@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런프렌즈</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap" class="h100p">
+		<!-- container -->
+		<div class="container p0">
+			<div style="padding:20px;text-align:center;"><button type="button" style="padding:10px;border:1px solid #ddd;" onclick="layerPop.show('pop-human');">popup open</button></div>
+
+			<!-- [D] 210909 실명인증 팝업 추가 -->
+			<!-- pop-wrap -->
+			<div id="pop-human" class="pop-wrap alert human ty02">
+				<div class="pop-wrap-inner">
+					<!-- pop-cont-inner -->
+					<div class="pop-cont-inner w720">
+						<!-- pop-group -->
+						<div class="pop-group">
+							<div class="pop-top-wrap">
+								<h5 class="pop-tit ty02">실명인증</h5>
+							</div>
+							<div class="txt-box">
+								<p class="txt">
+									상품몰에서 상품 구매시에는 <br>
+									구매자 정보 확인을 위한 본인인증이 필요합니다. <br>
+									(※ 최초 1회만 확인)
+								</p>
+							</div>
+							<div class="btn-box half">
+								<a href="#" class="btn line-black">취소</a>
+								<a href="#" class="btn next bg-orange">다음</a>
+							</div>
+						</div>
+						<!-- //pop-group -->
+					</div>
+					<!-- //pop-cont-inner -->
+				</div>
+			</div>
+			<!-- //pop-wrap -->
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

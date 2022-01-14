@@ -1,0 +1,153 @@
+// ========================================================================
+// [sub] | 기존 css 추가 수정
+// ========================================================================
+// 주문결제페이지 배송지 입력 - 회원정보수정 버튼
+.cont-group .txt-box.ty02.write-form:first-child{
+  position: relative;
+  .btn-address{
+    position: absolute;
+    top: 2.7rem;
+    right: 20px;
+    font-size: 0;
+    a{
+      font-size: 1rem;
+      color: #666;
+      letter-spacing: -.05em;
+    }
+  }
+}
+// 주문결제페이지 오프라인 체험 상품인 경우 우편번호 검색 버튼 삭제시 라인 이슈
+.txt-box.write-form .inp-box.address.offline-product .inp-txt{
+  width: 100%;
+}
+// 상세페이지 비디오 영상
+.pdt-description-wrap .tab-content.online-experience .video-list li{
+  margin: 0;
+}
+.video-list{
+  &.slick-initialized .slick-slide{
+    margin: 0;
+  }
+  .slick-dots{
+    li.slick-active{
+      button{
+        background-color: #333
+      }
+    }
+  }
+}
+// 상세페이지 공유버튼 모바일 오른쪽 정렬/크기 수정
+.share-wrap .share-list{
+  top: 1.25rem;
+  right: 0.75rem;
+  width: auto;
+}
+.share-wrap .share-list li .btn{
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("#{$imgOldSubPath}/icon_share_m.png");
+  background-size: 12.5rem 2.5rem;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.05);
+}
+.share-wrap .share-list li .btn.close {
+  background-position: -10rem 0;
+}
+.adjust_image_container{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+}
+// 마이페이지 문의하기 리스트 iOS 이슈
+.cont-wrap.mypage.customer{
+  .cont-group-wrap.cont-product-ask{
+    .tbl-st-col.order .product-img{
+      position: absolute;
+      top: 0;
+      display: table;
+      height: 100%;
+      a{
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px){
+  .mypage.customer .cont-middle-wrap .tbl-st-col.order .product-img a{
+    width: 52px;
+    height: 52px;
+  }
+  // 주문결제페이지 오프라인 체험 상품인 경우 우편번호 검색 버튼 삭제시 라인 이슈
+  .txt-box.write-form .inp-box.address.offline-product .inp-txt{
+    width: 100%;
+  }
+  // 주문결제페이지 결제금액 닫았을 때 최소높이값 수정
+  .payment-info .price-list{
+    min-height: auto;
+  }
+  // 상세페이지 비디오 영상
+  .pdt-description-wrap .tab-content.online-experience{
+    .slick-list{
+      margin: 0;
+      text-align: center;
+      .slick-track{
+        display: inline-flex;
+        justify-content: space-around;
+      }
+      .slick-slide{
+        float: none;
+        margin: 0 14px;
+      }
+    }
+    .video-list li{
+      margin: 0;
+    }
+  }
+
+
+}
+@media (max-width: 960px){
+  // 주문결제페이지 배송지 입력 - 회원정보수정 버튼
+  .cont-group .txt-box.ty02.write-form:first-child{
+    .btn-address{
+      right: 0px;
+    }
+  }
+  // 상품페이지 스크롤 영역
+  .submenu-wrap .scroll{
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      background-clip: padding-box;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+}
+@media (max-width: 560px){
+  .adjust_image_container{
+    .iframe-wrap{
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-top: 56.25%;
+      iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+}

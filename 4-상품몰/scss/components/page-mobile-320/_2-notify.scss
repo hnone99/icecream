@@ -1,0 +1,83 @@
+// ========================================================================
+// [notify] | 알림창
+// ========================================================================
+@media all and (max-width: 479px){
+  .ui-new{
+    .drawer-highest{
+      height: 48px;
+      .top-left-area{
+        line-height: 48px;
+        .top-btn{
+          margin: 0 5px;
+          font-size: 11px;
+        }
+      }
+      .top-right-area{
+        .top-btn-close{
+          padding: 16px 20px
+        }
+      }
+    }
+    .drawer-header{
+      padding: 16px 20px;
+      .drawer-title{
+        &::after{
+          @include top-right(50%, 20px);
+          @include bg-img-size(9px, 15px, $imgMobilePath, 'i-top-btn-next@2x');
+          margin-top: -5px;
+        }
+        .grade,
+        .study-access{
+          height: 16px;
+          line-height: 16px;
+          padding: 0 5px;
+          border-radius: 8px;
+          font-size: 10px;
+        }
+         .name{
+          font-size: 16px;
+         }
+      }
+    }
+    .drawer-body{
+      .alram{
+        padding: 0 20px;
+        font-size: 13px;
+        .text-secondary{
+          font-size: 13px;
+        }
+      }
+      .daylist{
+        margin: 20px;
+        .date{
+          font-size: 13px;
+        }
+        li{
+          .desc{
+            span, em{
+              font-size: 11px;
+            }
+          }
+          .list{
+            height: 54px;
+            > img{
+              width: 54px;
+              height: 54px;
+            }
+            em{
+              width: calc(100% - 68px);
+              padding: 0 20px 0 68px;
+              font-size: 11px;
+            }
+          }
+        }
+      }
+      .empty{
+        font-size: 12px;
+        img{
+          max-width: 36px;
+        }
+      }
+    }
+  }
+}

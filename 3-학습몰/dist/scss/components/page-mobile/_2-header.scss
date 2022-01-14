@@ -1,0 +1,89 @@
+// ========================================================================
+// [header] | 헤더
+// ========================================================================
+@media all and (max-width: 960px){
+  .ui-new{
+    .header-logo{
+      bottom: 15px;
+      left: 17px;
+      .img-logo{
+        @include bg-img-size(288px/2, 44px/2, $imgMobilePath, 'logo@2x');
+        background-repeat: no-repeat;
+      }
+    }
+    .header-btn{
+      display: none;
+    }
+    .header-tab{
+      .tab-list-grp{
+        left: initial;
+        right: 30px;
+        text-align: right;
+      }
+      .tab-list{
+        padding: 0 30px;
+        font-size: 19px;
+      }
+    }
+  }
+  //--------------------------------------------------------
+  // 서브페이지 상단
+  .ui-new.sub-page{
+    .ui-header-box,
+    .ui-sub-box{
+      display: none;
+    }
+    .ui-header-box-mo{
+      position: relative;
+      display: block;
+      height: 75px;
+      border-bottom: 1px solid #ddd;
+      .top-sub-title{
+        display: block;
+        line-height: 75px;
+        margin-left: 56px;
+        font-size: 24px;
+        font-weight: $fw-bold;
+        color: #333333;
+      }
+      .title-txt,
+      .title-mall{
+        vertical-align: middle;
+      }
+      .title-mall{
+        margin-top: 6px;
+        margin-left: 2px;
+      }
+      .top-btn-menu,
+      .top-btn-basket,
+      .top-btn-prev,
+      .top-btn-home,
+      .top-btn-close{
+        line-height: 1;
+        padding:  18px 10px;
+      }
+      .top-btn-basket{
+        padding:  25px 20px;
+      }
+      .top-btn-menu,
+      .top-btn-close{
+        padding:  26px 20px;
+      }
+      .top-btn-prev{
+        @include top-left(0, 0);
+      }
+      .top-btn-home{
+        @include top-right(0, 0);
+      }
+      .top-btn-close{
+        @include top-right(0, 0);
+      }
+      .top-btn-menu{
+        @include top-right(0, 0);
+      }
+      .top-btn-basket{
+        @include top-right(0, 55px);
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@charset "UTF-8";
+.fl {
+  float: left
+}
+.table tbody th,
+.table tbody td {
+  line-height: 1.4em;
+  border: 1px solid #e3ebf3;
+}
+.btn-download-dark {
+  color: #fff;
+  border: 1px solid #929292;
+  background-color: #929292;
+}
+.btn-download-dark:hover {
+  color: #fff;
+  background-color: #797979
+}
+/* 해시태그 높이 클래스 추가 */
+.custom-control-input-height {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  vertical-align: bottom;
+}
+.custom-checkbox {
+  position: relative;
+  display: block;
+  line-height: 1;
+  height: 18px;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 0;
+  vertical-align: middle;
+}
+.custom-radio .custom-control-label {
+  padding-top: 0;
+}
+.custom-checkbox .custom-control-label {
+  padding-top: 0;
+  cursor: pointer
+}
+.custom-file,
+.custom-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 0;
+}
+.img-title .fa-times:before {
+  display: inline-block;
+  padding: 0 3px;
+  background-color: #e8e8e8;
+  border-radius: 3px;
+}
+.badge {
+  display: inline-block;
+  height: auto;
+}
+.badge-secondary {
+  background-color: #868686;
+}
+.box-grey.box-grey-format .col-title {
+  width: 180px;
+  padding-left: 0;
+  text-align: center;
+}
+.box-grey.box-grey-format .col-desc {
+  float: left;
+  width: calc(100% - 180px);
+  margin-top: 10px;
+}
+.radio-contents .on {
+  display: block
+}
+.radio-contents .off {
+  display: none
+}
+.text-link {
+  white-space: normal;
+}
+.text-fixed {
+  vertical-align: middle;
+}
+.text-highlight {
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+  font-size: 16px;
+  color: red;
+}
+/* 판매 채널 추가 UI 관련 CSS */
+.sale-list {
+  border-bottom: 1px solid #ababab;
+}
+.sale-list:last-child {
+  border-bottom: 0;
+}
+.list-app li .list-app-link {
+  text-decoration: underline;
+}

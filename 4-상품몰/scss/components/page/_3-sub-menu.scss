@@ -1,0 +1,106 @@
+// ========================================================================
+// [sub] | 서브메뉴
+// ========================================================================
+.ui-new{
+  .ui-sub-box{
+    position: relative;
+    margin: 0 auto;
+    border-bottom: 1px solid #d2d2d2;
+    text-align: center;
+  }
+  .ui-sub-box-wrap{
+    position: relative;
+    display: inline-block;
+    min-width: 1280px;
+    height: 60px;
+    line-height: 1;
+  }
+  // --------------------------------------------------
+  .sub-prev-area{
+    @include top-left(0, 45px);
+    &.off{
+      display: none;
+    }
+    .sub-btn-prev{
+      width: 60px;
+      height: 60px;
+      line-height: 1;
+      border-left: 1px solid #d2d2d2;
+      border-right: 1px solid #d2d2d2;
+    }
+  }
+  // --------------------------------------------------
+  .sub-menu-area{
+    display: block;
+    text-align: left;
+    &.device-pc{
+      display: inline-block;
+    }
+    &.device-mo{
+      display: none;
+    }
+    .top-sub-title{
+      line-height: 60px;
+      font-size: 20px;
+      font-weight: $fw-bold
+    }
+    .sub-menu-grp{
+      display: inline-block;
+      padding-left: 12px;
+      font-size: 0;
+      &.device-pc{
+        display: inline-block;
+      }
+      &.device-mo{
+        display: none;
+      }
+    }
+    .sub-menu{
+      position: relative;
+      display: inline-block;
+      line-height: 60px;
+      margin: 0 34px;
+      font-size: 20px;
+      font-weight: $fw-regular;
+      &::before{
+        @include bottom-left(0, 0);
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: transparent;
+        content: ''
+      }
+      &.on{
+        &::before{
+          background-color: #ff7602;
+        }
+      }
+      a{
+        color: #202020;
+      }
+    }
+  }
+  // --------------------------------------------------
+  .sub-util-area{
+    line-height: 1;
+    @include top-right(0, 14px);
+    font-size: 0;
+    .sub-btn-util{
+      padding: 20px 14px;
+    }
+  }
+  // --------------------------------------------------
+  .search-box{
+    right: 116px;
+    width: 220px;
+    .btn-util-basket{
+      display: none;
+    }
+  }
+  .search-box .input-group{
+    border-bottom: 3px solid #000;
+  }
+  .search-box .input-group .btn-search {
+    right: 0;
+  }
+}

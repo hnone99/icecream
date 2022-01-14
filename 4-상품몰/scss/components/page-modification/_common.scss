@@ -1,0 +1,50 @@
+// ========================================================================
+// [main] | 기존 css 추가 수정
+// ========================================================================
+$imgOldCommonPath: "../../../../images/common";
+$imgOldSubPath: "../../../../images/sub";
+
+// 주문 결제 페이지 배송지 관리 높이값을 주지 않아 팝업시 iOS 이슈 생김
+// body를 클래스로 감싸고 처리
+.new-body-wrapper{
+  #wrap{
+    height: 100%;
+  }
+  .container{
+    height: auto;
+    overflow-y: hidden;
+  }
+}
+.ui-new #sideMenu{
+  font-family: 'NanumSquareRound',sans-serif;
+}
+#sideMenu .menu-top-wrap .util-menu li{
+  .btn_echo:before,
+  .btn:before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 0;
+    width: 2.917rem;
+    height: 2.917rem;
+    background: url("#{$imgEcoMainPath}/btn_util_side_menu.png") 0 0/11.667rem 2.917rem no-repeat;
+  }
+}
+#sideMenu .menu-top-wrap .util-menu.ty02 li{
+  .btn_echo:before,
+  .btn:before {
+    content: '';
+    display: none;
+  }
+  .btn_echo,
+  .btn{
+    padding: 0 .833rem;
+  }
+}
+.ui-new #sideMenu .menu-top-wrap .util-menu .mypage{
+  background-color: transparent;
+}
+// 상품문의 버튼
+.btn-comm{
+  word-break: keep-all;
+}

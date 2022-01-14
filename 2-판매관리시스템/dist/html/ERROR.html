@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-title" content="i-Scream" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="i-Scream"/>
+  <meta name="keywords" content="i-Scream"/>
+  <title>아이스크림 에듀 에코 판매관리</title>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/fonts/fontAwesomepro.css"/>
+  <script src="../js/bundle.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+  }
+</style>
+
+<div id="wrap" class="wrap error_wrap">
+  <div class="error_page">
+    <img src="../img/common/error.png" alt="에러이미지">
+    <div class="error_title">404 Page not found</div>
+    <div class="error_contents">요청하신 페이지를 찾을 수 없습니다.<br>
+      삭제된 주소거나, 일시적으로 사용할 수 없습니다.</div>
+  </div>
+</div>
+</body>
+<style>
+  body {
+    background: #ffffff;
+  }
+  .error_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #ffffff;
+  }
+  .error_page {
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  .error_title {
+    line-height: 40px;
+    margin: 21px 0 44px;
+    font-size: 40px;
+    color: #41c3d2;
+    font-weight: 900;
+  }
+  .error_contents {
+    text-align: center;
+    line-height: 36px;
+    font-size: 20px;
+    color: #333333;
+  }
+</style>
+</html>

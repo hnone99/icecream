@@ -1,0 +1,23 @@
+// * --------------------------------
+// * font-face
+// * --------------------------------
+@mixin font-face(
+	$font-name,
+	$file-name,
+	$file-fath,
+	$weight: normal,
+	$style: normal){
+
+	@font-face {
+		font-family: $font-name;
+		font-weight: $weight;
+		font-style: $style;
+		src: local($file-name);
+		src: url( $file-fath + $file-name + '.eot');
+		src:
+				url( $file-fath + $file-name + '.eot?#iefix') format('embedded-opentype'),
+				url( $file-fath + $file-name + '.woff') format('woff'),
+				url( $file-fath + $file-name + '.ttf') format('truetype'),
+				url( $file-fath + $file-name + '.svg##{$font-name}') format('svg')
+	}
+}

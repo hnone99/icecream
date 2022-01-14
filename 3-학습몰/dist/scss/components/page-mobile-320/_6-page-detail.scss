@@ -1,0 +1,184 @@
+// ========================================================================
+// [page] | 상세 페이지
+// ========================================================================
+@media all and (max-width: 479px){
+  .ui-new{
+    .detail-fit{
+      .detail-etc{
+        font-size: 12px;
+        .title-detail-area{
+          height: 60px;
+          line-height: 60px;
+          padding-left: 20px;
+          font-size: 16px;
+          &::before{
+            @include top-right(50%, 20px);
+            @include bg-img-size(15px, 10px, $imgMobilePath, 'detail-i-arrow@2x');
+            margin-top: -5px;
+          }
+        }
+        &.detail-index{
+          .detail-index-area{
+            padding: 20px;
+          }
+        }
+        &.detail-history{
+          .detail-history-area{
+            padding: 20px 0 15px 0;
+            .history-list-grp{
+              padding: 0 20px;
+            }
+            .history-btn-grp{
+              padding: 0 20px 20px 20px;
+            }
+          }
+        }
+        &.detail-review{
+          .review-wrap{
+            padding: 0 20px;
+          }
+          .title-detail-area{
+            height: 54px;
+            line-height: 60px;
+          }
+          .review-count{
+            .count{
+              padding-bottom: 15px;
+            }
+            .count > div{
+              .graph{
+                width: 50%;
+                margin-right: 5px;
+              }
+            }
+            .summary{
+              height: auto;
+              padding: 13px 10px;
+              font-size: 13px;
+            }
+            .graph,
+            .grade,
+            .num{
+              font-size: 12px;
+            }
+            .graph{
+              &::before{
+                height: 9px;
+              }
+              .bar{
+                height: 9px;
+              }
+            }
+          }
+          .review-rate{
+            .star{
+              height: auto;
+              margin-bottom: 0;
+              img{
+                width: 14px;
+                height: 14px;
+              }
+            }
+            .review-btn{
+              margin-top: 15px !important;
+              .btn{
+                height: 45px;
+                line-height: 45px;
+                font-size: 15px;
+              }
+            }
+          }
+          .rate{
+            margin-right: 5px;
+            .rate-average{
+              font-size: 35px;
+            }
+            .rate-all{
+              font-size: 12px;
+            }
+          }
+          .review-reply{
+            padding: 0 20px
+          }
+        }
+      }
+    }
+    .detail-review{
+      .review-reply{
+        .reply-desc{
+          margin-bottom: 30px;
+          padding-top: 26px;
+          font-size: 12px;
+        }
+        .sort{
+          top: 26px;
+          right: 20px;
+        }
+        .sort a{
+          padding-left: 12px;
+          margin-left: 12px;
+          font-size: 12px;
+          &::after{
+            top: 4px;
+            height: 12px;
+          }
+        }
+        .list-wrap{
+          .list{
+            .reply{
+              padding: 14px;
+              .name, .desc{
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .list{
+          .article{
+            .user, .user-info, .date{
+              font-size: 11px !important;
+            }
+            .name{
+              margin-bottom: 12px;
+            }
+            .date{
+              &::before{
+                height: 12px;
+                margin-top: -6px;
+              }
+            }
+            .rating{
+              margin-bottom: 7px;
+              .star{
+                img{
+                  width: 17px;
+                  height: 17px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .detail-page{
+      .detail-btn-state-area{
+        .btn-state{
+          height: 51px;
+          font-size: 11px;
+          .txt{
+            &::before{
+              @include bg-img-size(10px, 6px, $imgNewPath, detail-i-arrow-open);
+              margin-top: -3px;
+            }
+          }
+        }
+      }
+    }
+    .detail-history{
+      .h-txt{
+        margin-left: 66px;
+        padding-left: 10px;
+      }
+    }
+  }
+}

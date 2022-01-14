@@ -1,0 +1,49 @@
+//
+ * --------------------------------
+ * 텍스트 줄임
+%ellipsis
+	display: inline-block
+	overflow: hidden
+	text-overflow: ellipsis
+	-o-text-overflow: ellipsis
+	-moz-text-overflow: ellipsis
+	white-space: nowrap
+
+// webkit 기반 라인수 자르기
+%ellipsis-line
+	display: -webkit-box
+	-webkit-line-clamp: 1 
+	-webkit-box-orient: vertical
+	overflow: hidden
+
+
+//
+ * --------------------------------
+ * 활성화 비활성화 
+%show,
+%on
+	display: block
+%hide,
+%off
+	display: none
+
+//
+ * --------------------------------
+ *  스킵
+%skip
+	position: absolute
+	left: 0
+	top: -30px
+	width: auto
+	padding: 0 10px
+	text-align: center
+	&::active, &::focus
+		top: 0
+		text-decoration: none
+		cursor: pointer
+		zoom: 1
+
+		
+
+
+

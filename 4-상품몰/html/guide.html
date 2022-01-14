@@ -1,0 +1,634 @@
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>홈런프렌즈 쇼핑몰</title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../css/sub.css">
+		<link rel="stylesheet" type="text/css" href="../css/mall.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../js/datepicker-ko.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<style>
+			body{padding:1.250rem;}
+			table{width:100%;table-layout:fixed;}
+			table caption{text-align:left;}
+			table tbody td{width:100%;padding:20px 0;}
+			table tbody th{width:100%;padding:20px 0;}
+			table tbody .txt-box th{width:auto;padding:20px 0;}
+			
+			.tab:after{content:'';display:block;clear:both;}
+			.tab{padding-bottom:20px;}
+			.tab li{float:left;width:50%;padding-bottom:20px;text-align:center;}
+			.tab li.active{padding-bottom:20px;border-bottom:2px solid #f37720;}
+			.tab li a{display:block;font-size:20px;font-weight:bold;}
+			
+			@media all and (min-width:1025px){
+				
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="tab">
+			<li class="active"><a href="#">Layout</a></li>
+			<li><a href="#">Element</a></li>
+		</ul>
+		<div class="tbl-wrap">
+
+			<!-- 레이아웃 -->
+			<table>
+				<tbody>
+					<tr>
+						<th style="border-bottom:1px solid #000;">btn-box</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="btn-box half">
+								<a href="#" class="btn line-black">취소</a>
+								<a href="#" class="btn next bg-orange">다음</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th style="border-bottom:1px solid #000;">Text box (Type 01)</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="txt-box ty01">
+								<p class="sub-tit">이용약관 및 주요사항 고지</p>
+								<p class="txt disc">만 14세 미만 회원은 부모님을 통해서 회원가입이 가능합니다.</p>
+								<p class="txt disc">선택약관에 동의하지 않아도 회원가입은 가능합니다.</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th style="border-bottom:1px solid #000;">Text box (Type 02)</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="cont-group">
+								<h3 class="cont-tit">배송지 정보 </h3>
+								<div class="txt-box ty02">
+									<table>
+										<caption>구매자 정보</caption>
+										<colgroup>
+											<col style="width:28%;">
+											<col style="width:auto;">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">이름</th>
+												<td>김홈런</td>
+											</tr>
+											<tr>
+												<th scope="row">휴대폰번호</th>
+												<td>01012345678</td>
+											</tr>
+											<tr>
+												<th scope="row">이메일</th>
+												<td>homelearn1234@i-screamedu.co.kr</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<a href="#" class="btn edit bg-orange">배송지변경</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th style="border-bottom:1px solid #000;">Asset card (Type 01)</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="asset-card ty01">
+								<div class="card-top-wrap">
+									<div class="txt-box">
+										<p class="txt">
+											<em>김홈런</em> 님 쇼핑통장
+											<span>ABCDEFGHIJKLMNOP</span>
+										</p>
+									</div>
+									<div class="btn-wrap">
+										<div class="btn-box">
+											<div class="btn-inner"><a href="#" class="btn line-white">배송지관리</a></div>
+										</div>
+										<div class="btn-box">
+											<div class="btn-inner"><a href="#" class="btn line-white">계좌관리</a></div>
+										</div>
+										<div class="btn-box">
+											<div class="btn-inner"><a href="#" class="btn line-white">계정인증</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="card-cont-wrap">
+									<ul>
+										<li class="con"><a href="#"><div class="cont-inner"><i>콘</i><em class="num">9,999<span>콘</span></em></div></a></li>
+										<li class="money"><a href="#"><div class="cont-inner"><i>예치금</i><em class="num">999,999<span>원</span></em></div></a></li>
+										<li class="point"><a href="#"><div class="cont-inner"><i>포인트</i><em class="num">999,999<span>P</span></em></div></a></li>
+										<li class="coupon"><a href="#"><div class="cont-inner"><i>쿠폰</i><em class="num">999<span>개</span></em></div></a></li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th style="border-bottom:1px solid #000;">Asset card (Type 02)</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="asset-card ty02">
+								<div class="card-top-wrap">
+									<div class="txt-box">
+										<span>나의 콘</span>
+										<em class="num">999,999<span>콘</span></em>
+										<i>적립예정 100 콘</i>
+									</div>
+									<div class="btn-box">
+										<a href="#" class="btn line-white">조회화기</a>
+									</div>
+								</div>
+								<div class="card-cont-wrap">
+									<ul>
+										<li>
+											<div class="list-inner">
+												<span>최근 적립된 콘</span>
+												<em class="num">9,999<span>콘</span></em>
+												<i class="pc-ver">30일 이내 소멸예정</i>
+											</div>
+										</li>
+										<li>
+											<div class="list-inner">
+												<span>최근 사용한 콘</span>
+												<em class="num">999,999<span>콘</span></em>
+												<i class="pc-ver">최근 1개월 사용 내역</i>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr style="border-bottom:1px solid #000;">
+						<th>Delivery info</th>
+					</tr>
+					<tr>
+						<td>
+							<ul class="delivery-info-wrap">
+								<li class="active"><a href="#">결제완료<span>1</span></a></li>
+								<li><a href="#">배송준비중<span>0</span></a></li>
+								<li><a href="#">배송중<span>0</span></a></li>
+								<li><a href="#">배송완료<span>0</span></a></li>
+								<li><a href="#">교환/환불/취소<span>0</span></a></li>
+							</ul>
+						</td>
+					</tr>
+					<tr style="border-bottom:1px solid #000;">
+						<th>User info</th>
+					</tr>
+					<tr>
+						<td>
+							<ul class="user-info-wrap">
+								<li class="my-shop"><a href="#">나의 쇼핑정보</a></li>
+								<li class="cs-center"><a href="#">고객센터</a></li>
+								<li class="my-info"><a href="#">개인정보</a></li>
+							</ul>
+						</td>
+					</tr>
+					<tr style="border-bottom:1px solid #000;">
+						<th>Filter</th>
+					</tr>
+					<tr>
+						<td>
+							<!-- [D] 200220 Filter 모듈 수정 -->
+							<!-- 캘린더 적용해야 하는 페이지에 아래 코드 추가(폰트 CDN 밑으로 아래와 같이 수정해야 함)
+
+								<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+								<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+								<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+								<script type="text/javascript" src="../js/datepicker-ko.js"></script>
+								<script type="text/javascript" src="../js/common.js"></script>
+							-->
+							<div class="filter-wrap">
+								<ul class="filter-list">
+									<li class="active"><a href="#" class="btn line-gray">1주일</a></li>
+									<li><a href="#" class="btn line-gray">1개월</a></li>
+									<li><a href="#" class="btn line-gray">3개월</a></li>
+									<li><a href="#" class="btn line-gray">6개월</a></li>
+									<li><a href="#" class="btn line-gray">12개월</a></li>
+								</ul>
+								<div class="filter-date">
+									<ul>
+										<li>
+											<div class="inp-inner">
+												<input type="text" class="inp-txt calendar" readonly="readonly" value="2020.01.01">
+											</div>
+										</li>
+										<li>
+											<div class="inp-inner">
+												<input type="text" class="inp-txt calendar" readonly="readonly" value="2020.01.10">
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-box">
+									<div class="btn-inner">
+										<a href="#" class="btn">조회</a>
+									</div>
+								</div>
+							</div>
+							<!-- //[D] 200220 Filter 모듈 수정 -->
+						</td>
+					</tr>
+					<tr style="border-bottom:1px solid #000;">
+						<th>LNB</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="lnb-wrap pc-ver">
+								<ul>
+									<li class="dep1 my-shop">
+										<a href="#">나의 쇼핑정보</a>
+										<ul class="dep2">
+											<li><a href="#">주문/배송 내역</a></li>
+											<li><a href="#">취소/환불/반품 내역</a></li>
+											<li><a href="#">조르기</a></li>
+											<li><a href="#">교환/AS 내역</a></li>
+											<li>
+												<a href="#">나의 쇼핑통장</a>
+												<ul class="dep3">
+													<li><a href="#">콘</a></li>
+													<li><a href="#">마일리지</a></li>
+													<li><a href="#">예치금</a></li>
+													<li><a href="#">환전소</a></li>
+												</ul>
+											</li>
+											<li><a href="#">나의 쿠폰</a></li>
+											<li><a href="#">관심 리스트</a></li>
+										</ul>
+									</li>
+									<li class="dep1 cs-center">
+										<a href="#">고객센터</a>
+										<ul class="dep2">
+											<li><a href="#">공지사항</a></li>
+											<li><a href="#">1:1 친절상담<span class="new">+1</span></a></li>
+											<li><a href="#">나의 상품평</a></li>
+											<li><a href="#">상품QA</a></li>
+										</ul>
+									</li>
+									<li class="dep1 my-info">
+										<a href="#">개인정보</a>
+										<ul class="dep2">
+											<li><a href="#">회원정보 수정</a></li>
+											<li><a href="#">환불계좌 관리</a></li>
+											<li><a href="#">배송지 관리</a></li>
+											<li><a href="#">회원탈퇴</a></li>
+										</ul>
+									</li>
+								</ul>
+								<div class="company-info">
+									<p class="phone">1544-0910</p>
+									<p class="txt">mall@i-screamedu.co.kr</p>
+									<p class="txt">평일 AM 10 ~ PM 22</p>
+									<p class="txt">주말 AM 10 ~ PM 17</p>
+									<a href="#" class="btn"><img src="../images/common/btn_homelearn.png" alt="아이스크림 홈런"></a>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr style="border-bottom:1px solid #000;">
+						<th>LNB (Type 02 - m ver.)</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="lnb-wrap m-ver">
+								<div class="dep1">
+									<select>
+										<option>나의 쇼핑정보</option>
+										<option>고객센터</option>
+										<option>개인정보</option>
+									</select>
+								</div>
+								<div class="scroll">
+									<div class="scroll-inner">
+										<ul class="dep2">
+											<li class="active">
+												<a href="#">주문/배송</a>
+												<div class="scroll">
+													<div class="scroll-inner">
+														<ul class="dep3">
+															<li><a href="#">전체</a></li>
+															<li><a href="#">결제완료</a></li>
+															<li><a href="#">상품준비중</a></li>
+															<li><a href="#">배송중</a></li>
+															<li><a href="#">전체</a></li>
+															<li><a href="#">결제완료</a></li>
+															<li><a href="#">상품준비중</a></li>
+															<li><a href="#">배송중</a></li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li><a href="#">취소/환불/반품</a></li>
+											<li><a href="#">조르기</a></li>
+											<li><a href="#">교환/AS</a></li>
+											<li><a href="#">나의 쇼핑통장</a></li>
+											<li><a href="#">나의 쿠폰</a></li>
+											<li><a href="#">관심 리스트</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr style="border-bottom:1px solid #000;">
+						<th>Coupon list</th>
+					</tr>
+					<tr>
+						<td>
+							<ul class="coupon-list">
+								<li>
+									<div class="list-inner">
+										<dl class="txt-box">
+											<dt>회원가입 감사 쿠폰<span class="date">2019.00.00 00:00 ~ 2020.00.00 00:00</span></dt>
+											<dd><span class="num">10,000</span>원 할인</dd>
+											<dd>제한없음</dd>
+										</dl>
+										<div class="img-box"><img src="../images/sample/img_coupon01.png" alt="쿠폰이미지01"></div>
+									</div>
+								</li>
+								<li>
+									<div class="list-inner">
+										<dl class="txt-box">
+											<dt>회원가입 감사 쿠폰<span class="date">2019.00.00 00:00 ~ 2020.00.00 00:00</span></dt>
+											<dd><span class="num">10,000</span>원 할인</dd>
+											<dd>제한없음</dd>
+										</dl>
+										<div class="img-box"><img src="../images/sample/img_coupon01.png" alt="쿠폰이미지01"></div>
+									</div>
+								</li>
+								<li class="used">
+									<div class="list-inner">
+										<dl class="txt-box">
+											<dt>회원가입 감사 쿠폰<span class="date">2019.00.00 00:00 ~ 2020.00.00 00:00</span></dt>
+											<dd><span class="num">10,000</span>원 할인</dd>
+											<dd>사용완료</dd>
+										</dl>
+									</div>
+								</li>
+								<li class="used">
+									<div class="list-inner">
+										<dl class="txt-box">
+											<dt>회원가입 감사 쿠폰<span class="date">2019.00.00 00:00 ~ 2020.00.00 00:00</span></dt>
+											<dd><span class="num">10,000</span>원 할인</dd>
+											<dd>사용완료</dd>
+										</dl>
+									</div>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr style="border-bottom:1px solid #000;">
+						<th>Product list</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="product-area category">
+								<ul class="product-list">
+									<li>
+										<div class="thumb">
+											<a href="">
+												<img src="../images/sample/pdt_cup.jpg" alt="" />
+												<div class="pdt-badge">
+													<img src="../images/sub/pdt_badge_new.png" alt="new">
+													<img src="../images/sub/pdt_badge_sale.png" alt="sale">
+													<img src="../images/sub/pdt_badge_best.png" alt="best">
+													<img src="../images/sub/pdt_badge_good.png" alt="good">
+												</div>
+											</a>
+											<button type="button" class="icon like">찜</button>
+										</div>
+										<a href="" class="pdt-info">
+											<p class="brand">브랜드명</p>
+											<p class="tit">홈런프렌즈 2020년 컵</p>
+											<strong class="price"><span>22,000</span>원</strong>
+										</a>
+									</li>
+									<li>
+										<div class="thumb">
+											<a href="">
+												<img src="../images/sample/pdt_cup.jpg" alt="" />
+												<div class="pdt-badge">
+													<img src="../images/sub/pdt_badge_new.png" alt="new">
+													<img src="../images/sub/pdt_badge_sale.png" alt="sale">
+													<img src="../images/sub/pdt_badge_best.png" alt="best">
+													<img src="../images/sub/pdt_badge_good.png" alt="good">
+												</div>
+											</a>
+											<button type="button" class="icon like">찜</button>
+										</div>
+										<a href="" class="pdt-info">
+											<p class="brand">브랜드명</p>
+											<p class="tit">홈런프렌즈 2020년 컵</p>
+											<strong class="price"><span>22,000</span>원</strong>
+										</a>
+									</li>
+									<li>
+										<div class="thumb">
+											<a href="">
+												<img src="../images/sample/pdt_cup.jpg" alt="" />
+												<div class="pdt-badge">
+													<img src="../images/sub/pdt_badge_new.png" alt="new">
+													<img src="../images/sub/pdt_badge_sale.png" alt="sale">
+													<img src="../images/sub/pdt_badge_best.png" alt="best">
+													<img src="../images/sub/pdt_badge_good.png" alt="good">
+												</div>
+											</a>
+											<button type="button" class="icon like">찜</button>
+										</div>
+										<a href="" class="pdt-info">
+											<p class="brand">브랜드명</p>
+											<p class="tit">홈런프렌즈 2020년 컵</p>
+											<strong class="price"><span>22,000</span>원</strong>
+										</a>
+									</li>
+									<li>
+										<div class="thumb">
+											<a href="">
+												<img src="../images/sample/pdt_cup.jpg" alt="" />
+												<div class="pdt-badge">
+													<img src="../images/sub/pdt_badge_new.png" alt="new">
+													<img src="../images/sub/pdt_badge_sale.png" alt="sale">
+													<img src="../images/sub/pdt_badge_best.png" alt="best">
+													<img src="../images/sub/pdt_badge_good.png" alt="good">
+												</div>
+											</a>
+											<button type="button" class="icon like">찜</button>
+										</div>
+										<a href="" class="pdt-info">
+											<p class="brand">브랜드명</p>
+											<p class="tit">홈런프렌즈 2020년 컵</p>
+											<strong class="price"><span>22,000</span>원</strong>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr style="border-bottom:1px solid #000;">
+						<th>결제수단</th>
+					</tr>
+					<tr>
+						<td>
+							<!-- [D] 200220 결제수단 모듈 수정 -->
+							<ul class="payment-method">
+								<li>
+									<input type="radio" name="payment" id="pay-r1">
+									<label for="pay-r1"><span class="icon card"></span>신용카드 결제</label>
+								</li>
+								<li>
+									<input type="radio" name="payment" id="pay-r2">
+									<label for="pay-r2"><span class="icon account"></span>계좌이체</label>
+								</li>
+								<li>
+									<input type="radio" name="payment" id="pay-r3">
+									<label for="pay-r3"><span class="icon mobile"></span>휴대폰 결제</label>
+								</li>
+								<li>
+									<input type="radio" name="payment" id="pay-r4">
+									<label for="pay-r4"><span class="icon store"></span>편의점 결제</label>
+								</li>
+								<li>
+									<input type="radio" name="payment" id="pay-r5">
+									<label for="pay-r5"><span class="icon kakao"></span>KAKAO</label>
+								</li>
+								<li>
+									<input type="radio" name="payment" id="pay-r6">
+									<label for="pay-r6"><span class="icon payco"></span>PAYCO</label>
+								</li>
+							</ul>
+							<!-- //[D] 200220 결제수단 모듈 수정 -->
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- //레이아웃 -->
+			
+			<!-- 엘리먼트 -->
+			<table>
+				<tbody>
+					<!-- 버튼 -->
+					<tr style="border-bottom:1px solid #000;">
+						<th>Button</th>
+					</tr>
+					<tr>
+						<td>
+							<button type="button" class="btn bg-black">bg-black</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button type="button" class="btn bg-gray">bg-gray</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button type="button" class="btn bg-gray02">bg-gray02</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button type="button" class="btn bg-yellow">bg-yellow</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" class="btn arrow-link"></a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" class="btn close"></a>
+						</td>
+					</tr>
+					<!-- //버튼 -->
+					<!-- 인풋 -->
+					<tr style="border-bottom:1px solid #000;">
+						<th style="">Input</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" class="inp-txt" placeholder="inp-txt">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="password" class="inp-pwd" placeholder="inp-pwd">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="number" class="inp-num" placeholder="inp-num">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="radio-box">
+								<input type="radio" name="radio" id="r1">
+								<label for="r1">radio</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="chk-box">
+								<input type="checkbox" id="chk1">
+								<label for="chk1">checkbox</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="inp-sel-box">
+								<select class="select">
+									<option>셀렉트</option>
+									<option>옵션1</option>
+									<option>옵션2</option>
+									<option>옵션3</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+					<!-- //인풋 -->
+				</tbody>
+			</table>
+			<!-- 엘리먼트 -->
+
+		</div>
+
+		<script>
+			var tabList = $('.tab'),
+				tabLink = tabList.find('a'),
+				tbl = $('.tbl-wrap').children('table');
+
+			tbl.last().hide();
+
+			tabLink.on('click', function(){
+				var $this = $(this),
+					$liIdx = $this.closest('li').index();
+
+				tabList.find('li').removeClass('active');
+				$this.closest('li').addClass('active');
+
+				tbl.hide();
+				tbl.eq($liIdx).show();
+
+				console.log($liIdx);
+			});
+		</script>
+	</body>
+</html>

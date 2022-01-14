@@ -1,0 +1,137 @@
+.visually_hidden {
+    overflow: hidden;
+    position: absolute;
+    left: -999999px;
+    clip: rect(0, 0, 0, 0); /*ie6,7*/
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+}
+caption.visually_hidden {
+    position: static;
+}
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.text_ellipsis{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    width:100%;
+    overflow:hidden;
+}
+
+
+/**
+ 이미지 리스트
+ */
+.area .square_banner {
+    text-align: center;
+}
+.area .square_banner a {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 0 5px;
+}
+.area .square_banner.square_banner_sm a{
+    width: 100px;
+    height: 100px;
+}
+.area .square_banner a img {
+    width: 100%;
+    height: 100%;
+}
+.text_ellipsis{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    width:100%;
+    overflow:hidden;
+}
+
+
+/*스크롤바 커스텀*/
+
+.wrap_scroll::-webkit-scrollbar {
+    width: 5px;
+}
+.wrap_scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+.wrap_scroll::-webkit-scrollbar-thumb {
+    background: #ddd;
+}
+
+.policy li{
+    position: relative;
+    padding-left: 16px;
+}
+
+.icon_dropdown {
+    width: 300px;
+    height: 30px;
+    background-size: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $textColor;
+    & i{
+        position: absolute;
+        right: 0;
+        top: 10px;
+        color: #ffffff;
+    }
+}
+
+.list_wrap.close{
+    display: none;
+}
+.state {
+    width: 48px;
+    top: 6px;
+    height: 22px;
+    position: absolute;
+    line-height: 21px;
+    left: 3px;
+    font-size: 10px;
+    text-align: center;
+    color: #ffff;
+    display: block;
+    background: #e3dede;
+}
+.waiting{
+    background: #bdbdbd !important;;
+    color: #ffffff !important;;
+}
+.waiting::after{
+    content: '대기중';
+}
+.working{
+    background: #ffa726 !important;
+    color: #ffffff !important;
+}
+.working::after{
+    content: '작업중';
+}
+.complete{
+    background: #29b6f6 !important;
+    color: #ffffff !important;;
+}
+.complete::after{
+    content: '완료';
+}
+
+.depths_2_filename {
+
+}
+.tooltip {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+}

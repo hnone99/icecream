@@ -1,0 +1,108 @@
+// *! backgkround.sass © choa712@gmail.com, 2020 */
+//
+ * --------------------------------
+ * backgkround
+ * --------------------------------
+//  = @mixin + @include
+=bg-basic($imgPath:"../../images", $name: bg-img)
+	background-image: url('#{$imgPath}/#{$name}.png')
+
+=bg-repeat($imgPath:"../../images", $name: bg-img, $repeat: no-rpeat, $xy: 0 0)
+	background-image: url('#{$imgPath}/#{$name}.png')
+	background-repeat: $repeat
+	background-position: $xy
+
+=bg-size( $width: null, $height: null)
+	width: $width
+	height: $height
+	background-size: $width $height
+
+=bg-img-pos(  $width: null, $height: null, $pos: 0 0)
+	width: $width
+	height: $height
+	background-position: $pos
+
+//
+ * --------------------------------
+ * // 배경이미지
+=bg-img($width: 100px, $height: 100px, $imgPath:"../../images", $name: bg-img)
+	display: inline-block
+	width: $width
+	height: $height
+	background: url('#{$imgPath}/#{$name}.png')
+	background-position: 0 0
+
+// $x: '@2x'
+// background: url('../#{$path}/#{$name}#{$x}.png')
+//
+ * --------------------------------
+ * // 배경이미지 사이즈 지정
+=bg-img-size($width: 100px, $height: 100px, $imgPath:"../../images", $name: bg-img, $repeat: no-repeat)
+	display: inline-block
+	width: $width
+	height: $height
+	background-image: url('#{$imgPath}/#{$name}.png')
+	background-position: 0 0
+	background-size: $width $height
+	background-repeat: $repeat
+
+
+=bg-img-path($imgPath:"../../images", $name: bg-img, $repeat: no-repeat)
+	background-image: url('#{$imgPath}/#{$name}.png')
+//
+ * --------------------------------
+ * // 배경이미지 사이즈 지정 및 대체 텍스트
+=bg-img-ir($width: 100px, $height: 100px, $imgPath:"../../images", $name: bg-img)
+	display: inline-block
+	width: $width
+	height: $height
+	background-image: url('#{$imgPath}/#{$name}.png')
+	background-position: 0 0
+	background-repeat: no-repeat
+	overflow: hidden
+	text-indent: -999em
+
+	//ie8 이하 대체텍스트  대응
+	// +ie-support
+	// 	font-size: 0
+	// 	text-indent: 0
+		// text-transform:capitalize
+		// line-height: 0
+		// white-space: nowrap
+		// http://stackoverflow.com/questions/2888298/text-indent-is-not-working-in-ie7
+
+//
+ * --------------------------------
+ * // 배경이미지 IE 하위버전 대응 cover
+=bg-img-size-ie($width: 100px, $height: 100px, $imgPath:"../../images", $name: bg-img, $sizingMethod: scale)
+	display: inline-block
+	width: $width
+	height: $height3
+	background-image: url('#{$imgPath}/#{$name}.png')
+	background-position: 0 0
+	background-size: cover
+	background-repeat: no-repeat
+
+	//ie8 이하 배경이미지 대응
+	// +ie-support
+	// 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../#{$path}/#{$name}.png', sizingMethod='scale')
+	// 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../#{$path}/#{$name}.png', sizingMethod='scale')"
+
+	// scale: 상위의 객체에 채움
+	// crop: 이미지의 크기 비율에 맞게
+	// image: 기본 설정값
+	// bug https://css-tricks.com/perfect-full-page-background-image/
+
+//
+ * --------------------------------
+ * // +background-size()
+=background-size($width: 100%, $height: null)
+	width: $width
+	height: $height
+
+	@if ( type-of($width) == 'number' and $height != null )
+		// Safari 3-4
+		+prefix('background-size', $width $height, (webkit))
+	@else
+		// Chrome, Firefox 4+, IE 9+, Opera, Safari 5+
+		+prefix('background-size', $width, (webkit))

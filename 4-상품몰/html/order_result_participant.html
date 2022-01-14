@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런몰</title>
+	<link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/slick.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+		<header class="header" id="header">
+			<div class="hd-top-menu">
+				<div class="inner">
+					<h1 class="logo">
+						<a href="../idea/main.html"><img src="../images/common/logo.png" alt="HOME LEARN FRIENDS" /></a>
+					</h1>
+
+					<div class="search-wrap">
+						<div class="total-search">
+							<label for="searchInput" class="blind">검색어 입력</label>
+							<input type="text" id="searchInput" name="searchInput" placeholder="[온라인 전용] 존재감 뿜뿜!! 귀여움도 사이즈도 자이언트 뚜루뚜루!!" autocomplete="off" />
+							<button type="button" class="btn-search">검색</button>
+						</div>
+					</div>
+
+					<div class="top-menu">
+						<button type="button" class="btn-search">검색</button>
+						<a href="" class="btn-mypage">마이페이지</a>
+						<a href="" class="btn-cart">장바구니<span class="count">3</span></a>
+						<a href="" class="btn-delivery">배송</a>
+						<button type="button" class="btn-menu">메뉴</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="gnb-wrap">
+				<ul class="gnb">
+					<li><a href="">전체 카테고리</a></li>
+					<li><a href="">신상품</a></li>
+					<li><a href="">최고인기</a></li>
+					<li><a href="">테마기획전</a></li>
+					<li><a href="">이벤트</a></li>
+				</ul>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- container -->
+		<div class="container">
+
+			<section class="sub-content order">
+
+				<div class="title-area">
+					<h2 class="page-title">주문완료</h2>
+				</div>
+
+				<div class="txt-order-result">
+					<span class="order-num">주문번호 <em>K1903281842095931</em></span>
+
+					<p class="txt">구입해 주셔서 감사합니다.<br class="mo" /> 주문번호는 각종 조회 시 필요합니다. </p>
+				</div>
+
+				<!-- 주문내역 -->
+				<div class="cont-group mt0">
+					<h3 class="cont-tit">주문내역</h3>
+
+					<table class="tbl-st-col order">
+						<colgroup>
+							<col style="width:11.7%;" />
+							<col style="width:auto;" />
+							<col style="width:13.28%;" />
+							<col style="width:13.28%;" />
+						</colgroup>
+						<thead>
+							<th scope="col" colspan="2">상품정보</th>
+							<th scope="col">합계</th>
+							<th scope="col">상태</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="product-img">
+									<a href="">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+									</a>
+								</td>
+								<td class="product-info">
+									<a href="" class="tit">홈런프렌즈 캐릭터 머그잔</a>
+									<p class="option">옵션: 오렌지 / M</p>
+									<p class="count">10,000 / 2개</p>
+								</td>
+								<td class="price">
+									<span class="discount">20,000원</span><br />
+									[10%] 18,000원
+								</td>
+								<td class="state"><em>출고완료</em></td>
+							</tr>
+							<tr>
+								<td class="product-img">
+									<a href="">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+									</a>
+								</td>
+								<td class="product-info">
+									<span class="badge">체험상품</span>
+									<a href="" class="tit">홈런프렌즈 캐릭터 머그잔</a>
+									<p class="option">옵션: 오렌지 / M</p>
+									<p class="count">10,000 / 2개</p>
+								</td>
+								<td class="price">21,000원</td>
+								<td class="state">주문교환</td>
+							</tr>
+							<tr>
+								<td class="product-img">
+									<a href="">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+									</a>
+								</td>
+								<td class="product-info">
+									<span class="badge">체험상품</span>
+									<a href="" class="tit">홈런프렌즈 캐릭터 머그잔</a>
+									<p class="option">옵션: 오렌지 / M</p>
+									<p class="count">10,000 / 2개</p>
+								</td>
+								<td class="price">21,000원</td>
+								<td class="state">주문반품</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- //tbl-wrap -->
+				</div>
+				<!-- //주문내역 -->
+
+				<!-- 배송지 정보 -->
+				<div class="cont-group col2">
+					<h3 class="cont-tit">배송지 정보</h3>
+
+					<div class="txt-box ty02">
+						<table>
+							<caption>구매자 정보</caption>
+							<colgroup>
+								<col style="width:7.083rem;">
+								<col style="width:auto;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">이름</th>
+									<td>김홈런</td>
+								</tr>
+								<tr>
+									<th scope="row">휴대폰번호</th>
+									<td>01012345678</td>
+								</tr>
+								<tr>
+									<th scope="row">이메일</th>
+									<td>homelearn1234@i-screamedu.co.kr</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="txt-box ty02">
+						<table>
+							<caption>배송지 주소</caption>
+							<colgroup>
+								<col style="width:7.083rem;">
+								<col style="width:auto;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">이름</th>
+									<td>김홈런</td>
+								</tr>
+								<tr>
+									<th scope="row">휴대폰번호</th>
+									<td>01012345678</td>
+								</tr>
+								<tr>
+									<th scope="row">주소</th>
+									<td>[02356] 서울시 동작구 동작동 동작아파트 101동 801호</td>
+								</tr>
+								<tr>
+									<th scope="row">배송 메세지</th>
+									<td>내용이 없습니다.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- //배송지 정보 -->
+
+				<!-- [D] 200218 참가자 정보 추가 -->
+				<div class="cont-group col2">
+					<h3 class="cont-tit">참가자 정보</h3>
+
+					<div class="txt-box ty02 participant">
+						<span class="participant_num">참가자 1</span>
+						<span class="participant_option">옵션 : 옵션명 표시</span>
+						<table>
+							<colgroup>
+								<col style="width:7.083rem;">
+								<col style="width:auto;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">이름</th>
+									<td>김홈런</td>
+								</tr>
+								<tr>
+									<th scope="row">휴대폰번호</th>
+									<td>01012345678</td>
+								</tr>
+								<tr>
+									<th scope="row">주소</th>
+									<td>[02356] 서울시 동작구 동작동 동작아파트 101동 801호</td>
+								</tr>
+								<tr>
+									<th scope="row">배송 메세지</th>
+									<td>내용이 없습니다.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="txt-box ty02 participant">
+						<span class="participant_num">참가자 2</span>
+						<span class="participant_option">옵션 : 옵션명 표시</span>
+						<table>
+							<colgroup>
+								<col style="width:7.083rem;">
+								<col style="width:auto;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">이름</th>
+									<td>김홈런</td>
+								</tr>
+								<tr>
+									<th scope="row">휴대폰번호</th>
+									<td>01012345678</td>
+								</tr>
+								<tr>
+									<th scope="row">주소</th>
+									<td>[02356] 서울시 동작구 동작동 동작아파트 101동 801호</td>
+								</tr>
+								<tr>
+									<th scope="row">배송 메세지</th>
+									<td>내용이 없습니다.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- //[D] 200218 참가자 정보 추가 -->
+
+				<!-- 결제금액 -->
+				<div class="cont-group">
+					<h3 class="cont-tit">결제금액</h3>
+
+					<div class="txt-box ty02">
+						<table>
+							<caption class="blind">결제금액</caption>
+							<colgroup>
+								<col style="width:7.083rem;">
+								<col style="width:*;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">결제방법</th>
+									<td>신용카드 결제</td>
+								</tr>
+								<tr>
+									<th scope="row">카드사</th>
+									<td>국민카드 4445 **** **** 1589</td>
+								</tr>
+								<tr>
+									<th scope="row">결제확인 일시</th>
+									<td>2019-01-01 PM 0:00:00</td>
+								</tr>
+								<tr>
+									<th scope="row">결제금액</th>
+									<td>82,900원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="payment-info">
+						<div class="price-list product">
+							<div class="total-price-info">
+								<em class="tit">총 상품금액</em>
+								<span class="price">83,000원</span>
+							</div>
+
+							<ul class="price-info">
+								<li>
+									<em class="tit">총 상품금액 (<em>3</em>건)</em>
+									<span class="price">80,000원</span>
+								</li>
+								<li>
+									<em class="tit">배송비</em>
+									<span class="price">(+) 3,000원</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="price-list discount">
+							<div class="total-price-info">
+								<em class="tit">총 할인금액</em>
+								<span class="price">- 2,070원</span>
+							</div>
+
+							<ul class="price-info">
+								<li>
+									<em class="tit">쿠폰할인</em>
+									<span class="price">0원</span>
+								</li>
+								<li>
+									<em class="tit">적립금할인</em>
+									<span class="price">0원</span>
+								</li>
+								<li>
+									<em class="tit">콘할인</em>
+									<span class="price">(-) 80원</span>
+								</li>
+								<li>
+									<em class="tit">예치금사용</em>
+									<span class="price">0원</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="price-list total">
+							<div class="total-price-info">
+								<em class="tit">총 결제금액</em>
+								<span class="price">000,000원</span>
+							</div>
+
+							<ul class="price-info">
+								<li>
+									<em class="tit">총 상품금액</em>
+									<span class="price">83,000원</span>
+								</li>
+								<li>
+									<em class="tit">총 할인금액</em>
+									<span class="price">(-) 000,000원</span>
+								</li>
+								<li>
+									<em class="tit">적립예정금액</em>
+									<span class="price">(+) 000,000원</span>
+								</li>
+								<li>
+									<em class="tit">편의점결제(수납번호)</em>
+									<span class="price">5205000005333</span>
+								</li>
+								<!-- [D] 200305 결제방법 추가 -->
+								<li>
+									<em class="tit">결제방법</em>
+									<span class="price color-orange">신용카드</span>
+								</li>
+								<!-- //[D] 200305 결제방법 추가 -->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //결제금액 -->
+
+				<div class="btn-comm-wrap">
+					<a href="" class="btn-comm btn-md bg-line">쇼핑 계속하기</a>
+					<a href="" class="btn-comm btn-md">나의 쇼핑정보</a>
+				</div>
+
+			</section>
+
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer class="footer" id="footer">
+
+			<div class="footer-info">
+				<div class="family-site">
+					<div class="selected">FAMILY SITE</div>
+					<ul class="site-list">
+						<li><a href="" target="_blank">사이트1</a></li>
+						<li><a href="" target="_blank">사이트2</a></li>
+					</ul>
+				</div>
+
+				<ul class="quick-menu">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">IR정보</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="">전자금융거래약관</a></li>
+				</ul>
+
+				<p class="address">(주)아이스크림에듀<br class="mo" />
+				<span>서울 강남구 테헤란로88길 15 (대치동) B1~16층</span><span>대표 : 조용상</span><br />
+				<span>상담 및 문의전화 : 1544-0910</span><span>팩스 : 02-3448-5262</span><br class="mo" />
+				<span>사업자등록번호 : 120-87-9700</span><br class="mo" />
+				<span>통신판매신고번호 : 제2013-서울강남-01379호</span><br />
+				<span>개인정보 및 청소년 보호 책임자 : 채수양</span></p>
+
+				<p class="copy">Copyright © i-Scream edu Corporation. All rights reserved.</p>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+		<div class="fixed-btn-wrap">
+			<a href="" class="btn-customer"><span class="icon customer"></span>고객센터</a>
+			<a href="" class="btn-apply"><span class="icon apply"></span>홈런신청</a>
+			<button type="button" class="btn-top">Top</button>
+		</div>
+	</div>
+	<!-- //wrap -->
+
+</body>
+</html>

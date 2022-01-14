@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런프렌즈</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap" class="h100p">
+		<!-- container -->
+		<div class="container p0">
+			<div style="padding:20px;text-align:center;"><button type="button" style="padding:10px;border:1px solid #ddd;" onclick="layerPop.show('popOrderRecentList');">popup open</button></div>
+
+			<!-- pop-wrap -->
+			<div id="popOrderRecentList" class="pop-wrap fixed pop-recent-list">
+				<div class="pop-wrap-inner">
+					<div class="pop-cont-inner w720">
+						<div class="pop-top-wrap">
+							<h5 class="pop-tit ty02">최근 목록</h5>
+						</div>
+
+						<ul class="company-info-data">
+							<li>
+								<div class="radio-box type2 single">
+									<input type="radio" name="list" id="list1" />
+									<label for="list1"></label>
+								</div>
+
+								<div class="col name">김홈런</div>
+								<div class="col contact">02-1234-1234</div>
+								<div class="col grade">3학년</div>
+								<div class="col gender">여자</div>
+
+								<button type="button" class="btn-delete">삭제</button>
+							</li>
+							<li>
+								<div class="radio-box type2 single">
+									<input type="radio" name="list" id="list2" />
+									<label for="list2"></label>
+								</div>
+
+								<div class="col name">홍길동</div>
+								<div class="col contact">02-1234-1234</div>
+								<div class="col grade">5학년</div>
+								<div class="col gender">남자</div>
+
+								<button type="button" class="btn-delete">삭제</button>
+							</li>
+						</ul>
+
+						<div class="btn-box full">
+							<a href="#" class="btn bg-gray03" onclick="layerPop.hide(this);return false;">창닫기</a>
+							<a href="#" class="btn bg-black">등록하기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //pop-wrap -->
+
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

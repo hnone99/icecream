@@ -1,0 +1,671 @@
+// ========================================================================
+// [reset]
+// ========================================================================
+.free-experience-box{
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+
+  div,
+  strong,
+  span,
+  a,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  button {
+    position: relative;
+  }
+
+  /*폰트 사이즈 자동조절 방지*/
+
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  var {
+    display: none;
+  }
+
+  sup {
+    top: -0.25em;
+  }
+
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td {
+    position: static;
+  }
+
+  th,
+  td {
+    vertical-align: middle;
+  }
+
+
+  img {
+    -webkit-touch-callout: none;
+    max-width: 100%;
+  }
+
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  blockquote,
+  q {
+    quotes: none;
+  }
+
+  blockquote {
+
+    &:before,
+    &:after {
+      content: '';
+      content: none;
+    }
+  }
+
+  q {
+
+    &:before,
+    &:after {
+      content: '';
+      content: none;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  a {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    max-width: 100%;
+    outline: none;
+
+    &.line:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span.ib {
+    display: inline-block;
+  }
+
+  input {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+
+    &[type=checkbox],
+    &[type=file],
+    &[type=radio] {
+      cursor: pointer;
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  button {
+    cursor: pointer;
+    background: none;
+    font-family: inherit;
+    border: 0;
+    overflow: visible;
+    padding: 0;
+    outline: none;
+    -webkit-appearance: button;
+  }
+
+  input {
+
+    &[type=text],
+    &[type=search],
+    &[type=password] {
+      border-radius: 0;
+      border: 1px solid #cfcfcf;
+    }
+  }
+
+  textarea {
+    border-radius: 0;
+    border: 1px solid #cfcfcf;
+  }
+
+  input {
+
+    &[type=text],
+    &[type=search],
+    &[type=password] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
+
+  textarea,
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 16px;
+    line-height: 1.5em;
+    vertical-align: top;
+  }
+
+  textarea {
+    box-sizing: border-box;
+    border: 1px solid #b5b5b5;
+  }
+
+  * {
+    &[disabled] {
+      opacity: 0.3;
+    }
+
+    &[readonly] {
+      background: #f5f5f5;
+    }
+  }
+
+  /* 텍스트 인풋에 자동완성 배경색 제거 */
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #000000;
+    transition: background-color 5000s ease-in-out 0s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  /**/
+  /*::-webkit-input-placeholder{ color:#cccccc; }*/
+  /*::-moz-placeholder{ color:#cccccc; }*/
+  /*:-ms-input-placeholder{ color:#cccccc; }*/
+  /*:-moz-placeholder{ color:#cccccc; }*/
+
+  caption,
+  .blind,
+  .hidden {
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .IR {
+    text-indent: -99999999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .top_grp>* {
+    vertical-align: top !important;
+  }
+
+  .middle_grp>* {
+    vertical-align: middle !important;
+  }
+
+  .bottom_grp>* {
+    vertical-align: bottom !important;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .preload {
+    position: fixed;
+    top: -10000px;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .float_clear:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .float_left {
+    float: left;
+  }
+
+  .float_right {
+    float: right;
+  }
+
+  .txtl {
+    text-align: left !important;
+  }
+
+  .txtc {
+    text-align: center !important;
+  }
+
+  .txtr {
+    text-align: right !important;
+  }
+
+  .vat {
+    vertical-align: top !important;
+  }
+
+  .vam {
+    vertical-align: middle !important;
+  }
+
+  .vab {
+    vertical-align: bottom !important;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .ell {
+    padding-right: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .under {
+    text-decoration: underline;
+  }
+
+  .hover_btn {
+    display: inline-block;
+    position: relative;
+
+    >img {
+      display: none;
+
+      &:first-child {
+        display: block;
+      }
+    }
+
+    &.on>img,
+    &:hover>img {
+      display: block;
+    }
+
+    &.on>img:first-child,
+    &:hover>img:first-child {
+      display: none;
+    }
+  }
+
+  .block {
+    display: block;
+    width: 100%;
+  }
+
+  .dim {
+    pointer-events: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+
+    /*
+  	  IE8이하는 rgba가 동작하지 않기 때문에 배경 투명도 적용을 위해 filter의 gradient을 대체 이용한다.
+  	  컬러값 60000000의 8자리 숫자의 의미: 앞 60 불투명도, 나머지 6자리 컬러값.
+  	  startColorstr와 endColorstr의 색을 같게 하여 배경 투명도 처리를 하는것.
+  	  하지만 원래는 그라데이션 처리하는 기법이기 때문에 같은 60% 투명도라고 해도 약간의 차이는 있다.
+  	*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#60000000, endColorstr=#60000000);
+    zoom: 1;
+
+    /* 일반적이진 않지만 ie6, 7 에서 적용 안되는경우 선언. */
+  }
+
+  .hbox {
+    font-size: 0;
+
+    * {
+      font-size: medium;
+    }
+  }
+
+  .kQueryGuide {
+    display: none;
+    top: 0px;
+    position: absolute;
+    z-index: 999999;
+    left: 50%;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .ls0 {
+    letter-spacing: 0 !important;
+  }
+
+  .ls25 {
+    letter-spacing: -0.025em;
+  }
+
+  .ls50 {
+    letter-spacing: -0.050em;
+  }
+
+  .ls75 {
+    letter-spacing: -0.075em;
+  }
+
+  .ls100 {
+    letter-spacing: -0.1em;
+  }
+
+  .noscroll {
+    overflow: hidden !important;
+  }
+
+  .hide_scroll {
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  a {
+    &[href^=mailto] {
+      color: #4d81d7;
+      letter-spacing: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &[href="javascript:void(0);"] {
+      cursor: default;
+    }
+
+    &.link {
+      color: #4d81d7;
+      letter-spacing: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .nopage {
+    text-align: center;
+    margin-top: 25px !important;
+    background: white;
+
+    >img {
+      width: 100%;
+      max-width: 600px !important;
+      vertical-align: top;
+    }
+  }
+
+  /**/
+
+  .noitem {
+    background: #eeeeee;
+    color: #666666;
+    letter-spacing: -0.1em;
+    font-size: 16px;
+    outline: 1px solid #dddee0;
+    box-shadow: 0px 0px 10px #dddee0;
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+
+    >span {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+
+      &:before {
+        background: url(../../../images/common/ic_warn.png) no-repeat;
+        width: 20px;
+        height: 19px;
+        margin-right: 5px;
+        content: '';
+        display: inline-block;
+      }
+    }
+  }
+
+  /**/
+
+  .tbbs {
+    background: #eeeeee;
+    color: #666666;
+    letter-spacing: -0.1em;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 2px dashed #dddee0;
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    height: 420px;
+
+    >span {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+
+  /* #skip */
+
+  #skip {
+    z-index: 999999;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      line-height: 0;
+      vertical-align: top;
+      text-align: center;
+      font-size: 0;
+      font-weight: normal;
+      white-space: nowrap;
+
+      &:active,
+      &:focus,
+      &:hover {
+        width: auto;
+        height: auto;
+        line-height: normal;
+        font-size: 16px;
+        color: white;
+        padding: 12px 40px;
+        background: #333333;
+        z-index: 999999;
+      }
+    }
+  }
+
+  /**/
+
+  .pdf_box {
+    position: relative;
+    height: 0;
+    padding-bottom: 141.42%;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+
+    >* {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /**/
+
+  .fs0 {
+    font-size: 0;
+  }
+
+  /**/
+
+  #pixelParallel {
+    position: static;
+  }
+
+  /**/
+
+  .over_box {
+    overflow: hidden;
+  }
+
+  /*다음지도 꽉차게*/
+
+  .root_daum_roughmap {
+    width: 100% !important;
+  }
+
+  /**/
+
+  .pic>div>img {
+    vertical-align: top;
+  }
+
+  /**/
+
+  .img_map_box {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+
+    > {
+      img {
+        vertical-align: top;
+      }
+
+      a {
+        display: block;
+        font-size: 0;
+        z-index: 5;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+    }
+  }
+
+  .is_sogood .img_map_box>a {
+    background: rgba(255, 0, 0, 0.3);
+
+    &:focus {
+      outline: 1px dashed red;
+      box-shadow: 0px 0px 10px cornflowerblue;
+      background: rgba(255, 0, 0, 0.6);
+    }
+  }
+}

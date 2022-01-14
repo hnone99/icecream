@@ -1,0 +1,40 @@
+// ========================================================================
+// [page] | 무료체험
+// ========================================================================
+@media all and (max-width: 960px){
+  .free-experience-box{
+    padding-top: 50px;
+    .fe-title{
+      margin: 0 auto;
+      text-align: center;
+      font-size: 40px;
+      font-weight: $fw-black;
+      .title-txt{
+        display: block;
+        line-height: 1.2em;
+        letter-spacing: -1.6px;
+        &.txt1{
+          color: #ff7602;
+        }
+        &.txt2{
+          font-size: 31px;
+        }
+      }
+      .title-info{
+        margin-top: 12px;
+        font-size: 19px;
+        font-weight: $fw-light;
+        color: #888888;
+        letter-spacing: -1.24px;
+        line-height: 1.4em;
+        .dp-inlne{
+          display: block;
+        }
+      }
+    }
+    .layout_750{
+      width: 100%;
+      padding: 0 30px;
+    }
+  }
+}

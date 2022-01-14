@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-title" content="i-Scream" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="i-Scream"/>
+  <meta name="keywords" content="i-Scream"/>
+  <title>아이스크림 에듀 에코 판매관리</title>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/fonts/fontAwesomepro.css"/>
+  <script src="../js/bundle.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body class="bg-light">
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+  }
+</style>
+
+<div class="page_login">
+  <div class="area">
+    <div class="inner">
+      <div class="title"  data-text="CR_0001_03">로그인</div>
+      <div class="form">
+        <div class="id">
+          <input class="form-control form-control-sm" title="" type="text" placeholder="ID">
+        </div>
+        <div class="pw">
+          <input class="form-control form-control-sm" title="" type="text" placeholder="Password">
+        </div>
+        <div class="error">
+          <p>존재하지 않는 아이디 입니다.</p>
+        </div>
+      </div>
+      <div class="save_id">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" title="checkbox">
+          <label class="custom-control-label" data-text="LJ_0001_06">아이디 저장</label>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block"  data-text="CR_0001_03">로그인</button>
+      <div class="list-bottom">
+        <ul class="clearfix">
+          <li><a href="#" data-text="LJ_0001_08">아이디찾기</a></li>
+          <li><a href="#" data-text="LJ_0001_09">비밀번호찾기</a></li>
+          <li><a href="#">관리자 등록하기</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- S popup -->
+<div class="modal fade bd-example-modal-xl stateChangeDetailList show" tabindex="-1" role="dialog"
+     aria-labelledby="stateChangeDetailList" style="z-index: 1040; padding-right: 17px; display: block;"
+     aria-modal="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title" id="stateChangeDetailList" data-text="LJ_0005_01">비밀번호 재설정</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body pb-0">
+        <div class="info-box mb-2 clearfix">
+          <div class="info">
+            <span class="" data-text="LJ_0005_02">비밀번호를 변경한지 N개월이 지났습니다. 새로운 비밀번호로 재설정 바랍니다.</span>
+          </div>
+        </div>
+        <div class="table table-vertical mb-0">
+          <table class="v-table">
+            <colgroup>
+              <col style="width: 30%;">
+              <col style="width: 70%;">
+            </colgroup>
+            <tbody>
+            <tr>
+              <td data-text="LJ_0005_03">새 비밀번호<i class="fas fa-check icon-check"></i></td>
+              <td><input class="form-control form-control-sm" title="" type="text" data-placeholder="LJ_0005_04" placeholder="영문 대소문자, 숫자, 특수문자 조합 (8~16자)"></td>
+            </tr>
+            <tr>
+              <td data-text="LJ_0005_05">새 비밀번호 확인<i class="fas fa-check icon-check"></i></td>
+              <td><input class="form-control form-control-sm" title="" type="text" placeholder="비밀번호 재입력" data-placeholder="LJ_0005_06" ></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-text="LJ_0005_07">저장</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- E popup -->
+<div class="modal-backdrop fade show modal-stack" style="z-index: 1039;"></div>
+</body>
+</html>

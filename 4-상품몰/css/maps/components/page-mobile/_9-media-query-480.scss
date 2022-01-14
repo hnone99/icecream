@@ -1,0 +1,212 @@
+// ========================================================================
+// [] | 미디어쿼리
+// ========================================================================
+// 480px 이하 대응
+@media all and (max-width: 479px){
+  .ui-new{
+    .ui-header-box{
+      height: auto;
+    }
+    .header-logo{
+      position: relative;
+      bottom: 0;
+      left: 0;
+      margin-top: 16px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .header-tab{
+      .tab-list-grp{
+        position: relative;
+        right: 0;
+        text-align: center;
+      }
+    }
+    .tabs.new-tabs{
+      .list{
+        width: 77%;
+        li{
+          padding: 15px 0;
+        }
+      }
+    }
+    .tag-list{
+      .card-list{
+        .px-md-no{
+          justify-content: center;
+        }
+      }
+    }
+    // 하단
+    footer{
+      .footer-ceo,
+      .footer-fax{
+        display: block;
+        margin-left: 0;
+      }
+    }
+    // --------------------------------------------------
+    .search-box{
+      .form-control{
+        padding: 0 130px 0 30px;
+      }
+      .input-group{
+        &::before{
+          left: 36px;
+        }
+        .btn-search-back{
+          padding: 18px 12px;
+        }
+      }
+    }
+    .sub-menu-area{
+      .sub-menu{
+        margin: 0 24px;
+      }
+    }
+  }
+  // 상품몰 상단
+  .ui-new.ui-product-mall{
+    .search-box{
+      .form-control{
+        padding: 0 180px 0 12px;
+      }
+    }
+  }
+  //--------------------------------------------------
+  .ui-new{
+    // 상세
+    .detail-card {
+      .card-name{
+        height: auto;
+        padding-left: 0;
+        text-align: center;
+        .app-icon{
+          position: relative;
+          display: inline-block;
+        }
+        .title{
+          margin-top: 26px;
+        }
+      }
+      .card-price{
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 20px;
+        .total_price{
+          text-align: center;
+          .range{
+            text-align: center;
+          }
+        }
+      }
+      .card-info{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+    .detail-card-spec {
+      .spec{
+        .tit{
+          position: relative;
+          left: 0;
+        }
+        .desc{
+          margin-left: 0;
+        }
+      }
+    }
+    .detail-wide{
+      .detail-wide-wrap{
+        padding: 0 0 0 30px;
+      }
+    }
+    .detail-slider{
+      margin: 52px 0 90px 0;
+      .video-area-1{
+        width: 260px;
+        height: 160px;
+        iframe{
+          width: 260px;
+          height: 160px
+        }
+      }
+      .slick-slide{
+        img{
+          width: 260px;
+          height: 160px
+        }
+      }
+    }
+    .detail-review .review-reply{
+      .list-wrap .help{
+        position: relative;
+        top: 0;
+      }
+      .list .article .date::before{
+        width: 1px;
+      }
+    }
+    //--------------------------------------------------
+    // 서브 페이지
+    .ui-detail-box{
+      .ui-detail-box-wrap{
+        padding: 30px 20px;
+      }
+    }
+    //--------------------------------------------------
+    // 마이페이지
+    .ui-mypage-box{
+      .my-info-area{
+        .btn-modify{
+          top: 59px
+        }
+      }
+    }
+    // 학생별 학습 현황
+    .mypage .pay-list li{
+      padding-right: 60px;
+    }
+    .mypage .scroll-x .nav-item{
+      margin: 0;
+      padding: 0 2px;
+      font-size: 13px;
+    }
+    //로그인
+    .member.login .util-group a{
+      padding: 0 8px;
+    }
+    //고객센터
+    .nav-tabs-detail{
+      width: 100%;
+      height: 50px;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+      .nav-item{
+        height: 100%;
+        line-height: 20px;
+      }
+      .nav-link{
+        padding: 0 13px;
+      }
+    }
+    //--------------------------------------------------
+    // 결제
+    .payment > .btn-wrap .btn{
+      min-width: 120px;
+    }
+    .payment .p-info .accordion .card .card-body .total-bottom ul li{
+      padding-bottom: 10px;
+    }
+    .cs-center .form-group + .buttons .btn{
+      min-width: 130px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+// ========================================================================
+// [study_exp_free_renewal]
+// ========================================================================
+.free-experience-box{
+  font-family: $base-font;
+  section.section{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .txtc{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .radio_label {
+    position: absolute;
+    top: 12px;
+    width: 53px;
+    height: 23px;
+    border-radius: 3px;
+    color: #fff;
+    background: #f55619;
+    text-align: center;
+    line-height: 23px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .rdoui {
+    margin-right: 15px;
+  }
+  .radio_group {
+    margin-left: 75px;
+  }
+  .chkui {
+    display: block;
+    line-height: 1.4em;;
+
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 20px;
+      border-bottom: 1px solid #a7a7a7;
+      color: #a7a7a7;
+      font-size: 15px;
+    }
+
+    >input[type=checkbox]+div:before {
+      height: 20px;
+    }
+  }
+  .text190822141657 {
+    display: none;
+    margin-top: 10px;
+  }
+  .ul {
+    margin: 10px 0 20px;
+    color: #a6a6a6;
+    font-size: 15px;
+    letter-spacing: -0.045em;
+    line-height: 25px;
+    .color1 {
+      font-weight: $fw-bold;
+      font-size: 17px;
+    }
+  }
+  .color1 {
+    color: #eb643c !important;
+  }
+  .star:before {
+    font-style: normal;
+    color: orangered;
+    content: '*';
+    display: inline-block;
+  }
+}
+@media all and (max-width: 767px) {
+  .free-experience-box{
+    .ul {
+      font-size: 20px;
+      line-height: 32px;
+    }
+    .fe-title .title-txt{
+      &.txt1{
+        font-size: 30px;
+      }
+      &.txt2{
+        font-size: 22px;
+      }
+    }
+    a.btnui1{
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+}

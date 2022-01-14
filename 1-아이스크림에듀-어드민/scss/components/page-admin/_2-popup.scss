@@ -1,0 +1,24 @@
+.popupWrap .popupHead{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #494b50;
+  color: #fff;
+  z-index: 10000;
+}
+.popupWrap .popupHead h1{
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: $fw-bold;
+}
+.popupWrap .popupSub{
+  position: relative;
+  margin-top: 52px;
+}
+.popupWrap .popupSub h2{
+  padding: 20px;
+  font-size: 18px;
+  font-weight: $fw-bold;
+  text-align: left;
+}

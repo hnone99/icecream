@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런프렌즈</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap" class="h100p">
+		<!-- container -->
+		<div class="container p0">
+			<div style="padding:20px;text-align:center;"><button type="button" style="padding:10px;border:1px solid #ddd;" onclick="layerPop.show('pop-login');">popup open</button></div>
+
+			<!-- pop-wrap -->
+			<div id="pop-login" class="pop-wrap alert ty02">
+				<div class="pop-wrap-inner">
+					<!-- pop-cont-inner -->
+					<div class="pop-cont-inner">
+						<!-- pop-group -->
+						<div class="pop-group">
+							<div class="pop-top-wrap">
+								<h5 class="pop-tit">비밀번호 변경안내</h5>
+							</div>
+							<div class="txt-box">
+								<img src="../images/common/lock.png" alt="">
+								<p class="txt">회원님의 개인정보 보호를 위해 비밀번호를 변경해주세요.</p>
+								<p class="txt desc">콘가게에서는 회원님의 개인정보 보호를 위해 장기간 비밀번호를  유지중인 경우 비밀번호 변경을 안내해드리고 있습니다.</p>
+								<p class="txt desc">회원님의 소중한 개인정보보호를 위해 불편하시더라도주기적으로 비밀번호를 변경하시기 바랍니다.</p>
+							</div>
+							<ul class="btn-box">
+								<li>
+									<div class="btn-inner">
+										<button class="btn line-black" onclick="layerPop.hide(this)">3개월 후 알림</button>
+									</div>
+								</li>
+								<li>
+									<div class="btn-inner">
+										<a href="javascript:void(0)" class="btn bg-black">변경</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //pop-group -->
+					</div>
+					<!-- //pop-cont-inner -->
+					<!-- pop-cont-inner -->
+					<div class="pop-cont-inner w390" style="display:none;">
+						<p class="txt">입력하신 정보와 일치하는 주문내역이 없습니다.</p>
+
+						<p class="txt">아이디 또는 비밀번호가 일치하지 않습니다.</p>
+
+						<p class="txt"><span class="color-orange">사용가능</span><br>사용할 수 있는 아이디입니다.</p> <!-- [D] 200219 팝업 추가 -->
+						
+						<div class="btn-box">
+							<a href="#" class="btn bg-black" onclick="layerPop.hide('pop-login')">확인</a>
+						</div>
+					</div>
+					<!-- //pop-cont-inner -->
+				</div>
+			</div>
+			<!-- //pop-wrap -->
+
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

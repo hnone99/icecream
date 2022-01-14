@@ -1,0 +1,226 @@
+// ========================================================================
+// [common] | 공통
+// ========================================================================
+@media all and (max-width: 479px){
+  .ui-new{
+    .ico{
+      // 상단 메뉴
+      &.i-top-menu{
+        @include bg-img-size(15px, 15px, $imgMobilePath, 'top-i-mo-menu@2x');
+      }
+      // 상단 검색
+      &.i-top-search{
+        @include bg-img-size(15px, 15px, $imgMobilePath, 'i-top-search@2x');
+      }
+      // 모바일 - 이전
+      &.i-top-btn-prev{
+        @include bg-img-size(24px, 24px, $imgMobilePath, 'i-top-btn-prev@2x');
+        background-position: 10px 2px;
+      }
+      &.i-top-btn-next{
+        @include bg-img-size(13px, 21px, $imgMobilePath, 'i-top-btn-next@2x');
+        vertical-align: middle;
+      }
+      // 모바일 - 검색 뒤로가기
+      &.i-search-btn-back{
+        @include bg-img-size(9px, 15px, $imgMobilePath, 'i-search-btn-prev@2x');
+      }
+      // 모바일 - 홈
+      &.i-top-btn-home{
+        @include bg-img-size(24px, 24px, $imgMobilePath, 'i-top-btn-home@2x');
+      }
+      // 모바일 - 닫기
+      &.i-top-btn-close{
+        @include bg-img-size(14px, 13px, $imgMobilePath, 'i-top-close@2x');
+      }
+      // 모바일 - 바스켓
+      &.i-top-basket{
+        @include bg-img-size(21px, 23px, $imgMobilePath, 'i-top-basket@2x');
+      }
+      // 상품몰 서브 타이틀
+      &.title-mall{
+        @include bg-img-size(33px, 16px, $imgMobilePath, 'sub-title-mall@2x');
+        margin-left: 3px;
+      }
+      // 배지 홈런전용
+      &.i-badge-homelearn,
+      &.i-badge-free,
+      &.i-badge-half,
+      &.i-badge-pakage,
+      &.i-badge-released{
+        height: 16px;
+        line-height: 14px;
+        border-width: 1px;
+        padding: 0 3px;
+        border-radius: 5px;
+      }
+    }
+    //------------------------------------------------------------
+    .content{
+      // 더보기 버튼
+      .btn.btn-more{
+        font-size: 11px;
+        .txt{
+          color: #202020;
+          &::before{
+            @include bg-img-size(10px, 6px, $imgNewPath, detail-i-arrow-open);
+            margin-top: -3px;
+          }
+        }
+      }
+    }
+    //------------------------------------------------------------
+    // 하단 버튼
+    .sticky-btn{
+      &.new-sticky-btn{
+        height: auto;
+        padding: 13px 30px 10px 30px;
+        border-top: 1px solid #e1e1e1;
+        background-color: #eeeeee;
+        .cont{
+          width: 100%;
+          text-align: center;
+          font-size: 0;
+          .product-name,
+          .product-price,
+          .product-btn{
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 30px;
+            vertical-align: middle;
+          }
+          .product-name{
+            margin-bottom: 5px;
+            font-size: 13px;
+            font-weight: $fw-medium;
+            color: #202020;
+            &.device-pc{
+              display: none;
+            }
+            &.device-mo{
+              display: block;
+            }
+          }
+          .product-price{
+            display: none;
+            font-size: 0;
+            font-family: $sub-font;
+            .txt-price{
+              font-weight: $fw-bold;
+              font-size: 30px;
+            }
+            .txt-unit{
+              font-weight: $fw-regular;
+              font-size: 30px;
+            }
+            .txt-line{
+              font-weight: $fw-regular;
+              margin: 0 5px;
+              font-size: 29px;
+            }
+            .txt-info{
+              font-size: 17px;
+            }
+          }
+          .product-btn{
+            display: block;
+            margin: 0 auto;
+            a.btn{
+              max-width: 260px;
+              margin: 0 10px;
+              margin-bottom: 5px;
+              &:last-child{
+                margin-bottom: 0;
+              }
+            }
+          }
+          .btn{
+            width: 100%;
+            min-width: 216px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0;
+            padding: 0 36px;
+            border: 0 none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: $fw-regular;
+            border: 1px solid #d25400;
+            background-color: #ff7602;
+            &.btn-middle{
+              border: 1px solid #04b3be;
+              background-color: #08d1de;
+            }
+            &.btn-study{
+              border: 1px solid #c9c8c8;
+              background-color: #dcdcdc;
+              color: #acacac;
+            }
+          }
+        }
+        .product-price{
+          display: none;
+        }
+      }
+    }
+    //------------------------------------------------------------
+    // 하단 플로팅 버튼
+    .fixed-btn{
+      .cs,
+      .top{
+        width: 37px;
+        height: 37px;
+        box-shadow: 0 0 5px #dcdcdc;
+      }
+      .cs{
+        &::before{
+          @include bg-img-size(27px, 21px, $imgMobilePath, 'i-bottom-cs@2x');
+          margin-top: -10px;
+          margin-left: -13px;
+        }
+      }
+      .top{
+        &::before{
+          @include bg-img-size(13px, 17px, $imgMobilePath, 'i-bottom-top@2x');
+          margin-top: -8px;
+          margin-left: -7px;
+        }
+      }
+    }
+    &.sub-page{
+      .fixed-btn{
+        &.on{
+          bottom: 150px;
+        }
+      }
+    }
+    footer{
+      .container-footer{
+        padding: 18px;
+        // 서브 페이지 하단 버튼 생길 때
+        &.on{
+          padding: 18px 18px 140px 18px
+        }
+      }
+      .footer-ceo,
+      .footer-fax{
+        display: block;
+        margin-left: 0;
+      }
+      .family{
+        // height: 26px;
+        // padding: 0 20px;
+        .input-group{
+          height: 100%;
+        }
+      }
+      .address,
+      .copyright{
+        font-size: 12px;
+      }
+      .policy li{
+        font-size: 12px;
+      }
+    }
+  }
+}

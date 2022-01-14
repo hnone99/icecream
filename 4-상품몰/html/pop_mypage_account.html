@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런프렌즈</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap" class="h100p">
+		<!-- container -->
+		<div class="container p0">
+			<div style="padding:20px;text-align:center;"><button type="button" style="padding:10px;border:1px solid #ddd;" onclick="layerPop.show('pop-account');">popup open</button></div>
+
+			<!-- pop-wrap -->
+			<div id="pop-account" class="pop-wrap fixed account">
+				<div class="pop-wrap-inner">
+					<!-- pop-cont-inner -->
+					<div class="pop-cont-inner w720">
+						<!-- pop-group -->
+						<div class="pop-group">
+							<div class="pop-top-wrap">
+								<h5 class="pop-tit ty02">환불계좌 관리</h5>
+							</div>
+							<ul class="data-list">
+								<li>
+									<div class="chk-custom single">
+										<input type="checkbox" name="product" id="chk1">
+										<label for="chk1"><span></span>기본계좌로 설정</label>
+									</div>
+									<div class="inp-inner">
+										<em class="tit">계좌명</em>
+										<div class="cont"><input type="text" class="inp-txt" placeholder="내용을 입력해주세요."></div>
+									</div>
+								</li>
+								<li>
+									<div class="inp-inner">
+										<em class="tit">은행</em>
+										<div class="cont">
+											<div class="inp-sel-box">
+												<select class="select">
+													<option>선택</option>
+													<option>옵션1</option>
+													<option>옵션2</option>
+													<option>옵션3</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<em class="tit">계좌번호</em>
+									<div class="cont"><input type="number" class="inp-num" placeholder="('-' 없이 숫자만 입력)"></div>
+								</li>
+								<li>
+									<em class="tit">예금주</em>
+									<div class="cont">
+										<input type="text" readonly="readonly" value="홍길동">
+										<p class="desc">예금주명은 회원명과 동일해야 하므로 입력 및 수정하실 수 없습니다.</p>
+									</div>
+								</li>
+							</ul>
+							<div class="txt-box alert">
+								<p class="txt-alert ty02">주의</p>
+								<p class="txt">고객 불찰로 인한 환불 사고 발생 시 그책임은 고객님께 있습니다.</p>
+							</div>
+							<ul class="btn-box bd-none">
+								<li>
+									<div class="btn-inner">
+										<button class="btn bg-gray03" onclick="layerPop.hide(this)">창닫기</button>
+									</div>
+								</li>
+								<li>
+									<div class="btn-inner">
+										<a href="javascript:void(0)" class="btn bg-black">확인</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //pop-group -->
+					</div>
+					<!-- //pop-cont-inner -->
+				</div>
+			</div>
+			<!-- //pop-wrap -->
+
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

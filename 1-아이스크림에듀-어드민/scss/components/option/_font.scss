@@ -1,0 +1,41 @@
+// ========================================================================
+// [font] | 폰트
+// ========================================================================
+@font-face {
+	font-family: "NanumSquareWebFont";
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+	src:
+	local("NanumSquare"),
+  url("https://xcdn.home-learn.com/homelearn/fonts/NanumSquare/NanumSquareL.woff") format("woff");
+}
+
+@font-face {
+	font-family: "NanumSquareWebFont";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src:
+	local("NanumSquare"),
+  url("https://xcdn.home-learn.com/homelearn/fonts/NanumSquare/NanumSquareR.woff") format("woff");
+}
+
+@font-face {
+	font-family: "NanumSquareWebFont";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src:
+	local("NanumSquare"),
+  url("https://xcdn.home-learn.com/homelearn/fonts/NanumSquare/NanumSquareB.woff") format("woff");
+}
+@font-face {
+	font-family: "NanumSquareWebFont";
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+	src:
+	local("NanumSquare"),
+  url("https://xcdn.home-learn.com/homelearn/fonts/NanumSquare/NanumSquareEB.woff") format("woff");
+}

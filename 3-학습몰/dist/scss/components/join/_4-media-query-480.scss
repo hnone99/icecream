@@ -1,0 +1,128 @@
+// ========================================================================
+// [무료체험] 480미만 대응
+// ========================================================================
+@media all and (max-width: 480px) {
+  hr{
+    margin: 20px 0;
+  }
+  .free-experience-box{
+    .fe-title{
+      .title-txt{
+        &.txt1 {
+         font-size: 26px;
+        }
+        &.txt2 {
+         font-size: 22px;
+        }
+      }
+      .title-info{
+        font-size: 14px;
+      }
+    }
+    .layout_750{
+      padding: 0 20px;
+    }
+    .txt190821130329{
+      margin-top: 14px;
+    }
+    .text190822141657{
+      padding: 10px;
+      margin-top: 0;
+      font-size: 12px;
+    }
+    .variable_shape_box{
+      .cell:nth-child(3){
+        width: 80px !important;
+      }
+    }
+    .variable_shape_box > .cell{
+      height: auto;
+    }
+    .smsDiv2{
+      .variable_shape_box{
+        .cell:nth-child(1){
+          width: auto !important;
+          .ftxt1{
+            font-size: 14px;
+          }
+        }
+        .cell:nth-child(2){
+          width: 130px !important;
+        }
+        .cell:nth-child(3){
+          width: 10px !important;
+        }
+        .cell:nth-child(4){
+          width: 80px !important;
+        }
+      }
+    }
+
+
+    .radio_group{
+      margin-left: 56px;
+    }
+    .radio_label{
+      top: 10px;
+      width: 46px;
+      height: 18px;
+      line-height: 18px;
+      font-size: 12px;
+    }
+    .ul{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .ul .color1{
+      font-size: 14px;
+    }
+  }
+  a.btnui1{
+    font-size: 18px;
+    line-height: 50px;
+  }
+  .desc0 {
+    font-size: 14px;
+  }
+  .rdoui {
+    line-height: 40px;
+    font-size: 14px;
+  }
+  .rdoui > input[type=radio] + div {
+    padding-left: calc(26px + 5px);
+  }
+  .rdoui > input[type=radio] + div:before{
+    width: 24px;
+  }
+  .resfonsive_form_box > .item > .inner > div.label{
+    font-size: 13px
+  }
+  .resfonsive_form_box > .item > .inner > div.control .input0{
+    height: 40px;
+    font-size: 14px;
+  }
+  .resfonsive_form_box > .item > .inner > div.control .button0{
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    font-size: 14px;
+  }
+  .chkui {
+    font-size: calc(10px + 4px);
+  }
+  .chkui button{
+    margin: 10px 0;
+    font-size: 13px !important;
+  }
+  .chkui1 > input[type=checkbox] + div {
+    height: 50px;
+    line-height: 48px;
+    font-size: 14px;
+  }
+  .chkui > input[type=checkbox] + div:before{
+    top: 0;
+  }
+  .chkui1 > input[type=checkbox] + div:before{
+    height: 50px;
+  }
+}

@@ -1,0 +1,52 @@
+// ========================================================================
+// [] | 미디어쿼리
+// ========================================================================
+// bootstrap.css 1280으로 작성된 부분 수정
+// @media all and (min-width: 1280px){
+.ui-new{
+  .wrap{
+    padding-top: 0;
+  }
+  .container{
+    &.new-container{
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      .container-sm,
+      .container-md,
+      .container-lg,
+      .container-xl{
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  .search-box{
+    position: absolute;
+    top: 0;
+    left: inherit;
+    right: 85px;
+    padding: 0;
+  }
+  .search-box .input-group {
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    .btn-search-back{
+      display: none;
+    }
+  }
+  .search-box .search-content {
+    margin: 0;
+    padding: 18px 20px 18px 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.96);
+  }
+  .detail-page{
+    padding-top: 16px;
+    border-top: 0 none;
+  }
+}
+// }

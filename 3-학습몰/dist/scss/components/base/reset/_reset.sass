@@ -1,0 +1,263 @@
+//
+// * --------------------------------
+// * 기본 공통 모듈
+// * --------------------------------
+// 하이브리드웹앱
+// 1. 모달, 숨김/펼침 메뉴 등 숨기는 UI 처리에 3D css 가속 사용
+// display:none + -webkit-transform: translate3d(0px,0px,0px);
+// 2. 가속도 스트롤링
+// overflow: auto + -webkit-overflow-scrolling: touch;
+//
+
+html
+	font-family: $base-font
+	font-size: $base-size
+	font-weight: $base-weight
+	color: $base-color
+	// line-height: $base-line
+
+	+ios-support
+		-webkit-text-size-adjust: none
+		-ms-text-size-adjust: none
+// ios 뷰포트 변환시 폰트크기 자동확대 방지
+
+html, body
+	width: 100%
+	height: 100%
+	margin: 0
+	padding: 0
+body
+	// +font-size
+
+div, span, object, iframe, p, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, textarea, figure, figcaption, footer, header, hgroup, menu, main, nav, section, audio, video, input, button, select
+	margin: 0
+	padding: 0
+	font-family: inherit
+	font-size: inherit
+	color: inherit
+	word-wrap: break-word
+	// 영문 단어별 띄워쓰기, 특수문자 포함 강제 줄바꿈, aaaaaaaaa같은 영문 대응
+	vertical-align: baseline
+	line-height: inherit
+
+	// +word-break
+	// word-wrap: break-all // 한글 단어별 띄어쓰기 안함
+	// word-wrap: keep-all //한글 띄워쓰기 기준 개행
+	// word-break: keep-all // 띄워쓰기, 특수문자 제외 강제 줄바꿈
+	// word-break: break-all // 영문 단어별 띄어쓰기 안함
+	// word-break: break-word // 영문 단어별 띄어쓰기
+
+	+mobile-support
+		// firefox, chrome, safari, opera
+		-webkit-font-smoothing: antialiased
+		// text-shadow 포함
+		// @extend %font-smoothing
+
+h1, h2, h3, h4, h5, h6
+	font-family: inherit
+	color: inherit
+	margin: 0
+	padding: 0
+
+
+//
+//  * Correct `block` display not defined for any HTML5 element in IE 8/9.
+//  * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox
+//  * Correct `block` display not defined for `main` in IE 11.
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary
+	display: block
+
+//
+// * 1. Correct `inline-block` display not defined in IE 8/9.
+// * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+audio, canvas, progress, video
+	display: inline-block
+	vertical-align: baseline
+// ie
+  display: inline
+  zoom: 1
+
+//
+ // * Prevent modern browsers from displaying `audio` without controls.
+ // * Remove excess height in iOS 5 devices.
+// audio:not([controls])
+// 	display: none
+// 	height: 0
+
+//
+// * Correct overflow not hidden in IE 9/10/11.
+// svg:not(:root)
+// 	overflow: hidden
+
+em, address
+	font-style: normal
+
+dl, ul, ol, li
+	list-style: none
+
+//
+// * 모바일웹앱 작업시 이미지 터치 - 다른이름으로 저장  팝업 UI 제거
+// * http://phonegap-tips.com/articles/essential-phonegap-css-webkit-touch-callout.html
+img
+	-webkit-touch-callout: none
+
+img, fieldset
+	border: 0 none
+
+img, input, select, textarea, i, span, em
+	vertical-align: baseline
+
+// img
+// 	+ie-support
+// 		width: inherit
+// 	+mobile-support
+// 		max-width: 100%
+// 		height: auto
+
+a
+	text-decoration: none
+	+mobile-support
+		outline: 0
+		-webkit-tap-highlight-color: rgba(0,0,0,0.2)
+		// 모바일 이미지 or 텍스트 터치시 해당 위치 표시하는 하이라이트 색상 바꾸기
+		-webkit-tap-highlight-color: transparent
+		// 일부 안드로이드 호환을 위한 코드
+		// http://phonegap-tips.com/demos/webkit-tap-highlight-color.html
+		// -webkit-user-select: none; // 선택 기능 자체 제거
+
+a, button
+	cursor: pointer
+
+a, a:link, a:active, a:hover
+	text-decoration: none
+	color: $link-color
+
+a::hover
+	text-decoration: underline
+
+// dotted outline
+a::active, a::hover
+	outline: 0
+
++select-support
+	select
+		+mobile-support
+			border-radius: 0
+		+android-support
+			//안드로이드 화살표 아이콘 보이게 함
+			-webkit-apperance: listbox
+			-moz-apperance: listbox
+			appearance: listbox
+
+			// 안드로이드 화살표 아이콘 없앰
+			// -webkit-appearance: none
+			// -moz-appearance: none
+			// appearance: none
+			// background: url(../images/select_arrow.png) no-repeat 95% center
+
+		// &::-ms-expand // IE 10+ 화살표 아이콘 없앰
+		// 	display: none
+
+
+// * 하일라이트 색상 변경 ?!
+// &::selection
+// 	background: $select-color
+// &::-moz-selection
+// 	background: $select-color
+// &::-webkit-selection
+// 	background: $select-color
+
+// * ie6,7 padding bug
+// input, button
+// 	+ie-support
+// 		overflow: visible
+
+// * IE10이상 input 포커스시 x표시 삭제
+// input[type=text]::-ms-clear
+// 	display: none
+
+// input:checked[type='checkbox']
+// 	background: $input-checkbox-color
+// 	-webkit-apperance: checkbox
+
+// input[type='text'], input[type='password'], input[type='search'], input[type='tel'], input[type='email'], input[type='submit'], input[type='file'], input[type="button"]
+// 	-webkit-appearance: none
+// 	border-radius: 0
+
+// input[type="button"], input[type="submit"], input[type="file"]
+// 	cursor: pointer
+
+// input[type='search']::-webkit-search-cancle-button
+// 	-webkit-appearance: none
+
+// button[disabled='disabled']
+// 	cursor: default
+
+// * ios color
+// +ios-support
+// 	input[disabled]
+// 		-webkit-text-fill-color: $input-disabled-color
+// 		-webkit-opacity: 1
+
+// * placeholder
++placeholder-support
+	input[placeholder]
+		line-height: 1
+
+	input
+		&::-webkit-input-placeholder
+			//Chrome, Opera, Safari
+			text-align: $placeholder-text-align
+			color: $placeholder-color
+		&::-moz-placeholder
+			// Firefox 19+
+			text-align: $placeholder-text-align
+			color: $placeholder-color
+		&:-moz-placeholder
+			text-align: $placeholder-text-align
+			color: $placeholder-color
+		&:-ms-input-placeholder
+			// IE 10+
+			text-align: $placeholder-text-align
+			color: $placeholder-color
+		&:focus::-webkit-input-placeholder
+			opacity: 0
+		&:focus::-moz-placeholder
+			opacity: 0
+		&:focus::-ms-input-placeholder
+			opacity: 0
+
+// * table
+// table
+// 	border-collapse: collapse
+// 	border-spacing: 0
++table-support
+	table
+		border-collapse: collapse
+		border-spacing: 0
+
+// table
+// 	@extend %reset-table
+// #skip, .blind, legend, caption
+// 	@extend %blind
+// #skip
+// 	@extend %skip
+// .clearfix, .cf
+// 	@extend %cf
+// .ellipsis
+// 	@extend %ellipsis
+// //img-replacement
+// .ir
+// 	@extend %ir

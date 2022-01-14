@@ -1,0 +1,200 @@
+// ========================================================================
+// [open] | 오픈페이지 - 상품몰/학습몰 동일
+// 하이스토어에서 사용하던 소스 복사함 https://shop.homelearnfriends.com/main/index.do
+// ========================================================================
+$imgintroPath: "../../../img/intro";
+
+html, body{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  overflow: auto
+}
+.new-open-intro {
+  position: relative;
+  width: 100%;
+  // height: 100%;
+  font-family: 'NanumSquareRound';
+  &::before{
+    @include top-left(0, 0);
+    width: 100%;
+    height: 100%;
+    background-image: url("#{$imgintroPath}/bg_error_m.png");
+  	background-size: cover;
+    content: ''
+  }
+  .ui-header-box{
+    @include top-left(0, 0);
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-bottom: 0 none;
+    text-align: center;
+    .ui-header-box-wrap{
+      position: relative;
+      display: inline-block;
+      min-width: 1280px;
+      height: auto;
+      text-align: left;
+    }
+    .header-logo{
+      @include top-left(20px, 0);
+      font-size: 0;
+      z-index: 2;
+      .img-logo{
+        @include bg-img-size(280px, 51px, $imgintroPath, eco-logo);
+        @extend %ir;
+      }
+      a, .h-title{
+        display: inline-block;
+        vertical-align: bottom;
+      }
+    }
+  }
+  .ui-content-box{
+    position: relative;
+    .sub-content.detail{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      padding: 0;
+      letter-spacing: -.05em;
+      border-radius: 0;
+      box-shadow: none;
+      background-color: transparent;
+      margin: 0;
+    }
+  }
+  .landing-wrap {
+  	text-align: center;
+  	line-height: 1.75;
+  	padding: 18rem 2rem;
+    .title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: 0;
+      word-break: keep-all;
+    }
+    .desc {
+      color: #333;
+      font-size: 1.25rem;
+      letter-spacing: 0;
+      word-break: keep-all;
+      margin: 2rem 0;
+    }
+    .desc-paragraph{
+      display: block;
+      margin-bottom: 20px;
+    }
+    .t-bold{
+      font-weight: $base-bold
+    }
+    .p-block{
+      display: block;
+    }
+    .desc a {
+      font-weight: 800;
+      border-bottom: 1px solid #333;
+    }
+    .m-br {
+      display: inline-block;
+    }
+    .refer {
+      color: #888;
+      font-size: 1rem;
+      letter-spacing: 0;
+      word-break: keep-all;
+    }
+    .btn-comm{
+      display: block;
+      height: 2.917rem;
+      line-height: calc(2.917rem - 2px);
+      padding: 0 1.25rem;
+      border: 1px solid #f37720;
+      color: #fff;
+      font-size: 1.083rem;
+      letter-spacing: -.05em;
+      text-align: center;
+      background: #f37720;
+    }
+    .btn-comm.btn-md {
+      width: 100%;
+      font-weight: 600;
+      letter-spacing: 0;
+      border-radius: 10px;
+      margin: 2rem auto 0;
+    }
+  }
+}
+
+@media all and (max-width: 1279px){
+  .new-open-intro{
+    .ui-header-box{
+      .ui-header-box-wrap{
+        min-width: 100%;
+      }
+      .header-logo{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    .ui-content-box{
+      .sub-content.detail{
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+    .landing-wrap {
+      padding: 15rem 2rem;
+      .title {
+        font-size: 1.667rem;
+      }
+      .btn-comm.btn-md {
+        width: 300px;
+        height: 60px;
+        font-size: 18px;
+        line-height: 58px;
+      }
+      br.m-br {
+        display: none;
+      }
+      .p-block{
+        display: inline;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 960px){
+  html, body{
+    font-size: 17px;
+  }
+  .new-open-intro {
+    .ui-header-box{
+      position: relative;
+      height: auto;
+      padding: 20px 0;
+      .header-logo{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
+        .img-logo{
+          width: 223px;
+          height: 40px;
+          background-size: 100%;
+        }
+      }
+    }
+    .landing-wrap {
+      padding: 3rem 2rem;
+    }
+  }
+}

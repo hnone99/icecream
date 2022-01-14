@@ -1,0 +1,72 @@
+// ========================================================================
+// [font] | 웹폰트:  Noto Sans CJK KR / S-CoreDream
+// ========================================================================
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  src: local("Noto Sans CJK KR Regular"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Light.woff") format("woff"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Light.eot") format("embedded-opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  src: local("Noto Sans CJK KR Regular"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Regular.woff") format("woff"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Regular.eot") format("embedded-opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans CJK KR Medium"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Medium.woff") format("woff"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Medium.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans CJK KR Bold"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Bold.woff") format("woff"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Bold.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Noto Sans CJK KR Black"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Black.woff") format("woff"), url("../fonts/NotoSansCJK/NotoSansCJKkr-Black.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-style: normal;
+  font-weight: 300;
+  src: local("S-CoreDream"), url("../fonts/S-CoreDream/scdream3.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-style: normal;
+  font-weight: 400;
+  src: local("S-CoreDream"), url("../fonts/S-CoreDream/scdream4.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-style: normal;
+  font-weight: 500;
+  src: local("S-CoreDream"), url("../fonts/S-CoreDream/scdream5.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-style: normal;
+  font-weight: 700;
+  src: local("S-CoreDream"), url("../fonts/S-CoreDream/scdream6.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  font-style: normal;
+  font-weight: 900;
+  src: local("S-CoreDream"), url("../fonts/S-CoreDream/scdream7.woff") format("woff");
+}

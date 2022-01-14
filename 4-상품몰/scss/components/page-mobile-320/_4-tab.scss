@@ -1,0 +1,159 @@
+// ========================================================================
+// [tab] | 메인 / 서브페이지 탭
+// ========================================================================
+@media all and (max-width: 540px){
+  .ui-new{
+    .tabs.new-tabs{
+      &.mb-2{
+        margin-bottom: 1.2rem !important;
+      }
+    }
+    .tag-list{
+      .card-list{
+        padding-bottom: 0;
+        .px-md-no{
+          display: block;
+        }
+        .card-item{
+          display: table;
+          width: 100%;
+          min-height: 136px;
+          margin: 0;
+          a{
+            display: table-cell;
+            vertical-align: middle;
+          }
+          &:after{
+            @include bottom-right(0, 0);
+            display: block;
+            width: calc(100% - 112px);
+            height: 1px;
+            background-color: #e1e1e1;
+            content: "";
+          }
+          &:last-child{
+            &:after{
+              display: none;
+            }
+          }
+          .img{
+            @include top-left(50%, 0);
+            width: 100px;
+            height: 100px;
+            margin-top: -50px;
+            border-radius: 20px;
+          }
+          .list-badge{
+            position: relative;
+            top: 8px;
+            margin-left: 114px;
+            margin-bottom: 14px;
+          }
+          .list-body{
+            margin-top: 0;
+            min-height: auto;
+            padding: 0 0 8px 0;
+            margin-left: 114px;
+            .title{
+              height: auto;
+              font-size: 20px;
+              line-height: 1.2em;
+            }
+            .score i{
+              margin-right: 0;
+            }
+            .s-sticker,
+            .badge-list{
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    .ui-mypage-box
+    .tag-list.tag-list-all{
+      .card-list{
+        .card-item{
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 479px){
+  .ui-new{
+    .tabs.new-tabs{
+        margin-top: 1.8rem;
+        margin-bottom: 1.8rem;
+      &.mb-2{
+        margin-bottom: 0.6rem !important;
+      }
+      .list li{
+        padding: 7px 42px;
+        a{
+          font-size: 13px;
+        }
+      }
+    }
+    .tag-list{
+      .card-list{
+        .card-item{
+          min-height: 92px;
+          &:after{
+            width: calc(100% - 76px)
+          }
+          .img{
+            width: 68px;
+            height: 68px;
+            margin-top: -34px;
+            border-radius: 13px;
+          }
+          .list-badge{
+            margin-left: 76px;
+          }
+          .sticker-homelearn,
+          .sticker-free,
+          .sticker-half,
+          .sticker-pakage{
+            i{
+              font-size: 9px;
+            }
+          }
+          .list-body{
+            margin-left: 76px;
+            .title{
+              font-size: 13px;
+            }
+            .score{
+              font-size: 11px;
+              i{
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .tabs-pannel{
+      .empty{
+        margin: 30px auto;
+        .desc{
+          font-size: 15px;
+        }
+        .dot-list{
+          margin-top: 13px;
+          li{
+            line-height: 1;
+            .txt{
+              font-size: 11px;
+              &::before{
+                top: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

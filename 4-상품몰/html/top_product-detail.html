@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런몰</title>
+	<link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+
+	<!-- 210830 상단/하단 css추가 -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/slick.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap">
+
+		<!-- 210830 상단 GNB 추가 -->
+		<div class="ui-new sub-page">
+			<!-- ###ui-header-box -->
+			<!-- 210727 ui-header-box추가 -->
+			<header class="ui-header-box">
+				<div class="ui-header-box-wrap">
+					<!-- ##로고 -->
+					<h1 class="header-logo">
+						<a href="#">
+							<span class="img-logo">i-scream eco</span>
+						</a>
+					</h1>
+					<!-- ##탭 -->
+					<nav class="header-tab">
+						<ul class="tab-list-grp">
+							<!-- js 탭 활성화 on추가  -->
+							<li class="tab-list">
+								<span>학습<span class="txt-mall">mall</span></span>
+							</li>
+							<li class="tab-list on">
+								<span>상품<span class="txt-mall">mall</span></span>
+							</li>
+						</ul>
+					</nav>
+					<!-- ##버튼 -->
+					<div class="header-btn">
+						<button class="btn-loginout">로그인</button>
+						<button class="btn-joinus">회원가입</button>
+					</div>
+				</div>
+			</header>
+			<!-- //###ui-header-box -->
+
+			<!-- 모바일 서브 상단 -->
+			<!-- ###ui-header-box-mo -->
+			<header class="ui-header-box-mo">
+				<h2 class="top-sub-title">
+					<span class="title-txt">상품</span><span class="ico title-mall">mall</span>
+				</h2>
+				<button class="top-btn-prev">
+					<i class="ico i-top-btn-prev">이전</i>
+				</button>
+				<button class="top-btn-basket">
+					<i class="ico i-top-basket">장바구니</i>
+				</button>
+				<button class="top-btn-menu">
+					<i class="ico i-top-menu">메뉴리스트</i>
+				</button>
+			</header>
+			<!-- //###ui-header-box-mo -->
+
+
+			<!-- ###ui-sub-box -->
+			<div class="ui-sub-box">
+				<div class="ui-sub-box-wrap">
+					<!-- #이전 버튼 -->
+					<!-- js 이전 버튼 비활성화 off -->
+					<div class="sub-prev-area off">
+						<button class="sub-btn-prev">
+							<i class="ico i-sub-btn-prev">이전</i>
+						</button>
+					</div>
+					<!-- ##서브 메뉴 -->
+					<div class="sub-menu-area">
+						<ul class="sub-menu-grp device-pc">
+							<!-- js 탭 활성화 on추가  -->
+							<li class="sub-menu on">
+								<a href="">#전체</a>
+							</li>
+							<li class="sub-menu">
+								<a href="">#진단검사도구</a>
+							</li>
+							<li class="sub-menu">
+								<a href="">#체험키트</a>
+							</li>
+							<li class="sub-menu">
+								<a href="">#체험캠프</a>
+							</li>
+							<li class="sub-menu">
+								<a href="">#홈런굿즈</a>
+							</li>
+							<li class="sub-menu">
+								<a href="">#이벤트</a>
+							</li>
+						</ul>
+						<!-- #서브 검색/모바일 메뉴 리스트 -->
+						<!-- 모바일에서만 사용 -->
+						<ul class="sub-menu-list-grp device-mo">
+							<li class="sub-menu-list sl-search">
+								<button class="sub-btn-util">
+									<i class="ico i-top-search">검색</i>
+								</button>
+							</li>
+							<li class="sub-menu-list sl-basket">
+								<button class="sub-btn-util">
+									<i class="ico i-top-basket">장바구니</i>
+								</button>
+							</li>
+							<li class="sub-menu-list sl-menu">
+								<button class="sub-btn-util">
+									<i class="ico i-top-menu">메뉴리스트</i>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<!-- ##서브 검색/마이페이지 -->
+					<div class="sub-util-area">
+						<button class="sub-btn-util">
+							<i class="ico i-top-search">검색</i>
+						</button>
+						<button class="sub-btn-util">
+							<i class="ico i-top-basket">장바구니</i>
+						</button>
+						<button class="sub-btn-util">
+							<i class="ico i-top-member">마이페이지</i>
+						</button>
+					</div>
+
+				</div>
+			</div>
+			<!-- //###ui-sub-box -->
+		</div>
+		<!-- //210830 상단 GNB 추가 -->
+
+
+
+		<!-- container -->
+		<div class="container">
+
+			<section class="sub-content detail">
+				<h2 class="blind">상품 상세</h2>
+
+				<!-- pdt-top-wrap -->
+				<div class="pdt-top-wrap">
+
+					<div class="pdt-top-img">
+						<div class="pdt-img-slider">
+							<div class="item">
+								<div class="pdt-badge">
+									<span class="badge new">NEW</span>
+									<span class="badge sale">SALE</span>
+									<span class="badge best">BEST</span>
+									<span class="badge good">GOOD</span>
+								</div>
+								<img src="../images/sample/pdt_cup.jpg" alt="" />
+							</div>
+							<div class="item">
+								<div class="pdt-badge">
+									<span class="badge new">NEW</span>
+									<span class="badge sale">SALE</span>
+								</div>
+								<img src="../images/sample/pdt_dduru.jpg" alt="" />
+							</div>
+							<div class="item">
+								<div class="pdt-badge">
+									<span class="badge new">NEW</span>
+									<span class="badge sale">SALE</span>
+									<span class="badge best">BEST</span>
+								</div>
+								<img src="../images/sample/pdt_cup.jpg" alt="" />
+							</div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+						</div>
+						<div class="pdt-slider-nav">
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+						</div>
+					</div>
+					<!-- //pdt-top-img -->
+
+					<div class="pdt-detail-info">
+						<a href="" class="banner pc"><img src="../images/sample/sale_coupon.jpg" alt="" /></a>
+
+						<div class="pdt-title-wrap">
+							<span class="pdt-brand">브랜드명</span>
+							<h3 class="pdt-name">홈런프렌즈 캐릭터 머그잔</h3>
+
+							<div class="share-wrap">
+								<button type="button" class="btn-sns">SNS 공유</button>
+								<ul class="share-list">
+									<li><button class="btn url">URL 복사</button></li>
+									<li><a href="" class="btn facebook">페이스북</a></li>
+									<li><a href="" class="btn line">라인</a></li>
+									<li><a href="" class="btn kakao">카카오톡</a></li>
+									<li><button class="btn close">닫기</button></li>
+								</ul>
+								<p class="txt" style="display:none;">복사가 완료 되었습니다.</p>
+							</div>
+						</div>
+
+						<div class="stats-info-wrap">
+							<div class="pdt-grade">
+								<div class="star-score">
+									<!-- 평점을 백분율하여 width 값에 적용하면 별점이 채워집니다. -->
+									<span class="star" style="width:80%;"></span>
+								</div>
+								<span class="score">(4)</span>
+							</div>
+							<!-- //pdt-grade -->
+
+							<p class="original-price">
+								<span class="price">10,000 콘</span> 할인 판매가
+							</p>
+							<div class="sale-price">
+								<strong>5,000</strong>콘
+							</div>
+						</div>
+
+						<ul class="info-list">
+							<li>
+								<em class="info-tit">상품코드</em>
+								<div class="info-cont">G0000010697</div>
+							</li>
+							<li>
+								<em class="info-tit">배송비</em>
+								<div class="info-cont">
+									<span class="fc-orange">3,000원</span> <!-- [D] 200302 span 태그 추가 -->
+									<em class="fc-gray">(3만원이상 무료)</em>
+								</div>
+							</li>
+							<li>
+								<em class="info-tit">제조사</em>
+								<div class="info-cont">아이스크림 에듀</div>
+							</li>
+							<li>
+								<em class="info-tit">원산지</em>
+								<div class="info-cont">한국</div>
+							</li>
+							<li>
+								<em class="info-tit">추가출력내용1</em>
+								<div class="info-cont">추가출력내용</div>
+							</li>
+							<li>
+								<em class="info-tit">추가출력내용1</em>
+								<div class="info-cont">추가출력내용</div>
+							</li>
+							<!-- [D]200703 KC인증 추가 -->
+							<li>
+								<em class="info-tit">KC인증</em>
+								<div class="info-cont"><a href="javascript:void(0);" onclick="layerPop.show('pop-certificate')">CB064R326-9001</a></div>
+							</li>
+							<!-- //[D]200703 KC인증 추가 -->
+						</ul>
+
+						<div class="option-wrap">
+							<ul class="info-list">
+								<li>
+									<em class="info-tit">옵션선택</em>
+									<div class="info-cont">
+										<select name="" id="" class="custom-select">
+											<option value="">컬러</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<em class="info-tit">옵션선택</em>
+									<div class="info-cont">
+										<select name="" id="" class="custom-select">
+											<option value="">사이즈</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+
+							<div class="option-result">
+								<ul>
+									<li>
+										<em class="option-name">컬러 : 오렌지 / 사이즈 : M</em>
+										<div class="count">
+											<button type="button" class="btn-minus">수량감소</button>
+											<input type="text" value="1" name="" class="num">
+											<button type="button" class="btn-plus">수량증가</button>
+										</div>
+										<button type="button" class="btn-cancel">옵션 선택 취소</button>
+									</li>
+									<li>
+										<em class="option-name">컬러 : 오렌지 / 사이즈 : M</em>
+										<div class="count">
+											<button type="button" class="btn-minus">수량감소</button>
+											<input type="text" value="1" name="" class="num">
+											<button type="button" class="btn-plus">수량증가</button>
+										</div>
+										<button type="button" class="btn-cancel">옵션 선택 취소</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //option-wrap -->
+
+						<div class="total-price">
+							<span class="tit">주문금액</span><em class="price">10,000콘</em>
+						</div>
+
+						<div class="btn-wrap">
+							<button type="button" class="btn-comm btn-lg btn-like" onclick="layerPop.show('pop-alert-product')"><span class="icon like white">찜</span>500</button> <!-- [D] 200226 팝업 오픈 기능 추가 -->
+							<button type="button" class="btn-comm btn-lg btn-cart" onclick="layerPop.show('pop-alert-product')"><span class="icon cart white">장바구니</span></button> <!-- [D] 200226 팝업 오픈 기능 추가 -->
+							<button type="button" class="btn-comm btn-lg btn-buy">구매하기</button>
+						</div>
+
+						<a href="" class="banner"><img src="../images/sample/sale_coupon.jpg" alt="" /></a>
+
+					</div>
+					<!-- //pdt-detail-info -->
+
+				</div>
+				<!-- //pdt-top-wrap -->
+
+				<!-- pdt-description-wrap -->
+				<div class="pdt-description-wrap">
+					<ul class="tab-product">
+						<li class="active"><a href="#productInfo"><span>제품정보</span></a></li>
+						<li><a href="#productDelivery"><span>배송안내</span></a></li>
+						<li><a href="#productExchange"><span>교환/반품</span></a></li>
+						<li><a href="#productReview"><span>구매리뷰</span></a></li>
+						<li><a href="#productInquiry"><span>상품문의</span></a></li>
+					</ul>
+
+					<!-- 제품정보 -->
+					<div class="tab-content pdt-info" id="productInfo">
+						<img src="../images/sample/pdt_dduru.jpg" alt="" />
+					</div>
+					<!-- //제품정보 -->
+
+					<!-- 배송안내 -->
+					<div class="tab-content pdt-delivery" id="productDelivery">
+						<h4 class="title">배송정보</h4>
+
+						<ul class="list-st-dot">
+							<li>택배 배송기일은 휴일 포함여부 및 상품 재고상황, 택배사 사정에 의해 지연될 수 있습니다.</li>
+							<li>제주/도서산간 지역은 추가 운임이 발생할 수 있습니다.</li>
+							<li>[다중배송] 장바구니에서 여러 주소지로 한번에 주문 결제가 가능합니다. (일부상품 제외)</li>
+						</ul>
+
+						<ul class="delivery-info">
+							<li>
+								<span class="icon delivery"></span>
+								<em class="tit">택배 배송</em>
+								<p class="txt">업체 및 산지에서 주문 후 평균 2~3일 이내 택배 배송됩니다.</p>
+							</li>
+							<li>
+								<span class="icon exchange"></span>
+								<em class="tit">반품/교환/환불</em>
+								<p class="txt">업체 및 산지에서 주문 후 평균 2~3일 이내 택배 배송됩니다.</p>
+							</li>
+						</ul>
+
+					</div>
+					<!-- //배송안내 -->
+
+					<!-- 교환/반품 -->
+					<div class="tab-content pdt-exchange" id="productExchange">
+						<h4 class="title">교환/반품</h4>
+
+						<ul class="list-st-dot">
+							<li>상품 수령일로부터 7일 이내 반품 / 환불 가능합니다.</li>
+							<li>변심 반품의 경우 왕복배송비를 차감한 금액이 환불되며, 제품 및 포장 상태가 재판매 가능하여야 합니다.</li>
+							<li>상품 불량인 경우는 배송비를 포함한 전액이 환불됩니다.</li>
+							<li>출고 이후 환불요청 시 상품 회수 후 처리됩니다.</li>
+							<li>얼리 등 주문제작상품 / 카메라 / 밀봉포장상품 등은 변심에 따른 반품 / 환불이 불가합니다.</li>
+							<li>일부 완제품으로 수입된 상품의 경우 A/S가 불가합니다.</li>
+							<li>특정브랜드의 상품설명에 별도로 기입된 교환 / 환불 / AS 기준이 우선합니다.</li>
+							<li>구매자가 미성년자인 경우에는 상품 구입 시 법정대리인이 동의하지 아니하면 미성년자 본인 또는 법정대리인이 구매 취소 할 수 있습니다.</li>
+						</ul>
+					</div>
+					<!-- //교환/반품 -->
+
+					<!-- 구매리뷰 -->
+					<div class="tab-content pdt-review" id="productReview">
+						<h4 class="title">구매리뷰</h4>
+						<span class="total">(40)</span>
+						<div class="pdt-grade">
+							<div class="star-score">
+								<!-- 평점을 백분율하여 width 값에 적용하면 별점이 채워집니다. -->
+								<span class="star" style="width:80%;"></span>
+							</div>
+						</div>
+
+						<!-- pdt-write-form -->
+						<div class="pdt-write-form">
+							<ul class="list-st-dot">
+								<li>상품 문의/교환, 환불, 배송 관련 안내는 <a href="">1:1문의하기</a>를 이용해 주세요.</li>
+							</ul>
+
+							<div class="write-box">
+								<div class="top-info">
+									<span class="user-name">HOMELEARN</span>
+
+									<div class="star-score review">
+										<button type="button" class="star"></button>
+										<button type="button" class="star"></button>
+										<button type="button" class="star"></button>
+										<button type="button" class="star"></button>
+										<button type="button" class="star"></button>
+									</div>
+								</div>
+
+								<textarea name="" id="" cols="30" rows="10" placeholder="500자까지 작성할 수 있습니다"></textarea>
+
+								<div class="attached-file">
+									<label for="file">사진첨부</label>
+									<input type="file" id="file" />
+								</div>
+
+								<div class="btn-wrap">
+									<button type="button" class="btn-comm btn-sm bg-line btn-cancel">취소</button>
+									<button type="button" class="btn-comm btn-sm">작성</button>
+								</div>
+							</div>
+						</div>
+						<!-- //pdt-write-form -->
+
+						<div class="list-sort">
+							<select name="" id="" class="custom-select">
+								<option value="">전체보기</option>
+							</select>
+
+							<select name="" id="" class="custom-select">
+								<option value="">옵션별</option>
+							</select>
+
+							<button type="button" class="btn-comm bg-black toggle-write-form">리뷰쓰기</button>
+						</div>
+
+						<!-- pdt-bd-list -->
+						<ul class="pdt-bd-list review">
+							<li>
+								<div class="writer-info">
+									<span class="name">Jeo********</span>
+									<span class="date">2020-00-00 00:00</span>
+								</div>
+								<div class="star-score">
+									<!-- 평점을 백분율하여 width 값에 적용하면 별점이 채워집니다. -->
+									<span class="star" style="width:92%;"></span>
+								</div>
+
+								<div class="bd-cont">
+									<p class="pdt-option">[구매옵션] 옵션 : 블루/ M</p>
+									<p class="txt">너무 좋아해요~ 구매하길 정말 잘 한거 같아요 너무 좋아해요~</p>
+									<!-- [D] 200225 수정/삭제 버튼 추가 -->
+									<div class="btn-box">
+										<a href="" class="btn line-gray">수정</a>
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+									<!-- //[D] 200225 수정/삭제 버튼 추가 -->
+									<div class="thumb">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+										<span class="num">+3</span>
+									</div>
+								</div>
+
+								<div class="review-gallery">
+									<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+									<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+								</div>
+							</li>
+							<li>
+								<div class="writer-info">
+									<span class="name">Jeo********</span>
+									<span class="date">2020-00-00 00:00</span>
+								</div>
+								<div class="star-score">
+									<!-- 평점을 백분율하여 width 값에 적용하면 별점이 채워집니다. -->
+									<span class="star" style="width:92%;"></span>
+								</div>
+
+								<div class="bd-cont">
+									<p class="pdt-option">[구매옵션] 옵션 : 블루/ M</p>
+									<p class="txt">너무 좋아해요~ 구매하길 정말 잘 한거 같아요 너무 좋아해요~</p>
+									<div class="btn-box">
+										<a href="" class="btn line-gray">수정</a>
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+									<div class="thumb">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+										<span class="num">+3</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- //pdt-bd-list -->
+
+						<div class="pagination">
+							<button type="button" class="nav-prev">이전</button>
+							<a href="#" class="page-num active">1</a>
+							<a href="#" class="page-num">2</a>
+							<a href="#" class="page-num">3</a>
+							<a href="#" class="page-num">4</a>
+							<a href="#" class="page-num">5</a>
+							<button type="button" class="nav-next">다음</button>
+						</div>
+
+						<!-- [D]200625 우리아이들의 후기 추가 -->
+						<h4 class="title fc-blue">우리아이들의 후기</h4>
+
+						<!-- pdt-bd-list -->
+						<ul class="pdt-bd-list review">
+							<li>
+								<div class="writer-info">
+									<span class="name">Jeo********</span>
+									<span class="date">2020-00-00 00:00</span>
+								</div>
+								<div class="star-score">
+									<!-- 평점을 백분율하여 width 값에 적용하면 별점이 채워집니다. -->
+									<span class="star" style="width:92%;"></span>
+								</div>
+
+								<div class="bd-cont">
+									<p class="pdt-option">[구매옵션] 옵션 : 블루/ M</p>
+									<p class="txt">너무 좋아해요~ 구매하길 정말 잘 한거 같아요 너무 좋아해요~</p>
+									<!-- [D] 200225 수정/삭제 버튼 추가 -->
+									<div class="btn-box">
+										<a href="" class="btn line-gray">수정</a>
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+									<!-- //[D] 200225 수정/삭제 버튼 추가 -->
+									<div class="thumb">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+										<span class="num">+3</span>
+									</div>
+								</div>
+
+								<div class="review-gallery">
+									<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+									<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+								</div>
+							</li>
+							<li>
+								<div class="writer-info">
+									<span class="name">Jeo********</span>
+									<span class="date">2020-00-00 00:00</span>
+								</div>
+								<div class="star-score">
+									<!-- 평점을 백분율하여 width 값에 적용하면 별점이 채워집니다. -->
+									<span class="star" style="width:92%;"></span>
+								</div>
+
+								<div class="bd-cont">
+									<p class="pdt-option">[구매옵션] 옵션 : 블루/ M</p>
+									<p class="txt">너무 좋아해요~ 구매하길 정말 잘 한거 같아요 너무 좋아해요~</p>
+									<div class="btn-box">
+										<a href="" class="btn line-gray">수정</a>
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+									<div class="thumb">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+										<span class="num">+3</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- //pdt-bd-list -->
+
+						<div class="pagination">
+							<button type="button" class="nav-prev">이전</button>
+							<a href="#" class="page-num active">1</a>
+							<a href="#" class="page-num">2</a>
+							<a href="#" class="page-num">3</a>
+							<a href="#" class="page-num">4</a>
+							<a href="#" class="page-num">5</a>
+							<button type="button" class="nav-next">다음</button>
+						</div>
+						<!-- //[D]200625 우리아이들의 후기 추가 -->
+					</div>
+					<!-- //구매리뷰 -->
+
+					<!-- 상품문의 -->
+					<div class="tab-content pdt-inquiry" id="productInquiry">
+						<h4 class="title">상품문의</h4>
+						<button type="button" class="btn-comm bg-black toggle-write-form posTR">문의하기</button> <!-- [D] 200306 버튼 위치 변경 -->
+
+						<!-- pdt-write-form -->
+						<div class="pdt-write-form">
+							<ul class="list-st-dot">
+								<li>성격에 맞지않는 글은 삭제될 수 있습니다.</li>
+							</ul>
+
+							<!-- [D] 200630 셀렉트 박스 삭제 --
+							<select name="" id="" class="custom-select">
+								<option value="">전체보기</option>
+							</select>
+							<!-- //[D] 200630 셀렉트 박스 삭제 -->
+
+							<div class="write-box">
+								<div class="top-info">
+									<span class="user-name">HOMELEARN</span>
+								</div>
+
+								<!-- [D] 200630 제목 입력칸 추가 -->
+								<input type="text" class="inp-txt" placeholder="상품문의 제목을 입력하세요" />
+								<!-- //[D] 200630 제목 입력칸 추가 -->
+
+								<textarea name="" id="" cols="30" rows="10" placeholder="500자까지 작성할 수 있습니다"></textarea>
+
+								<div class="chk-custom">
+									<input type="checkbox" name="secret" id="secret">
+									<label for="secret"><span></span>비밀글</label>
+								</div>
+
+								<div class="btn-wrap">
+									<button type="button" class="btn-comm btn-sm bg-line btn-cancel">취소</button>
+									<button type="button" class="btn-comm btn-sm">작성</button>
+								</div>
+							</div>
+						</div>
+						<!-- //pdt-write-form -->
+
+						<div class="list-sort">
+							<!-- [D] 200630 셀렉트 박스 삭제 --
+							<select name="" id="" class="custom-select">
+								<option value="">전체보기</option>
+							</select>
+							<!-- //[D] 200630 셀렉트 박스 삭제 -->
+
+							<button type="button" class="btn-comm bg-black toggle-write-form">상품문의</button>
+						</div>
+
+						<!-- pdt-bd-list -->
+						<ul class="pdt-bd-list inquiry">
+							<li>
+								<div class="writer-info">
+									<span class="name">Jeo********</span>
+									<span class="date">2020-00-00 00:00</span>
+								</div>
+
+								<div class="bd-cont">
+									<p class="tit">[상품문의]</p>
+									<p class="txt">상품 재입고 언제되나요?</p>
+									<span class="icon secret">비밀글</span>
+									<!-- <span class="badge">답변완료</span> -->
+									<!-- [D] 200626 답변하기 버튼 수정, 수정/삭제 버튼 추가 -->
+									<a href="javascript:void(0);" class="btn anw" onclick="event.stopPropagation();layerPop.show('pop-product-anw');">답변하기</a>
+									<div class="btn-box">
+										<a href="javascript:void(0);" class="btn line-gray toggle-write-form" onclick="event.stopPropagation();">수정</a>
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+									<!-- //[D] 200626 답변하기 버튼 수정, 수정/삭제 버튼 추가 -->
+								</div>
+
+								<!-- [D] 200626 수정 폼 추가 -->
+								<!-- pdt-write-form -->
+								<div class="pdt-write-form">
+									<!-- [D] 200630 셀렉트 박스 삭제 --
+									<select name="" id="" class="custom-select">
+										<option value="">전체보기</option>
+									</select>
+									<!-- //[D] 200630 셀렉트 박스 삭제 -->
+
+									<div class="write-box">
+										<div class="top-info">
+											<span class="user-name">HOMELEARN</span>
+										</div>
+
+										<!-- [D] 200630 제목 입력칸 추가 -->
+										<input type="text" class="inp-txt" placeholder="상품문의 제목을 입력하세요" />
+										<!-- //[D] 200630 제목 입력칸 추가 -->
+
+										<textarea name="" id="" cols="30" rows="10" placeholder="500자까지 작성할 수 있습니다">상품 재입고 언제되나요? </textarea>
+
+										<div class="chk-custom">
+											<input type="checkbox" name="secret" id="secret">
+											<label for="secret"><span></span>비밀글</label>
+										</div>
+
+										<div class="btn-wrap">
+											<button type="button" class="btn-comm btn-sm bg-line btn-cancel">취소</button>
+											<button type="button" class="btn-comm btn-sm">작성</button>
+										</div>
+									</div>
+								</div>
+								<!-- //pdt-write-form -->
+								<!-- //[D] 200626 수정 폼 추가 -->
+
+								<div class="bd-cont reply">
+									<span class="profile"><img src="../images/sub/profile_kwoni.png" alt="" /></span>
+									<p class="txt">문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.</p>
+									<!-- [D] 200225 수정/삭제 버튼 추가 -->
+									<div class="btn-box">
+										<!-- [D] 200626 팝업 오픈 기능 추가 -->
+										<a href="javascript:void(0);" class="btn line-gray" onclick="event.stopPropagation();layerPop.show('pop-product-anw-edit');">수정</a>
+										<!-- [D] 200626 팝업 오픈 기능 추가 -->
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+									<!-- //[D] 200225 수정/삭제 버튼 추가 -->
+								</div>
+							</li>
+							<li>
+								<div class="writer-info">
+									<span class="name">Jeo********</span>
+									<span class="date">2020-00-00 00:00</span>
+								</div>
+
+								<div class="bd-cont">
+									<p class="tit">[상품문의]</p>
+									<p class="txt">상품 재입고 언제되나요 상품 재입고 언제되나요 상품 재입고 언제되나요?</p>
+									<span class="icon secret">비밀글</span>
+									<!-- <span class="badge">답변완료</span> -->
+									<a href="" class="btn anw" onclick="layerPop.show('pop-product-anw')">답변하기</a>
+								</div>
+
+								<div class="bd-cont reply">
+									<span class="profile"><img src="../images/sub/profile_kwoni.png" alt="" /></span>
+									<p class="txt">문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.</p>
+									<div class="btn-box">
+										<a href="" class="btn line-gray">수정</a>
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="writer-info">
+									<span class="name">Jeo********</span>
+									<span class="date">2020-00-00 00:00</span>
+								</div>
+
+								<div class="bd-cont">
+									<p class="tit">[상품문의]</p>
+									<p class="txt">상품 재입고 언제되나요?</p>
+									<span class="icon secret">비밀글</span>
+									<span class="badge">답변완료</span>
+									<!-- <a href="" class="btn anw" onclick="layerPop.show('pop-product-anw')">답변하기</a> -->
+								</div>
+
+								<div class="bd-cont reply">
+									<span class="profile"><img src="../images/sub/profile_kwoni.png" alt="" /></span>
+									<p class="txt">문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.</p>
+									<div class="btn-box">
+										<a href="" class="btn line-gray">수정</a>
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="writer-info">
+									<span class="name">Jeo********</span>
+									<span class="date">2020-00-00 00:00</span>
+								</div>
+
+								<div class="bd-cont">
+									<p class="tit">[상품문의]</p>
+									<p class="txt">상품 재입고 언제되나요?</p>
+									<span class="icon secret">비밀글</span>
+									<span class="badge">답변완료</span>
+									<!-- <a href="" class="btn anw" onclick="layerPop.show('pop-product-anw')">답변하기</a> -->
+								</div>
+
+								<div class="bd-cont reply">
+									<span class="profile"><img src="../images/sub/profile_kwoni.png" alt="" /></span>
+									<p class="txt">문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.</p>
+									<div class="btn-box">
+										<a href="" class="btn line-gray">수정</a>
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="writer-info">
+									<span class="name">Jeo********</span>
+									<span class="date">2020-00-00 00:00</span>
+								</div>
+
+								<div class="bd-cont">
+									<p class="tit">[상품문의]</p>
+									<p class="txt">상품 재입고 언제되나요?</p>
+									<span class="icon secret">비밀글</span>
+									<span class="badge">답변완료</span>
+									<!-- <a href="" class="btn anw" onclick="layerPop.show('pop-product-anw')">답변하기</a> -->
+								</div>
+
+								<div class="bd-cont reply">
+									<span class="profile"><img src="../images/sub/profile_kwoni.png" alt="" /></span>
+									<p class="txt">문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.<br />
+									문의에 대한 답변이 보여집니다.</p>
+									<div class="btn-box">
+										<a href="" class="btn line-gray">수정</a>
+										<a href="" class="btn line-gray">삭제</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- //pdt-bd-list -->
+
+						<div class="pagination">
+							<button type="button" class="nav-prev">이전</button>
+							<a href="#" class="page-num active">1</a>
+							<a href="#" class="page-num">2</a>
+							<a href="#" class="page-num">3</a>
+							<a href="#" class="page-num">4</a>
+							<a href="#" class="page-num">5</a>
+							<button type="button" class="nav-next">다음</button>
+						</div>
+					</div>
+					<!-- //상품문의 -->
+				</div>
+				<!-- //pdt-description-wrap -->
+
+				<!-- 관련 추천상품 -->
+				<div class="product-area recommend">
+					<h4 class="title">관련 추천상품</h4>
+
+					<div class="product-list">
+						<div class="item">
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+									<div class="pdt-badge">
+										<span class="badge new">NEW</span>
+										<!-- <span class="badge sale">SALE</span>
+										<span class="badge best">BEST</span>
+										<span class="badge good">GOOD</span> -->
+									</div>
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="brand">브랜드명</p>
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price">22,000원</strong>
+								<!-- [D] 200303 태그 추가 -->
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+								<!-- //[D] 200303 태그 추가 -->
+							</a>
+						</div>
+						<div class="item">
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+									<div class="pdt-badge">
+										<span class="badge new">NEW</span>
+										<span class="badge sale">SALE</span>
+										<!-- <span class="badge best">BEST</span>
+										<span class="badge good">GOOD</span> -->
+									</div>
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="brand">브랜드명</p>
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price">22,000원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+									<div class="pdt-badge">
+										<span class="badge new">NEW</span>
+										<span class="badge sale">SALE</span>
+										<span class="badge best">BEST</span>
+										<!-- <span class="badge good">GOOD</span> -->
+									</div>
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="brand">브랜드명</p>
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price">22,000원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+									<div class="pdt-badge">
+										<span class="badge new">NEW</span>
+										<span class="badge sale">SALE</span>
+										<span class="badge best">BEST</span>
+										<span class="badge good">GOOD</span>
+									</div>
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="brand">브랜드명</p>
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price">22,000원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+									<div class="pdt-badge">
+										<span class="badge new">NEW</span>
+										<!-- <span class="badge sale">SALE</span>
+										<span class="badge best">BEST</span>
+										<span class="badge good">GOOD</span> -->
+									</div>
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="brand">브랜드명</p>
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price">22,000원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- //관련 추천상품 -->
+
+			</section>
+
+		</div>
+		<!-- //container -->
+
+		<!-- 210830 하단 footer 추가 -->
+		<div class="ui-new">
+			<!-- 학습몰 이전 소스 활용 -->
+			<footer class="footer-box">
+			  <div class="container-footer">
+			    <div class="policy">
+			      <ul class="clearfix">
+			        <li class="item"><a href="#" data-text="CU_0018_01">회사소개</a></li>
+			        <li><a href="#" data-text="CU_0018_02">이용약관</a></li>
+			        <li><a href="#" data-text="CU_0018_03">개인정보처리방침</a></li>
+			      </ul>
+			    </div>
+			    <div class="family">
+			      <div class="input-group">
+							<select name="" id="" class="custom-select">
+								<option value="" data-text="CU_0018_12">FAMILY SITE</option>
+								<option value="" data-text="CU_0018_13">아이스크림홈런</option>
+								<option value="" data-text="CU_0018_14">아이스크림홈런중등</option>
+								<option value="" data-text="CU_0018_15">아이스크림에듀</option>
+								<option value="" data-text="CU_0018_16">아이스크림미디어</option>
+								<option value="" data-text="CU_0018_17">아이스크림</option>
+								<option value="" data-text="CU_0018_18">아이스크림몰</option>
+								<option value="" data-text="CU_0018_19">아이스크림연수원</option>
+							</select>
+			      </div>
+			    </div>
+			    <address>
+			      <p>
+			         <span class="address">
+								<em data-text="CU_0018_04">(주)아이스크림에듀<br>
+								서울특별시 강남구 테헤란로88길 15</em>
+								<em data-text="CU_0018_05">대표 : 조용상</em><br>
+		            <em data-text="CU_0018_06">상담 및 문의전화 : 1544-0910</em>
+								<em data-text="CU_0018_07">팩스 : (02)3448-5262</em><br>
+								<em data-text="CU_0018_08">사업자등록번호 : 120-87-97004</em>
+		            <em data-text="CU_0018_09">통신판매신고번호 : 제2013-서울강남-01379호</em><br>
+		            <em data-text="CU_0018_10">호스팅사업자 : AWS</em><br>
+							</span>
+			        <span class="copyright" data-text="CU_0018_11">Copyright © i-Scream edu Corporation. All rights reserved.</span>
+			      </p>
+			    </address>
+			  </div>
+			</footer>
+		</div>
+		<!-- //210830 하단 footer 추가 -->
+
+		<!-- lay-pop-guide -->
+		<div class="lay-pop-guide">
+			<span class="icon guide"></span>
+			<em class="tit">[맞춤제작 상품안내]</em>
+			<p class="txt">개별 맞춤되어 취소, 반품, 교환이 제한 될 수 있습니다.</p>
+			<button type="button" class="btn-close">닫기</button>
+		</div>
+		<!-- //lay-pop-guide -->
+
+		<div class="fixed-menu-bar">
+			<button type="button" class="btn-comm btn-lg btn-like"><span class="icon like white">찜</span>500</button>
+			<button type="button" class="btn-comm btn-lg btn-cart"><span class="icon cart white">장바구니</span></button>
+			<button type="button" class="btn-comm btn-lg btn-buy">구매하기</button>
+		</div>
+
+		<!-- 옵션바 -->
+		<div class="pdt-option-bar">
+			<button type="button" class="btn-comm btn-lg btn-buy">구매하기</button>
+
+			<div class="pdt-option">
+				<div class="inner">
+					<div class="option-box">
+						<button type="button" class="btn-box-close">닫기</button>
+
+						<div class="option-info">
+							<div class="pdt-title-wrap">
+								<span class="pdt-brand">브랜드명</span>
+								<h3 class="pdt-name">홈런프렌즈 캐릭터 머그잔</h3>
+							</div>
+
+							<ul class="option-list">
+								<li>
+									<em class="info-tit">옵션선택</em>
+									<div class="info-cont">
+										<select name="" id="" class="custom-select">
+											<option value="">컬러</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<em class="info-tit">옵션선택</em>
+									<div class="info-cont">
+										<select name="" id="" class="custom-select">
+											<option value="">사이즈</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //option-info -->
+
+						<div class="option-info">
+							<div class="option-result">
+								<ul>
+									<li>
+										<em class="option-name">오렌지 / M</em>
+										<div class="count">
+											<button type="button" class="btn-minus">수량감소</button>
+											<input type="text" value="1" name="" class="num">
+											<button type="button" class="btn-plus">수량증가</button>
+										</div>
+										<button type="button" class="btn-cancel">옵션 선택 취소</button>
+									</li>
+									<li>
+										<em class="option-name">오렌지 / M</em>
+										<div class="count">
+											<button type="button" class="btn-minus">수량감소</button>
+											<input type="text" value="1" name="" class="num">
+											<button type="button" class="btn-plus">수량증가</button>
+										</div>
+										<button type="button" class="btn-cancel">옵션 선택 취소</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="total-price">
+								<span class="tit">주문금액</span><em class="price">10,000콘</em>
+							</div>
+
+							<div class="btn-wrap">
+								<button type="button" class="btn-comm btn-lg btn-like"><span class="icon like white">찜</span>500</button>
+								<a href="" class="btn-comm btn-lg bg-skyblue">조르기</a>
+								<a href="" class="btn-comm btn-lg">구매하기</a>
+							</div>
+						</div>
+						<!-- //option-info -->
+					</div>
+
+					<div class="btn-wrap">
+						<a href="" class="btn-comm btn-lg bg-skyblue">조르기</a>
+						<a href="" class="btn-comm btn-lg">구매하기</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="dimm"></div>
+		</div>
+		<!-- 옵션바 -->
+
+		<!-- 상품 이미지 팝업 -->
+		<div class="layer-pop pop-pdt-img">
+			<div class="pop-bg"></div>
+			<div class="pop-content">
+				<button type="button" class="btn-pop-close">닫기</button>
+
+				<div class="inner">
+					<div class="pop-title">
+						<p class="brand">브랜드명</p>
+						<p class="tit">홈런프렌즈 캐릭터 머그잔</p>
+					</div>
+
+					<div class="pdt-gallery">
+						<div class="gallery-slider">
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+						</div>
+						<span class="paging-num"></span>
+						<div class="gall-slider-nav">
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_cup.jpg" alt="" /></div>
+							<div class="item"><img src="../images/sample/pdt_dduru.jpg" alt="" /></div>
+						</div>
+					</div>
+					<!-- //pdt-top-img -->
+				</div>
+			</div>
+		</div>
+		<!-- //상품 이미지 팝업 -->
+
+		<!-- 비노출
+		<div class="fixed-btn-wrap">
+			<a href="" class="btn-customer"><span class="icon customer"></span>고객센터</a>
+			<a href="" class="btn-apply"><span class="icon apply"></span>홈런신청</a>
+			<button type="button" class="btn-top">Top</button>
+		</div> -->
+	</div>
+	<!-- //wrap -->
+
+	<!-- [D] 200225 팝업 추가 -->
+	<!-- 알림 팝업 -->
+	<div id="pop-alert-product" class="pop-wrap alert product" style="display:none;">
+		<div class="pop-wrap-inner">
+			<div class="pop-cont-inner">
+				<p class="txt">장바구니에 담겼습니다.<br>장바구니로 이동하시겠습니까?</p>
+				<p class="txt">관심리스트에 담겼습니다.<br>관심리스트를 지금 확인 하시겠습니까?</p>
+				<div class="btn-box">
+					<button href="" class="btn bg-gray" onclick="layerPop.hide(this)">창닫기</button>
+					<a href="" class="btn bg-black">확인</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //알림 팝업 -->
+	<!-- 답변하기 팝업 -->
+	<div id="pop-product-anw" class="pop-wrap alert product anw" style="display:none;">
+		<div class="pop-wrap-inner">
+			<div class="pop-cont-inner w720">
+				<div class="pop-top-wrap">
+					<h5 class="pop-tit ty02">답변하기</h5>
+				</div>
+				<ul class="pdt-bd-list inquiry">
+					<li>
+						<div class="writer-info">
+							<span class="name">Jeo********</span>
+							<span class="date">2020-00-00 00:00</span>
+						</div>
+
+						<div class="bd-cont">
+							<p class="tit">[상품문의]</p>
+							<p class="txt">상품 재입고 언제되나요?</p>
+						</div>
+					</li>
+				</ul>
+				<div class="anw-box">
+					<em class="tit">답변내용</em>
+					<textarea name="" id="" placeholder="내용"></textarea>
+				</div>
+				<div class="btn-box">
+					<button href="" class="btn bg-gray" onclick="layerPop.hide(this)">취소</button>
+					<a href="" class="btn bg-black">등록</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //답변하기 팝업 -->
+	<!-- //[D] 200225 팝업 추가 -->
+
+	<!-- [D] 200626 팝업 추가 -->
+	<!-- 답변 수정 팝업 -->
+	<div id="pop-product-anw-edit" class="pop-wrap alert product anw" style="display:none;">
+		<div class="pop-wrap-inner">
+			<div class="pop-cont-inner w720">
+				<div class="pop-top-wrap">
+					<h5 class="pop-tit ty02">답변하기</h5>
+				</div>
+				<ul class="pdt-bd-list inquiry">
+					<li>
+						<div class="writer-info">
+							<span class="name">Jeo********</span>
+							<span class="date">2020-00-00 00:00</span>
+						</div>
+
+						<div class="bd-cont">
+							<p class="tit">[상품문의]</p>
+							<p class="txt">상품 재입고 언제되나요?</p>
+						</div>
+					</li>
+				</ul>
+				<div class="anw-box">
+					<em class="tit">답변내용</em>
+					<textarea name="" id="" placeholder="내용">문의에 대한 답변이 보여집니다.
+문의에 대한 답변이 보여집니다.
+문의에 대한 답변이 보여집니다.
+문의에 대한 답변이 보여집니다.
+문의에 대한 답변이 보여집니다.</textarea>
+				</div>
+				<div class="btn-box">
+					<button href="" class="btn bg-gray" onclick="layerPop.hide(this)">취소</button>
+					<a href="" class="btn bg-black">등록</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //답변 수정 팝업 -->
+	<!-- //[D] 200626 팝업 추가 -->
+
+	<!-- [D] 200703 팝업 추가 -->
+	<!-- KC인증 팝업 -->
+	<div id="pop-certificate" class="pop-wrap alert pop-certificate" style="display:none;">
+		<div class="pop-wrap-inner">
+			<div class="pop-cont-inner">
+				<button class="btn-pop-close" onclick="layerPop.hide(this)">닫기</button>
+				<img src="../images/sample/img_kc.png" alt="" />
+			</div>
+		</div>
+	</div>
+	<!-- //KC인증 팝업 -->
+	<!-- //[D] 200703 팝업 추가 -->
+
+<script>
+//상품이미지
+$('.pdt-img-slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: true,
+	dots: false,
+	asNavFor: '.pdt-slider-nav',
+	responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				dots: true
+			}
+		}
+	]
+});
+
+$('.pdt-slider-nav').slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	asNavFor: '.pdt-img-slider',
+	arrows: true,
+	dots: false,
+	//centerMode: true,
+	focusOnSelect: true
+});
+
+//상품이미지 팝업
+gallerySettings = {
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: true,
+	dots: false,
+	asNavFor: '.gall-slider-nav',
+	responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				dots: true
+			}
+		}
+	]
+};
+
+gallNavSettings = {
+	slidesToShow: 7,
+	slidesToScroll: 1,
+	asNavFor: '.gallery-slider',
+	arrows: true,
+	dots: false,
+	infinite: false,
+	focusOnSelect: true
+};
+
+$('.gallery-slider').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide){
+	var i = (currentSlide ? currentSlide : 0) + 1;
+	$('.pop-pdt-img .paging-num').html('<em>' + i + '</em>/' + slick.slideCount);
+});
+
+$('.pdt-top-img .pdt-img-slider .item').on('click', function(){
+	if(window.innerWidth > 1024){
+		$('.pop-pdt-img').addClass('open');
+		$('.gallery-slider').slick(gallerySettings);
+		$('.gall-slider-nav').slick(gallNavSettings);
+	};
+});
+
+$('.pop-pdt-img .btn-pop-close, .pop-pdt-img .pop-bg').on('click', function(){
+	$('.pop-pdt-img').removeClass('open');
+	$('.gallery-slider, .gall-slider-nav').slick('unslick');
+});
+
+//추천상품
+$('.recommend .product-list').slick({
+	slidesToShow: 4,
+	slidesToScroll: 4,
+	arrows: false,
+	fade: false,
+	dots: false,
+	infinite:false,
+	responsive: [{
+		breakpoint: 1024,
+		settings: {
+			slidesToShow: 2.1,
+			slidesToScroll: 2
+		}
+	}]
+});
+
+//상품리뷰
+var reviewSettings = {
+	responsive: [{
+		breakpoint: 9999,
+		settings: "unslick"
+	},{
+		breakpoint: 1024,
+		settings: {
+			speed:600,
+			slidesToShow:1.6,
+			autoplay:false,
+			dots:false,
+			arrows:false,
+			infinite:false
+		}
+	}]
+};
+
+$('.review-gallery').slick(reviewSettings);
+$('.pdt-bd-list.review>li').on('click',function(){
+	if( $(this).find('.review-gallery').length>0 ){
+		$('.review-gallery').slick('unslick');
+		$('.review-gallery').not('.slick-initialized').slick(reviewSettings);
+	}
+});
+
+//tab 고정
+$(window).scroll(function() {
+	var topHeight = $('.pdt-top-wrap').outerHeight();
+	var hdHeight = $('.header').outerHeight();
+
+	if( $('html, body').scrollTop() > topHeight ){
+		$('.header').addClass('pos-top');
+	}else{
+
+		$('.header').removeClass('pos-top');
+	}
+
+	if( $('html, body').scrollTop() > topHeight + hdHeight ){
+		$('.tab-product').addClass('fixed');
+	} else {
+		$('.tab-product').removeClass('fixed');
+	}
+});
+
+$('.tab-product>li>a').on('click', function(){
+	$(this).parents('.tab-product').find('li').removeClass('active');
+	$(this).parents('li').addClass('active');
+});
+
+/* [D] 200626 스크립트 수정 */
+//구매리뷰, 상품문의
+$('.toggle-write-form').on('click', function(){
+	var writeForm = $(this).next('.pdt-write-form');
+
+	if($(this).parents('.bd-cont').length){
+		writeForm =$(this).parents('.bd-cont').next('.pdt-write-form');
+	}
+
+	if (writeForm.is(':visible')) {
+		writeForm.hide();
+	}else{
+		writeForm.show();
+	}
+});
+$('.pdt-write-form').on('click', function(e){
+	e.stopPropagation();
+});
+$('.pdt-write-form .btn-cancel').on('click', function(e){
+	e.stopPropagation();
+	$(this).parents('.pdt-write-form').hide();
+});
+/* //[D] 200626 스크립트 수정 */
+
+//옵션바
+$('.fixed-menu-bar .btn-buy, .pdt-option-bar .btn-buy').on('click', function(e){
+	e.preventDefault();
+	if($('.pdt-option-bar').is('.open')){
+		$('.pdt-option-bar').removeClass('open');
+	}else{
+		$('.pdt-option-bar').addClass('open');
+	}
+});
+$('.pdt-option-bar .btn-box-close, .pdt-option-bar .dimm').on('click', function(e){
+	e.preventDefault();
+	$('.pdt-option-bar').removeClass('open');
+});
+
+//상품안내 팝업
+$('.lay-pop-guide .btn-close').on('click', function(e){
+	e.preventDefault();
+	$('.lay-pop-guide').hide();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+// ========================================================================
+// [page] | 무료체험
+// ========================================================================
+.free-experience-box{
+  padding-top: 90px;
+  .fe-title{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 48px;
+    font-weight: $fw-black;
+    .title-txt{
+      display: block;
+      line-height: 1.2em;
+      letter-spacing: -1.92px;
+      &.txt1{
+        color: #ff7602;
+      }
+    }
+    .title-info{
+      margin-top: 20px;
+      font-size: 19px;
+      font-weight: $fw-light;
+      color: #888888;
+      letter-spacing: -1.24px;
+      .dp-inlne{
+        display: inline-block;
+      }
+    }
+  }
+}

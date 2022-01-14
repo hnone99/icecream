@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런몰</title>
+	<link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+
+	<!-- 210727 style.css 추가 -->
+	<link type="text/css" rel="stylesheet" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/slick.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap">
+
+		<!-- 210830 상단 GNB 추가 -->
+		<div class="ui-new sub-page">
+			<!-- ###ui-header-box -->
+		  <!-- 210727 ui-header-box추가 -->
+		  <header class="ui-header-box">
+		    <div class="ui-header-box-wrap">
+		      <!-- ##로고 -->
+		      <h1 class="header-logo">
+		        <a href="#">
+		          <span class="img-logo">i-scream eco</span>
+		        </a>
+		      </h1>
+		      <!-- ##탭 -->
+		      <nav class="header-tab">
+		        <ul class="tab-list-grp">
+		          <!-- js 탭 활성화 on추가  -->
+		          <li class="tab-list">
+		            <span>학습<span class="txt-mall">mall</span></span>
+		          </li>
+		          <li class="tab-list on">
+		            <span>상품<span class="txt-mall">mall</span></span>
+		          </li>
+		        </ul>
+		      </nav>
+		      <!-- ##버튼 -->
+		      <div class="header-btn">
+		        <button class="btn-loginout">로그인</button>
+		        <button class="btn-joinus">회원가입</button>
+		      </div>
+		    </div>
+		  </header>
+		  <!-- //###ui-header-box -->
+
+
+		  <!-- 모바일 서브 상단 -->
+		  <!-- ###ui-header-box-mo -->
+		  <header class="ui-header-box-mo">
+		    <h2 class="top-sub-title">
+		      <span class="title-txt">장바구니</span>
+		    </h2>
+		    <button class="top-btn-prev">
+		      <i class="ico i-top-btn-prev">이전</i>
+		    </button>
+		    <button class="top-btn-basket">
+		      <i class="ico i-top-basket">장바구니</i>
+		    </button>
+		    <button class="top-btn-home">
+		      <i class="ico i-top-btn-home">홈</i>
+		    </button>
+		  </header>
+		  <!-- //###ui-header-box-mo -->
+
+
+
+		  <!-- ###ui-sub-box -->
+		  <div class="ui-sub-box">
+		    <div class="ui-sub-box-wrap">
+		      <!-- #이전 버튼 -->
+		      <!-- js 이전 버튼 비활성화 off -->
+		      <div class="sub-prev-area off">
+		        <button class="sub-btn-prev">
+		          <i class="ico i-sub-btn-prev">이전</i>
+		        </button>
+		      </div>
+		      <!-- ##서브 메뉴 -->
+		      <div class="sub-menu-area">
+		        <ul class="sub-menu-grp device-pc">
+		          <!-- js 탭 활성화 on추가  -->
+		          <li class="sub-menu on">
+		            <a href="">#전체</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#진단검사도구</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#체험키트</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#체험캠프</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#홈런굿즈</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#이벤트</a>
+		          </li>
+		        </ul>
+		        <!-- #서브 검색/모바일 메뉴 리스트 -->
+		        <!-- 모바일에서만 사용 -->
+		        <ul class="sub-menu-list-grp device-mo">
+		          <li class="sub-menu-list sl-search">
+		            <button class="sub-btn-util">
+		              <i class="ico i-top-search">검색</i>
+		            </button>
+		          </li>
+		          <li class="sub-menu-list sl-basket">
+		            <button class="sub-btn-util">
+		              <i class="ico i-top-basket">장바구니</i>
+		            </button>
+		          </li>
+		          <li class="sub-menu-list sl-menu">
+		            <button class="sub-btn-util">
+		              <i class="ico i-top-menu">메뉴리스트</i>
+		            </button>
+		          </li>
+		        </ul>
+		      </div>
+		      <!-- ##서브 검색/마이페이지 -->
+		      <div class="sub-util-area">
+		        <button class="sub-btn-util">
+		          <i class="ico i-top-search">검색</i>
+		        </button>
+		        <button class="sub-btn-util">
+		          <i class="ico i-top-basket">장바구니</i>
+		        </button>
+		        <button class="sub-btn-util">
+		          <i class="ico i-top-member">마이페이지</i>
+		        </button>
+		      </div>
+
+		    </div>
+		  </div>
+		  <!-- //###ui-sub-box -->
+		</div>
+		<!-- //210830 상단 GNB 추가 -->
+
+
+		<!-- container -->
+		<div class="container">
+
+			<section class="sub-content cart">
+
+				<div class="title-area">
+					<h2 class="page-title">장바구니</h2>
+				</div>
+
+				<div class="asset-card ty01">
+					<div class="card-top-wrap">
+						<div class="txt-box">
+							<p class="txt">
+								<em>김홈런</em> 님 쇼핑통장
+								<span>ABCDEFGHIJKLMNOP</span>
+							</p>
+						</div>
+					</div>
+					<div class="card-cont-wrap">
+						<ul>
+							<li class="con"><a href="#"><div class="cont-inner"><i>콘</i><em class="num">999,999<span>콘</span></em></div></a></li>
+							<li class="money"><a href="#"><div class="cont-inner"><i>예치금</i><em class="num">999,999<span>원</span></em></div></a></li>
+							<li class="point"><a href="#"><div class="cont-inner"><i>포인트</i><em class="num">999,999<span>P</span></em></div></a></li>
+							<li class="coupon"><a href="#"><div class="cont-inner"><i>쿠폰</i><em class="num">999,999<span>개</span></em></div></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 배송상품 -->
+				<div class="cont-group">
+					<div class="cont-tit-area">
+						<h3 class="cont-tit">배송상품</h3>
+						<p class="guide-txt"><span class="icon alert gray"></span>상품 특성 상 tag가 다른 상품은 개별 주문서로 결제하셔야 합니다.</p>
+					</div>
+
+					<table class="tbl-st-col order">
+						<colgroup>
+							<col style="width:2.1%;" />
+							<col style="width:13.28%;" />
+							<col style="width:auto;" />
+							<col style="width:13.28%;" />
+							<col style="width:13.28%;" />
+							<col style="width:13.28%;" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" colspan="3"></th>
+								<th scope="col">합계</th>
+								<th scope="col">적립</th>
+								<th scope="col">관리</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="chk-product">
+									<div class="chk-custom single">
+										<input type="checkbox" name="product" id="product1">
+										<label for="product1"><span></span></label>
+									</div>
+								</td>
+								<td class="product-img">
+									<a href="" class="soldout">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+									</a>
+								</td>
+								<td class="product-info">
+									<a href="" class="tit">홈런프렌즈 캐릭터 머그잔</a>
+									<p class="option">옵션: 오렌지 / M</p>
+									<p class="count">품절 / 0개</p>
+								</td>
+								<td class="price">품절</td>
+								<td class="point">42원 <span>적립</span></td> <!-- [D] 200218 수정 -->
+								<td>
+									<div class="btn-comm-wrap">
+										<button type="button" class="btn-comm btn-xs bg-grayline" onclick="layerPop.show('popOption');">수정</button>
+										<button type="button" class="btn-comm btn-xs bg-grayline">삭제</button>
+									</div>
+
+									<!-- 옵션 팝업 -->
+									<div class="layer-pop pop-option" id="popOption">
+										<div class="pop-bg"></div>
+										<div class="pop-content pdt-option">
+											<div class="inner">
+												<div class="option-box">
+													<div class="option-info">
+														<div class="pdt-title-wrap">
+															<span class="pdt-brand">브랜드명</span>
+															<h3 class="pdt-name">홈런프렌즈 캐릭터 머그잔</h3>
+														</div>
+
+														<ul class="option-list">
+															<li>
+																<em class="info-tit">옵션명</em>
+																<div class="info-cont">
+																	<select name="" id="" class="custom-select">
+																		<option value="">컬러</option>
+																	</select>
+																</div>
+															</li>
+															<li>
+																<em class="info-tit">옵션명</em>
+																<div class="info-cont">
+																	<select name="" id="" class="custom-select">
+																		<option value="">사이즈</option>
+																	</select>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<!-- //option-info -->
+
+													<div class="option-info">
+														<div class="option-result">
+															<ul>
+																<li>
+																	<em class="option-name">오렌지 / M</em>
+																	<div class="count">
+																		<button type="button" class="btn-minus">수량감소</button>
+																		<input type="text" value="1" name="" class="num">
+																		<button type="button" class="btn-plus">수량증가</button>
+																	</div>
+																	<button type="button" class="btn-cancel">옵션 선택 취소</button>
+																</li>
+																<li>
+																	<em class="option-name">오렌지 / M</em>
+																	<div class="count">
+																		<button type="button" class="btn-minus">수량감소</button>
+																		<input type="text" value="1" name="" class="num">
+																		<button type="button" class="btn-plus">수량증가</button>
+																	</div>
+																	<button type="button" class="btn-cancel">옵션 선택 취소</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<!-- //option-info -->
+												</div>
+
+												<div class="btn-comm-wrap">
+													<button type="button" class="btn-comm btn-md bg-gray" onclick="layerPop.hide(this);">취소</button>
+													<button type="button" class="btn-comm btn-md bg-black">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //옵션 팝업 -->
+								</td>
+							</tr>
+							<tr>
+								<td class="chk-product">
+									<div class="chk-custom single">
+										<input type="checkbox" name="product" id="product2">
+										<label for="product2"><span></span></label>
+									</div>
+								</td>
+								<td class="product-img">
+									<a href="">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+									</a>
+								</td>
+								<td class="product-info">
+									<a href="" class="tit">홈런프렌즈 캐릭터 머그잔</a>
+									<p class="option">옵션: 오렌지 / M</p>
+									<p class="count">10,000 / 2개</p>
+								</td>
+								<td class="price">
+									<span class="discount">20,000원</span><br />
+									[10%] 18,000원
+								</td>
+								<td class="point">42원 <span>적립</span></td> <!-- [D] 200218 수정 -->
+								<td>
+									<div class="btn-comm-wrap">
+										<button type="button" class="btn-comm btn-xs bg-grayline" onclick="layerPop.show('popOption2');">수정</button>
+										<button type="button" class="btn-comm btn-xs bg-grayline">삭제</button>
+									</div>
+
+									<!-- 옵션 팝업 -->
+									<div class="layer-pop pop-option" id="popOption2">
+										<div class="pop-bg"></div>
+										<div class="pop-content pdt-option">
+											<div class="inner">
+												<div class="option-box">
+													<div class="option-info">
+														<div class="pdt-title-wrap">
+															<span class="pdt-brand">브랜드명</span>
+															<h3 class="pdt-name">홈런프렌즈 캐릭터 머그잔</h3>
+														</div>
+
+														<ul class="option-list">
+															<li>
+																<em class="info-tit">옵션명</em>
+																<div class="info-cont">
+																	<select name="" id="" class="custom-select">
+																		<option value="">컬러</option>
+																	</select>
+																</div>
+															</li>
+															<li>
+																<em class="info-tit">옵션명</em>
+																<div class="info-cont">
+																	<select name="" id="" class="custom-select">
+																		<option value="">사이즈</option>
+																	</select>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<!-- //option-info -->
+
+													<div class="option-info">
+														<div class="option-result">
+															<ul>
+																<li>
+																	<em class="option-name">오렌지 / M</em>
+																	<div class="count">
+																		<button type="button" class="btn-minus">수량감소</button>
+																		<input type="text" value="1" name="" class="num">
+																		<button type="button" class="btn-plus">수량증가</button>
+																	</div>
+																	<button type="button" class="btn-cancel">옵션 선택 취소</button>
+																</li>
+																<li>
+																	<em class="option-name">오렌지 / M</em>
+																	<div class="count">
+																		<button type="button" class="btn-minus">수량감소</button>
+																		<input type="text" value="1" name="" class="num">
+																		<button type="button" class="btn-plus">수량증가</button>
+																	</div>
+																	<button type="button" class="btn-cancel">옵션 선택 취소</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<!-- //option-info -->
+												</div>
+
+												<div class="btn-comm-wrap">
+													<button type="button" class="btn-comm btn-md bg-gray" onclick="layerPop.hide(this);">취소</button>
+													<button type="button" class="btn-comm btn-md bg-black">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //옵션 팝업 -->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- //tbl-wrap -->
+
+					<div class="order-btn-wrap">
+						<div class="chk-custom">
+							<input type="checkbox" name="checkAll" id="checkAll">
+							<label for="checkAll"><span></span>전체선택(1/1)</label>
+						</div>
+
+						<button type="button" class="btn-delete"><span class="icon delete"></span>선택삭제</button>
+
+						<button type="button" class="btn-like like-all"><span class="icon like gray"></span>모두 찜하기</button>
+					</div>
+				</div>
+				<!-- //배송상품 -->
+
+				<!-- [D] 200717 온라인 체험상품 추가 -->
+				<!-- 온라인 체험상품 -->
+				<div class="cont-group">
+					<div class="cont-tit-area">
+						<h3 class="cont-tit">온라인 체험</h3>
+						<p class="guide-txt"><span class="icon alert gray"></span>상품 특성 상 tag가 다른 상품은 개별 주문서로 결제하셔야 합니다.</p>
+					</div>
+
+					<table class="tbl-st-col order">
+						<colgroup>
+							<col style="width:2.1%;" />
+							<col style="width:13.28%;" />
+							<col style="width:auto;" />
+							<col style="width:13.28%;" />
+							<col style="width:13.28%;" />
+							<col style="width:13.28%;" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" colspan="3"></th>
+								<th scope="col">합계</th>
+								<th scope="col">적립</th>
+								<th scope="col">관리</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="chk-product">
+									<div class="chk-custom single">
+										<input type="checkbox" name="product" id="product3">
+										<label for="product3"><span></span></label>
+									</div>
+								</td>
+								<td class="product-img">
+									<a href="">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+									</a>
+								</td>
+								<td class="product-info">
+									<span class="badge">온라인체험상품</span>
+									<a href="" class="tit">홈런프렌즈 캐릭터 머그잔</a>
+									<p class="option">옵션: 오렌지 / M</p>
+									<p class="count">10,000 / 2개</p>
+								</td>
+								<td class="price">21,000원</td>
+								<td class="point">42원 <span>적립</span></td> <!-- [D] 200218 수정 -->
+								<td>
+									<div class="btn-comm-wrap">
+										<button type="button" class="btn-comm btn-xs bg-grayline" onclick="layerPop.show('popOption3');">수정</button>
+										<button type="button" class="btn-comm btn-xs bg-grayline">삭제</button>
+									</div>
+
+									<!-- 옵션 팝업 -->
+									<div class="layer-pop pop-option" id="popOption3">
+										<div class="pop-bg"></div>
+										<div class="pop-content pdt-option">
+											<div class="inner">
+												<div class="option-box">
+													<div class="option-info">
+														<div class="pdt-title-wrap">
+															<span class="pdt-brand">브랜드명</span>
+															<h3 class="pdt-name">홈런프렌즈 캐릭터 머그잔</h3>
+														</div>
+
+														<ul class="option-list">
+															<li>
+																<em class="info-tit">옵션명</em>
+																<div class="info-cont">
+																	<select name="" id="" class="custom-select">
+																		<option value="">컬러</option>
+																	</select>
+																</div>
+															</li>
+															<li>
+																<em class="info-tit">옵션명</em>
+																<div class="info-cont">
+																	<select name="" id="" class="custom-select">
+																		<option value="">사이즈</option>
+																	</select>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<!-- //option-info -->
+
+													<div class="option-info">
+														<div class="option-result">
+															<ul>
+																<li>
+																	<em class="option-name">오렌지 / M</em>
+																	<div class="count">
+																		<button type="button" class="btn-minus">수량감소</button>
+																		<input type="text" value="1" name="" class="num">
+																		<button type="button" class="btn-plus">수량증가</button>
+																	</div>
+																	<button type="button" class="btn-cancel">옵션 선택 취소</button>
+																</li>
+																<li>
+																	<em class="option-name">오렌지 / M</em>
+																	<div class="count">
+																		<button type="button" class="btn-minus">수량감소</button>
+																		<input type="text" value="1" name="" class="num">
+																		<button type="button" class="btn-plus">수량증가</button>
+																	</div>
+																	<button type="button" class="btn-cancel">옵션 선택 취소</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<!-- //option-info -->
+												</div>
+
+												<div class="btn-comm-wrap">
+													<button type="button" class="btn-comm btn-md bg-gray" onclick="layerPop.hide(this);">취소</button>
+													<button type="button" class="btn-comm btn-md bg-black">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //옵션 팝업 -->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- //tbl-wrap -->
+
+					<div class="order-btn-wrap">
+						<div class="chk-custom">
+							<input type="checkbox" name="checkAll" id="checkAll">
+							<label for="checkAll"><span></span>전체선택(1/1)</label>
+						</div>
+
+						<button type="button" class="btn-delete"><span class="icon delete"></span>선택삭제</button>
+
+						<button type="button" class="btn-like like-all"><span class="icon like gray"></span>모두 찜하기</button>
+					</div>
+				</div>
+				<!-- //온라인 체험상품 -->
+				<!-- //[D] 200717 온라인 체험상품 추가 -->
+
+				<!-- [D] 200220 체험상품 추가 -->
+				<!-- 오프라인 체험상품 -->
+				<div class="cont-group">
+					<div class="cont-tit-area">
+						<!-- [D] 200717 텍스트 변경 -->
+						<h3 class="cont-tit">오프라인 체험</h3>
+						<!-- //[D] 200717 텍스트 변경 -->
+						<p class="guide-txt"><span class="icon alert gray"></span>상품 특성 상 tag가 다른 상품은 개별 주문서로 결제하셔야 합니다.</p>
+					</div>
+
+					<table class="tbl-st-col order">
+						<colgroup>
+							<col style="width:2.1%;" />
+							<col style="width:13.28%;" />
+							<col style="width:auto;" />
+							<col style="width:13.28%;" />
+							<col style="width:13.28%;" />
+							<col style="width:13.28%;" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" colspan="3"></th>
+								<th scope="col">합계</th>
+								<th scope="col">적립</th>
+								<th scope="col">관리</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="chk-product">
+									<div class="chk-custom single">
+										<input type="checkbox" name="product" id="product3">
+										<label for="product3"><span></span></label>
+									</div>
+								</td>
+								<td class="product-img">
+									<a href="">
+										<img src="../images/sample/pdt_cup.jpg" alt="" />
+									</a>
+								</td>
+								<td class="product-info">
+									<!-- [D] 200717 텍스트 변경2 -->
+									<span class="badge">오프라인체험상품</span>
+									<!-- [D] 200717 텍스트 변경2 -->
+									<a href="" class="tit">홈런프렌즈 캐릭터 머그잔</a>
+									<p class="option">옵션: 오렌지 / M</p>
+									<p class="count">10,000 / 2개</p>
+								</td>
+								<td class="price">21,000원</td>
+								<td class="point">42원 <span>적립</span></td> <!-- [D] 200218 수정 -->
+								<td>
+									<div class="btn-comm-wrap">
+										<button type="button" class="btn-comm btn-xs bg-grayline" onclick="layerPop.show('popOption3');">수정</button>
+										<button type="button" class="btn-comm btn-xs bg-grayline">삭제</button>
+									</div>
+
+									<!-- 옵션 팝업 -->
+									<div class="layer-pop pop-option" id="popOption3">
+										<div class="pop-bg"></div>
+										<div class="pop-content pdt-option">
+											<div class="inner">
+												<div class="option-box">
+													<div class="option-info">
+														<div class="pdt-title-wrap">
+															<span class="pdt-brand">브랜드명</span>
+															<h3 class="pdt-name">홈런프렌즈 캐릭터 머그잔</h3>
+														</div>
+
+														<ul class="option-list">
+															<li>
+																<em class="info-tit">옵션명</em>
+																<div class="info-cont">
+																	<select name="" id="" class="custom-select">
+																		<option value="">컬러</option>
+																	</select>
+																</div>
+															</li>
+															<li>
+																<em class="info-tit">옵션명</em>
+																<div class="info-cont">
+																	<select name="" id="" class="custom-select">
+																		<option value="">사이즈</option>
+																	</select>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<!-- //option-info -->
+
+													<div class="option-info">
+														<div class="option-result">
+															<ul>
+																<li>
+																	<em class="option-name">오렌지 / M</em>
+																	<div class="count">
+																		<button type="button" class="btn-minus">수량감소</button>
+																		<input type="text" value="1" name="" class="num">
+																		<button type="button" class="btn-plus">수량증가</button>
+																	</div>
+																	<button type="button" class="btn-cancel">옵션 선택 취소</button>
+																</li>
+																<li>
+																	<em class="option-name">오렌지 / M</em>
+																	<div class="count">
+																		<button type="button" class="btn-minus">수량감소</button>
+																		<input type="text" value="1" name="" class="num">
+																		<button type="button" class="btn-plus">수량증가</button>
+																	</div>
+																	<button type="button" class="btn-cancel">옵션 선택 취소</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<!-- //option-info -->
+												</div>
+
+												<div class="btn-comm-wrap">
+													<button type="button" class="btn-comm btn-md bg-gray" onclick="layerPop.hide(this);">취소</button>
+													<button type="button" class="btn-comm btn-md bg-black">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //옵션 팝업 -->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- //tbl-wrap -->
+
+					<div class="order-btn-wrap">
+						<div class="chk-custom">
+							<input type="checkbox" name="checkAll" id="checkAll">
+							<label for="checkAll"><span></span>전체선택(1/1)</label>
+						</div>
+
+						<button type="button" class="btn-delete"><span class="icon delete"></span>선택삭제</button>
+
+						<button type="button" class="btn-like like-all"><span class="icon like gray"></span>모두 찜하기</button>
+					</div>
+				</div>
+				<!-- //오프라인 체험상품 -->
+				<!-- //[D] 200220 체험상품 추가 -->
+
+				<!-- 결제금액 -->
+				<div class="cont-group">
+					<h3 class="cont-tit">결제금액</h3>
+
+					<div class="payment-info">
+						<div class="price-list product">
+							<div class="total-price-info">
+								<em class="tit">총 상품금액</em>
+								<span class="price">83,000원</span>
+							</div>
+
+							<ul class="price-info">
+								<li>
+									<em class="tit">총 상품금액 (<em>3</em>건)</em>
+									<span class="price">80,000원</span>
+								</li>
+								<li>
+									<em class="tit">배송비</em>
+									<span class="price">(+) 3,000원</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="price-list discount">
+							<div class="total-price-info">
+								<em class="tit">총 할인금액</em>
+								<span class="price">- 2,070원</span>
+							</div>
+
+							<ul class="price-info">
+								<li>
+									<em class="tit">일반할인</em>
+									<span class="price">0원</span>
+								</li>
+								<li>
+									<em class="tit">쿠폰할인</em>
+									<span class="price">0원</span>
+								</li>
+								<li>
+									<em class="tit">회원할인</em>
+									<span class="price">(-) 80원</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="price-list total">
+							<div class="total-price-info">
+								<em class="tit">총 결제금액</em>
+								<span class="price">000,000원</span>
+							</div>
+
+							<ul class="price-info">
+								<li>
+									<em class="tit">총 상품금액</em>
+									<span class="price">83,000원</span>
+								</li>
+								<li>
+									<em class="tit">총 할인금액</em>
+									<span class="price">(-) 000,000원</span>
+								</li>
+								<li>
+									<em class="tit">총 배송비</em> <!-- [D] 200305 총 배송비 추가 -->
+									<span class="price">(+) 000,000원</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<ul class="list-st-dot">
+						<li>배송료는 업체의 기본배송정책과 상품마다 배송정책이 다를 수가 있습니다.</li>
+						<li>상품명에 적용된 배송정책은 상품에게만 적용되며, 기본정책에는 영향을 받지 않습니다.</li>
+					</ul>
+				</div>
+				<!-- //결제금액 -->
+
+				<div class="btn-comm-wrap">
+					<a href="" class="btn-comm btn-md bg-grayline">쇼핑 계속하기</a>
+					<a href="" class="btn-comm btn-md bg-skyblue">선택주문</a>
+					<a href="" class="btn-comm btn-md">전체주문</a> <!-- [D] 200218 수정 -->
+				</div>
+
+			</section>
+
+		</div>
+		<!-- //container -->
+
+		<!-- 210830 하단 footer 추가 -->
+		<div class="ui-new">
+			<!-- 학습몰 이전 소스 활용 -->
+			<footer class="footer-box">
+			  <div class="container-footer">
+			    <div class="policy">
+			      <ul class="clearfix">
+			        <li class="item"><a href="#" data-text="CU_0018_01">회사소개</a></li>
+			        <li><a href="#" data-text="CU_0018_02">이용약관</a></li>
+			        <li><a href="#" data-text="CU_0018_03">개인정보처리방침</a></li>
+			      </ul>
+			    </div>
+			    <div class="family">
+			      <div class="input-group">
+							<select name="" id="" class="custom-select">
+								<option value="" data-text="CU_0018_12">FAMILY SITE</option>
+								<option value="" data-text="CU_0018_13">아이스크림홈런</option>
+								<option value="" data-text="CU_0018_14">아이스크림홈런중등</option>
+								<option value="" data-text="CU_0018_15">아이스크림에듀</option>
+								<option value="" data-text="CU_0018_16">아이스크림미디어</option>
+								<option value="" data-text="CU_0018_17">아이스크림</option>
+								<option value="" data-text="CU_0018_18">아이스크림몰</option>
+								<option value="" data-text="CU_0018_19">아이스크림연수원</option>
+							</select>
+			      </div>
+			    </div>
+			    <address>
+			      <p>
+			         <span class="address">
+								<em data-text="CU_0018_04">(주)아이스크림에듀<br>
+								서울특별시 강남구 테헤란로88길 15</em>
+								<em data-text="CU_0018_05">대표 : 조용상</em><br>
+		            <em data-text="CU_0018_06">상담 및 문의전화 : 1544-0910</em>
+								<em data-text="CU_0018_07">팩스 : (02)3448-5262</em><br>
+								<em data-text="CU_0018_08">사업자등록번호 : 120-87-97004</em>
+		            <em data-text="CU_0018_09">통신판매신고번호 : 제2013-서울강남-01379호</em><br>
+		            <em data-text="CU_0018_10">호스팅사업자 : AWS</em><br>
+							</span>
+			        <span class="copyright" data-text="CU_0018_11">Copyright © i-Scream edu Corporation. All rights reserved.</span>
+			      </p>
+			    </address>
+			  </div>
+			</footer>
+		</div>
+		<!-- //210830 하단 footer 추가 -->
+
+		<div class="fixed-btn-wrap">
+			<a href="" class="btn-customer"><span class="icon customer"></span>고객센터</a>
+			<a href="" class="btn-apply"><span class="icon apply"></span>홈런신청</a>
+			<button type="button" class="btn-top">Top</button>
+		</div>
+	</div>
+	<!-- //wrap -->
+
+</body>
+</html>

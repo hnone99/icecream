@@ -1,0 +1,279 @@
+// ========================================================================
+// [] | 미디어쿼리
+// ========================================================================
+// bootstrap.css 1280으로 작성된 부분 수정
+// @media all and (min-width: 1280px){
+.ui-new{
+  // .wrap{
+  //   padding-top: 0;
+  // }
+  // .container{
+  //   &.new-container{
+  //     max-width: 100%;
+  //     margin: 0 auto;
+  //     padding: 0;
+  //     .container-sm,
+  //     .container-md,
+  //     .container-lg,
+  //     .container-xl{
+  //       max-width: 100%;
+  //       padding-left: 0;
+  //       padding-right: 0;
+  //     }
+  //   }
+  // }
+
+  //---------------------------------------------------------------------------
+  //---------------------------------------------------------------------------
+  // 학습몰 부트스트랩 가져옴
+  .search-box {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 100;
+    border-radius: 0;
+    overflow: auto;
+  }
+  .search-box .input-group {
+    height: 60px;
+    padding-left: 12px;
+    border-bottom: 2px solid rgba(224, 224, 224, 0.6);
+  }
+  .search-box .input-group .btn-back {
+    width: 32px;
+    height: 32px;
+    margin-top: 14px;
+    display: inline-block;
+  }
+  .search-box .input-group .form-control {
+    display: block;
+    width: 100%;
+    height: 58px;
+    line-height: 61px;
+    padding: 0 70px 0 12px;
+    font-size: 14px;
+    font-family: $base-font;
+    color: #333333;
+    background-color: #fff;
+    border-radius: 0;
+    border: 0 none;
+    background-color: transparent;
+    outline: none;
+  }
+  .search-box .input-group .form-control::placeholder,
+  .search-box .input-group .form-control:-moz-placeholder,
+  .search-box .input-group .form-control:-ms-input-placeholder,
+  .search-box .input-group .form-control::-webkit-input-placeholder,
+  .search-box .input-group .form-control::-ms-input-placeholder {
+    color: #bbbbbb;
+  }
+  .search-box .input-group .btn-search-close {
+    display: block;
+    position: absolute;
+    right: 52px;
+    top: 21px;
+    line-height: 1;
+    z-index: 111;
+  }
+  .search-box .input-group .btn-search {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 12px;
+    top: 14px;
+    line-height: 1;
+  }
+  .search-box .input-group .btn-search:hover {
+    background-color: transparent;
+  }
+  .search-box .search-content {
+    position: relative;
+    text-align: left;
+    margin: 0 20px;
+    padding: 10px 0 0;
+    line-height: 1
+  }
+  .search-box .search-content .search-list > p {
+    padding-top: 6px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #999999;
+  }
+  .search-box .search-content .search-list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 74px 5px 36px;
+    margin-bottom: 4px;
+  }
+  .search-box .search-content .search-list li .item-1 {
+    display: inline-block;
+  }
+  .search-box .search-content .search-list li .item-1 .img {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  .search-box .search-content .search-list li .item-1 .text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .search-box .search-content .search-list li .item-1 .text .highlight {
+    color: #42c2d1;
+  }
+  .search-box .search-content .search-list li .item-2 {
+    position: absolute;
+    right: 0;
+    top: 7px;
+  }
+  .search-box .search-content .search-list li .item-2 .date {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+    font-size: 14px;
+    color: #999999;
+  }
+  .search-box .search-content .search-list li .item-2 a {
+    display: inline-block;
+    margin-left: 12px;
+    transform: translateY(-2px);
+  }
+  .search-box .search-content .search-list li:last-child {
+    margin-bottom: 0;
+  }
+  .search-box .search-content .search-list .empty {
+    margin-top: 52px;
+  }
+  .search-box .search-content .search-list .empty .img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 12px;
+  }
+  .search-box .search-content .search-list .empty .desc {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #666666;
+  }
+
+
+  @media (min-width: 1280px) {
+    .search-box {
+      position: fixed;
+      height: auto;
+      top: 24px;
+      left: 0;
+      background: transparent;
+      padding: 0 24px;
+      overflow: visible;
+    }
+    .search-box .input-group {
+      background-color: #fff;
+      border-radius: 33px 33px 0 0;
+      box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
+    }
+    .search-box .input-group .form-control {
+      font-size: 20px;
+    }
+    .search-box .input-group .btn-back {
+      width: 36px;
+      height: 36px;
+      margin-top: 12px;
+    }
+    .search-box .input-group .btn-search {
+      width: 36px;
+      height: 36px;
+      top: 12px;
+    }
+    .search-box .search-content {
+      margin: 0;
+      padding: 18px 42px 18px 42px;
+      background-color: rgba(255, 255, 255, 0.96);
+      border-radius: 0 0 33px 33px;
+      box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
+    }
+    .search-box .search-content .search-list > p {
+      font-size: 16px;
+      padding-bottom: 15px;
+    }
+    .search-box .search-content .search-list li {
+      margin-bottom: 14px;
+    }
+    .search-box .search-content .search-list li .item-1 .text {
+      font-size: 18px;
+    }
+    .search-box .search-content .search-list li .item-2 .date {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .search-box .search-content .search-list li .item-2 a {
+      transform: translateY(-1px);
+    }
+    .search-box .search-content .search-list .empty {
+      margin-top: 40px;
+    }
+    .search-box .search-content .search-list .empty .img {
+      width: 120px;
+      height: 120px;
+    }
+    .search-box .search-content .search-list .empty .desc {
+      font-size: 18px;
+      line-height: 48px;
+      color: #999999;
+      margin-bottom: 40px;
+    }
+  }
+  //---------------------------------------------------------------------------
+  //---------------------------------------------------------------------------
+  .search-box{
+    position: absolute;
+    top: 0;
+    left: inherit;
+    right: 116px;
+    width: 220px;
+    padding: 0;
+  }
+  .search-box .input-group {
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 3px solid #000;
+    .btn-search-back{
+      display: none;
+    }
+    .btn-search{
+      img{
+        vertical-align: middle;
+        border-style: none;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .search-box .search-content {
+    margin: 0;
+    padding: 18px 20px 18px 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.96);
+    .search-list li{
+      img{
+        vertical-align: middle;
+        border-style: none;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

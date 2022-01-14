@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-title" content="HOMELEARN_MARKET" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="HOMELEARN_MARKET"/>
+  <meta name="keywords" content="HOMELEARN_MARKET"/>
+  <title>홈런MARKET</title>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/fonts/fontAwesomepro.css"/>
+
+  <!-- 210727 css 추가 -->
+  <link type="text/css" rel="stylesheet" href="../css/style.css">
+
+  <script src="../js/bundle.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<!-- 210727 ui-new 추가 -->
+<body class="ui-new sub-page">
+
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+  }
+</style>
+
+<div class="">
+  <div class="wrap">
+
+    <!-- ###ui-header-box -->
+    <header class="ui-header-box">
+      <div class="ui-header-box-wrap">
+        <!-- ##로고 -->
+        <h1 class="header-logo">
+          <a href="#">
+            <span class="img-logo">i-scream eco</span>
+          </a>
+        </h1>
+        <!-- ##탭 -->
+        <nav class="header-tab">
+          <ul class="tab-list-grp">
+            <!-- js 탭 활성화 on추가  -->
+            <li class="tab-list on">
+              <span>학습<span class="txt-mall">mall</span></span>
+            </li>
+            <li class="tab-list">
+              <span>상품<span class="txt-mall">mall</span></span>
+            </li>
+          </ul>
+        </nav>
+        <!-- ##버튼 -->
+        <div class="header-btn">
+          <button class="btn-top btn-loginout">로그인</button>
+          <!-- <button class="btn-top btn-loginout">로그아웃</button> -->
+          <button class="btn-top btn-joinus">회원가입</button>
+        </div>
+      </div>
+    </header>
+    <!-- //###ui-header-box -->
+
+    <!-- 모바일 서브 상단 -->
+    <!-- ###ui-header-box-mo -->
+    <header class="ui-header-box-mo">
+      <h2 class="top-sub-title">상세보기</h2>
+      <button class="top-btn-prev">
+        <i class="ico i-top-btn-prev">이전</i>
+      </button>
+      <button class="top-btn-home">
+        <i class="ico i-top-btn-home">홈</i>
+      </button>
+    </header>
+    <!-- //###ui-header-box-mo -->
+
+    <!-- ###ui-sub-box -->
+    <div class="ui-sub-box">
+      <div class="ui-sub-box-wrap">
+        <!-- #이전 버튼 -->
+        <!-- js 이전 버튼 비활성화 off -->
+        <div class="sub-prev-area">
+          <button class="sub-btn-prev">
+            <i class="ico i-sub-btn-prev">이전</i>
+          </button>
+        </div>
+        <!-- ##서브 메뉴 -->
+        <div class="sub-menu-area">
+          <!-- 상세페이지 일 경우 타이틀 활성화 -->
+          <h2 class="top-sub-title">상세보기</h2>
+          <!-- 상세페이지 일 경우 서브 메뉴 삭제  -->
+          <ul class="sub-menu-grp device-pc" style="display: none">
+            <!-- js 탭 활성화 on추가  -->
+            <li class="sub-menu on">
+              <a href="">#전체</a>
+            </li>
+            <li class="sub-menu">
+              <a href="" data-text="MA_0013_03">#초등</a>
+            </li>
+            <li class="sub-menu">
+              <a href="" data-text="MA_0013_04">#중등</a>
+            </li>
+          </ul>
+          <!-- #서브 검색/모바일 메뉴 리스트 -->
+          <!-- 모바일에서만 사용 -->
+          <ul class="sub-menu-list-grp device-mo">
+            <li class="sub-menu-list sl-search">
+              <button class="sub-btn-util">
+                <i class="ico i-top-search">검색</i>
+              </button>
+            </li>
+            <li class="sub-menu-list sl-menu">
+              <button class="sub-btn-util">
+                <i class="ico i-top-menu">메뉴리스트</i>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <!-- ##서브 검색/마이페이지 -->
+        <div class="sub-util-area">
+          <button class="sub-btn-util">
+            <i class="ico i-top-search">검색</i>
+          </button>
+          <button class="sub-btn-util show" data-trigger="drawer">
+            <i class="ico i-top-member">마이페이지</i>
+          </button>
+        </div>
+
+
+        <!-- ##서브 알림창 -->
+        <!-- 이전 소스 활용 / js drawer-open: 알림창 활성화-->
+        <div tabindex="-1" class="drawer drawer-right">
+          <div class="drawer-mask"></div>
+          <div class="drawer-content-wrapper">
+            <div class="drawer-content">
+              <div class="drawer-wrapper-body">
+
+                <!-- #알림 최상단 -->
+                <!-- 알림 모바일만 적용 -->
+                <section class="drawer-highest">
+                  <div class="top-left-area">
+                    <button class="top-btn top-btn-member">
+                      로그아웃
+                    </button>
+                    <button class="top-btn top-btn-language">
+                      언어설정
+                    </button>
+                  </div>
+                  <div class="top-right-area">
+                    <button class="top-btn-close">
+                      <i class="ico i-top-btn-close">닫기</i>
+                    </button>
+                  </div>
+                </section>
+                <!-- //#알림 최상단 -->
+
+                <!-- #알림 상단 -->
+                <div class="drawer-header">
+                  <div class="drawer-title">
+                    <span class="grade" data-text="CU_0004_12">학부모 회원</span>
+                    <span class="study-access"><a href="#">학습관 이용</a></span>
+                    <a href="#" class="name" data-text="CU_0004_02">회원명</a>
+                  </div>
+                </div>
+                <!-- //#알림 상단 -->
+                <!-- #알림 콘텐츠 -->
+                <div class="drawer-body">
+                  <!-- 읽은 알림/읽지 않은 알림 -->
+                  <div class="alram">
+                    <em data-text="CU_0004_16">읽지 않은 알림</em> <span class="text-secondary" data-text="CU_0004_17">%S개</span><em data-text="CU_0004_18">있습니다.</em>
+                    <a href="#" class="setting d-inline" data-toggle="modal" data-target="#tagNotice"><span class="text-secondary" data-text="CU_0004_07">알림설정</span></a>
+                  </div>
+                  <div class="alram">
+                    <em data-text="CU_0004_16">읽지 않은 알림</em><em data-text="CU_0004_19">이 없습니다.</em>
+                    <a href="#" class="setting d-inline" data-toggle="modal" data-target="#tagNotice"><span class="text-secondary" data-text="CU_0004_07">알림설정</span></a>
+                  </div>
+                  <hr class="line">
+                  <!-- 오늘 -->
+                  <div class="daylist">
+                    <div class="date" data-text="CU_0004_08">오늘</div>
+                    <ul>
+                      <li>
+                        <span class="desc">
+                          <span class="text-secondary"><em class="user-name">김홈런</em></span>
+                          <em data-text="CU_0004_21">에 새로운 학습이 등록되었습니다.</em>
+                        </span>
+                        <span class="list">
+                          <img src="../img/common/m-alram-app-img.png" alt="">
+                          <em>뚜루아이와 함께하는 초등 수학 3학년</em>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="desc"><span class="text-secondary"><em data-text="CU_0004_20">#%S</em></span><em data-text="CU_0004_21">에 새로운 학습이 등록되었습니다.</em></span>
+                        <span class="list">
+                          <img src="../img/common/m-alram-app-img.png" alt="">
+                          <em>뚜루아이와 함께하는 초등 수학 3학년</em>
+                          <i class="new"><img src="../img/common/icon-list-badge-new@3x.png" alt="" width="16"></i>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="desc"><span class="text-secondary"><em data-text="CU_0004_20">#%S</em></span><em data-text="CU_0004_21">에 새로운 학습이 등록되었습니다.</em></span>
+                        <span class="list">
+                          <img src="../img/common/m-alram-app-img.png" alt="">
+                          <em>뚜루아이와 함께하는 초등 수학 3학년</em>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="desc"><span class="text-secondary"><em data-text="CU_0004_20">#%S</em></span><em data-text="CU_0004_21">에 새로운 학습이 등록되었습니다.</em></span>
+                        <span class="list">
+                          <img src="../img/common/m-alram-app-img.png" alt="">
+                          <em>뚜루아이와 함께하는 초등 수학 3학년</em>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- 날짜별 -->
+                  <div class="daylist">
+                    <div class="date">2020.06.15</div>
+                    <ul>
+                      <li>
+                        <span class="desc">
+                          <span class="text-secondary"><em class="user-name">김홈런</em></span>
+                          <em data-text="CU_0004_21">에 새로운 학습이 등록되었습니다.</em>
+                        </span>
+                        <span class="list">
+                          <img src="../img/common/m-alram-app-img.png" alt="">
+                          <em>뚜루아이와 함께하는 초등 수학 3학년</em>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="desc"><span class="text-secondary"><em data-text="CU_0004_20">#%S</em></span><em data-text="CU_0004_21">에 새로운 학습이 등록되었습니다.</em></span>
+                        <span class="list">
+                          <img src="../img/common/m-alram-app-img.png" alt="">
+                          <em>뚜루아이와 함께하는 초등 수학 3학년</em>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="desc"><span class="text-secondary"><em data-text="CU_0004_20">#%S</em></span><em data-text="CU_0004_21">에 새로운 학습이 등록되었습니다.</em></span>
+                        <span class="list">
+                          <img src="../img/common/m-alram-app-img.png" alt="">
+                          <em>뚜루아이와 함께하는 초등 수학 3학년</em>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="desc"><span class="text-secondary"><em data-text="CU_0004_20">#%S</em></span><em data-text="CU_0004_21">에 새로운 학습이 등록되었습니다.</em></span>
+                        <span class="list">
+                          <img src="../img/common/m-alram-app-img.png" alt="">
+                          <em>뚜루아이와 함께하는 초등 수학 3학년</em>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- 알림이 비었습니다.  -->
+                  <div class="empty">
+                    <img src="../img/common/icon-80-alram.png" alt="알람">
+                    <span data-text="CU_0004_22">알림함이 비었습니다.</span>
+                  </div>
+                </div>
+                <!-- //#알림 콘텐츠 -->
+                <!-- #알림 하단 -->
+                <div class="drawer-footer">
+                  <a href="#" class="btn-language">언어설정</a>
+                  <a href="#" data-text="CU_0004_04">로그아웃</a>
+                </div>
+                <!-- //#알림 하단 -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //##서브 알림창 -->
+
+      </div>
+    </div>
+    <!-- //###ui-sub-box -->
+
+
+
+  </div>
+</div>
+<div class="fixed-btn">
+  <ul>
+    <li><a href="#" class="cs"><img src="../img/common/btn-cs-n@2x.png" /><span data-text="CC_0001_01">고객센터</span></a></li>
+    <li><a href="#" class="top"><img src="../img/common/btn-top-n.png" /></a></li>
+  </ul>
+</div>
+
+<footer>
+  <div class="container-footer">
+    <div class="policy">
+      <ul class="clearfix">
+        <li class="item"><a href="#" data-text="CU_0018_01">회사소개</a></li>
+        <li><a href="#" data-text="CU_0018_02">이용약관</a></li>
+        <li><a href="#" data-text="CU_0018_03">개인정보처리방침</a></li>
+      </ul>
+    </div>
+    <div class="family">
+      <div class="input-group">
+        <select name="" id="">
+          <option value="" data-text="CU_0018_12">FAMILY SITE</option>
+          <option value="" data-text="CU_0018_13">아이스크림홈런</option>
+          <option value="" data-text="CU_0018_14">아이스크림홈런중등</option>
+          <option value="" data-text="CU_0018_15">아이스크림에듀</option>
+          <option value="" data-text="CU_0018_16">아이스크림미디어</option>
+          <option value="" data-text="CU_0018_17">아이스크림</option>
+          <option value="" data-text="CU_0018_18">아이스크림몰</option>
+          <option value="" data-text="CU_0018_19">아이스크림연수원</option>
+        </select>
+      </div>
+    </div>
+    <!--  S 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
+    <address>
+      <p>
+          <span class="address"><em data-text="CU_0018_04">(주)아이스크림에듀 서울특별시 강남구 테헤란로88길 15</em> <em data-text="CU_0018_05">대표 : 조용상</em><br>
+            <em data-text="CU_0018_06">상담 및 문의전화 : 1544-0910</em> <em data-text="CU_0018_07">팩스 : (02)3448-5262</em> <em data-text="CU_0018_08">사업자등록번호 : 120-87-97004</em><br>
+            <em data-text="CU_0018_09">통신판매신고번호 : 제2013-서울강남-01379호</em><br>
+            <em data-text="CU_0018_10">호스팅사업자 : AWS</em><br><br></span>
+        <span class="copyright" data-text="CU_0018_11">Copyright © i-Scream edu Corporation. All rights reserved.</span>
+      </p>
+    </address>
+    <!--  E 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
+  </div>
+</footer>
+
+<!-- E content -->
+</body>
+</html>

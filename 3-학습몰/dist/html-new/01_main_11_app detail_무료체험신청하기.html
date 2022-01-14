@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="Referrer" content="origin"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="apple-mobile-web-app-title" content="HOMELEARN_MARKET" />
+<meta name="robots" content="index,nofollow"/>
+<meta name="description" content="HOMELEARN_MARKET"/>
+<meta name="keywords" content="HOMELEARN_MARKET"/>
+<title>홈런MARKET</title>
+<link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="../css/fonts/fontAwesomepro.css"/>
+<!-- 210727 style.css 추가 -->
+<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+<script src="../js/bundle.js"></script>
+<script src="../js/lang/lang.js"></script>
+</head>
+
+<!-- 210727 ui-new 추가 -->
+<body class="ui-new sub-page">
+<!-- <button id="koBtn" data-lang="ko">한국</button><br/> -->
+<!-- <button id="enBtn" data-lang="en">영어</button><br/> -->
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+  }
+</style>
+<!-- ####wrap -->
+<div class="wrap">
+
+  <!-- ###ui-header-box -->
+  <header class="ui-header-box">
+    <div class="ui-header-box-wrap">
+      <!-- ##로고 -->
+      <h1 class="header-logo">
+        <a href="#">
+          <span class="img-logo">i-scream eco</span>
+        </a>
+      </h1>
+      <!-- ##탭 -->
+      <nav class="header-tab">
+        <ul class="tab-list-grp">
+          <!-- js 탭 활성화 on추가  -->
+          <li class="tab-list on">
+            <span>학습<span class="txt-mall">mall</span></span>
+          </li>
+          <li class="tab-list">
+            <span>상품<span class="txt-mall">mall</span></span>
+          </li>
+        </ul>
+      </nav>
+      <!-- ##버튼 -->
+      <div class="header-btn">
+        <button class="btn-top btn-loginout">로그인</button>
+        <button class="btn-top btn-joinus">회원가입</button>
+      </div>
+    </div>
+  </header>
+  <!-- //###ui-header-box -->
+
+  <!-- 모바일 서브 상단 -->
+  <!-- ###ui-header-box-mo -->
+  <header class="ui-header-box-mo">
+    <h2 class="top-sub-title">무료체험 신청하기</h2>
+    <button class="top-btn-prev">
+      <i class="ico i-top-btn-prev">이전</i>
+    </button>
+    <!-- <button class="top-btn-home">
+      <i class="ico i-top-btn-home">홈</i>
+    </button> -->
+    <button class="top-btn-close">
+      <i class="ico i-top-btn-close">닫기</i>
+    </button>
+  </header>
+  <!-- //###ui-header-box-mo -->
+
+
+  <!-- ###ui-sub-box -->
+  <div class="ui-sub-box">
+    <div class="ui-sub-box-wrap">
+      <!-- #이전 버튼 -->
+      <!-- js 이전 버튼 비활성화 off -->
+      <div class="sub-prev-area">
+        <button class="sub-btn-prev">
+          <i class="ico i-sub-btn-prev">이전</i>
+        </button>
+      </div>
+      <!-- ##서브 메뉴 -->
+      <div class="sub-menu-area">
+        <ul class="sub-menu-grp">
+          <!-- js 탭 활성화 on추가  -->
+          <li class="sub-menu on">
+            <a href="">#전체</a>
+          </li>
+          <li class="sub-menu">
+            <a href="" data-text="MA_0013_03">#초등</a>
+          </li>
+          <li class="sub-menu">
+            <a href="" data-text="MA_0013_04">#중등</a>
+          </li>
+        </ul>
+      </div>
+      <!-- ##서브 검색/마이페이지 -->
+      <div class="sub-util-area">
+        <button class="sub-btn-util">
+          <i class="ico i-top-search">검색</i>
+        </button>
+        <button class="sub-btn-util">
+          <i class="ico i-top-member">마이페이지</i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- //###ui-sub-box -->
+
+  <!-- 210727 navbar 삭제 -->
+
+  <!-- ###container -->
+  <div class="container">
+
+    <!-- ##free-experience-box 10일 무료체험 신청 -->
+    <!-- 홈페이지 소스 활용 -->
+    <div class="free-experience-box">
+      <h3 class="fe-title">
+        <span class="title-txt txt1">0원으로 10일 무료체험!</span>
+        <span class="title-txt txt2">무료체험 후 결정해도 늦지 않습니다</span>
+        <div class="title-info">
+          <span class="dp-inline">*정회원과 동일한 학습을 10일간 무료로 체험해 보세요!</span>
+          <span class="dp-inline">(홈런 학습기 무료배송 및 회수)</span>
+        </div>
+      </h3>
+      <!-- section -->
+      <div class="section">
+        <div class="layout_750">
+          <div class="txt190821130329 txtr"><i class="star"></i> 표시 필수사항</div>
+          <form class="resfonsive_form_box" name="regForm" id="regForm" method="post" autocomplete="off">
+            <div class="item">
+              <div class="inner">
+                <div class="label">
+                  <div>학부모 이름 <i class="star"></i></div>
+                </div>
+                <div class="control">
+                  <div class="variable_shape_box">
+                    <div class="cell">
+                      <input type="text" class="input0 block" id="nm_kor" name="nm_kor" value="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="inner">
+                <div class="label">
+                  <div>휴대폰 번호 <i class="star"></i></div>
+                </div>
+                <div class="control">
+                  <div>
+                    <div class="variable_shape_box">
+                      <div class="cell">
+                        <input type="text" class="input0 block num_only" id="mobile3" name="mobile3" maxlength="11" placeholder="- 없이 입력" />
+                      </div>
+                      <div class="cell" style="width:10px;"></div>
+                      <div class="cell" style="width:160px;">
+                        <!--인증요청, 재요청 -->
+                        <button type="button" class="button0 block" id="certSms">인증요청</button>
+                        <button type="button" class="button0 block" id="certSmsRe" onclick="fnCmdReSend()" style="display:none">재요청</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="smsErr01" class="smsShow" style="display:none">
+                    <div class="variable_shape_box">
+                      <div class="cell">
+                        <div class="desc0 color2" id="smsErr01_txt">이미 회원가입 된 휴대폰 번호 입니다. AI홈런 아이디를 찾아서 로그인 하세요.</div>
+                      </div>
+                    </div>
+                    <div class="variable_shape_box">
+                      <div class="cell">
+                        <button type="button" class="button0 type2 block" onclick="goSearchId()">AI홈런 아이디 찾기</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="smsDiv2 smsShow" style="margin-top:10px; display:block">
+                    <div class="variable_shape_box">
+                      <div class="cell" style="width:100px;">
+                        <div class="ftxt1">
+                          <div>인증번호</div>
+                          <div class="color2" id="Dtimer">(02:00)</div>
+                        </div>
+                      </div>
+                      <div class="cell">
+                        <input type="text" id="certificationNo" name="certificationNo" class="input0 block" placeholder="" value="" />
+                        <input type="hidden" id="hdnProgress" value="" />
+                        <input type="hidden" id="certNo" value="" />
+                      </div>
+                      <div class="cell" style="width:10px;"></div>
+                      <div class="cell" style="width:160px;">
+                        <button type="button" class="button0 type2 block" onclick="certificationSms()" id="certSmsBtn">인증하기</button>
+                      </div>
+                    </div>
+                    <div class="variable_shape_box">
+                      <div class="cell">
+                        <div class="desc0 color2" id="smsTxt">입력하신 휴대폰 번호로 인증번호를 발송 하였습니다.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="inner">
+                <div class="label">
+                  <div>자녀 이름</div>
+                </div>
+                <div class="control">
+                  <div class="variable_shape_box">
+                    <div class="cell">
+                      <input type="text" class="input0 block disabled" id="jname1" name="prev_jname" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="inner">
+                <div class="label">
+                  <div>자녀 학년 <i class="star"></i></div>
+                </div>
+                <div class="control">
+                  <div class="variable_shape_box">
+                    <div class="cell">
+                      <div class="layout190903104939">
+                        <label class="radio_label">미취학</label>
+                        <div class="radio_group">
+                          <label class="rdoui" for="lb_children_grade0">
+                            <input type="radio" name="lb_children_grade" id="lb_children_grade0" value="0">
+                            <div>7세</div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="layout190903104939">
+                        <label class="radio_label">초&nbsp;&nbsp;&nbsp;&nbsp;등</label>
+                        <div class="radio_group">
+                          <label class="rdoui" for="lb_children_grade1">
+                            <input type="radio" name="lb_children_grade" checked="checked" id="lb_children_grade1" value="1">
+                            <div>초1</div>
+                          </label>
+                          <label class="rdoui" for="lb_children_grade2">
+                            <input type="radio" name="lb_children_grade" id="lb_children_grade2" value="2">
+                            <div>초2</div>
+                          </label>
+                          <label class="rdoui" for="lb_children_grade3">
+                            <input type="radio" name="lb_children_grade" id="lb_children_grade3" value="3">
+                            <div>초3</div>
+                          </label>
+                          <label class="rdoui" for="lb_children_grade4">
+                            <input type="radio" name="lb_children_grade" id="lb_children_grade4" value="4">
+                            <div>초4</div>
+                          </label>
+                          <label class="rdoui" for="lb_children_grade5">
+                            <input type="radio" name="lb_children_grade" id="lb_children_grade5" value="5">
+                            <div>초5</div>
+                          </label>
+                          <label class="rdoui" for="lb_children_grade6">
+                            <input type="radio" name="lb_children_grade" id="lb_children_grade6" value="6">
+                            <div>초6</div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="layout190903104939">
+                        <label class="radio_label">중&nbsp;&nbsp;&nbsp;&nbsp;등</label>
+                        <div class="radio_group">
+                          <label class="rdoui" for="lb_children_grade7">
+                            <input type="radio" name="lb_children_grade" id="lb_children_grade7" value="7">
+                            <div>중1</div>
+                          </label>
+                          <label class="rdoui" for="lb_children_grade8">
+                            <input type="radio" name="lb_children_grade" id="lb_children_grade8" value="8">
+                            <div>중2</div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <ul class="ul">
+                      <li>* 당해 연도 기준 자녀의 학년을 선택해 주세요. (1명만 선택)</li>
+                      <li>* 중등 자녀를 둔 학부모님께서는 '아이스크림 AI홈런 중등'에서 안내드릴 예정입니다.</li>
+                      <li>* 무료 체험은 1회만 가능합니다.</li>
+                      <li class="color1">* 지인소개 무료체험은 소개하신 학부모님을 통해서만 신청 가능합니다.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="inner">
+                <div class="label">
+                  <div>주소</div>
+                </div>
+                <div class="control">
+                  <div class="variable_shape_box">
+                    <div class="cell">
+                      <input type="text" name="zipcode" id="zipcode" value="" onclick="fnCmdOpenWindowZipcode();" readonly class="input0 block" />
+                    </div>
+                    <div class="cell" style="width:10px;"></div>
+                    <div class="cell" style="width:160px;">
+                      <button type="button" class="button0 block" onclick="fnCmdOpenWindowZipcode();">우편번호</button>
+                    </div>
+                  </div>
+                  <div class="variable_shape_box">
+                    <div class="cell" style="width:100%;">
+                      <input type="text" name="addr1" id="addr1" value="" readonly class="input0 block" />
+                    </div>
+                  </div>
+                  <div class="variable_shape_box">
+                    <div class="cell" style="width:100%;">
+                      <input type="text" name="addr2" id="addr2" value="" class="input0 block" />
+                      <div class="desc0 color2">AI홈런 전용 학습기 및 학습교재 배송을 위해 정확한 주소를 입력해 주세요.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form id="regForm" method="post">
+              <div class="item">
+                <div class="inner">
+                  <div class="label">
+                    <div>약관 동의 <i class="star"></i></div>
+                  </div>
+                  <div class="control">
+                    <div>
+                      <div class="variable_shape_box">
+                        <div class="cell">
+                          <label class="chkui1 block">
+                            <input type="checkbox" id="chk_val_all" name="chk_val_all">
+                            <div>이용약관에 모두 동의합니다.</div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="variable_shape_box" style="margin-top: 20px;">
+                      <div class="cell" style="height: auto;">
+                        <label class="chkui">
+                          <input type="checkbox" id="chk_val_prv" name="chk_val_prv">
+                          <div>개인정보 수집 및 이용 동의<span class="color1">(필수)</span></div>
+                          <button type="button">펼치기</button>
+                        </label>
+                        <div class="text190822141657" style="display: block">
+                          <div class="desc">
+                            <div><strong>[ 수집목적 ]</strong></div>
+                            <div>: 서비스 제공을 위한 이용자 식별 및 본인여부 확인</div>
+                            <div>: 계약 이행을 위한 연락민원 등 고객 고충 처리</div>
+                            <div>- 수집항목 : 신청자명, 휴대폰 번호</div>
+                            <div>- 보유기간 : 무료 체험 학습 완료 후 60일 이내</div>
+                            <div>※ 서비스 제공을 위해서 필요한 최소한의 개인정보이므로 동의를 해 주셔야 서비스를 이용하실 수 있습니다.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--edit201008-->
+                    <div class="variable_shape_box">
+                      <div class="cell" style="height: auto;">
+                        <label class="chkui">
+                          <input type="checkbox" id="chk_val_clova" name="chk_val_clova">
+                          <!-- ##### HL-25824 -->
+                          <div>AI튜터 서비스 이용을 위한 네이버 클로바 서비스 이용 동의 <span class="color1">(필수)</span></div>
+                          <!-- ##### // HL-25824 -->
+                          <button type="button">펼치기</button>
+                        </label>
+                        <div class="text190822141657">
+                          <div class="desc">
+                            <div>
+                              본 약관은 아이스크림에듀를 통해 네이버주식회사(이하 ‘회사’라 합니다)의 AI 플랫폼 서비스인
+                              네이버의 클로바 서비스(NAVER Clova Service, 이하 ‘네이버 클로바 서비스’라 합니다)를
+                              이용하는 이용자(이하 ‘이용자’라 합니다)에게 적용됩니다.
+                            </div>
+                            <br>
+                            <div>
+                              <strong>제 1 조 (제한적 사용권의 부여)</strong><br>
+                              이용자가 본 이용약관에 동의한 경우에 한하여, 회사는 해당 이용자에게 네이버 클로바 서비스를
+                              지역적 제한 없이 이용할 수 있도록 하는 양도 불가능한 비독점적이고 개인적인 사용권을
+                              무상으로 부여합니다.
+                            </div>
+                            <br>
+                            <div>
+                              <strong>제 2 조 (이용자의 의무)</strong><br>
+                              1. 이용자는 본 이용약관에 동의하는 경우에 한하여 네이버 클로바 서비스를 이용하실 수 있으며,
+                              본 이용약관에 동의하지 않거나 동의를 철회할 경우 즉시 네이버 클로바 서비스의 이용을
+                              중지해야 합니다.
+                              2. 이용자는 네이버 클로바 서비스를 사용함에 있어서 본 약관에서 규정하는 사항과 관련법령,
+                              기타 회사가 정한 제반 규정 및 공지사항을 준수하여야 합니다.
+                            </div>
+                            <br>
+                            <div>
+                              <strong>제 3 조 (네이버 클로바 서비스 관련 권리)</strong><br>
+                              네이버 클로바 서비스 및 서비스를 통해 제공되는 모든 컨텐츠와 관련된 모든 권리(저작권,
+                              상표권, 디자인권 등 일체의 권리)는 회사 혹은 원권리자에게 있으며, 이용자는 본 이용약관에서
+                              정한 바에 따른 제한적 사용권만을 취득할 뿐, 그 외 네이버 클로바 서비스 및 해당 서비스를
+                              통해 제공되는 모든 컨텐츠에 대한 어떠한 권리도 취득하지 않습니다.
+                            </div>
+                            <br>
+                            <div>
+                              <strong>제 4 조 (네이버 클로바 서비스 이용 관련 데이터의 활용 및 제공)</strong>
+                              회사는 이용자에게 좀 더 좋은 아이스크림에듀를 통한 네이버 클로바 서비스를 제공하기 위하여
+                              이용자가 네이버 클로바 서비스를 이용하는 과정에서 입력하거나 수집되는 데이터(음성명령 및
+                              텍스트 검색 내용, 위치정보 등 개인을 식별할 수는 없는 정보)를 아이스크림에듀를 통한 네이버
+                              클로바 서비스의 품질 개선 및 성능 향상, 이용자에 대한 서비스의 고도화 및 최적화 등의
+                              목적으로 활용하거나 아이스크림에듀에 제공할 수 있습니다.
+                            </div>
+                            <br>
+                            <div>
+                              <strong>제 5 조 (회사의 책임 제한)</strong><br>
+                              1. 회사는 무료로 제공되는 네이버 클로바 서비스 및 해당 서비스를 통해 무료로 제공되는
+                              컨텐츠의 정확성, 완전성, 무결성, 적절성 등을 보증하지 않습니다.
+                              2. 이용자는 네이버 클로바 서비스를 자신의 책임 하에 본 이용약관 및 관계법령을 준수하여
+                              적법하게 이용하여야 하며, 회사가 이용자의 네이버 클로바 서비스를 이용한 위법행위에 대해
+                              책임을 지지는 않습니다.
+                            </div>
+                            <br>
+                            <div>
+                              <strong>제 6 조 (계약의 해지, 사용제한)</strong><br>
+                              1. 이용자는 언제든 네이버 클로바 서비스의 사용을 중단하고, 본 약관에 따른 이용계약을
+                              해지할 수 있습니다.
+                              2. 이용자가 관련 법령을 위반하거나 본 이용약관을 준수하지 않는 경우, 회사는 임의로 본
+                              계약을 해지하거나 이용자의 네이버 클로바 서비스의 사용을 일시적 또는 영구적으로 제한할 수
+                              있습니다.
+                            </div>
+                            <br>
+                            <div>
+                              <strong>제 7 조 (아이스크림에듀 가입 및 이용 방식에 따른 확인사항)</strong><br>
+                              이용자가 아이스크림에듀의 학습전용서비스 i-Scream AI홈런 사이트(www.home-learn.co.kr 및
+                              m.home-learn.com)를 통해 본 약관에 동의하는 경우, 이용자 본인뿐만 아니라 이용자의 자녀
+                              또는 법적 보호를 받는 자로서 AI홈런 학습기를 사용하여 네이버 클로바 서비스를 지속적으로
+                              사용하는 자를 대리하여서도 본 약관에 동의한 것으로 봅니다.
+                            </div>
+                            <br>
+                            <div>
+                              <strong>제 8 조 (재판권 및 준거법)</strong><br>
+                              본 약관의 준거법은 대한민국 법으로 하며, 본 약관과 관련하여 소송이 제기되는 경우
+                              민사소송법 상의 관할 법원을 재판관할을 갖는 법원으로 합니다.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="variable_shape_box">
+                      <div class="cell" style="height: auto;">
+                        <label class="chkui">
+                          <input type="checkbox" id="chk_val_third" name="chk_val_third">
+                          <div>개인정보 제 3자 제공 동의 <span class="color1">(필수)</span></div>
+                          <button type="button">펼치기</button>
+                        </label>
+                        <div class="text190822141657">
+                          <!-- ##### HL-25824 -->
+                          <div class="desc">
+                            AI홈런 서비스 이용과 관련하여 본인은 동의 내용을 숙지하였으며, 이에 따라 학습자의 학습 분석에 필요한 개인정보를 AI홈런 서비스 협력사에 제공하는 것에 동의합니다.<br>
+                            협력사 등 관련 내용은 AI홈런 홈페이지 내 개인정보처리방침에 고지됩니다.<br>
+                            본 동의는 AI홈런 서비스를 이용하기 위해 필요한 동의로서, 동의하시지 않을 경우 AI홈런 서비스 이용 중 제한이 발생할 수 있습니다.
+                          </div>
+                          <!-- ##### // HL-25824 -->
+                        </div>
+                      </div>
+                    </div>
+                    <!--//edit201008-->
+                    <div class="variable_shape_box">
+                      <div class="cell" style="height: auto;">
+                        <label class="chkui">
+                          <input type="checkbox" id="chk_val_marketing" name="chk_val_marketing">
+                          <div>마케팅 활용 동의<span style="color:#aaaaaa;">(선택)</span></div>
+                          <button type="button">펼치기</button>
+                        </label>
+                        <div class="text190822141657">
+                          <div class="desc">
+                            <div>- 수집목적 : 새로운 상품 및 서비스에 대한 마케팅, 광고성 정보 전송</div>
+                            <div>- 수집항목 : 신청자명, 휴대폰 번호</div>
+                            <div>- 보유기간 : 무료 체험 학습 완료 후 1년</div>
+                            <div>※ 동의를 거부하시는 경우에도 무료 체험 학습 서비스는 이용하실 수 있습니다.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </form>
+          </form>
+          <hr>
+        </div>
+      </div>
+      <!-- // section -->
+      <div class="txtc">
+        <a href="javascript:fnCmdCheck();" class="btnui1"><span>10일 무료체험 신청하기</span></a>
+      </div>
+    </div>
+    <!-- //##free-experience-box 10일 무료체험 신청 -->
+
+
+  </div>
+  <!-- //### container -->
+</div>
+<div class="fixed-btn">
+  <ul>
+    <li><a href="#" class="cs"><img src="../img/common/btn-cs-n@2x.png" /><span data-text="CC_0001_01">고객센터</span></a></li>
+    <li><a href="#" class="top"><img src="../img/common/btn-top-n.png" /></a></li>
+  </ul>
+</div>
+
+<!-- ### 하단 -->
+<footer class="footer-box">
+  <div class="container-footer">
+    <div class="policy">
+      <ul class="clearfix">
+        <li class="item"><a href="#" data-text="CU_0018_01">회사소개</a></li>
+        <li><a href="#" data-text="CU_0018_02">이용약관</a></li>
+        <li><a href="#" data-text="CU_0018_03">개인정보처리방침</a></li>
+      </ul>
+    </div>
+    <div class="family">
+      <div class="input-group">
+        <select name="" id="">
+          <option value="" data-text="CU_0018_12">FAMILY SITE</option>
+          <option value="" data-text="CU_0018_13">아이스크림홈런</option>
+          <option value="" data-text="CU_0018_14">아이스크림홈런중등</option>
+          <option value="" data-text="CU_0018_15">아이스크림에듀</option>
+          <option value="" data-text="CU_0018_16">아이스크림미디어</option>
+          <option value="" data-text="CU_0018_17">아이스크림</option>
+          <option value="" data-text="CU_0018_18">아이스크림몰</option>
+          <option value="" data-text="CU_0018_19">아이스크림연수원</option>
+        </select>
+      </div>
+    </div>
+    <!--  S 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
+    <address>
+      <p>
+        <span class="address">
+          <em class="footer-company">(주)아이스크림에듀</em>
+          <span class="dp-block">
+            <em class="footer-address"> 서울특별시 강남구 테헤란로88길 15</em>
+            <em class="footer-ceo" data-text="CU_0018_05">대표 : 조용상</em>
+          </span>
+          <span class="dp-block">
+            <em class="footer-tel" data-text="CU_0018_06">상담 및 문의전화 : 1544-0910</em>
+            <em class="footer-fax" data-text="CU_0018_07">팩스 : (02)3448-5262</em>
+          </span>
+          <em class="footer-operator-num" data-text="CU_0018_08">사업자등록번호 : 120-87-97004</em>
+          <em class="footer-sale-num" data-text="CU_0018_09">통신판매신고번호 : 제2013-서울강남-01379호</em><br>
+          <em class="footer-hosting" data-text="CU_0018_10">호스팅사업자 : AWS</em>
+        </span>
+        <span class="copyright" data-text="CU_0018_11">Copyright © i-Scream edu Corporation. All rights reserved.</span>
+      </p>
+    </address>
+    <!--  E 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
+  </div>
+</footer>
+<!-- //### 하단 -->
+
+<!-- E content -->
+</body>
+</html>

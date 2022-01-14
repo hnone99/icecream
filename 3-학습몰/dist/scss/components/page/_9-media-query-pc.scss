@@ -1,0 +1,54 @@
+// ========================================================================
+// [] | 미디어쿼리: PC
+// ========================================================================
+// PC 1280px 이하 대응
+@media all and (max-width: 1279px){
+  .ui-new{
+    .ui-header-box{
+      .ui-header-box-wrap{
+        min-width: 100%;
+      }
+    }
+    .ui-sub-box-wrap{
+      min-width: 100%;
+    }
+    .wrap .container{
+      padding: 0;
+      padding-bottom: 20px;
+    }
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg{
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .main-slider{
+      .slider-fit{
+        width: 100%;
+      }
+    }
+    .detail-review .review-count{
+      width: 100%;
+    }
+    .detail-fit{
+      width: 100%;
+    }
+    .detail-wide{
+      .detail-wide-wrap{
+        width: 100%;
+      }
+    }
+    .detail-page{
+      .detail-btn-state-area::before{
+         width: 100%
+      }
+    }
+    .mypage .dashboard nav a .badge{
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+    }
+  }
+}

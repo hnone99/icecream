@@ -1,0 +1,165 @@
+// ========================================================================
+// [notify] | 알림창
+// ========================================================================
+@media all and (max-width: 1279px){
+  .ui-new{
+    .drawer.drawer-right.drawer-open{
+      right: 10px;
+    }
+    .drawer-right{
+      height: 520px;
+    }
+    .i-drawer-tail{
+      left: 87%;
+    }
+  }
+}
+@media all and (max-width: 960px){
+  .ui-new{
+    .drawer-right{
+      border-radius: 0;
+    }
+    .drawer-mask{
+      border-radius: 0;
+    }
+    .drawer.drawer-right.drawer-open{
+      right: 0;
+      .drawer-content-wrapper{
+        border-radius: 0;
+        overflow: visible;
+        .drawer-content{
+          overflow: auto;
+        }
+      }
+    }
+    .drawer-right{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+    .drawer-wrapper-body{
+      display: block;
+    }
+    .drawer-highest{
+      display: block;
+      height: 74px;
+      padding: 0 15px;
+      background-color: #fff;
+      border-bottom: 1px solid #d2d2d2;
+      .top-left-area{
+        position: relative;
+        line-height: 74px;
+        .top-btn{
+          padding: 0;
+          margin: 0 15px;
+        }
+      }
+      .top-right-area{
+        @include top-right(0, 0);
+        .top-btn-close{
+          padding: 24px;
+        }
+        .i-top-btn-close{
+          vertical-align: middle;
+        }
+      }
+    }
+    .drawer-header{
+      padding: 20px 30px;
+      .drawer-title{
+        line-height: 1;
+        &::after{
+          @include top-right(50%, 30px);
+          @include bg-img-size(13px, 21px, $imgMobilePath, 'i-top-btn-next@2x');
+          margin-top: -10px;
+          vertical-align: middle;
+          content: '';
+        }
+        .grade, .study-access{
+          line-height: 23px;
+          font-size: 15px;
+          color: #fff;
+        }
+        .grade{
+          display: inline-block;
+          height: 23px;
+          line-height: 23px;
+          padding: 0 10px;
+          border-radius: 12px;
+          background-color: #d2d2d2;
+          font-size: 15px;
+          color: #696969;
+        }
+        .name{
+          background-image: none;
+        }
+        .study-access{
+          display: inline-block;
+          height: 23px;
+          line-height: 23px;
+          padding: 0 10px;
+          margin-left: 5px;
+          border-radius: 12px;
+          background-color: #ff7602;
+          a{
+            color: #fff;
+          }
+          &::before{
+            display: none;
+          }
+        }
+      }
+      &.drawer-login{
+        padding: 25px 30px;
+        border-color: #d2d2d2;
+        .btn-login{
+          font-size: 24px;
+          font-weight: $fw-bold;
+          color: #202020;
+        }
+        .drawer-title::after{
+          right: initial;
+          margin-left: 20px;
+        }
+      }
+    }
+    .drawer-body{
+      overflow-y: visible;
+      .alram{
+        font-size: 20px;
+        .text-secondary{
+          font-size: 20px;
+        }
+      }
+      .daylist{
+        .date{
+          font-size: 20px;
+        }
+        li{
+          .desc{
+            font-size: 0;
+            span, em{
+              font-size: 17px;
+            }
+          }
+          .list{
+            em{
+              font-size: 17px;
+            }
+            .new{
+              img{
+                width: 22px;
+                height: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .drawer-footer{
+      display: none;
+    }
+  }
+}

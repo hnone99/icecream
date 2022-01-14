@@ -1,0 +1,247 @@
+// ========================================================================
+// [tab] | 메인 / 서브페이지 탭
+// ========================================================================
+.ui-new{
+  // bootstrap.css 가져옴
+  .tabs.new-tabs{
+    position: relative;
+    width: auto;
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .list {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 0;
+      background-color: transparent;
+      text-align: center;
+      font-size: 0;
+    }
+    .list::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+    .list li {
+      display: inline-block;
+      height: auto;
+      line-height: 1;
+      padding: 15px 42px;
+      text-align: center;
+      border-radius: 0;
+      border-bottom: 3px solid #e5e5e5;
+      background-color: transparent;
+    }
+    .list li a {
+      display: block;
+      font-weight: $fw-regular;
+      font-size: 17px;
+      color: #e5e5e5;
+    }
+    .list li.active {
+      box-shadow: none;
+      border-bottom: 3px solid #202020;
+      z-index: 10;
+    }
+    .list li.active a {
+      letter-spacing: normal;
+      text-align: center;
+      color: #202020;
+    }
+  }
+  .tabs-pannel{
+    .empty{
+      padding-top: 10px;
+      .desc{
+        font-size: 22px;
+        font-weight: $fw-medium;
+        color: #202020;
+        .desc-search{
+          color: #ff7602;
+          letter-spacing: -0.88px;
+        }
+      }
+      .dot-list{
+        margin-top: 23px;
+      }
+      .dot-list li{
+        position: relative;
+        display: block;
+        line-height: 1.4em;
+        font-size: 17px;
+        font-weight: $fw-light;
+        color: #c7c7c7;
+        letter-spacing: -0.68px;
+        .txt{
+          position: relative;
+          padding-left: 8px;
+          &::before{
+            @include top-left(12px, 0);
+            display: block;
+            width: 2px;
+            height: 2px;
+            background-color: #c7c7c7;
+            border-radius: 50%;
+            content: ''
+          }
+        }
+      }
+    }
+  }
+  .tag-list{
+    .card-list{
+      padding-bottom: 36px;
+      .px-md-no{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-direction: row;
+        align-content: flex-start;
+      }
+      .card-item{
+        position: relative;
+        width: 210px;
+        margin: 0 19px 12px 19px;
+        background-color: transparent;
+        box-shadow: none;
+        &:nth-child(5n){
+          margin-right: 19px !important;
+        }
+        &:nth-child(2n){
+          margin-right: 19px !important;
+        }
+        .img{
+          position: relative;
+          display: block;
+          width: 210px;
+          height: 210px;
+          border-radius: 40px;
+          overflow: hidden !important;
+          .new-released-band{
+            @include top-right(0, 0);
+          }
+        }
+        .list-badge{
+          font-size: 0;
+          div{
+            &:first-child{
+              margin-left: 0;
+            }
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+        }
+        .sticker-homelearn,
+        .sticker-free,
+        .sticker-half,
+        .sticker-pakage,
+        .sticker-released{
+          display: inline-block;
+          margin: 0 2px;
+          i{
+            font-style: normal;
+            font-size: 14px;
+          }
+        }
+        .sticker-homelearn{
+          position: relative;
+          top: 0;
+          left: 0;
+          color: #1774ff;
+        }
+        .sticker-free{
+          position: relative;
+          top: 0;
+          left: 0;
+          width: auto;
+          background: none;
+        }
+        .sticker-half{
+          color: #ff0000;
+        }
+        .sticker-pakage{
+          color: #632cff;
+        }
+        .sticker-released{
+          color: #cf0f2a;
+        }
+
+        .list-badge{
+          position: absolute;
+          top: 220px;
+        }
+        .list-body{
+          margin-top: 24px;
+          min-height: auto;
+          padding: 12px 0 8px 0;
+          .title{
+            padding: 0;
+            margin-bottom: 3px;
+            font-size: 17px;
+            color: #202020;
+          }
+          // 회사
+          .company{
+            display: block;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #afafaf;
+          }
+          // 평점
+          .score{
+            display: block;
+            padding: 0;
+            font-size: 17px;
+            i{
+              width: 18px;
+              height: 18px;
+              transform: translateY(-1px);
+            }
+          }
+          // 출시 예정일
+          .date-released{
+            position: relative;
+            font-size: 0;
+            .t-date{
+              position: relative;
+              padding-left: 18px;
+              margin-right: 4px;
+              &::before{
+                @include top-left(50%, 0);
+                @include bg-img(14px, 14px, $imgNewPath, i-released-time);
+                margin-top: -7px;
+                content: ''
+              }
+            }
+            .t-date,
+            .t-txt{
+              font-size: 15px;
+              color: #636363
+            }
+          }
+        }
+      }
+    }
+  }
+  // 마이페이지
+  .ui-mypage-box{
+    .tag-list{
+      .card-list{
+        .card-item{
+          margin: 0 25px 36px 25px;
+          &:nth-child(5n){
+            margin-right: 25px !important;
+          }
+          &:nth-child(2n){
+            margin-right: 25px !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런프렌즈</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap" class="h100p">
+		<!-- container -->
+		<div class="container p0">
+			<div style="padding:20px;text-align:center;"><button type="button" style="padding:10px;border:1px solid #ddd;" onclick="layerPop.show('pop-home-login');">popup open</button></div>
+
+			<!-- pop-wrap -->
+			<div id="pop-home-login" class="pop-wrap login">
+				<div class="pop-wrap-inner">
+					<div class="pop-cont-inner">
+						<div class="pop-top-wrap">
+							<h5 class="pop-tit">홈런 로그인</h5>
+							<div class="txt-box">
+								<p class="txt disc">홈런에서 쌓은 콘을 사용하여 결제 하시려면 홈런 회원 정보를 인증하셔야 합니다.</p>
+								<p class="txt disc">아이디/비밀번호가 생각나지 않으실 경우 아이디찾기/비밀번호 찾기를 진행하시거나 고객센터로 문의해주세요.</p>
+							</div>
+						</div>
+						<div class="pop-cont-wrap">
+							<div class="inp-box id">
+								<div class="inp-inner">
+									<input type="text" class="inp-txt" placeholder="아이디">
+								</div>
+							</div>
+							<div class="inp-box">
+								<input type="password" class="inp-pwd" placeholder="비밀번호">
+							</div>
+							<div class="btn-wrap">
+								<div class="btn-box">
+									<button type="button" class="btn bg-black">로그인</button>
+								</div>
+								<div class="btn-box">
+									<div class="btn-inner">
+										<a href="#" class="btn">아이디 찾기</a>
+										<a href="#" class="btn">비밀번호 찾기</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="pop-bottom-wrap">
+							<li>
+								<div class="btn-inner">
+									<a href="#" class="btn bg-gray02 customer">고객센터 1544 - 0910</a>
+								</div>
+							</li>
+							<li>
+								<div class="btn-inner">
+									<a href="#" class="btn bg-yellow kakao">아이스크림홈런</a>
+								</div>
+							</li>
+						</ul>
+						
+						<button class="btn close" onclick="layerPop.hide(this)" aria-label="팝업 닫기"></button>
+					</div>
+				</div>
+			</div>
+			<!-- //pop-wrap -->
+
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

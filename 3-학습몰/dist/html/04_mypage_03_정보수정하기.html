@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- 코드값 변경 -- 2020.09.17 -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-title" content="HOMELEARN_MARKET" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="HOMELEARN_MARKET"/>
+  <meta name="keywords" content="HOMELEARN_MARKET"/>
+  <title>홈런MARKET</title>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/fonts/fontAwesomepro.css"/>
+  <script src="../js/bundle.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+  }
+</style>
+
+<div class="wrap p-no cs-center mypage">
+  <div class="navbar-sub">
+    <div class="navbar-brand">
+      <a href="#"><img src="../img/common/btn-back-n@3x.png"/></a>
+    </div>
+    <div class="title" data-text="MY_0054_02">정보 수정하기</div>
+    <div class="navbar-util">
+      <a href="#"><img src="../img/common/btn-main-search-n@3x.png"/></a>
+      <a href="#"><img src="../img/common/btn-sub-home-n@3x.png"/></a>
+    </div>
+  </div>
+  <div class="content children-add">
+    <div class="container">
+      <div class="title text-center">
+        <h3>
+          <img src="../img/common/icon-16-info-black@3x.png" /><em data-text="MY_0007_02">아이디와 비밀번호는 꼭 기억하세요.</em>
+        </h3>
+        <p data-text="MY_0054_03"><i class="require"></i>항목은 변경이 불가합니다.</p>
+      </div>
+      <div class="form-group">
+        <label for="name" class="font-weight-bold" data-text="MY_0007_04">이름<i class="require"></i></label>
+        <input
+          type="text"
+          id="name"
+          value="김홈런"
+          class="form-control"
+          disabled
+        />
+      </div>
+      <div class="form-group">
+        <label for="grade" class="font-weight-bold" data-text="MY_0007_06">학년<i class="require"></i></label>
+        <select id="grade" class="form-control custom-select" disabled>
+          <option disabled data-text="MY_0007_07">현재 학년으로 신청해주세요.</option>
+          <option data-text="CU_0027_01">예비 초등</option>
+          <option data-text="CU_0027_02">초1</option>
+          <option data-text="CU_0027_02">초2</option>
+          <option data-text="CU_0027_02" selected>초3</option>
+          <option data-text="CU_0027_02">초4</option>
+          <option data-text="CU_0027_02">초5</option>
+          <option data-text="CU_0027_02">초6</option>
+        </select>
+      </div>
+
+      <div class="button-group">
+        <div class="form-group">
+          <label for="address" class="font-weight-bold mb-rem-xl-0" data-text="MY_0015_06">주소<i class="require"></i></label><!-- mb-rem-xl-0로 변경 -- 2020.09.24  -->
+          <input type="text" class="form-control" id="address" value="06082"/>
+          <button class="btn btn-outline-primary" data-text="AD_0028_08">우편번호</button>
+        </div>
+      </div>
+      <div class="form-group my-0">
+        <label for="address2" class="d-none d-xl-block"></label><!-- d-xl-block로 변경 -- 2020.09.24  -->
+        <input type="text" id="address2" class="form-control" value="서울시 강남구 어디로1길 18"/>
+      </div>
+      <div class="form-group mt-xl-0"><!-- mt-xl-0로 변경 -- 2020.09.24  -->
+        <label for="address3" class="d-none d-xl-block"></label><!-- d-xl-block로 변경 -- 2020.09.24  -->
+        <input type="text" id="address3" class="form-control" value=" 205호"/>
+      </div>
+
+      <div class="form-group">
+        <label for="id" class="font-weight-bold" data-text="MY_0007_08">아이디<i class="require"></i></label>
+        <input
+          type="text"
+          id="id"
+          value="kim-homelearn"
+          class="form-control"
+          disabled
+        />
+      </div>
+
+      <div class="button-group">
+        <div class="form-group">
+          <label for="password" class="font-weight-bold mb-rem-xl-0" data-text="MY_0007_12">비밀번호<i class="require"></i></label><!-- mb-rem-xl-0로 변경 -- 2020.09.24  -->
+          <input type="password" class="form-control" id="password" value="06082" disabled/>
+          <button class="btn btn-primary" data-text="MY_0054_01">초기화</button>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="#" class="btn btn-outline btn-radius" data-text="AD_0034_01">취소</a>
+        <a href="#" class="btn btn-white btn-radius" data-text="MY_0007_16">저장</a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="container-footer">
+    <div class="policy">
+      <ul class="clearfix">
+        <li class="item"><a href="#" data-text="CU_0018_01">회사소개</a></li>
+        <li><a href="#" data-text="CU_0018_02">이용약관</a></li>
+        <li><a href="#" data-text="CU_0018_03">개인정보처리방침</a></li>
+      </ul>
+    </div>
+    <div class="family">
+      <div class="input-group">
+        <select name="" id="">
+          <option value="" data-text="CU_0018_12">FAMILY SITE</option>
+          <option value="" data-text="CU_0018_13">아이스크림홈런</option>
+          <option value="" data-text="CU_0018_14">아이스크림홈런중등</option>
+          <option value="" data-text="CU_0018_15">아이스크림에듀</option>
+          <option value="" data-text="CU_0018_16">아이스크림미디어</option>
+          <option value="" data-text="CU_0018_17">아이스크림</option>
+          <option value="" data-text="CU_0018_18">아이스크림몰</option>
+          <option value="" data-text="CU_0018_19">아이스크림연수원</option>
+        </select>
+      </div>
+    </div>
+    <!--  S 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
+    <address>
+      <p>
+          <span class="address"><em data-text="CU_0018_04">(주)아이스크림에듀 서울특별시 강남구 테헤란로88길 15</em> <em data-text="CU_0018_05">대표 : 조용상</em><br>
+            <em data-text="CU_0018_06">상담 및 문의전화 : 1544-0910</em> <em data-text="CU_0018_07">팩스 : (02)3448-5262</em> <em data-text="CU_0018_08">사업자등록번호 : 120-87-97004</em><br>
+            <em data-text="CU_0018_09">통신판매신고번호 : 제2013-서울강남-01379호</em><br>
+            <em data-text="CU_0018_10">호스팅사업자 : AWS</em><br><br></span>
+        <span class="copyright" data-text="CU_0018_11">Copyright © i-Scream edu Corporation. All rights reserved.</span>
+      </p>
+    </address>
+    <!--  E 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
+  </div>
+</footer>
+
+
+<!-- E content -->
+</body>
+</html>

@@ -1,0 +1,218 @@
+// ========================================================================
+// [common] | 공통
+// ========================================================================
+#wrap{
+  overflow-x: hidden;
+}
+.ui-new{
+  background-color: #fff;
+  // overflow-y: auto;
+  font-family: $base-font;
+  color: #202020;
+  button{
+    font-family: $base-font;
+  }
+  .device-pc{
+    display: block;
+  }
+  .device-mo{
+    display: none;
+  }
+  .clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+  .ico{
+    @extend %ir;
+    // 상단 검색
+    &.i-top-search{
+      @include bg-img(22px, 21px, $imgNewPath, i-top-search);
+    }
+    // 마이페이지
+    &.i-top-member{
+      @include bg-img(20px, 21px, $imgNewPath, i-top-member);
+    }
+    // 바스켓
+    &.i-top-basket{
+      @include bg-img-size(20px, 21px, $imgNewPath, i-top-basket);
+    }
+    // 상단 이전
+    &.i-sub-btn-prev{
+      @include bg-img(12px, 20px, $imgNewPath, i-sub-prev);
+    }
+    // 배지-홈런학습
+    &.i-badge-homelearn{
+      @include bg-img(76px, 46px, $imgNewPath, i-badge-homelearn);
+    }
+    // 배지-무료
+    &.i-badge-free{
+      @include bg-img(76px, 46px, $imgNewPath, i-badge-free);
+    }
+    &.i-top-back{
+      @include bg-img(21px, 21px, $imgTabletPath, top-i-back);
+      vertical-align: bottom;
+    }
+  }
+  //----------------------------------------------------------------
+  // 추천하기 버튼
+  .btn{
+    &.btn.btn-recommend{
+      min-width: 100px;
+      height: 50px;
+      line-height: 48px;
+      padding: 0 46px;
+      border-radius: 25px;
+      border: 1px solid #c5c4c4;
+      background-color: #ffffff;
+      &.active{
+        border-color: #ff7602;
+        .txt-recommend{
+          color: #ff7602;
+          &::before{
+            background-image: url("#{$imgNewPath}/detail-i-recommend-on.png")
+          }
+        }
+      }
+    }
+    .txt-recommend{
+      position: relative;
+      padding-left: 24px;
+      font-weight: $fw-regular;
+      color: #a3a3a3;
+      &::before{
+        @include top-left(1px, 0);
+        @include bg-img(16px, 20px, $imgNewPath, detail-i-recommend-off);
+        content: ''
+      }
+    }
+  }
+  //----------------------------------------------------------------
+  // 더보기 버튼
+  .btn.btn-more{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+    line-height: 58px;
+    background-color: #ffffff;
+    border: 0 none;
+    border-top: 1px solid #e1e1e1;
+    font-size: 17px;
+    .txt{
+      position: relative;
+      display: inline-block;
+      font-weight: $fw-medium;
+      color: #202020;
+      &::before{
+        @include top-right(50%, -20px);
+        @include bg-img(14px, 8px, $imgNewPath, detail-i-arrow-open);
+        margin-top: -4px;
+        content: ''
+      }
+    }
+  }
+  .content{
+    // 메인 더보기 버튼
+    .btn.btn-more{
+      .txt{
+        color: #adadad;
+        &::before{
+          @include bg-img(14px, 8px, $imgNewPath, main-i-arrow-open);
+        }
+      }
+    }
+  }
+  //------------------------------------------------------------
+  // 하단 버튼
+  .sticky-btn{
+    &.new-sticky-btn{
+      display: none;
+      height: 90px;
+      padding: 12px 14px;
+      border-top: 1px solid #e1e1e1;
+      background-color: #fff;
+      &.on{
+        display: block;
+      }
+      .cont{
+        width: auto;
+        text-align: center;
+        font-size: 0;
+        .product-name,
+        .product-price,
+        .product-btn{
+          display: inline-block;
+          margin: 0 15px;
+          font-size: 30px;
+          vertical-align: middle;
+        }
+        .product-name{
+          font-weight: $fw-bold;
+          color: #ff7602;
+          &.device-pc{
+            display: inline-block;
+          }
+          &.device-mo{
+            display: none;
+          }
+        }
+        .product-price{
+          font-size: 0;
+          font-family: $sub-font;
+          .txt-price{
+            font-weight: $fw-bold;
+            font-size: 30px;
+          }
+          .txt-unit{
+            font-weight: $fw-regular;
+            font-size: 30px;
+          }
+          .txt-line{
+            font-weight: $fw-regular;
+            margin: 0 5px;
+            font-size: 29px;
+          }
+          .txt-info{
+            font-size: 17px;
+            font-weight: $fw-regular;
+            font-family: $base-font;
+          }
+        }
+        .btn{
+          width: auto;
+          min-width: 216px;
+          height: 66px;
+          line-height: 66px;
+          margin: 0 5px;
+          padding: 0 36px;
+          border: 0 none;
+          border-radius: 33px;
+          font-size: 22px;
+          font-weight: $fw-regular;
+          &.btn-middle{
+            background-color: #08d1de
+          }
+          &.btn-study{
+            background-color: #eeeeee;
+            color: #acacac;
+          }
+        }
+      }
+    }
+  }
+  &.sub-page{
+    .fixed-btn{
+      &.on{
+        bottom: 120px;
+      }
+    }
+  }
+}
+//------------------------------------------------------------
+// 하단
+footer{
+  .container-footer{
+    margin-top: 0;
+  }
+}

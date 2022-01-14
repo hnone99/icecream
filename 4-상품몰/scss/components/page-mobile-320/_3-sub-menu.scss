@@ -1,0 +1,117 @@
+// ========================================================================
+// [sub] | 서브메뉴
+// ========================================================================
+@media all and (max-width: 479px){
+  .ui-new{
+    .ui-sub-box-wrap{
+      height: 38px;
+      line-height: 38px;
+    }
+    // --------------------------------------------------
+    .search-box{
+      .input-group{
+        position: relative;
+        height: 39px;
+        padding-left: 22px;
+        &::before{
+          left: 45px;
+          height: 15px;
+          margin-top: -7px;
+        }
+        .form-control{
+          height: 40px;
+          line-height: 40px;
+          padding: 0 130px 0 30px;
+          font-size: 16px;
+        }
+        .btn-search-back{
+          left: 8px;
+          padding: 11px 12px;
+        }
+        .btn-search{
+          top: 0;
+          right: 70px;
+          @include bg-img-size(12px, 12px, $imgMobilePath, 'i-top-search-on@2x');
+          background-position: center;
+          padding: 19px 15px;
+        }
+        .btn-search-close{
+          top: 13px;
+          right: 108px;
+          img{
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+      .sub-btn-util{
+        // right: 10px;
+        padding: 0 10px;
+        .ico{
+          vertical-align: middle;
+        }
+        &.btn-util-menu{
+          right: 10px
+        }
+        &.btn-util-basket{
+          right: 38px;
+        }
+      }
+      .search-content{
+        .search-list{
+          line-height: 1;
+          > p{
+            margin-bottom: 10px;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-size: 11px;
+          }
+          li{
+            padding: 5px 30px 5px 27px;
+            .item-1{
+              .img{
+                top: 7px;
+                width: 15px;
+                height: 15px;
+              }
+              .text{
+                font-size: 13px;
+              }
+            }
+            .item-2{
+              top: 5px;
+              img{
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // --------------------------------------------------
+    .sub-menu-area{
+      .sub-menu{
+        margin: 0 24px;
+        line-height: 40px;
+        font-size: 13px;
+      }
+      .sub-menu-list-grp{
+        height: 38px;
+        line-height: 1;
+        padding-right: 10px;
+        .sub-btn-util{
+          padding: 12px 6px;
+        }
+      }
+      &.device-mo{
+        .sub-menu-grp{
+          padding-left: 0;
+        }
+        .sub-menu{
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}

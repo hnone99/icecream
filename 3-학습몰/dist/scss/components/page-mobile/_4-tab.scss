@@ -1,0 +1,89 @@
+// ========================================================================
+// [tab] | 메인 / 서브페이지 탭
+// ========================================================================
+@media all and (max-width: 1279px){
+  .ui-new{
+    .content-fit{
+      // width: 816px;
+      width: 1035px;
+    }
+    .ui-mypage-box{
+      .card-list{
+        width: 800px;
+        margin: 0 auto;
+        padding-left: 0;
+      }
+    }
+  }
+}
+@media all and (max-width: 1040px){
+  .ui-new{
+    .content-fit{
+      width: 816px;
+    }
+  }
+}
+@media all and (max-width: 960px){
+  .ui-new{
+    .tabs.new-tabs{
+      margin-bottom: 2.4rem;
+      margin-top: 2.4rem;
+      .list li{
+        width: 50%;
+        a{
+          font-size: 19px;
+        }
+      }
+    }
+    .tag-list{
+      margin-bottom: 0;
+      .card-list{
+        .card-item{
+          .list-body{
+            // 출시 예정일
+            .date-released{
+              .t-date{
+                &::before{
+                  @include bg-img-size(14px, 14px, $imgMobilePath, 'i-released-time@2x');
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 800px){
+  .ui-new{
+    .content-fit{
+      width: 576px;
+    }
+    .ui-mypage-box{
+      .card-list{
+        width: 530px;
+      }
+    }
+  }
+}
+@media all and (max-width: 640px){
+  .ui-new{
+    .content-fit{
+      width: 100%;
+    }
+    .ui-mypage-box{
+      .card-list{
+        width: 100%;
+      }
+    }
+  }
+}
+@media all and (max-width: 479px){
+  .ui-new{
+    .ui-mypage-box{
+      .card-list{
+        width: 100%;
+      }
+    }
+  }
+}

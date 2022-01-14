@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런몰</title>
+	<link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/slick.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+		<header class="header" id="header">
+			<div class="hd-top-menu">
+				<div class="inner">
+					<h1 class="logo">
+						<a href="../idea/main.html"><img src="../images/common/logo.png" alt="HOME LEARN FRIENDS" /></a>
+					</h1>
+
+					<div class="search-wrap">
+						<div class="total-search">
+							<label for="searchInput" class="blind">검색어 입력</label>
+							<input type="text" id="searchInput" name="searchInput" placeholder="[온라인 전용] 존재감 뿜뿜!! 귀여움도 사이즈도 자이언트 뚜루뚜루!!" autocomplete="off" />
+							<button type="button" class="btn-search">검색</button>
+						</div>
+					</div>
+
+					<div class="top-menu">
+						<button type="button" class="btn-search">검색</button>
+						<a href="" class="btn-mypage">마이페이지</a>
+						<a href="" class="btn-cart">장바구니<span class="count">3</span></a>
+						<a href="" class="btn-delivery">배송</a>
+						<button type="button" class="btn-menu">메뉴</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="gnb-wrap">
+				<ul class="gnb">
+					<li><a href="">전체 카테고리</a></li>
+					<li><a href="">신상품</a></li>
+					<li><a href="">최고인기</a></li>
+					<li><a href="">테마기획전</a></li>
+					<li><a href="">이벤트</a></li>
+				</ul>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- container -->
+		<div class="container">
+
+			<div class="sub-visual">
+				<img src="../images/sub/m_sub_visual_category.jpg" alt="" class="mo" />
+				<img src="../images/sub/sub_visual_category.jpg" alt="" class="pc" />
+				<div class="inner">
+					<h2 class="title">전체</h2>
+				</div>
+			</div>
+
+			<section class="sub-content category">
+
+				<!-- [D] 200717 탭메뉴 추가 -->
+				<ul class="tab-product type2">
+					<li class="active"><a href=""><span>배송상품</span></a></li>
+					<li><a href=""><span>온라인체험</span></a></li>
+					<li><a href=""><span>오프라인체험</span></a></li>
+				</ul>
+				<!-- //[D] 200717 탭메뉴 추가 -->
+
+				<div class="title-area total">
+					<h3 class="title">총 상품<span class="total-num">(120)</span></h3>
+
+					<div class="sort">
+						<select class="custom-select">
+							<option value="">캐릭터 전체</option>
+						</select>
+
+						<select class="custom-select">
+							<option value="">신상품 순</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- 상품 목록 -->
+				<div class="product-area category">
+					<ul class="product-list">
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //상품 목록 -->
+
+				<div class="pagination">
+					<button type="button" class="nav-prev">이전</button>
+					<a href="#" class="page-num active">1</a>
+					<a href="#" class="page-num">2</a>
+					<a href="#" class="page-num">3</a>
+					<a href="#" class="page-num">4</a>
+					<a href="#" class="page-num">5</a>
+					<button type="button" class="nav-next">다음</button>
+				</div>
+
+			</section>
+
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer class="footer" id="footer">
+
+			<div class="footer-info">
+				<div class="family-site">
+					<div class="selected">FAMILY SITE</div>
+					<ul class="site-list">
+						<li><a href="" target="_blank">사이트1</a></li>
+						<li><a href="" target="_blank">사이트2</a></li>
+					</ul>
+				</div>
+
+				<ul class="quick-menu">
+					<li><a href="">회사소개</a></li>
+					<li><a href="">IR정보</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="">전자금융거래약관</a></li>
+				</ul>
+
+				<p class="address">(주)아이스크림에듀<br class="mo" />
+				<span>서울 강남구 테헤란로88길 15 (대치동) B1~16층</span><span>대표 : 조용상</span><br />
+				<span>상담 및 문의전화 : 1544-0910</span><span>팩스 : 02-3448-5262</span><br class="mo" />
+				<span>사업자등록번호 : 120-87-9700</span><br class="mo" />
+				<span>통신판매신고번호 : 제2013-서울강남-01379호</span><br />
+				<span>개인정보 및 청소년 보호 책임자 : 채수양</span></p>
+
+				<p class="copy">Copyright © i-Scream edu Corporation. All rights reserved.</p>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+		<div class="fixed-btn-wrap">
+			<a href="" class="btn-customer"><span class="icon customer"></span>고객센터</a>
+			<a href="" class="btn-apply"><span class="icon apply"></span>홈런신청</a>
+			<button type="button" class="btn-top">Top</button>
+		</div>
+	</div>
+	<!-- //wrap -->
+
+</body>
+</html>

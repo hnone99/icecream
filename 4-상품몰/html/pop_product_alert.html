@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런프렌즈</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap" class="h100p">
+		<!-- container -->
+		<div class="container p0">
+			<div style="padding:20px;text-align:center;"><button type="button" style="padding:10px;border:1px solid #ddd;" onclick="layerPop.show('pop-alert-product');">popup open</button></div>
+
+			<!-- pop-wrap -->
+			<div id="pop-alert-product" class="pop-wrap alert product">
+				<div class="pop-wrap-inner">
+					<div class="pop-cont-inner">
+						<p class="txt">장바구니에 담겼습니다.<br>장바구니로 이동하시겠습니까?</p>
+						<p class="txt">관심리스트에 담겼습니다.<br>관심리스트를 지금 확인 하시겠습니까?</p>
+						<div class="btn-box">
+							<a class="btn bg-gray" onclick="layerPop.hide(this)">창닫기</a>
+							<a class="btn bg-black">확인</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //pop-wrap -->
+
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

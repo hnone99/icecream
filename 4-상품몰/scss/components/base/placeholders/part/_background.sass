@@ -1,0 +1,25 @@
+//
+ * --------------------------------
+ * 배경이미지
+
+$sizing: scale
+// 상위의 객체에 채움
+// $sizing: crop // 이미지의 크기 비율에 맞게
+// $sizing: image // 기본
+
+%background-img
+	display: inline-block
+	width: $bg-size-x
+	height: $bg-size-y
+	background: url('../' + $bg-path + '/' + $bg-name + '.png') 0 0 no-repeat
+	background-position: $bg-position-x $bg-poxition-y
+	background-repeat: no-repeat
+	background-size: $bg-size-x $bg-size-y
+
+
+%opacity
+	filter: alpha(opacity=50) // IE
+	-khtml-opacity: 0.5 // khtml, old safari
+	-moz-opacity: 0,5 // mozilla netscape
+	opacity: 0.5 // fx, safari, opera
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)" // ie8

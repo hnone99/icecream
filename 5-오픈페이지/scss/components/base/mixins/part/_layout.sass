@@ -1,0 +1,149 @@
+// *! layout.sass © choa712@gmail.com, 2020 */
+//
+ * --------------------------------
+ * layout
+ * --------------------------------
+
+//
+ * --------------------------------
+ * 마진
+=margin($top: null, $right: null, $bottom: null, $left: null)
+	margin:
+		top: $top
+		right: $right
+		bottom: $bottom
+		left: $left
+
+//
+ * --------------------------------
+ * 패딩
+=padding($top: null, $right: null, $bottom: null, $left: null)
+	padding:
+		top: $top
+		right: $right
+		bottom: $bottom
+		left: $left
+
+//
+ * --------------------------------
+ * 컨테이너
+=container($max-width: auto, $left: auto, $right: $left)
+	width: 100%
+	max-width: $max-width
+	margin:
+		left:  $left
+		right: $right
+
+
+//
+ * --------------------------------
+ * 가로 세로 크기
+=size($width: null, $height: null)
+	width:  $width
+	height: $height
+
+=mt($top: null)
+	margin-top: $top
+=mb($bottom: null)
+	margin-bottom: $bottom
+=ml($left: null)
+	margin-left: $left
+=mr($right: null)
+	margin-right: $right
+
+=pt($top: null)
+	padding-top: $top
+=pb($bottom: null)
+	padding-bottom: $bottom
+=pl($left: null)
+	padding-left: $left
+=pr($right: null)
+	padding-right: $right
+
+
+
+
+
+//
+ * --------------------------------
+ * 포지션
+ * --------------------------------
+=position($method: absolute, $top: null, $right: null, $bottom: null, $left: null, $z-index: null)
+	position: $method
+	top:      $top
+	right:    $right
+	bottom:   $bottom
+	left:     $left
+	z-index:  $z-index
+
+=pos-margin($top:0, $right: 0, $bottom: 0, $left: 0)
+	position: relative
+	margin:
+		top: $top
+		right: $right
+		bottom: $bottom
+		left: $left
+	padding: 0
+
+=top-right( $top: 0, $right: 0)
+	position: absolute
+	top: $top
+	right: $right
+
+=top-left( $top: 0, $left: 0)
+	position: absolute
+	top: $top
+	left: $left
+
+=bottom-left( $bottom: 0, $left: 0)
+	position: absolute
+	bottom: $bottom
+	left: $left
+
+=bottom-right( $bottom: 0, $right: 0)
+	position: absolute
+	bottom: $bottom
+	right: $right
+
+=pos( $pos: relative, $display: null )
+	position: $pos
+	display: $display
+
+=pos-center( $pos: relative)
+	position: $pos
+	margin: 0 auto
+	text-align: center
+
+=pos-left( $pos: relative)
+	position: $pos
+	margin: 0
+	text-align: left
+
+//
+ * --------------------------------
+ * Photoshop 값 설정과 동일한 결과 처리
+=letter-spacing($value: -10)
+	letter-spacing: ( $value / 1000)+ em
+
+//
+ * --------------------------------
+ * 가운데 정렬
+=center-h($height)
+	+position(50% null null null)
+	margin-top: -($height/2)
+
+=center-w($width)
+	+position(null null null 50%)
+	margin-left: -($width/2)
+
+=center($width, $height)
+	+position(50% null null 50%)
+	+margin(-($height/2) null null -($width/2))
+
+=center-pos($width: 10px, $height: 10px)
+	position: absolute
+	top: 50%
+	left: 50%
+	margin:
+		left: -($width/2)
+		top: -($height/2)

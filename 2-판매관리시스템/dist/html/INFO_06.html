@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-title" content="i-Scream" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="i-Scream"/>
+  <meta name="keywords" content="i-Scream"/>
+  <title>아이스크림 에듀 에코 판매관리</title>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/fonts/fontAwesomepro.css"/>
+  <script src="../js/bundle.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+  }
+</style>
+
+<div class="wrap">
+
+  <!-- S SNB -->
+<div class="main-menu">
+  <div class="header_wrap">
+    <div class="login_section">
+      <a href="#" class="logo _logo">
+        <img src="../img/common/logo.png" alt="로고">
+      </a>
+      <div class="login_wrap">
+        <span class="login_name"><span class="name">관리자</span>님(System)</span>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="btn-lang dropdown-toggle" href="#" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-globe"></i>한국어</a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">한국어</a>
+        <a class="dropdown-item" href="#" data-text="PD_0105_10">영어</a>
+        <a class="dropdown-item" href="#">베트남어</a>
+      </div>
+    </div>
+    <ul class="icon_menu">
+      <li class="login_icon" id="logOutLi" data-text="HOM_0101_008"><i class="fal fa-sign-out-alt"></i>로그아웃</li>
+    </ul>
+  </div>
+  <div class="main-menu-content _scroll" style="height: calc(100% - 179px);">
+    <ul class="navigation">
+      <li class="navigation-header"><i class="fas fa-info-circle"></i><span class="menu-title" data-text="CR_0002_01">상품등록/관리</span></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_01">상품관리</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_02">콘텐츠 관리</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_03">플랫폼 콘텐츠관리</span></a></li>
+      <li class="navigation-header"><i class="fas fa-info-circle"></i><span class="menu-title" data-text="CR_0002_02">판매관리</span></li>
+      <li class="nav-item has-sub">
+        <a href="#"><span class="menu-title" data-text="CR_0003_04">판매현황</span><i class="fal fa-chevron-right"></i></a>
+        <ul class="menu-content"> <!-- 3depth 메뉴 활성화, on 클래스 추가, style="display:block" -->
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_05">판매현황 대시보드</span></a></li> <!-- 3depth 활성화, active 클래스 추가 -->
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_06">일별 판매현황</span></a></li>
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_07">월별 판매현황</span></a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="#"><span class="menu-title" data-text="CR_0003_08">프로모션</span><i class="fal fa-chevron-right"></i></a>
+        <ul class="menu-content"> <!-- 3depth 메뉴 활성화, on 클래스 추가, style="display:block" -->
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_09">할인판매</span></a></li> <!-- 3depth 활성화, active 클래스 추가 -->
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_10">판매자 배너신청</span></a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_11">구매취소내역</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_12">정산/송금현황</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_13">상품리뷰관리</span></a></li>
+      <li class="navigation-header"><i class="fas fa-box-alt"></i><span class="menu-title" data-text="CR_0002_03">통계</span></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_14">프로모션 배너 통계</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_15">상품 이용 통계</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_16">카테고리 랭킹</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_17">상품구매 랭킹</span></a></li>
+      <li class="navigation-header"><i class="fas fa-calculator-alt"></i><span class="menu-title" data-text="CR_0002_04">정보센터</span></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_18">공지사항</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_19">FAQ</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_20">1:1 문의</span></a></li>
+      <li class="nav-item has-sub">
+        <a href="#"><span class="menu-title" data-text="CR_0003_21">자료실</span><i class="fal fa-chevron-right"></i></a>
+        <ul class="menu-content">
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_22">이용안내</span></a></li>
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_23">운영가이드</span></a></li>
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_24">SDK</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- S SNB -->
+<script>
+  $('._scroll').mCustomScrollbar();
+  $('.has-sub > a').on('click',function (){
+    $(this).siblings('.menu-content').slideToggle(200).toggleClass('on');
+  })
+  /**
+   * 활성화
+   */
+  function setGnbActive (depth1,depth2,depth3) {
+    var elWrap = $('.main-menu-content');
+    var items2depth = elWrap.find('.navigation-header').eq(depth1).nextUntil('.navigation-header').eq(depth2);
+
+    if (items2depth.hasClass('has-sub')) {
+      items2depth.find('ul').show().addClass('on');
+      items2depth.find('li').eq(depth3).addClass('active');
+    } else {
+      items2depth.addClass('on');
+    }
+  }
+  setGnbActive(0,0,0);
+  // setGnbActive(0,1);
+  // setGnbActive(2,1,1);
+</script>
+
+
+  <!-- S content -->
+  <div class="contents">
+    <div class="page-content">
+      <div class="title-content" data-text="SL_0003_07">등록</div>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#"  data-text="CR_0002_04">정보센터</a></li>
+          <li class="breadcrumb-item"><a href="#"  data-text="CR_0003_20">1:1 문의</a></li>
+          <li class="breadcrumb-item active" aria-current="page" data-text="SL_0003_07">등록</li>
+        </ol>
+      </nav>
+
+      <div class="card-shadow"> <!-- card-shadow 클래스 추가  --- 2020.11.27 -->
+        <table class="table v-table">
+          <colgroup>
+            <col style="width: 15%;">
+            <col style="width: 85%;">
+          </colgroup>
+          <tbody>
+          <tr>
+            <td data-text="LJ_0102_03">아이디</td>
+            <td>홍길동</td>
+          </tr>
+          <tr>
+            <td data-text="LJ_0002_04">이메일</td>
+            <td>email@naver.com</td>
+          </tr>
+          <tr>
+            <td data-text="IM_0004_02">질문 유형</td>
+            <td>
+              <select class="custom-select custom-select-sm com-input-width" title="">
+                <option selected="">회원</option>
+                <option>상품등록</option>
+                <option>상품검증</option>
+                <option>판매지원</option>
+                <option>기술지원</option>
+                <option>사이트 이용</option>
+                <option>정산신청</option>
+                <option>기타 제공</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td data-text="SL_0003_22">제목<i class="fas fa-check icon-check"></i></td>
+            <td>
+              <input class="form-control form-control-sm d-inline-block" title="" type="text" value="개인정보 처리방침 개정 안내"
+                     style="width: 750px">
+              <span class="ml-2">(0/50)</span>
+            </td>
+          </tr>
+          <tr class="txt-lg">
+            <td data-text="SL_0006_18">내용<i class="fas fa-check icon-check"></i></td>
+            <td class="pt-1">
+              <textarea name="" title="text" style="resize: none; width: 100%; height: 100px"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td data-text="IM_0004_03">파일첨부</td>
+            <td class="img-list py-1">
+              <!-- S 마크업 변경 -- 2020.09.03 -->
+              <div class="custom-file custom-file-sm d-inline-block" style="width:650px;">
+                <input type="file" class="custom-file-input file-path validate" title="file" id="inputGroupFile01"
+                       aria-describedby="inputGroupFile01">
+                <label class="custom-file-label" for="inputGroupFile01"></label>
+                <button class="btn btn-outline-dark custom-file-btn" data-text="PD_0102_09">파일찾기</button>
+              </div>
+              <!-- E 마크업 변경 -- 2020.09.03 -->
+              <span class="ml-2 align-sub">(00KB)</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box clearfix">
+          <div class="wrap-btn">
+            <a class="btn btn-outline-dark" href="#" data-text="LJ_0101_07">취소</a>
+            <a class="btn btn-primary" href="#" data-text="SL_0003_07">등록</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <footer>
+  <div class="footer">
+    <ul class="t-info">
+      <li><a href="#" data-text="FT_0001_01">아이스크림 홈런 서비스</a></li>
+      <li><a href="#" data-text="FT_0002_01">이용약관</a></li>
+      <li><a href="#" data-text="FT_0002_02">개인정보 처리방침</a></li>
+    </ul>
+    <div class="box">
+      <ul class="c-info">
+        <li>
+          <span class="bar">(우) 06180 서울특별시 강남구 테헤란로88길 15</span>
+          <span class="bar" data-text="FT_0003_02">대표이사 : 조용상</span>
+          <span data-text="FT_0003_03">사업자등록번호 : 120-87-97004</span>
+        </li>
+        <li>
+          <span class="bar" data-text="FT_0003_04">통신판매신고번호 : 제2013-서울강남-01379호</span>
+          <span class="text-lg" data-text="FT_0003_04">전자출판물인증번호 : I410-ECN-0199-2013-001-002535352</span>
+        </li>
+        <li class="mb-2">
+          <span class="bar">Tel : <a href="tel:1544-0910">1544-0910</a></span>
+          <span class="bar">Fax : <a href="tel:02-3448-5262">02-3448-5262</a></span>
+          <span class="email">Email : <a href="homemaster@home-learn.com/">homemaster@home-learn.com</a></span>
+        </li>
+        <li>
+          <span class="desc text-lg">아이스크림 홈런은 한국콘텐츠진흥원에서 주관하는 '뉴미디어 연계 콘텐츠 지원사업' 대상으로 선정되어 사업비의 일부를 지원받았습니다.</span>
+        </li>
+        <li>
+          <span class="desc text-lg" data-text="FT_0003_09"><i class="far fa-copyright"></i>i-Scream edu Corporation all rights reserved.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <!-- E content -->
+</div>
+</body>
+</html>

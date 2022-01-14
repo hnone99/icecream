@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런프렌즈</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap" class="h100p">
+		<!-- container -->
+		<div class="container p0">
+			<div style="padding:20px;text-align:center;"><button type="button" style="padding:10px;border:1px solid #ddd;" onclick="layerPop.show('popParticipantList');">popup open</button></div>
+
+			<!-- pop-wrap -->
+			<div id="popParticipantList" class="pop-wrap fixed pop-recent-list order">
+				<div class="pop-wrap-inner">
+					<div class="pop-cont-inner w720">
+						<div class="pop-top-wrap">
+							<h5 class="pop-tit">최근 참가자</h5>
+						</div>
+
+						<div class="tbl-wrap">
+							<table class="tbl-deli-term">
+								<colgroup>
+									<col width="10.6%" />
+									<col width="16.3%" />
+									<col width="auto" />
+									<col width="13.6%" />
+									<col width="13.6%" />
+									<col width="13.6%" />
+									<col width="10.6%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">선택</th>
+										<th scope="col">참가자명</th>
+										<th scope="col">휴대전화번호</th>
+										<th scope="col">학년</th>
+										<th scope="col">성별</th>
+										<th scope="col">구분</th>
+										<th scope="col">삭제</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="radio-box type2 single">
+												<input type="radio" name="list" id="list1">
+												<label for="list1"></label>
+											</div>
+										</td>
+										<td>최유리</td>
+										<td>01012345678</td>
+										<td>초1</td>
+										<td>여</td>
+										<td>여</td>
+										<td>
+											<button type="button" class="btn-delete v2">삭제</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="radio-box type2 single">
+												<input type="radio" name="list" id="list2">
+												<label for="list2"></label>
+											</div>
+										</td>
+										<td>최유리</td>
+										<td>01012345678</td>
+										<td>초1</td>
+										<td>여</td>
+										<td>여</td>
+										<td>
+											<button type="button" class="btn-delete v2">삭제</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="btn-box full">
+							<a href="#" class="btn bg-gray03" onclick="layerPop.hide(this);return false;">창닫기</a>
+							<a href="#" class="btn bg-black">확인</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //pop-wrap -->
+
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

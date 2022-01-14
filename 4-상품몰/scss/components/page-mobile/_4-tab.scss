@@ -1,0 +1,82 @@
+// ========================================================================
+// [tab] | 메인 / 서브페이지 탭
+// ========================================================================
+@media all and (max-width: 960px){
+  .ui-new{
+    .tabs.new-tabs{
+      margin-bottom: 2.4rem;
+      margin-top: 2.4rem;
+      .list li{
+        width: 50%;
+        a{
+          font-size: 19px;
+        }
+      }
+    }
+    .tag-list{
+      margin-bottom: 0;
+      .card-list{
+        .px-md-no{
+          justify-content: space-around;
+        }
+        .card-item{
+          width: 200px;
+          margin: 0 0 36px 0;
+          &:nth-child(5n){
+            margin-right: 0 !important;
+          }
+          &:nth-child(2n){
+            margin-right: 0 !important;
+          }
+          .img{
+            width: 200px;
+            height: 200px;
+          }
+        }
+        .card-item{
+          .sticker-homelearn{
+            @include top-right(162px, -6px);
+          }
+          .sticker-free{
+            @include top-right(162px, -6px);
+          }
+          .list-body{
+            .title{
+              height: 52px;
+              line-height: 1.2em;
+              font-size: 22px;
+              font-weight: $fw-medium
+            }
+            .company{
+              margin-bottom: 12px;
+              font-size: 15px;
+              font-weight: $fw-light
+            }
+            .score{
+              font-size: 17px;
+              .sprite.icon-16-star{
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ui-mypage-box{
+      .tag-list{
+        .card-list{
+          .card-item{
+            margin: 0 0 36px 0;
+            &:nth-child(5n){
+              margin-right: 0 !important;
+            }
+            &:nth-child(2n){
+              margin-right: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

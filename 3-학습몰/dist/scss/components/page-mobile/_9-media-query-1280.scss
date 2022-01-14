@@ -1,0 +1,181 @@
+// ========================================================================
+// [] | 미디어쿼리
+// ========================================================================
+// 1280px 이하 대응
+@media all and (max-width: 1279px){
+  .ui-new{
+    .wrap{
+      padding-top: 0;
+    }
+    .container{
+      &.new-container{
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        .container-sm,
+        .container-md,
+        .container-lg,
+        .container-xl{
+          max-width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+    //----------------------------------------------------------------
+    // 검색영역
+    .search-box{
+      position: absolute;
+      top: 0;
+      left: inherit;
+      right: 0;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      overflow: auto;
+      .form-control{
+        position: relative;
+        padding: 0 130px 0 50px;
+        font-size: 20px;
+        font-weight: $fw-regular;
+        &::placeholder{
+          font-weight: $fw-light;
+          color: #bbbbbb;
+        }
+      }
+      .input-group{
+        border-width: 2px;
+        background-color: #fff;
+        border-radius: 0;
+        box-shadow: none;
+        &::before{
+          @include top-left(50%, 56px);
+          display: block;
+          width: 2px;
+          height: 21px;
+          margin-top: -10px;
+          background-color: #ff7602;
+          content: ''
+        }
+        .btn-search-back{
+          display: block;
+          @include top-left(0, 0);
+          padding: 18px;
+          z-index: 10;
+        }
+        .btn-search{
+          top: 18px;
+          right: 73px;
+          @include bg-img-size(22px, 21px, $imgMobilePath, 'i-top-search-on@2x');
+          img{
+            display: none;
+          }
+        }
+        .btn-search-close{
+          right: 105px;
+        }
+      }
+      .sub-btn-util{
+        @include top-right(0, 18px);
+        padding: 18px 10px;
+      }
+      .search-content{
+        margin: 0 32px 0 50px;
+        padding: 18px 0 0;
+        margin: 0;
+        padding: 18px 20px 18px 20px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, 0.96);
+        .search-list{
+          li{
+            margin-bottom: 8px;
+          }
+          .item-1 .text{
+            line-height: 1.2em;
+            font-size: 20px;
+            font-weight: $fw-medium;
+            color: #202020;
+          }
+          > p{
+            margin-bottom: 13px;
+            font-size: 17px;
+            font-weight: $fw-medium;
+            color: #bbbbbb;
+         }
+        }
+      }
+    }
+    .detail-page{
+      border-top: 0 none;
+    }
+  }
+  // --------------------------------------------------
+  // --------------------------------------------------
+  // 상품몰 상단
+  .ui-new.ui-product-mall{
+    .search-box{
+      right: 0;
+      width: 100%;
+      .btn-util-basket{
+        display: block;
+        right: 66px;
+      }
+      .input-group{
+        .form-control{
+          padding: 0 200px 0 50px
+        }
+        .btn-search{
+          right: 125px
+        }
+        .btn-search-close{
+          right: 172px;
+        }
+      }
+    }
+    .sub-menu-area{
+      .sub-menu{
+        margin: 0 25px;
+      }
+    }
+  }
+  // --------------------------------------------------
+  // 서브페이지 하단 플로팅 버튼
+  .ui-new.sub-page{
+    .fixed-btn{
+      bottom: 10px;
+    }
+  }
+  // --------------------------------------------------
+  // 서브페이지 결제페이지
+  .ui-new{
+    .payment{
+      .p-info{
+        .accordion{
+          .card{
+            .card-body{
+              .user-list{
+                padding: 28px 0;
+                li{
+                  .custom-radio{
+                    .custom-control-input:checked ~ .custom-control-label::after{
+                      top: 6px;
+                    }
+                    .custom-control-label{
+                      line-height: 25px;
+                      .t-info-highlight{
+                        max-width: 100%;
+                        margin-left: 0;
+                        font-size: 15px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

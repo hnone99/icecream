@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런프렌즈</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap" class="h100p">
+		<!-- container -->
+		<div class="container p0">
+			<div style="padding:20px;text-align:center;"><button type="button" style="padding:10px;border:1px solid #ddd;" onclick="layerPop.show('pop-join');">popup open</button></div>
+
+			<!-- pop-wrap -->
+			<div id="pop-join" class="pop-wrap alert">
+				<div class="pop-wrap-inner">
+					<div class="pop-cont-inner">
+						<p class="txt"><span class="color-red">*</span> 표시된 항목은 필수항목으로 모두 입력하셔야 합니다.<br>본인 계정이 없으실 경우 부모님 계정으로 가입해주세요.</p>
+
+						<p class="txt">인증을 진행하시는 부모님(법정대리인)과의 나이차가 20년 미만으로 법정대리인으로 동의를 진행할 수 없습니다.</p>
+
+						<p class="txt">필수항목을 모두 동의해주세요.</p>
+						
+						<div class="btn-box">
+							<button class="btn bg-black" onclick="layerPop.hide(this)">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //pop-wrap -->
+
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

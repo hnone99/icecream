@@ -1,0 +1,29 @@
+// ========================================================================
+// [cs] | cs 고객센터
+// ========================================================================
+.ui-new{
+  .cs-center{
+    #qna{
+      h4{
+        small{
+          line-height: 1.4em;
+        }
+        .new{
+          margin-left: 5px;
+          vertical-align: middle;
+          img{
+            vertical-align: baseline
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1279px){
+  .ui-new{
+    .accordion > label h4 small{
+      margin-top: 7px;
+    }
+  }
+}

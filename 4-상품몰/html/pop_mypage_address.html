@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런프렌즈</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap" class="h100p">
+		<!-- container -->
+		<div class="container p0">
+			<div style="padding:20px;text-align:center;"><button type="button" style="padding:10px;border:1px solid #ddd;" onclick="layerPop.show('pop-address');">popup open</button></div>
+
+			<!-- pop-wrap -->
+			<div id="pop-address" class="pop-wrap fixed address">
+				<div class="pop-wrap-inner">
+					<!-- pop-cont-inner -->
+					<div class="pop-cont-inner w720">
+						<!-- pop-group -->
+						<div class="pop-group">
+							<div class="pop-top-wrap">
+								<h5 class="pop-tit ty02">주소록 관리</h5>
+							</div>
+							<ul class="data-list">
+								<li>
+									<div class="chk-custom single">
+										<input type="checkbox" name="product" id="chk1">
+										<label for="chk1"><span></span>기본주소로 설정</label>
+									</div>
+									<div class="inp-inner">
+										<em class="tit">주소명</em>
+										<div class="cont"><input type="text" class="inp-txt" placeholder="내용을 입력해주세요."></div>
+									</div>
+								</li>
+								<li>
+									<em class="tit">전화번호</em>
+									<div class="cont"><input type="number" class="inp-num" placeholder="('-' 없이 숫자만 입력)"></div>
+								</li>
+								<li>
+									<em class="tit">휴대폰 번호</em>
+									<div class="cont"><input type="number" class="inp-num" placeholder="('-' 없이 숫자만 입력)"></div>
+								</li>
+								<li>
+									<em class="tit">주소</em>
+									<div class="cont">
+										<div class="inp-txt-inner">
+											<input type="text" class="inp-txt">
+											<a href="#" class="btn line-gray">우편번호</a>
+										</div>
+										<input type="text" class="inp-txt" placeholder="상세주소를 입력해주세요.">
+									</div>
+								</li>
+							</ul>
+							<ul class="btn-box bd-none">
+								<li>
+									<div class="btn-inner">
+										<button class="btn bg-gray03" onclick="layerPop.hide(this)">창닫기</button>
+									</div>
+								</li>
+								<li>
+									<div class="btn-inner">
+										<a href="javascript:void(0)" class="btn bg-black">확인</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //pop-group -->
+					</div>
+					<!-- //pop-cont-inner -->
+				</div>
+			</div>
+			<!-- //pop-wrap -->
+
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

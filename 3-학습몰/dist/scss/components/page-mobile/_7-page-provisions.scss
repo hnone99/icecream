@@ -1,0 +1,74 @@
+// ========================================================================
+// [page] | 이용약관 - 아이스크림홈런 사이트에서 가져옴
+// ========================================================================
+@media all and (max-width: 1279px){
+  .new-terms-of-service{
+    margin: 20px 30px;
+  }
+}
+@media all and (max-width: 720px){
+  .new-terms-of-service{
+    padding-bottom: 20px;
+    .layout190927111745>.item{
+      width: 100%;
+    }
+    .layout190927111745>.item:nth-child(2n) {
+      border-left: none
+    }
+    .layout190927111745>.item.blank {
+      display: none;
+    }
+  }
+}
+@media all and (max-width: 479px){
+  .new-terms-of-service{
+    margin: 20px 15px;
+    color: #666666;
+    ul, li{
+      font-size: 14px;
+      color: #666666;
+    }
+    .section{
+      margin-top: 20px !important;
+    }
+    .tit0{
+      font-size: 20px;
+    }
+    .tit1{
+      font-size: 18px;
+    }
+    .tit2{
+      padding: 5px 0;
+      font-size: 17px;
+    }
+    .txt0 {
+      word-break: break-all;
+      font-size: 14px;
+      letter-spacing: -0.05em;
+    }
+    .layout190927111745 > .item{
+      height: 30px;
+    }
+    .layout190927111745>.item>a {
+      padding: 0 10px;
+      line-height: 30px;
+      font-size: 12px;
+    }
+    .indent_list > li{
+      font-size: 14px;
+      .indent_list > li{
+        padding-left: 0px;
+        .indent_list > li{
+          padding-left: 10px;
+        }
+      }
+    }
+    .ol0{
+      padding-left: 10px;
+      font-size: 14px;
+    }
+    // .ol0 > li{
+    //   margin-left: 10px;
+    // }
+  }
+}

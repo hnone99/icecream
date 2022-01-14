@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-title" content="HOMELEARN_MARKET" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="HOMELEARN_MARKET"/>
+  <meta name="keywords" content="HOMELEARN_MARKET"/>
+  <title>홈런MARKET</title>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/fonts/fontAwesomepro.css"/>
+  <script src="../js/bundle.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+  }
+</style>
+
+<div class="wrap bg-grey">
+  <!-- S content -->
+  <div class="contents">
+    <div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#alert">알림 사용법 (제목없음)</button>
+      <!-- Modal -->
+      <div class="modal fade" id="alert" tabindex="-1" role="dialog" aria-labelledby="alert" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              버튼에는 <code>data-toggle="modal" data-target="#alert"</code> 코드를 넣고 팝업의 ID를 맞추면 동작합니다.<br>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-sm btn-block" data-dismiss="modal" data-text="CU_0007_04">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#alert2">알림 팝업 (제목포함)</button>
+      <!-- Modal -->
+      <div class="modal fade" id="alert2" tabindex="-1" role="dialog" aria-labelledby="alert2" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="modal-title">제목 텍스트 영역입니다.</div>
+              본문 텍스트 영역입니다.<br>
+              본문 텍스트 영역입니다.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-sm btn-block" data-dismiss="modal" data-text="CU_0007_04">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal">dialog</button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              본문 텍스트 영역입니다.<br>
+              본문 텍스트 영역입니다.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-sm btn-outline-primary " data-dismiss="modal" aria-label="Close" data-text="AD_0034_01">취소</button>
+              <button type="button" class="btn btn-sm com-modal-btn" data-dismiss="modal" data-text="CU_0007_04">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!-- E content -->
+</body>
+<style>
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+
+  .component {
+    padding: 54px 52px;
+  }
+
+  .component .title-lg {
+    line-height: 41px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 104px;
+  }
+
+  .component .com-box {
+    margin-bottom: 44px
+  }
+
+  .component .com-box .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+</style>
+</html>

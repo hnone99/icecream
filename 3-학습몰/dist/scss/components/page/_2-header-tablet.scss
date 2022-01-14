@@ -1,0 +1,27 @@
+// ========================================================================
+// [header] | 헤더
+// ========================================================================
+.ui-new{
+  .h-title{
+    position: relative;
+    margin-left: 12px;
+    padding-left: 12px;
+    font-size: 19px;
+    &::before{
+      @include top-left(50%, 0);
+      width: 1px;
+      height: 18px;
+      margin-top: -9px;
+      background-color: #202020;
+      content: '';
+    }
+    .txt, .txt-mall{
+      display: inline-block;
+      vertical-align: bottom;
+    }
+    .txt-mall{
+      @include bg-img(33px, 16px, $imgTabletPath, top-txt-mall);
+      @extend %ir;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// ========================================================================
+// [main] | 메인
+// ========================================================================
+.ui-new{
+
+  .ui-container-box{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .content{
+    &.new-main-content{
+      padding-top: 0;
+      padding-bottom: 60px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &.new-sub-content{
+      padding-top: 0;
+      padding-bottom: 60px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  .content-fit{
+    display: inline-block;
+    width: 1280px;
+    padding: 0 20px;
+    text-align: left;
+  }
+  .new-result{
+    margin: 0 auto;
+    text-align: center;
+  }
+  .new-result-title{
+    margin-top: 60px;
+    font-size: 26px;
+    font-weight: $fw-bold
+  }
+}

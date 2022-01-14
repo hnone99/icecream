@@ -1,0 +1,97 @@
+// ========================================================================
+// [header] | 헤더
+// ========================================================================
+.ui-new{
+  .wrap{
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    padding-top: 0;
+  }
+  .ui-header-box{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    height: 76px;
+    border-bottom: 1px solid #d2d2d2;
+    text-align: center;
+    .ui-header-box-wrap{
+      position: relative;
+      display: inline-block;
+      min-width: 1280px;
+      height: 100%;
+      text-align: left;
+    }
+  }
+  .ui-header-box-mo{
+    display: none;
+  }
+  // ----------------------------------------------------------------
+  .header-logo{
+    @include bottom-left(14px, 37px);
+    font-size: 0;
+    z-index: 2;
+    .img-logo{
+      @include bg-img(223px, 32px, $imgNewPath, logo);
+      @extend %ir;
+    }
+    a, .h-title{
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+  // ----------------------------------------------------------------
+  .header-tab{
+    position: relative;
+    display: block;
+    height: 100%;
+    z-index: 1;
+    .tab-list-grp{
+      @include bottom-left(-1px, 0);
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0;
+    }
+    .tab-list{
+      display: inline-block;
+      height: 56px;
+      line-height: 56px;
+      padding: 0 67px;
+      border: 1px solid #d2d2d2;
+      border-right: 0 none;
+      background-color: #ffffff;
+      font-size: 22px;
+      vertical-align: top;
+      cursor: pointer;
+      &.on{
+        background-color: #202020;
+        color: #fff;
+        .txt-mall{
+          background-image: url("#{$imgNewPath}/tab-mall-on.png")
+        }
+      }
+      &:last-child{
+        border-right: 1px solid #d2d2d2;
+      }
+    }
+    .txt-mall{
+      @include bg-img(44px, 20px, $imgNewPath, tab-mall-off);
+      @extend %ir;
+      margin-left: 3px;
+    }
+  }
+  // ----------------------------------------------------------------
+  .header-btn{
+    @include top-right(42px, 27px);
+    font-size: 13px;
+    z-index: 2;
+    button{
+      padding: 0 6px;
+    }
+    .btn-top{
+      margin-left: 14px;
+      vertical-align: middle;
+    }
+  }
+}

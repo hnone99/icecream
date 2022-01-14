@@ -1,0 +1,178 @@
+// ========================================================================
+// [main] | 서브 마이페이지
+// ========================================================================
+.ui-new{
+  &.bg-white{
+    .ui-detail-box{
+      background-color: #fff;
+    }
+  }
+  // 상세페이지
+  .ui-detail-box{
+    padding-top: 46px;
+    background-color: #fffdfa;
+    .ui-detail-box-wrap{
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-bottom: 80px;
+    }
+    // 로그인
+    .member.login{
+      padding: 60px;
+    }
+  }
+  //------------------------------------------------------------
+  // 마이페이지
+  .mypage{
+    background-color: #fff;
+  }
+  .mypage .container + .buttons{
+    padding: 20px 0
+  }
+  .mypage .edu-list li .form-control ~ h2,
+  .mypage .edu-list li .btn ~ h2{
+    width: calc(100% - 370px);
+  }
+  .mypage .edu-list li h2{
+    width: calc(100% - 200px);
+  }
+  .ui-mypage-box{
+    padding-top: 46px;
+    padding-bottom: 60px;
+    background-color: #fffdfa;
+    .ui-mypage-box-wrap{
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .content{
+      margin: 0 84px 0 84px;
+    }
+    .container.parent{
+      .dashboard{
+        h2{
+          padding-left: 0;
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+        h4{
+          padding-left: 0;
+        }
+        .btn-reg,
+        .btn-disabled{
+          margin-right: 0;
+        }
+        .list{
+          padding: 0
+        }
+      }
+    }
+    .recent{
+      margin-top: 60px;
+    }
+    .tag-list{
+      .card-list{
+        padding-left: 30px;
+      }
+    }
+    .my-info-area{
+      position: relative;
+    }
+    .my-content-area{
+      > .input-group:first-child{
+        display: inline-block;
+        margin-right: 20px;
+        width: 220px;
+      }
+      .md-p{
+        top: 12px;
+      }
+    }
+    // 평가관리
+    .review{
+      .my-content-area{
+        .review-list{
+          li{
+            position: relative;
+            >img{
+              position: absolute;
+              top: 24px;
+              left: 0;
+            }
+            h2{
+              position: relative;
+              margin-left: 80px;
+              line-height: 1.4em;
+            }
+            .btn.btn-review{
+              margin-top: -50px;
+            }
+          }
+        }
+      }
+    }
+
+
+
+    // 정보수정
+    .btn-modify{
+      @include top-right(0, 0);
+      min-width: 136px;
+      height: 50px;
+      line-height: 48px;
+      padding: 0 30px;
+      border-radius: 25px;
+      border: 2px solid #efefef;
+      background-color: #ffffff;
+      font-size: 17px;
+    }
+  }
+  //------------------------------------------------------------
+  // 결제페이지
+  .payment{
+    .p-info{
+      .accordion{
+        .card{
+          .card-body{
+            .qty-wrap{
+              .count-num{
+                .qty-minus,
+                .qty-plus{
+                  vertical-align: top;
+                }
+              }
+            }
+            .user-list{
+              li{
+                .custom-radio{
+                  .custom-control-input:checked ~ .custom-control-label::after{
+                    top: 7px;
+                  }
+                  .custom-control-input{
+                    top: 0;
+                  }
+                  .custom-control-label{
+                    line-height: 27px;
+                    &::before{
+                      top: 0;
+                    }
+                    .t-info-highlight{
+                      display: inline-block;
+                      max-width: 600px;
+                      margin-left: 6px;
+                      font-size: 17px;
+                      color: #f15e5e;
+                      vertical-align: top;
+                    }
+                    .desc{
+                      display: inline-block;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

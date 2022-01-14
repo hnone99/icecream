@@ -1,0 +1,144 @@
+// ========================================================================
+// [footer] | footer
+// ========================================================================
+.ui-new{
+  //상품몰 부트스트랩 가져옴
+  .custom-select {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    padding: 0 14px;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: middle;
+    background: #ffffff url("#{$imgEcoCommonPath}/btn-open-n@3x.png") no-repeat right 14px center/16px 16px;
+    border: 2px solid #bbb;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    color: #333333;
+  }
+  footer {
+    z-index: 100;
+    width: 100%;
+    background-color: #eeeeee;
+  }
+  footer .container-footer {
+    margin: 0 auto;
+    height: 318px;
+    max-width: none;
+    padding: 24px;
+    position: relative;
+  }
+  footer .policy {
+    margin-bottom: 12px;
+  }
+  footer .policy li {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.71;
+    color: #333333;
+    position: relative;
+    padding: 0 10px;
+  }
+  footer .policy li:after {
+    content: "";
+    width: 1px;
+    height: 12px;
+    opacity: 0.2;
+    background-color: #333333;
+    position: absolute;
+    top: 6px;
+    left: 0;
+  }
+  footer .policy li:first-child {
+    padding-left: 0;
+  }
+  footer .policy li:first-child:after {
+    display: none;
+  }
+  footer .family {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 24px;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: 36px;
+    padding: 0 20px;
+    margin-bottom: 12px;
+    .input-group{
+      height: 36px;
+    }
+  }
+  footer .family select {
+    border: none;
+    width: 100%;
+    font-size: 12px;
+    font-family: $base-font;
+    outline: none
+  }
+  footer address {
+    height: 100px;
+    font-size: 12px;
+    line-height: 1.67;
+    color: #666666;
+  }
+  footer address .copyright {
+    font-weight: bold;
+  }
+}
+@media (min-width: 1280px) {
+  .ui-new{
+    .custom-select {
+      height: 48px;
+      line-height: 48px;
+    }
+    footer .container-footer {
+      height: 330px;
+      width: 100%;
+      max-width: 1280px;
+      padding: 50px 100px 84px 100px;
+    }
+    footer .policy {
+      margin-bottom: 24px;
+    }
+    footer .policy li {
+      font-size: 18px;
+      line-height: 1.33;
+    }
+    footer .policy li:after {
+      width: 2px;
+      height: 14px;
+      top: 4px;
+    }
+    footer .family {
+      position: absolute;
+      top: 42px;
+      right: 100px;
+      width: 240px;
+      height: 48px;
+      padding: 0 20px;
+    }
+    footer .family select {
+      font-size: 14px;
+    }
+    footer address {
+      height: 144px;
+      font-size: 14px;
+      line-height: 1.71;
+    }
+    footer address .copyright {
+      font-weight: bold;
+    }
+  }
+}
+@media (max-width: 479px) {
+  .ui-new{
+    .custom-select {
+      padding: 0;
+    }
+  }
+}

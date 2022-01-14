@@ -1,0 +1,3881 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Referrer" content="origin">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="HOMERUN_MARKET">
+<meta name="robots" content="index,nofollow">
+<meta name="description" content="HOMERUN_MARKET">
+<meta name="keywords" content="HOMERUN_MARKET">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<title>홈런ECO</title>
+<link type="text/css" rel="stylesheet" href="https://dev-market.home-learn.com/webapp/css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="https://dev-market.home-learn.com/webapp/css/fonts/fontAwesomepro.css">
+
+<!-- 210727 css 추가 -->
+<link type="text/css" rel="stylesheet" href="https://dev-market.home-learn.com/webapp/css/style.css">
+<style type="text/css">
+/* .ui-new .detail-fit { */
+/* 	padding: 0px 30px 26px 46px; */
+/* } */
+@media (max-width: 960px) {
+	.ui-new .detail-card .card-price .total_price.top{
+	    top: 13px;
+	}
+}
+
+.ui-new .detail-card .card-btn .btn.btn-new-active.disabled {
+	background-color: #eeeeee;
+	border: 1px solid #eeeeee;
+}
+
+.ui-new .sticky-btn.new-sticky-btn .cont .btn.disabled {
+	background-color: #eeeeee;
+	border: 1px solid #787878;
+}
+
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled){
+    z-index: 1;
+}
+
+</style>
+<script type="text/javascript">
+window.addEventListener('DOMContentLoaded', function(){
+	showLoadingbar();
+});
+
+function failed(e){
+	console.log(e);
+	console.log(e.target.error.code);
+}
+</script>
+</head><body class="ui-new sub-page" onselectstart="return false" ondragstart="return false" style="">
+	<br>
+	<div class="wrap-bg">
+		<div class="wrap p-no">
+
+			<!-- ###ui-header-box -->
+			<header class="ui-header-box">
+				<div class="ui-header-box-wrap">
+					<!-- ##로고 -->
+					<h1 class="header-logo">
+						<a href="#"> <span class="img-logo">i-scream eco</span>
+						</a>
+
+						<!-- #서브 타이틀 -->
+						<!-- js 서브 타이틀 태블릿 버전에만 사용 -->
+						<div class="h-title tablet" style="display: none">
+							<span class="txt">학습</span> <span class="txt-mall">mall</span>
+						</div>
+						<!-- //#서브 타이틀 -->
+					</h1>
+					<!-- ##탭 -->
+					<nav class="header-tab">
+						<ul class="tab-list-grp noTablet" style="">
+							<!-- js 탭 활성화 on추가  -->
+							<li class="tab-list on" id="studysmall"><span>학습<span class="txt-mall">mall</span></span></li>
+							<li class="tab-list" id="goodsmall"><span>상품<span class="txt-mall">mall</span></span></li>
+						</ul>
+					</nav>
+					<!-- ##버튼 -->
+					<div class="header-btn" style="">
+						<button class="btn-top btn-loginout noTablet">로그인</button>
+						<button class="btn-top btn-joinus noTablet">회원가입</button>
+						<button class="btn-top tablet" style="display: none">
+							<i class="ico i-top-back">나가기</i>
+						</button>
+					</div>
+				</div>
+			</header>
+			<!-- //###ui-header-box -->
+
+			<!-- 모바일 서브 상단 -->
+			<!-- ###ui-header-box-mo -->
+			<header class="ui-header-box-mo">
+				<h2 class="top-sub-title">상세보기</h2>
+				<button class="top-btn-prev">
+					<i class="ico i-top-btn-prev">이전</i>
+				</button>
+				<button class="top-btn-home">
+					<i class="ico i-top-btn-home">홈</i>
+				</button>
+			</header>
+			<!-- //###ui-header-box-mo -->
+
+			<!-- ###ui-sub-box -->
+			<div class="ui-sub-box">
+				<div class="ui-sub-box-wrap">
+					<!-- #이전 버튼 -->
+					<!-- js 이전 버튼 비활성화 off -->
+					<div class="sub-prev-area">
+						<button class="sub-btn-prev">
+							<i class="ico i-sub-btn-prev">이전</i>
+						</button>
+					</div>
+					<!-- ##서브 메뉴 -->
+					<div class="sub-menu-area">
+						<ul class="sub-menu-grp">
+							<!-- js 탭 활성화 on추가  -->
+							<li class="sub-menu" data-tag="all"><a href="">#전체</a></li>
+							<li class="sub-menu" data-tag="es"><a href="">#초등</a></li>
+							<li class="sub-menu" data-tag="ms"><a href="">#중등</a></li>
+						</ul>
+					</div>
+					<!-- ##서브 검색/마이페이지 -->
+					<div class="sub-util-area">
+						<button class="sub-btn-util">
+							<i class="ico i-top-search">검색</i>
+						</button>
+						<button class="sub-btn-util" style="font-family:revert">
+							<i class="ico i-top-member" id="login-on">마이페이지</i>
+						</button>
+					</div>
+					<div id="nav">
+      <!-- ##서브 검색창 영역 / 기존 소스 활용 -->
+      <div class="search-box _searchBox">
+        <div class="input-group">
+          <!-- 검색 뒤로가기 -->
+          <button class="btn-search-back">
+            <i class="ico i-search-btn-back">검색 뒤로가기</i>
+          </button>
+
+          <input class="form-control _search" id="searchText" type="search" placeholder="검색어를 입력하세요" aria-label="Search">
+
+          <a href="#" class="btn-search"><img src="../../img/common/btn-search-color-n@3x.png" alt=""></a>
+          <a href="#" class="btn-search-close _searchClear" style="display: none;"><img src="../../img/common/btn-text-delete-n@3x.png" alt="" width="16" height="16"></a>
+          <button class="sub-btn-util" id="menuList">
+            <i class="ico i-top-menu">메뉴리스트</i>
+          </button>
+        </div>
+        <div class="search-content">
+          <div class="search-list"><p data-text="CU_0010_02">최근 검색어</p><div class="empty">	<div class="img"><img src="../../img/common/icon-120-clear-list@3x.png" alt="최근검색어가 없습니다."></div>	<p class="desc" data-text="CU_0010_03">최근 검색어가 없습니다.</p></div></div>
+        </div>
+      </div>
+
+
+
+      <!-- 		S:알람내용영역 -->
+		<div tabindex="-1" id="divAlarm" class="drawer drawer-right" style="display:none">
+    <!-- 		<div tabindex="-1" id="divAlarm" class="drawer drawer-right drawer-open" style="outline: 0px;"> -->
+			<div class="drawer-mask"></div>
+			<!-- 210818 꼬리 엘리먼트 추가 -->
+          <i class="i-drawer-tail"></i>
+			<div class="drawer-content-wrapper">
+				<div class="drawer-content">
+					<div class="drawer-wrapper-body">
+
+					<!-- #알림 최상단 -->
+                	<!-- 알림 모바일만 적용 -->
+					<section class="drawer-highest">
+	                  <div class="top-left-area">
+	                    <button class="top-btn top-btn-member noTablet">
+	                      로그아웃
+	                    </button>
+    <!-- 	                    <button class="top-btn top-btn-language" id="btnLang"> -->
+    <!-- 	                      언어설정 -->
+    <!-- 	                    </button> -->
+	                  </div>
+	                  <div class="top-right-area">
+	                    <button class="top-btn-close">
+	                      <i class="ico i-top-btn-close">닫기</i>
+	                    </button>
+	                  </div>
+	                </section>
+	                <!-- //#알림 최상단 -->
+
+	               <!-- #알림 상단 -->
+					<div class="drawer-header">
+						<div class="drawer-title">
+						   <span class="grade memberType"></span>
+		                   <span class="study-access" id="small" style="display: none;"><a href="#">학습관 이용</a></span>
+		                   <a href="/webapp/html/mypage/mypage.html" class="name"></a>
+						</div>
+					</div>
+
+					<!-- //#알림 상단 -->
+                	<!-- #알림 콘텐츠 -->
+					<div class="drawer-body">
+						<!-- 읽은 알림/읽지 않은 알림 -->
+						<div class="alram">
+							<span id="alarmCnt" style="display: none;">
+	                   			<em>읽지 않은 알림이</em> <span class="text-secondary" data-text="CU_0004_17">개</span><em data-text="CU_0004_18">있습니다.</em>
+	                   		</span>
+    <!-- 	                   		<a href="#" class="setting d-inline" data-toggle="modal" data-target="#tagNotice"><span class="text-secondary" data-text="CU_0004_07">알림설정</span></a> -->
+		                   <span id="alarmNotCnt" style="display: none;">
+		                   		<em data-text="CU_0004_16">읽지 않은 알림</em><em data-text="CU_0004_19">이 없습니다.</em>
+		                   </span>
+						</div>
+	                 	<div class="alram">
+    <!-- 		                   <a href="#" class="setting d-inline" data-toggle="modal" data-target="#tagNotice"><span class="text-secondary" data-text="CU_0004_07">알림설정</span></a> -->
+		                </div>
+						<hr class="line">
+						<!-- 오늘 -->
+                  		<div id="divAlarmBody">
+						</div>
+						 <!-- 알림이 비었습니다.
+						 <div class="empty">
+		                    <img src="../../img/common/icon-80-alram.png" alt="알람">
+		                    <span data-text="CU_0004_22">알림함이 비었습니다.</span>
+		                 </div>
+						 //#알림 콘텐츠 -->
+					</div>
+           		   <!-- #알림 하단 -->
+					<div class="drawer-footer">
+    <!-- 						<a href="#" class="btn-language" id="btnLang">언어설정</a> -->
+               			<a href="#" id="logout" class="noTablet" data-text="CU_0004_04">로그아웃</a>
+					</div>
+					<!-- //#알림 하단 -->
+				</div>
+			</div>
+		</div>
+	</div>
+      <!-- 		E:알람내용영역 -->
+      <!--	국기 표시시 표시하지 않음
+      	<div class="navbar-btn-eco">
+      		<a href="#">         	<img src="../../img/common/btn-main-homerun-eco-n.png" class="d-none d-xl-block"/>
+      			         	<img src="../../img/common/btn-main-homerun-eco-n-mobile.png" class="d-xs-block d-xl-none"/>
+
+      			<img src="../../img/common/btn-main-home-learn-eco-nt-n.png"
+      			class="d-none d-xl-block" />
+      		d-xl-block로 변경 -- 2020.09.24  <img
+      			src="../../img/common/btn-main-homerun-eco-n-mobile.png"
+      			class="d-xs-block d-xl-none" />
+      		d-xl-none로 변경 -- 2020.09.24  <span
+      			class="eco d-none d-xl-block">홈런에코</span> <img
+      			src="../../img/common/reply-24-px.png"
+      			class="arrow d-none d-xl-block" alt="">
+      		</a>
+      	</div>
+
+
+      </div> -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(window).bind("pageshow", function(event) {
+			//iphone 웹뷰 back 이벤트 일 경우
+		    if (Global.reqCommonData.devinfo == "MOBILE" && event.originalEvent && event.originalEvent.persisted) {
+    	    	window.location.reload();
+	    	}
+		});
+
+		$(document).click(function(e){ //문서 body를 클릭했을때
+// 			console.log('target: '+ e.target.className);
+// 			console.log('.i-top-member").hasClass show >>'+ $('.i-top-member').hasClass('show'));
+			if($('.i-top-member').hasClass('show') && e.target.className !="drawer-content-wrapper" && e.target.className !="daylist"){
+		 		//알람 숨김
+// 		 		console.log('들어옴 ');
+		 		$('.i-top-member').removeClass('hasalram');
+		 		$('.i-top-member').removeClass('show');
+				$('#divAlarm').removeClass('drawer-open');
+		 		$('#divAlarm').css('display','none');
+	 		}else if(!$('.i-top-member').hasClass('show') && e.target.className == "ico i-top-member"){
+	 			$('.i-top-member').trigger('click');
+	 			$('#divAlarm').css('display','');
+
+// 	 			$('#divAlarm').css('display','');
+// 	 			$('.i-top-member').removeClass('hasalram');
+// 		 		$('.i-top-member').addClass('show');
+// 				$('#divAlarm').addClass('drawer-open');
+// 		 		$('#divAlarm').css('display','block');
+	 		}
+
+
+	 		if( $("._searchBox").hasClass('show')  && e.target.className !="" && e.target.className !="ico i-top-search" && e.target.className != "form-control _search" && e.target.className != "search-content"){
+	 			//검색창 숨김
+// 	 			console.log('들어옴2 ');
+		 		$('._searchBox').css('display','none');
+		 		$('._searchBox').removeClass('show');
+
+	 		}else if(!$('._searchBox').hasClass('show') && e.target.className == "ico i-top-search"){
+// 	 			$('.i-top-member').removeClass('hasalram');
+	 			$('._searchBox').css('display','block');
+		 		$('._searchBox').addClass('show');
+	 		}
+		 });
+		 /*
+		 if(localStorage.getItem('IS_HYBRID') =='Y'){//isHybrid()){
+			 //하이브리드인 경우 tablet mode 세팅
+			//학습몰/상품몰 텝 안보임
+			$(".tab-list-grp").css("display","none");
+			$(".noTablet").css("display","none");
+
+		    $(".tablet").css("display","");
+		 }else{
+			$(".tab-list-grp").css("display","");
+			$(".noTablet").css("display","");
+			$(".tablet").css("display","none");
+		 }*/
+
+		//알람 숨김
+		$(".setting.text-secondary").click(function(e){
+			$('.i-top-member').removeClass('show').removeClass('hasalram');
+			$('#divAlarm').removeClass('drawer-open');
+			$('#divAlarm').css('display','none');
+		 });
+
+		 //이름영역 >
+		 $('.drawer-title').click(function(e){
+		 	location.href = "/webapp/html/mypage/mypage.html";
+		 });
+
+
+		//공통 이전
+		/*$(".sub-btn-prev, .top-btn-prev").on('click', function(e) {
+			onClickEventPrevent(e);
+			history.back();
+		});*/
+
+		//공통 이전 처리
+		$(".sub-btn-prev, .top-btn-prev, .sub-prev-area").on('click', function (e) {
+			onClickEventPrevent(e);
+			var path = "/webapp/html";
+
+			var location = window.location.pathname ? window.location.pathname : "" ;
+			location = location.replace(path, "");
+
+			//backpress 화면 세팅
+			var spc = sessionStorage.spc;
+			var ordrIdx = sessionStorage.ordrIdx;
+			var uci = sessionStorage.upCategoryId;
+			var ci = sessionStorage.categoryId;
+			var tag = sessionStorage.tag;
+
+			sessionStorage.removeItem('spc');
+			sessionStorage.removeItem('ordrIdx');
+			sessionStorage.removeItem('upCategoryId');
+			sessionStorage.removeItem('categoryId');
+			sessionStorage.removeItem('tag');
+
+			if(location.startsWith("/mypage")){
+				if(location.indexOf("paydate.html") != -1){
+					window.location.href = path + "/mypage/manage.html";
+				}else if(location.indexOf("mypage.html") != -1){
+					window.location.href = path + "/main/main.html";
+				}else{
+					window.location.href = path + "/mypage/mypage.html";
+				}
+			}else if(location.startsWith("/brand") || location.startsWith("/curriculumMain") || location.startsWith("/event")){
+				if(!$.isEmpty($.getUrlParam("upCategoryId"))){
+					window.location.href = path + "/curriculumMain/curriculumMain.html?upCategoryId="+$.getUrlParam("upCategoryId");
+				}else{
+					window.location.href = path + "/main/main.html";
+				}
+			}else if(location.startsWith("/login")){
+				window.location.href = path + "/main/main.html";
+			}else if(location.startsWith("/product")){
+				/*
+				if(location.indexOf("payInfo.html") != -1){
+					if(!$.isEmpty($.getUrlParam("saleProductCode"))){
+						window.location.href = path + "/product/detail.html?saleProductCode="+$.getUrlParam("saleProductCode");
+					}else {
+						window.location.href = path + "/main/main.html";
+					}
+
+				}else{
+					window.location.href = path + "/main/main.html";
+				}
+				*/
+				if(location.indexOf("payInfo.html") != -1){
+					if(!$.isEmpty($.getUrlParam("saleProductCode"))){
+						window.location.href = path + "/product/detail.html?saleProductCode="+$.getUrlParam("saleProductCode");
+					}else {
+						window.location.href = path + "/main/main.html";
+					}
+
+				} else if(location.indexOf("freeExp.html") != -1){
+					commonConfirm('무료 체험 신청을 종료하시겠어요?', '', function(){
+						history.back();
+					}, false);
+
+				}else{
+					//detail.html
+					if(!$.isEmpty(ci) || !$.isEmpty(tag)){
+						history.back();
+					}else{
+						if($.isEmpty(uci)){
+							window.location.href = path + "/main/main.html";
+						}else{
+							window.location.href = path + "/curriculumMain/curriculumMain.html?upCategoryId="+uci;
+						}
+					}
+				}
+			}else{
+				if(location.indexOf('kcp') != -1 ||  location.indexOf('batch') != -1
+					 	|| (location.indexOf('payment') != -1 && location.startsWith('/mypage/payment.html') == -1 )  ){
+					//결제 중 에러//
+					if(spc != null && spc != ""){
+						if(ordrIdx != null){
+							//결제 중 에러
+							goBack(ordrIdx, spc);
+						}else{
+							//결제는 아직
+							location.replace(path + "/product/detail.html?saleProductCode="+spc);
+						}
+					}else{
+						history.back();
+					}
+				}else{
+					history.back();
+				}
+				//history.back();
+			}
+		});
+
+		//공통 홈
+		$(".i-top-btn-home").on('click', function(e) {
+			onClickEventPrevent(e);
+			location.href = "/webapp/html/main/main.html";
+		});
+		//검색닫기버튼(모바일)
+		$(".btn-search-back").on('click', function(e) {
+			onClickEventPrevent(e);
+			$('._searchBox').css('display','none');
+	 		$('._searchBox').removeClass('show');
+		});
+
+		//검색지우기버튼(모바일)
+		$("._searchClear").on('click', function(e) {
+			onClickEventPrevent(e);
+			$('#searchText').val("");
+		});
+
+		//회원가입: 아이스크림 홈페이지
+		$(".btn-joinus").on('click', function(e) {
+			onClickEventPrevent(e);
+		    location.href = oLink[oLink.env].eduJoin;
+// 		    var url = "https://dev-nhome.home-learn.com/integrate/interJoin.do?inflow_cd=10003";
+// 		    openNewBrowser(url);
+		});
+
+		//상품몰 이동
+		$('#goodsmall').on('click', function() {
+	          location.href = oLink[oLink.env].goodsMall;
+	    });
+		//학습몰 이동
+		$('#studysmall').on('click', function() {
+	          location.href =  "/webapp/html/main/main.html";
+	    });
+
+	 	//로그인
+		$(".btn-loginout, .top-btn-member").on('click', function(e) {
+			onClickEventPrevent(e);
+			e.stopPropagation();
+			if($(".btn-loginout").hasClass("logout")){
+				//로그아웃 --> 내 정보 (마이페이지로 이동)
+// 				location.href = "/webapp/html/mypage/mypage.html";
+				$("#logout").trigger('click');
+			}else{
+				//로그인
+				location.href = "/webapp/html/login/login.html";
+
+			}
+		});
+
+
+
+		//언어설정 창
+		/* [9월오픈 노출 안함]
+		if(localStorage.getItem("isFirst") != 'N'){
+			var oldLang = Global.reqCommonData.countryCode;
+			openModalPopup("langSettingPopup","/webapp/html/common/popup/language.html",
+				"common-lang-setting", null, function(data) {
+					if (Global.reqCommonData.countryCode != oldLang) {
+						fnSetLangImg();
+						window.location.reload();
+					}
+				});
+
+			localStorage.setItem("isFirst","N");
+		}
+		*/
+
+
+
+
+		//검색 열기
+		$("._searchBtn, .btn-search").click(function(e){
+// 			console.log("._searchBox-------");
+			$('.i-top-member').removeClass('show');
+			$('#divAlarm').removeClass('drawer-open');
+			$('#divAlarm').css('display','none');
+			$('#divAlarm').removeClass('show');
+
+			$('._searchBox').css('display','block');
+	 		$('._searchBox').addClass('show');
+
+
+		 });
+
+		$(".top-btn-close, .i-top-btn-close").click(function(e){
+			$('.i-top-member').removeClass('show').removeClass('hasalram');
+			$('#divAlarm').removeClass('drawer-open');
+			$('#divAlarm').css('display','none');
+		 });
+
+
+
+		$("#btnLang").click(function(e){
+			$('.i-top-member').removeClass('show');
+			$('#divAlarm').removeClass('drawer-open');
+			$('#divAlarm').css('display','none');
+		 });
+
+
+		hideLoadingbar();
+
+		//login 안했을때
+		//$('.hasalram').hide();
+// 		includeCommonSearch();
+
+
+		//[9월오픈] 언어설정 안보임
+		//pc환경일 경우 언어표시 show, eco 이동 숨김
+		if (!isApp() ) { // && !isHybrid()
+			$(".tab-list-grp").css("display","");
+			$(".noTablet").css("display","");
+			$(".tablet").css("display","none");
+			/*
+			fnSetLangImg();
+			$("#btnLang").show();
+			$(".navbar-btn-eco").hide();
+			$(".navbar-util").css('right', '32px');
+			if(localStorage.getItem("isFirst") != 'N'){
+				var oldLang = Global.reqCommonData.countryCode;
+				openModalPopup("langSettingPopup","/webapp/html/common/popup/language.html", "common-lang-setting", null, function(data) {
+					if (Global.reqCommonData.countryCode != oldLang) {
+						fnSetLangImg();
+						window.location.reload();
+					}
+				});
+
+				localStorage.setItem("isFirst","N");
+			}
+			*/
+		} else {
+			$(".tab-list-grp").css("display","none");
+			$(".noTablet").css("display","none");
+
+		    $(".tablet").css("display","");
+			/* if (isEcoDevice()) {
+				$("#logout").hide();
+				$(".btn-loginout").hide();
+			} */
+		}
+		var data = Global.getReqCommonData();
+
+		//로그인 사용자인경우
+		if (!$.isEmpty(getCookie("loginSid"))) {
+			//알림 건수만 조회
+			$.postJSON('/marketplace/common/productAlarm', {searchType : "0"}, fnSetNavHasAlarm, false);
+			$("#login-off").hide();
+			$(".i-top-member").show();
+			$(".btn-loginout").text(commonMessage('CU_0004_04'));
+// 			$(".btn-loginout").text("내 정보");
+			$(".btn-loginout").addClass('logout');
+			$(".btn-joinus").css('display','none');
+			//학생일떈 탭 가리기
+//  			if(sessionStorage.getItem('loginType') == "" || sessionStorage.getItem('loginType') ==  null){
+			if(getCookie('loginType') == "" || getCookie('loginType') ==  null){
+				$(".tab-list-grp").css("display","none");
+			}
+		}else{
+			//로그인 사용자가 아닌 경우 표시
+			$(".btn-loginout").text(commonMessage('LI_0001_05')); //로그인
+			$(".btn-loginout").removeClass('logout');
+			$(".btn-joinus").css('display','');
+		}
+		//세팅 후 보이기
+		$('.header-btn').css('display','');
+
+
+
+		$("#btnNavLogo, #login-off").on('click', function(e) {
+			onClickEventPrevent(e);
+			e.stopPropagation();
+							//		var location = window.location.pathname ? window.location.pathname : "" ;
+							//		location = location.replace("/webapp/html", "");
+							//		//로그인 정보 찾기 화면에서 로그인시 메인으로 이동
+							//		if(location.startsWith("/login/findInfo.html")){
+							//			window.location.href = $(this).attr("href")+"?before=N";
+							//		}else{
+							//			window.location.href = $(this).attr("href")+"?before=Y";
+							//		}
+			location.href = $(this).attr("href");
+		});
+
+		$(".navbar-btn-eco a").on('click', function(e) {
+			onClickEventPrevent(e);
+			e.stopPropagation();
+			if(isApp()){
+				goEcoApp();
+			}else if(isHybrid()){
+				closeWebView();
+			}
+		});
+
+
+
+		//메인 로고 클릭
+		$(".top-btn-home, .img-logo, .header-logo, .img-logo, .header-logo, .top-btn-home").on('click', function(e) {
+			onClickEventPrevent(e);
+			location.href = "/webapp/html/main/main.html";
+		});
+
+
+		//프로필 클릭
+		$('.i-top-member, .i-top-menu').on('click',function(e) {
+// 			console.log('click my box')
+			onClickEventPrevent(e);
+			e.stopPropagation();
+
+			//로그인 된 회원이라면
+			if (!$.isEmpty(getCookie("loginSid"))) {
+				//i-top-member, .i-top-menu
+				if($(this).hasClass('i-top-member')){
+					if ($(".i-top-member").hasClass('show')) {
+						//알림 숨김
+						$(this).removeClass('show').removeClass('hasalram');
+						$('#divAlarm').removeClass('drawer-open');
+						$('#divAlarm').css('display','none');
+					} else {
+						//알림 보임
+						$.postJSON('/marketplace/common/productAlarm', {searchType : "1"}, fnSetNavProductAlarm, false);
+						$(this).addClass('show');
+						$('#divAlarm').css('display','');
+					}
+				}else{
+					$.postJSON('/marketplace/common/productAlarm', {searchType : "1"}, fnSetNavProductAlarm, false);
+// 									$(this).addClass('show');
+				}
+
+			}else{
+
+				//로그인 화면으로 이동
+				history.pushState(null, '' , '/webapp/html/main/main.html');
+				location.replace("/webapp/html/login/login.html");
+			}
+		});
+
+
+
+		//로그아웃
+		$("#logout").on('click',function(e) {
+			onClickEventPrevent(e);
+			e.stopPropagation();
+			$.postJSON('/marketplace/login/logout',	{}, function(resData) {
+				//프로필 열려있다면 닫고
+				if($('.i-top-member').hasClass('show')){
+			 		$('.i-top-member').removeClass('hasalram');
+			 		$('.i-top-member').removeClass('show');
+					$('#divAlarm').removeClass('drawer-open');
+			 		$('#divAlarm').css('display','none');
+				}
+				//프로필 지우기
+				//아무것도 없도록 세팅
+				$('.drawer-content .memberType').text('');
+				$('.drawer-content .name').text('');
+				var template = '';
+				template += '<div class="empty">';
+				template += '	<img src="../../img/common/icon-80-alram.png" alt="알람">';
+				template += '	<span data-text="CU_0004_22">'
+						+ commonMessage("CU_0004_22") + '</span>';
+				template += '</div>';
+				$("#divAlarmBody").html(template);
+				//아무것도 없도록 세팅
+
+				var isSavedYn = localStorage.getItem('isSavedYn');
+				var loginId = sessionStorage.getItem('loginId');
+				var nowLang = sessionStorage.getItem('lang');
+
+				sessionStorage.clear();
+				clearMarketCookie();
+// 				deleteAllCookies();
+
+				if (isSavedYn == "Y") {
+					localStorage.setItem('isSavedYn',isSavedYn);
+					sessionStorage.setItem('loginId',loginId);
+				}
+				//언어는 유지
+				sessionStorage.setItem('lang',nowLang);
+				history.pushState(null, '' , '/webapp/html/main/main.html');
+// 				history.replaceState(null, '' , '/webapp/html/main/main.html');
+// 				location.replace("/webapp/html/login/login.html");
+				window.location.href = "/webapp/html/login/login.html";
+				}, false);
+		});
+
+		$(".drawer-mask").on('click', function(e) {
+			onClickEventPrevent(e);
+			e.stopPropagation();
+			$('.i-top-member').click();
+		});
+
+		//알림설정 클릭
+		$("#divAlarm .setting").on('click', function(e) {
+			onClickEventPrevent(e);
+			e.stopPropagation();
+			openModalPopup("tagAlarmPopup", "/webapp/html/common/popup/tagAlarm.html", "tag-notice-setting");
+		});
+
+
+		//언어 클릭
+		$("#btnLang").on('click',function(e) {
+			onClickEventPrevent(e);
+			e.stopPropagation();
+			var oldLang = Global.reqCommonData.countryCode;
+			openModalPopup("langSettingPopup","/webapp/html/common/popup/language.html", "common-lang-setting", null, function(data) {
+				if (Global.reqCommonData.countryCode != oldLang) {
+					fnSetLangImg();
+					window.location.reload();
+				}
+			});
+		});
+
+		//마켓웹뷰 닫기
+		$(".i-top-back").on('click',function(e) {
+			 //쿠키 삭제
+			 $("#logout").trigger('click');
+			 closeWebView();
+		});
+
+		//메뉴클릭
+		$("li.nav-item a").on('click', function(e) {
+			onClickEventPrevent(e);
+			e.stopPropagation();
+			showLoadingbar();
+			var upCategoryId = $(this).data("upcategoryid");
+			if ($.isEmpty(upCategoryId)) {
+				location.replace($(this).attr("href"));
+			} else {
+				location.replace($(this).attr("href")+ "?upCategoryId="+ upCategoryId);
+			}
+		});
+
+
+		//언어 이미지 설정
+		function fnSetLangImg() {
+			var language = nvl( Global.getReqCommonData().countryCode, "ko");
+			$("#btnLang img[data-language!=" + language + "]").hide();
+			$("#btnLang img[data-language=" + language + "]").show();
+		}
+
+
+		var $inputSearch = $("._search");
+	    var $inputClear = $('._searchClear');
+
+		var searchTgt = $(".search-box .search-list");
+		var recentList = sessionStorage.getItem('eco_recent_search_list');
+
+		if($.isEmpty(recentList)){
+			recentList = new Array();
+		}else{
+			recentList = JSON.parse(recentList);
+			recentList.sort(function(a,b){
+				return new Date(b.date) - new Date(a.date);
+			});
+		}
+
+		//최근검색어 표출
+		fnSetRecentSearchValue();
+		//검색어 초기화
+		$inputClear.toggle(Boolean($inputSearch.val()));
+
+		//검색어 초기화
+		$inputClear.on('click', function () {
+			$inputSearch.val('').focus();
+			$(this).hide();
+			fnSetRecentSearchValue();
+		});
+
+		//검색어 자동 완성
+		$inputSearch.on("keyup", function(e){
+			$inputClear.toggle(Boolean($(this).val()));
+
+			 //평가글
+		    $('#searchText').keyup(function(){
+		    	//500자 제한
+		    	if($('#searchText').val().length > 50) {
+					$('#searchText').val($('#searchText').val().substring(0, 50));
+				}
+			});
+
+
+			if (e.keyCode == 13) {
+				 fnEcoMarketSearch();
+				 return;
+	       	}
+
+			var searchValue = $(this).val();
+
+			if($.isEmpty(searchValue)){
+				//최근검색어 표출
+				fnSetRecentSearchValue();
+			}else{
+				$.postJSON('/marketplace/common/presearch'
+						, {searchValue : searchValue}
+						, function(data){
+								searchTgt.addClass("_searchList");
+								searchTgt.html("<ul></ul>");
+
+								if(!$.isEmpty(data) && !$.isEmpty(data.list)){
+									$.each(data.list, function(index, item){
+										if(index == 20){
+											return;
+										}
+
+										var matchArray = nvl(item).match(new RegExp(searchValue, "gi"));
+										var value = nvl(item);
+
+										$.each(matchArray, function(matchIndex, matchItem){
+											value = value.replace(matchItem, '<span class="highlight">'+matchItem+'</span>');
+										});
+
+										var template = '';
+										template += '<li>';
+										template += '	<a class="item-1" href="#" data-searchvalue="'+nvl(item)+'">';
+										template += '		<span class="img"><img src="../../img/common/icon-24-search-auto@3x.png" alt="관련검색어"></span>';
+										template += '		<span class="text" style="word-break:break-all;">'+value+'</span>';
+										template += '	</a>';
+										template += '	<div class="item-2">';
+										template += '		<a href="#" data-searchvalue="'+nvl(item)+'"><img src="../../img/common/history-button-n@3x.png" alt="" width="20" height="20"></a>';
+										template += '	</div>';
+										template += '</li>';
+
+										searchTgt.find("ul").append(template);
+										searchTgt.find("ul li:last a").each(function(eventIndex, eventItem){
+											eventItem.addEventListener("click", fnSetSearchValue);
+										});
+
+									});
+								}
+						  }
+						, false);
+			}
+
+		});
+
+		//검색 돋보기 클릭
+		$(".search-box .btn-search").on("click", function(e){
+			onClickEventPrevent(e);
+			fnEcoMarketSearch();
+		});
+
+	//마켓 플레이스 검색
+		function fnEcoMarketSearch(){
+			var searchValue = $inputSearch.val();
+
+			if(!$.isEmpty(searchValue)){
+				if(!$.isEmpty(recentList)){
+					var index = -1;
+					$.each(recentList, function(i, obj){
+						if(obj.searchValue == searchValue){
+							index = i;
+							return;
+						}
+					});
+
+	// 				var index = recentList.findIndex(function(obj){ return obj.searchValue == searchValue; });
+					if(index > -1){
+						recentList.splice(index, 1);
+					}
+				}
+
+				recentList.push({date: new Date(), searchValue : searchValue});
+				recentList.sort(function(a,b){
+					return new Date(b.date) - new Date(a.date);
+				});
+				sessionStorage.setItem('eco_recent_search_list', JSON.stringify(recentList));
+			}
+
+			var loc = window.location.pathname ? window.location.pathname : "" ;
+
+			if(loc.indexOf("/common/result.html") != -1){
+				location.replace("/webapp/html/common/result.html?searchValue="+encodeURI(searchValue));
+			}else{
+				window.location.href="/webapp/html/common/result.html?searchValue="+encodeURI(searchValue);
+			}
+		}
+
+
+	//최근 검색어
+	function fnSetRecentSearchValue(){
+
+		searchTgt.removeClass("_searchList");
+
+		if($.isEmpty(recentList)){
+			var template = '';
+			template += '<p data-text="CU_0010_02">'+commonMessage("CU_0010_02")+'</p>';
+			template += '<div class="empty">';
+			template += '	<div class="img"><img src="../../img/common/icon-120-clear-list@3x.png" alt="최근검색어가 없습니다."></div>';
+			template += '	<p class="desc" data-text="CU_0010_03">'+commonMessage("CU_0010_03")+'</p>';
+			template += '</div>';
+			searchTgt.html(template);
+		}else{
+
+			var template = '';
+			template += '<p data-text="CU_0010_02">'+commonMessage("CU_0010_02")+'</p>';
+			template += '<ul></ul>';
+			searchTgt.html(template);
+
+			$.each(recentList, function(index, item){
+
+				//최대 20개 제공
+				if(index >= 20){
+					return false;
+				}
+
+				template = '';
+				template += '<li>';
+				template += '	<a class="item-1" href="#" data-searchvalue="'+nvl(item.searchValue)+'">';
+				template += '		<span class="img"><img src="../../img/common/icon-24-search-recent@3x.png" alt="최신검색어"></span>';
+				template += '		<span class="text" style="word-break:break-all;">'+nvl(item.searchValue)+'</span>';
+				template += '	</a>';
+				template += '	<div class="item-2">';
+				template += '		<span class="date">'+new Date(item.date).format("MM.dd")+'</span>';
+				template += '		<a href="#" data-index="'+index+'"><img src="../../img/common/btn-delete-n@3x.png" alt="" width="20" height="20" alt="최신검색어삭제"></a>';
+				template += '	</div>';
+				template += '</li>';
+
+				searchTgt.find("ul").append(template);
+				if(searchTgt.find("ul li:last a.item-1").length > 0) {
+					searchTgt.find("ul li:last a.item-1")[0].addEventListener("click", fnSetSearchValue);
+				}
+
+				if(searchTgt.find("ul li:last div.item-2 a").length > 0) {
+					searchTgt.find("ul li:last div.item-2 a")[0].addEventListener("click", fnDeleteSearchValue);
+				}
+			});
+		}
+	}
+
+	//검색어 셋팅
+	function fnSetSearchValue(e){
+		onClickEventPrevent(e);
+		$inputSearch.val($(this).data("searchvalue"));
+		fnEcoMarketSearch();
+	}
+
+	//검색어 삭제
+	function fnDeleteSearchValue(e){
+		onClickEventPrevent(e);
+
+		if(!$.isEmpty(recentList)){
+			var index = $(this).data("index");
+			recentList.splice(index, 1);
+			sessionStorage.setItem('eco_recent_search_list', JSON.stringify(recentList));
+		}
+
+		fnSetRecentSearchValue();
+	}
+});
+
+
+	//읽지않은 알림 셋팅
+	var fnSetNavHasAlarm = function(resData) {
+
+		if (!$.isEmpty(resData) && !$.isEmpty(resData.notReadCnt) && resData.notReadCnt > 0) {
+			$(".i-top-member").addClass("hasalram");
+		}
+
+		//로그인 사용자인경우
+		if (!$.isEmpty(Global.reqCommonData.memberSid)) {
+			$("#login-off").hide();
+			$(".i-top-member").show();
+		}
+	}
+
+	//상품 알림 목록 셋팅
+	var fnSetNavProductAlarm = function(resData) {
+
+		if (!$.isEmpty(resData)) {
+
+			var memberType = Global.reqCommonData.memberType;
+			//학부모
+			if (memberType == "0" || memberType == "2") {
+				$("#divAlarm .memberType").text(commonMessage("CU_0004_12"));
+
+				if (memberType == '2') {
+					$("#small").show();
+				}
+
+			} else if (memberType == "1") {
+				$("#divAlarm .memberType").text(commonMessage("CU_0004_14"));
+			} else if ($.isEmpty(memberType)) {
+				//학생
+				if(sessionStorage.getItem('buyer') == 1
+				 || getCookie('buyer')  == 1
+				 ){
+					$("#divAlarm .memberType").text(commonMessage("CU_0004_23"));
+				}else{
+					$("#divAlarm .memberType").text(commonMessage("CU_0004_13"));
+				}
+			}
+// 			console.log('name:'+Global.reqCommonData.memberName);
+			$("#divAlarm .name").text(nvl(decodeURIComponent(getCookie('loginName'))));
+
+			var notReadCnt = resData.notReadCnt;
+			if (notReadCnt > 0) {
+				if (notReadCnt >= 1000) {
+					notReadCnt = "999+";
+				}
+
+				$(".i-top-member").addClass("hasalram");
+				$("#alarmCnt").show();
+				$("#alarmCnt").find("span").text(commonMessage("CU_0004_17", notReadCnt));
+				$("#alarmNotCnt").hide();
+			} else {
+				$(".i-top-member").removeClass("hasalram");
+				$("#alarmCnt").hide();
+				$("#alarmNotCnt").show();
+			}
+
+			if (!$.isEmpty(resData.list)) {
+
+				var template = '';
+				template += '<div class="daylist">';
+
+				$.each(
+								resData.list,
+								function(index, item) {
+									var beforeDate = index == 0 ? ""
+											: resData.list[index - 1].alarmDate;
+									var nextDate = index == resData.list.length - 1 ? ""
+											: resData.list[index + 1].alarmDate;
+
+									if (beforeDate != item.alarmDate) {
+										template += '<div class="date">'
+												+ item.alarmDate + '</div>';
+										template += '<ul>';
+									}
+
+									template += '<li>';
+									template += '	<span class="desc">';
+									template += '		<span class="text-secondary">'
+											+ nvl(item.alarmTitle) + '</span>';
+
+									if (item.alarmType == "0") {
+										//에 새로운 학습이 등록되었습니다.
+										template += '<em data-text="CU_0004_21">'
+												+ commonMessage("CU_0004_21")
+												+ '</em>';
+									} else if (item.alarmType == "1") {
+										//님이 공부하고 싶은 학습을 요청했습니다.
+										template += '<em data-text="CU_0004_10">'
+												+ commonMessage("CU_0004_10",
+														"") + '</em>';
+									} else if (item.alarmType == "2") {
+										//학습을 시작하세요.
+										template += '<em data-text="CU_0004_11">'
+												+ commonMessage("CU_0004_11")
+												+ '</em>';
+									}
+
+									template += '	</span>';
+									template += '	<span class="list" style="cursor: pointer;" onClick="goProducctDetailPage(\''
+											+ item.saleProductCode + '\')">';
+									template += '		<img src="'+item.icon+'" alt="'+item.productName+'" style="width:66px;" >';
+									template += '		<em>' + item.productName
+											+ '</em>';
+
+									if (item.readYn == "N") {
+										template += '	<i class="new"><img src="../../img/common/icon-list-badge-new@3x.png" alt="읽지않은 알림" width="16"></i>';
+									}
+
+									template += '	</span>';
+									template += '</li>';
+
+									if (nextDate != item.alarmDate) {
+										template += '</ul>';
+									}
+								});
+
+				template += '</div>';
+				$("#divAlarmBody").html(template);
+			} else {
+				var template = '';
+				template += '<div class="empty">';
+				template += '	<img src="../../img/common/icon-80-alram.png" alt="알람">';
+				template += '	<span data-text="CU_0004_22">'
+						+ commonMessage("CU_0004_22") + '</span>';
+				template += '</div>';
+				$("#divAlarmBody").html(template);
+			}
+		}
+
+		$('#divAlarm').addClass('drawer-open');
+		$('#divAlarm').css('display','block');
+	}
+</script></div>
+				</div>
+			</div>
+			<!-- //###ui-sub-box -->
+
+			<!-- ###container -->
+			<div class="container new-container">
+
+				<!-- ##상품콘텐츠 영역 / 기존 소스 활용 -->
+				<div class="container-lg container-fluid">
+					<div class="detail">
+
+						<!-- 레아아웃별 그룹화: fit  -->
+						<div class="detail-fit detail-fit-1">
+							<div class="detail-fit-wrap">
+								<!-- #상품 카드 -->
+								<div class="detail-card">
+									<div class="detail-card-wrap">
+										<div class="card-name">
+											<!-- #상품 이미지 -->
+											<div class="app-icon">
+												<!-- hidden data -->
+												<input type="hidden" id="homelearnPd"> <input type="hidden" id="marketCategoryId" value="CT200001"> <input type="hidden" id="allinoneFreeEs" value="199999"> <input type="hidden" id="allinoneFreeMs" value="199998">
+												<div class="app-ico-img">
+													<img src="https://xcdn.home-learn.com/eco//dev/saleProduct/20210915181711/ICO2.jpg" width="210" height="210" alt="상품이미지" id="mainIcon">
+												</div>
+											</div>
+
+											<!-- <div class="app-icon">
+											<img id="mainIcon" src="../../img/_temp/m-main-detail-app-icon@2x.png" width="104" alt="">
+												<span class="badge-homelearn" style="display: none">
+													<img src="../../img/common/icon-list-badge-homelearn@2x.png" alt="홈런전용">
+													<i data-text="CU_0024_01">홈런전용</i>
+												</span>
+												<span class="badge-package" style="display: none">
+													<img src="../../img/common/icon-list-badge-package@2x.png" alt="">
+													<i data-text="CU_0024_02">패키지</i>
+												</span>
+												<span class="badge-free" style="display: none">
+													<img src="../../img/common/icon-list-badge-discount-free@2x.png" alt="">
+													<i data-text="CU_0024_04">FREE</i>
+												</span>
+												<span class="badge-percent" style="display: none">
+													<img src="../../img/common/icon-list-badge-discount-percent@2x.png" alt="">
+													<i data-text="CU_0024_03">50%</i>
+												</span>
+											</div> -->
+
+											<!-- 210907 홈런전용/free 소스 위치 이동 이후 -->
+											<!-- list-badge -->
+											<div class="list-badge">
+												<!-- 홈런전용 -->
+												<div class="sticker-homelearn badge-homelearn" style="display: none">
+													<span class="ico i-badge-homelearn"> <i data-text="CU_0024_01">홈런 전용</i>
+													</span>
+												</div>
+												<!-- free -->
+												<div class="sticker-free badge-free" style="">
+													<span class="ico i-badge-free"> <i data-text="CU_0024_04">Free</i>
+													</span>
+												</div>
+												<!-- 50% -->
+												<div class="sticker-half badge-percent" style="display: none">
+													<span class="ico i-badge-half"> <i>50%</i>
+													</span>
+												</div>
+												<!-- 패키지 -->
+												<div class="sticker-pakage badge-package" style="display: none">
+													<span class="ico i-badge-pakage"> <i>패키지</i>
+													</span>
+												</div>
+											</div>
+											<!-- //list-badge -->
+
+											<!-- #상품 타이틀 -->
+											<div class="title" id="title">Britannica LaunchPacks Social Studies</div>
+											<!-- #상품 회사 -->
+											<div class="company" id="brandName">가입테스투01</div>
+											<input type="hidden" id="categoryId" value=""> <input type="hidden" id="learnerCnt"> <input type="hidden" id="studentCnt">
+											<input type="hidden" id="useAccount">
+											<!-- #별 -->
+											<!-- star 10가지 경우 추가  2020.08.28 -->
+											<div class="star">
+												<img src="../../img/common/icon-16-star@2x.png" alt="">
+												<span id="star">0.0</span>
+											</div>
+										</div>
+										<!-- 상품 가격 -->
+										<div class="card-price parents" style="display: none">
+											<span class="total_price top"><span class="price"><span class="unit">무료</span></span></span>
+										</div>
+
+										<!-- 학생 -->
+										<div class="card-info student" id="studentPop" style="display: none">
+											<p>
+												<span class="txt-highlight">★ 공부하고 싶은 학습</span>이 있다면 부모님께
+												알려주세요.
+											</p>
+										</div>
+										<div class="card-btn please _please student" style="display: none">
+											<a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-active buyMe">공부하고 싶어요</a>
+										</div>
+
+
+										<!-- 비로그인 -->
+										<div class="card-btn logout" style="display: block;">
+											<a href="#" class="goLogin btn btn-radius btn-primary btn-subscribe btn-new-active">로그인하기</a>
+										</div>
+
+
+										<!-- 학부모 결제하기-->
+										<div class="card-btn parents" style="display: none">
+											<a href="#" class="pay btn btn-radius btn-primary btn-subscribe btn-new-active">이용하기</a>
+											<a href="#" class="btn btn-radius btn-primary btn-subscribe learning" data-text="AD_0006_07" style="display: none">학습 중</a>
+										</div>
+										<!-- 학부모 유료/무료 가입신청-->
+										<div class="card-btn expParents" style="display: none;">
+											<span class="txt-new-info"> ※ 자녀가 홈런 학습 이용 시 사용 가능합니다.
+											<a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-active freeExp" style="display: none">무료체험 신청하기</a>
+											<a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-active freeExpHr freeExpHrEs" style="display: none">초등 홈런 무료 신청</a>
+											<a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-middle freeExpHr freeExpHrMs" style="display: none">중등 홈런 무료 신청</a>
+											<a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-active payExp" style="display: none"> 유료학습 신청하기</a>
+											<!-- 												<a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-active payExp"  style="display: none">초등 홈런 유료 신청</a>  -->
+											<!-- 												<a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-middle payExp"  style="display: none">중등 홈런 유료 신청</a> -->
+										</span></div>
+
+										<!--                   상품 버튼 -->
+										<!--                   <div class="card-btn expParents"> -->
+										<!-- 	                  <span class="txt-new-info"> -->
+										<!-- 	                    ※ 자녀가 홈런 학습 이용 시 사용 가능합니다. -->
+										<!-- 	                  </span> -->
+										<!-- 	                  <a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-active payExp" >초등 홈런 유료 신청</a> -->
+										<!-- 	                  <a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-middle payExp" >중등 홈런 유료 신청</a> -->
+										<!-- 	              </div> -->
+
+
+									</div>
+								</div>
+								<!-- //#상품 카드 -->
+
+								<!-- #상품 스펙 -->
+								<div class="detail-card-spec">
+									<div class="spec">
+										<span class="tit">전체 학습 구성</span> <span class="desc" id="learningTitle">-</span>
+									</div>
+									<div class="spec">
+										<span class="tit">권장 이용 연령</span> <span class="desc" id="learningAge">7세 이하, 8세, 9세, 10세</span>
+									</div>
+									<div class="spec">
+										<span class="tit">권장 학습 기간</span> <span class="desc" id="learningTerm">12개월(하루60분)</span>
+									</div>
+									<div class="info" id="noTeacher" style="display: none">
+										<span class="txt">※ 학습관 교사 지도가 없는 학습입니다.</span>
+									</div>
+								</div>
+								<!-- //#상품 스펙 -->
+							</div>
+						</div>
+
+						<!-- 레아아웃별 그룹화: wide  -->
+						<div class="detail-wide">
+							<div class="detail-wide-wrap">
+								<section class="detail-slider regular slider slick-initialized slick-slider slick-dotted"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 15000px; transform: translate3d(-5px, 0px, 0px);"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" role="tabpanel" id="slick-slide10" aria-describedby="slick-slide-control10"><div><div id="videoArea" style="width: 100%; display: inline-block;">
+										<!-- style="display:none" -->
+										<!-- 210830 영상 소스 수정 -->
+										<div class="video-area-1">
+											<video id="videoData" controls="" controlslist="nodownload" type="video/mp4" onerror="failed(event)" src="https://xcdn.home-learn.com/eco//dev/saleProduct/video/20210915181722/video_201020_codmos_service_advertising_30s.mp4">
+											</video>
+										</div>
+										<!-- //210830 영상 소스 수정 -->
+									</div></div></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide11" aria-describedby="slick-slide-control11"><div><div id="imgSlider1" style="width: 100%; display: inline-block;">
+										<img src="https://xcdn.home-learn.com/eco//dev/saleProduct/20210915181730/미리보기1.png">
+									</div></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" role="tabpanel" id="slick-slide12" aria-describedby="slick-slide-control12"><div><div id="imgSlider2" style="width: 100%; display: inline-block;">
+										<img src="https://xcdn.home-learn.com/eco//dev/saleProduct/20210915181734/미리보기2.png">
+									</div></div></div></div></div><ul class="slick-dots" role="tablist" style="display: block;"><li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control10" aria-controls="slick-slide10" aria-label="1 of 3" tabindex="0" aria-selected="true">1</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control11" aria-controls="slick-slide11" aria-label="2 of 3" tabindex="-1">2</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control12" aria-controls="slick-slide12" aria-label="3 of 3" tabindex="-1">3</button></li></ul></section>
+							</div>
+						</div>
+
+						<!-- 레아아웃별 그룹화: fit  -->
+						<div class="detail-fit detail-fit-2">
+							<div class="detail-fit-wrap">
+								<!-- #상품 상세페이지 -->
+								<!-- js open: 상세페이지 펼친상태 / closed: 상세페이지 닫힌상태 -->
+								<section class="detail-page closed" id="detailDesc">
+									<h3 class="title-detail-area">상세 페이지</h3>
+									<div class="detail-contents-area" id="intro-home"><article class="detail-article"><div class="img device-pc"><img src="https://xcdn.home-learn.com/eco//dev/saleProduct/desc/20210915181744/상품상세_PC.jpg" alt=""></div><div class="img device-mo"><img src="https://xcdn.home-learn.com/eco//dev/saleProduct/desc/20210915181747/상품상세_모바일.jpg" alt=""></div></article></div>
+									<div class="detail-btn-state-area">
+										<button class="btn-state">
+											<span class="txt txt-add">더보기</span>
+											<span class="txt txt-fold">접기</span>
+										</button>
+									</div>
+								</section>
+								<!-- //#상품 상세페이지 -->
+
+								<!-- #상품 학습 목차 -->
+								<section class="detail-etc detail-index">
+									<h3 class="title-detail-area">학습 목차</h3>
+									<div class="detail-index-area" id="learningTitleList"><article class="detail-article"><div class="title"></div><div class="desc"></div></article></div>
+								</section>
+								<!-- //#상품 학습 목차 -->
+
+								<!-- #상품 변경 내역 -->
+								<section class="detail-etc detail-history" id="changeLogTitle" style="display: none">
+									<h3 class="title-detail-area">변경 내역</h3>
+									<div class="detail-history-area">
+										<ul class="history-list-grp">
+											<li class="history-list">
+												<div id="changeLog"></div>
+											</li>
+											<!-- <li class="history-list"><span class="h-date">2021.06.14</span>
+												<div class="h-txt">학습 콘텐츠가 추가 되었습니다.</div></li>
+											<li class="history-list"><span class="h-date">2021.06.14</span>
+												<div class="h-txt">학습 콘텐츠가 추가 되었습니다.학습 콘텐츠가 추가
+													되었습니다.학습 콘텐츠가 추가 되었습니다.학습 콘텐츠가 추가 되었습니다.학습 콘텐츠가 추가 되었습니다.학습
+													콘텐츠가 추가 되었습니다.학습 콘텐츠가 추가 되었습니다.</div></li> -->
+										</ul>
+										<!-- 										<div class="history-btn-grp"> -->
+										<!-- 											<button type="button" name="button" class="btn-history-view">변경 -->
+										<!-- 												내역 더 보기 ≫</button> -->
+										<!-- 										</div> -->
+									</div>
+								</section>
+								<!-- //#상품 변경 내역 -->
+
+								<!-- #상품 사용자 후기 -->
+								<section class="detail-etc detail-review">
+									<h3 class="title-detail-area">사용자 후기</h3>
+									<!-- 리뷰 / 이전 소스 활용 -->
+									<!-- 리뷰 있을 때 상단 -->
+									<div class="review-wrap">
+										<div class="review-rate">
+											<div class="rate">
+												<span class="rate-average" id="starCount">0.0</span> <span class="rate-all">/ 5</span>
+											</div>
+											<div class="star" id="starIcon"><img src="../../img/common/icon-42-star-off@2x.png" width="24" alt=""><img src="../../img/common/icon-42-star-off@2x.png" width="24" alt=""><img src="../../img/common/icon-42-star-off@2x.png" width="24" alt=""><img src="../../img/common/icon-42-star-off@2x.png" width="24" alt=""><img src="../../img/common/icon-42-star-off@2x.png" width="24" alt=""></div>
+											<div class="review-btn">
+												<a href="#" class="btn" id="ratingBtn" data-toggle="modal" data-text="AD_0013_01">평가하기</a>
+											</div>
+										</div>
+										<div class="review-count" id="reviewChart">
+											<div class="summary">
+												<div class="summary-wrap"><em style="line-height: 35px;"><span class="font-weight-bold">초1</span> 학생들이 가장 많이 학습하고 있어요.</em></div>
+											</div>
+											<div class="count" id="chart"><div><span class="graph"><span class="bar" style="width: 0%;"></span></span><span class="grade" data-text="CU_0027_01">예비초등</span><span class="num" data-text="AD_0025_07;0">0명</span></div><div><span class="graph"><span class="bar" style="width: 55.55555555555556%;"></span></span><span class="grade best" data-text="CU_0027_02;1">초1</span><span class="num best" data-text="AD_0025_07;5">5명</span></div><div><span class="graph"><span class="bar" style="width: 11.11111111111111%;"></span></span><span class="grade" data-text="CU_0027_02;2">초2</span><span class="num" data-text="AD_0025_07;1">1명</span></div><div><span class="graph"><span class="bar" style="width: 11.11111111111111%;"></span></span><span class="grade" data-text="CU_0027_02;3">초3</span><span class="num" data-text="AD_0025_07;1">1명</span></div><div><span class="graph"><span class="bar" style="width: 0%;"></span></span><span class="grade" data-text="CU_0027_02;4">초4</span><span class="num" data-text="AD_0025_07;0">0명</span></div></div>
+										</div>
+									</div>
+									<!-- //리뷰 있을 때 상단 -->
+
+									<!-- 리뷰 없을 때 -->
+									<div class="review-wrap empty" style="display: block; height: 230px;" ;="" id="reviewEmpty">
+										<p>
+											<img src="../../img/common/icon-120-evaluation@2x.png" width="120" alt="">
+										</p>
+										<p class="title" data-text="AD_0015_02">등록된 구매자 리뷰가 없어요.</p>
+										<p class="desc" data-text="AD_0015_03">학습을 결제하고 평가를 남겨보세요.</p>
+									</div>
+									<!-- //리뷰 없을 때 -->
+
+									<!-- 리뷰 있을 때 -->
+									<div class="review-reply" id="reviewSection" style="display: none;">
+										<div class="reply-desc device-pc">
+											<!--                   	<span>95</span>개의 리뷰가 있습니다. -->
+										</div>
+										<!-- 모바일 -->
+										<div class="reply-desc device-mo">
+											<!--                   	리뷰<span>95</span>개 -->
+										</div>
+										<div class="sort">
+											<a href="#" class="active" id="orderGood">추천순</a> <a href="#" data-text="AD_0013_08" id="orderNew">최신순</a>
+										</div>
+										<!-- 후기 리스트 -->
+										<div class="list-wrap" id="reviewContents"></div>
+										<!-- 후기 리스트 더보기 버튼 -->
+										<div class="more-btn mb-rem-6 mb-rem-md-0" id="btnMore" data-startrow="0" data-pagerowcnt="20" data-option="0">
+											<a href="#" class="btn btn-block btn-more"> <span class="txt" data-text="CU_0023_01">더 보기</span>
+											</a>
+										</div>
+									</div>
+									<!-- //리뷰 있을 때 -->
+								</section>
+								<!-- //#상품 사용자 후기 -->
+							</div>
+						</div>
+
+
+						<!-- 하단 플로팅 버튼 -->
+						<!-- 신규추가 플로팅-->
+						<div class="sticky-btn new-sticky-btn expParents on" style="display: none">
+							<div class="cont">
+								<div class="product-name device-pc">Britannica LaunchPacks Social Studies</div>
+								<div class="product-name device-mo">Britannica LaunchPacks Social Studies</div>
+								<!-- 무료 체험 -->
+								<div class="product-price freeExp">
+									<span class="txt-price">무료</span>
+								</div>
+								<!--  유료 신청 -->
+								<div class="product-price payExp">
+									<span class="txt-unit">￦</span> <span class="txt-price">-</span>
+									<span class="txt-line">/</span> <span class="txt-info">월
+									</span>
+								</div>
+
+								<div class="product-btn">
+									<a href="#" class="btn btn-white btn-radius freeExp">무료체험
+										신청하기</a>
+									<!-- 홈런 상품 이동 -->
+									<a href="#" class="btn btn-white btn-radius freeExpHr freeExpHrEs">초등
+										홈런 무료 신청 </a> <a href="#" class="btn btn-middle btn-radius freeExpHr freeExpHrMs">중등
+										홈런 무료 신청 </a>
+									<!--                 <a href="#" class="btn btn-study btn-radius ">학습 중</a> -->
+									<a href="#" class="btn btn-white btn-radius payExp">유료학습
+										신청하기</a>
+									<!-- 									<a href="#" class="btn btn-middle btn-radius payExp">중등 홈런 유료 신청 </a> -->
+								</div>
+							</div>
+						</div>
+
+						<!-- //하단 플로팅 버튼(학부모) -->
+						<div class="sticky-btn new-sticky-btn parents on" style="display: none">
+							<div class="cont">
+								<div class="product-name device-pc">Britannica LaunchPacks Social Studies</div>
+								<div class="product-name device-mo">Britannica LaunchPacks Social Studies</div>
+
+								<!-- 가격 정보 -->
+								<div class="product-price payExp">
+									<span class="txt-unit">￦</span> <span class="txt-price">-</span>
+									<span class="txt-line">/</span> <span class="txt-info">월</span>
+								</div>
+
+								<!-- 버튼 -->
+								<div class="product-btn" style="display: none">
+									<a href="#" class="btn btn-white btn-radius learning">학습 중</a>
+									<a href="#" class="btn btn-white btn-radius pay">이용하기</a>
+									<a href="#" class="btn btn-middle btn-radius stop" data-target="#product2">판매 중지 상품</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- case: 학생 -->
+						<div class="sticky-btn new-sticky-btn student on" style="display: none">
+							<div class="cont">
+								<div class="product-name device-pc">Britannica LaunchPacks Social Studies</div>
+								<div class="product-name device-mo">Britannica LaunchPacks Social Studies</div>
+								<!-- 버튼 -->
+								<div class="product-btn">
+									<a href="#" class="btn btn-white btn-radius buyMe" data-toggle="modal" data-text="AD_0006_01">공부하고 싶어요</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- case: 로그아웃 -->
+						<div class="sticky-btn new-sticky-btn logout on" style="display: block;">
+							<div class="cont">
+								<div class="product-name device-pc">Britannica LaunchPacks Social Studies</div>
+								<div class="product-name device-mo">Britannica LaunchPacks Social Studies</div>
+								<!-- 버튼 -->
+								<div class="product-btn">
+									<a href="#" class="btn btn-white btn-radius goLogin" data-toggle="modal" data-text="AD_0007_01">로그인하기</a>
+								</div>
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+				<!-- //##상품콘텐츠 영역 / 기존 소스 활용 -->
+			</div>
+			<!-- //###container -->
+
+
+			<!-- S content -->
+		</div>
+	</div>
+
+	<div id="footer"><footer>
+	<div class="container-footer">
+		<div class="policy">
+		    <ul class="clearfix">
+		        <li class="item"><a href="javascript:;" onclick="openNewBrowser('http://www.i-screamedu.co.kr/www/about01.html')" data-text="CU_0018_01">회사소개</a></li>
+		        <li><a href="/webapp/html/common/termsofuse.html" data-text="CU_0018_02">이용약관</a></li>
+		        <li><a href="/webapp/html/common/termsofuse.html?termsType=3" data-text="CU_0018_03">개인정보 처리방침</a></li>
+		    </ul>
+		</div>
+		<div class="family">
+		    <div class="input-group">
+		        <select name="" id="familySite" style="background-color:white;">
+					<option value="" data-text="CU_0018_12">Family Site</option>
+          			<option value="https://www.home-learn.co.kr/main/Index.do" data-text="CU_0018_13">아이스크림홈런</option>
+          			<option value="https://www.schooling.co.kr/" data-text="CU_0018_14">아이스크림홈런중등</option>
+			        <option value="http://www.i-screamedu.co.kr/index.do" data-text="CU_0018_15">아이스크림에듀</option>
+			        <option value="https://www.i-screammedia.com/index.do" data-text="CU_0018_16">아이스크림미디어</option>
+			        <option value="http://www.i-scream.co.kr/user/main/MainPage.do?sso=ok" data-text="CU_0018_17">아이스크림</option>
+			        <option value="https://www.i-screammall.co.kr/main/index" data-text="CU_0018_18">아이스크림몰</option>
+			        <option value="http://teacher.i-scream.co.kr/index.do?sso=ok" data-text="CU_0018_19">아이스크림연수원</option>
+		        </select>
+		    </div>
+		</div>
+		<address>
+	      <p>
+	        <span class="address">
+	          <em class="footer-company">(주)아이스크림에듀</em>
+	          <span class="dp-block">
+	            <em class="footer-address"> 서울특별시 강남구 테헤란로88길 15</em>
+	            <em class="footer-ceo" data-text="CU_0018_05">대표 : 조용상</em>
+	          </span>
+	          <span class="dp-block">
+	            <em class="footer-tel" data-text="CU_0018_06">상담 및 문의전화 : 1544-0910</em>
+	            <em class="footer-fax" data-text="CU_0018_07">팩스 : (02)3448-5262</em>
+	          </span>
+	          <em class="footer-operator-num" data-text="CU_0018_08">사업자등록번호 : 120-87-97004</em>
+	          <em class="footer-sale-num" data-text="CU_0018_09">통신판매신고번호 : 제2013-서울강남-01379호</em><br>
+	          <em class="footer-hosting" data-text="CU_0018_10">호스팅사이버자 : AWS</em>
+	        </span>
+	        <span class="copyright" data-text="CU_0018_11">Copyright ⓒ i-Scream edu Corporation all rights reserved.</span>
+	      </p>
+	    </address>
+	</div>
+</footer></div>
+
+	<!-- E content -->
+	<!-- 조르기 팝업 -->
+	<div class="modal fade" id="alert" tabindex="-1" role="dialog" aria-labelledby="alert" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body" data-text="AD_0004_06">공부하고 싶은 학습 요청 완료! 부모님께 메시지를 보냈어요.<!--         공부하고 싶은 학습 조르기 완료! <br> -->
+					<!--         부모님께 메시지를 보냈어요. -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-sm btn-block" data-dismiss="modal" data-text="CU_0007_04">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 결제완료 팝업 (임시)-->
+	<div class="modal fade" id="alert2" tabindex="-1" role="dialog" aria-labelledby="alert" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body" data-text="AD_0034_06">결제가 완료되었어요.<br>
+					<p data-text="AD_0034_07">홈런 에코를 실행하여 다운로드한 후 학습을 시작하세요.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-sm btn-block" id="popupConfirm" data-dismiss="modal" data-text="CU_0007_04">확인</button>
+				</div>
+			</div>
+			<!-- <div class="modal-body" data-text="AD_0034_06">결제 요청이 완료되었어요.<br><p data-text="AD_0034_07"> 가상계좌로 입금 및 확인 완료 후 학습을 이용할 수 있어요.</p>  -->
+		</div>
+	</div>
+
+	<!-- 학습계획 사용 팝업 (임시) -->
+	<div class="modal fade" id="alert3" tabindex="-1" role="dialog" aria-labelledby="alert" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<em data-text="AD_0034_10">홈런 학습 계획을 사용합니다.</em> <br>
+					<p data-text="AD_0034_11">사용할 경우 학생들에게 오늘의 학습이 제공됩니다. 마이페이지에서 사용 여부 설정이 가능합니다.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-sm btn-block" data-dismiss="modal" data-text="CU_0007_04">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 평가하기 팝업 -->
+	<div class="modal fade detail-modal-rating" id="rating" tabindex="-1" role="dialog" aria-labelledby="alert" aria-hidden="true">
+		<div class="modal-dialog " role="document">
+			<div class="modal-content">
+				<div class="modal-head">
+					<div class="title" data-text="AD_0013_01">평가하기</div>
+					<div class="desc">Britannica LaunchPacks Social Studies</div>
+				</div>
+				<div class="modal-body">
+					<div class="rating _rating" id="ratingData" data-ratingdata="0">
+						<a href="#" data-rating="1" class="defaultoff"> <img src="../../img/common/icon-42-star@2x.png" class="on" width="42">
+							<img src="../../img/common/icon-42-star-off@2x.png" class="off" width="42" style="display: none;">
+						</a> <a href="#" class="current defaultoff" data-rating="2"> <img src="../../img/common/icon-42-star@2x.png" class="on" width="42">
+							<img src="../../img/common/icon-42-star-off@2x.png" class="off" width="42" style="display: none;">
+						</a> <a href="#" data-rating="3" class="defaultoff"> <img src="../../img/common/icon-42-star@2x.png" class="on" width="42" style="display: none;"> <img src="../../img/common/icon-42-star-off@2x.png" class="off" width="42">
+						</a> <a href="#" data-rating="4" class="defaultoff"> <img src="../../img/common/icon-42-star@2x.png" class="on" width="42" style="display: none;"> <img src="../../img/common/icon-42-star-off@2x.png" class="off" width="42">
+						</a> <a href="#" data-rating="5" class="defaultoff"> <img src="../../img/common/icon-42-star@2x.png" class="on" width="42" style="display: none;"> <img src="../../img/common/icon-42-star-off@2x.png" class="off" width="42">
+						</a>
+					</div>
+					<div class="edit">
+						<textarea name="rating" id="ratingText" rows="10" maxlength="500" placeholder="리뷰를 작성해 주세요."></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-block" id="saveRating" data-text="AD_0021_03" disabled="">평가 완료</button>
+					<!-- data-dismiss="modal"  -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 평가 수정 팝업
+	<div class="modal fade detail-modal-rating" id="mod_rating"
+		tabindex="-1" role="dialog" aria-labelledby="alert" aria-hidden="true">
+		<div class="modal-dialog " role="document">
+			<div class="modal-content">
+				<div class="modal-head">
+					<div class="title" data-text="MY_0050_01">평가 수정하기</div>
+					<div class="desc"></div>
+				</div>
+				<div class="modal-body">
+					<div class="rating _rating">
+						<a href="#" data-rating="1"> <img
+							src="../../img/common/icon-42-star@2x.png" class="on" width="42" />
+							<img src="../../img/common/icon-42-star-off@2x.png" class="off"
+							width="42" style="display: none;" />
+						</a> <a href="#" data-rating="2"> <img
+							src="../../img/common/icon-42-star@2x.png" class="on" width="42" />
+							<img src="../../img/common/icon-42-star-off@2x.png" class="off"
+							width="42" style="display: none;" />
+						</a> <a href="#" data-rating="3"> <img
+							src="../../img/common/icon-42-star@2x.png" class="on" width="42" />
+							<img src="../../img/common/icon-42-star-off@2x.png" class="off"
+							width="42" style="display: none;" />
+						</a> <a href="#" data-rating="4"> <img
+							src="../../img/common/icon-42-star@2x.png" class="on" width="42" />
+							<img src="../../img/common/icon-42-star-off@2x.png" class="off"
+							width="42" style="display: none;" />
+						</a> <a href="#" data-rating="5" class="current"> <img
+							src="../../img/common/icon-42-star@2x.png" class="on" width="42" />
+							<img src="../../img/common/icon-42-star-off@2x.png" class="off"
+							width="42" style="display: none;" />
+						</a>
+					</div>
+					<div class="edit">
+						<textarea name="review" id="reviewCont" rows="10" maxlength="500"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-block modSave"
+						data-text="MY_0050_02" data-opt="U">수정 완료</button>
+					<div class="buttons">
+						<button type="button" class="btn btn-delete text-error modSave"
+							data-text="MY_0050_03" data-opt="D">평가 삭제</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- 다자녀 팝업 -->
+	<div class="modal fade" id="product1" tabindex="-1" role="dialog" aria-labelledby="alert2" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="modal-title" data-text="AD_0006_08">2명의 자녀가 필요해요.</div>
+					<em id="modalContent" data-text="AD_0006_09">마이페이지에서 자녀를 추가한 후 다시 시도해 주세요.</em>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-sm btn-block" data-dismiss="modal" data-text="CU_0007_04">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 판매중지 팝업 -->
+	<div class="modal fade" id="product2" tabindex="-1" role="dialog" aria-labelledby="alert2" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="modal-title" data-text="AD_0006_14">판매가 중지 되었거나 접근할 수 없는 상품입니다.</div>
+					<em data-text="AD_0006_12">이미 결제한 학습은 정상적으로 학습이 가능하며 추가 결제는 불가합니다.</em>
+					<!-- 코드값 변경 -- 2020.09.17 -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-sm btn-block" data-dismiss="modal" data-text="CU_0007_04">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- preview 팝업
+	<div class="modal fade" id="preview" tabindex="-1" role="dialog"
+		aria-labelledby="alert2" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-dialog-centered"
+			role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<video src="" id="previewContent" crossorigin="anonymous" controls
+						autoplay> 미리보기가 없습니다.
+					</video>
+
+					<iframe id="previewIframeContent" style="display: none" src=""
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen> </iframe>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-sm btn-block"
+						data-dismiss="modal" data-text="CU_0007_04">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+
+<!-- <script src="https://dev-market.home-learn.com/webapp/js/bundle.js"></script> -->
+<!-- <script>
+var bundle = jQuery.noConflict();
+</script> -->
+
+<script type="text/javascript" src="https://dev-market.home-learn.com/webapp/js/lib/jquery-2.2.0.min.js"></script>
+<script src="../js/custom.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var jqSlick = $.noConflict();
+</script>
+<script src="https://dev-market.home-learn.com/webapp/js/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://dev-market.home-learn.com/webapp/js/custom.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://dev-market.home-learn.com/webapp/js/init.js"></script><script type="text/javascript" src="https://dev-market.home-learn.com/webapp/js/lang/lang.js"></script>
+<script type="text/javascript" src="https://dev-market.home-learn.com/webapp/js/bundle.js"></script>
+<script type="text/javascript" src="https://dev-market.home-learn.com/webapp/js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://dev-market.home-learn.com/webapp/js/lib/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="https://dev-market.home-learn.com/webapp/js/lib/jquery-touch-events.js"></script>
+<script type="text/javascript" src="https://dev-market.home-learn.com/webapp/js/lib/moment.min.js"></script>
+<script type="text/javascript" src="https://dev-market.home-learn.com/webapp/js/common.js?Wed Oct 20 2021 16:03:51 GMT+0900 (한국 표준시)"></script>
+<script type="text/javascript" src="https://dev-market.home-learn.com/webapp/js/sha256.js"></script>
+
+
+<script>
+
+var loginType = getCookie("loginType");
+var loginSid = getCookie("loginSid");
+var divCd = getCookie("divCd");
+// var loginType = sessionStorage.getItem("loginType");
+// var loginSid = sessionStorage.getItem("loginSid");
+// var divCd = sessionStorage.getItem("divCd");
+var data = {};
+var testerYn = 'N';
+var videoData =
+	  {
+	  url: "",
+	  width: "341",
+	  height: "207",
+	  }
+
+$(document).ready(function() {
+	$(window).bind("pageshow", function(event) {
+	    //iphone 웹뷰 back 이벤트 일 경우
+	    if (event.originalEvent && event.originalEvent.persisted) {
+	//     	if (sessionStorage.getItem("refresh") == "true") {
+	    		history.pushState(null, '' , '/webapp/html/product/detail.html?saleProductCode='+ $.getUrlParam("saleProductCode"));
+	    		sessionStorage.removeItem("refresh");
+	    		location.replace('/webapp/html/product/detail.html?saleProductCode='+saleProductCode);
+	//     	    window.location.reload();
+	//     	}
+	    }
+	});
+
+
+	//평가하기 창 뒤에 스크롤
+	$(document).click(function(e){ //문서 body를 클릭했을때
+		if(e.target.className.indexOf("modal fade") !== -1){
+			$("body").removeClass("overflow-hidden");
+		}
+	});
+
+	if (sessionStorage.getItem("refresh") == "true") {
+	    history.pushState(null, '' , '/webapp/html/product/detail.html?saleProductCode='+ $.getUrlParam("saleProductCode"));
+// 		location.replace('/webapp/html/product/detail.html?saleProductCode='+saleProductCode);
+	    sessionStorage.removeItem("refresh");
+	    window.location.reload();
+	}
+	//공통 import && 제목없는 메뉴
+	includeHTML('', function(){
+		$(".navbar-sub").addClass("navbar-sub-detail");
+	});
+
+//  	if(loginSid == "2061328"){
+// 		sessionStorage.setItem('divCd', '10003'); //정회원으로 설정하여 테스트 진행
+// 	}
+
+	//app-icon default 세팅
+	$('.badge-homelearn').css('display','none');
+	$('.badge-package').css('display','none');
+	$('.badge-free').css('display','none');
+	$('.badge-percent').css('display','none');
+
+// 	if(sessionStorage.getItem("testerYn") == "Y" || sessionStorage.getItem("testerYn") == "S"){
+	if(getCookie("testerYn") == "Y" || getCookie("testerYn") == "S"){
+		testerYn = "Y";
+	}
+
+
+	//메인 이외의 화면에서 서브 전체/초등/중등 클릭시
+	$(".sub-menu-grp .sub-menu").on('click', function(e) {
+		onClickEventPrevent(e);
+		location.href = "/webapp/html/main/main.html?tag="+$(this).data('tag');
+	});
+
+	var saleProductCode  = $.getUrlParam("saleProductCode");
+	var payYn  = $.getUrlParam("payYn");
+	var firstYn  = $.getUrlParam("firstYn");
+	var vtpay  = $.getUrlParam("vtpay"); //가상계좌 결제 여부 - 팝업 메시지 변경
+
+	data.saleProductCode = saleProductCode;
+
+	//로딩바 나오고 있었다면, 가리기
+	hideLoadingbar();
+
+	//에코로 진입시 sid를 이용하여 자동 로그인
+	var ecoLogin = sessionStorage.getItem('ecoLogin');
+	//로그인 시도는 한번만
+	if(getCookie('loginSid') == null && $.isEmpty(ecoLogin)){
+		if(Global.reqCommonData.devinfo == "MOBILE" && isApp()){
+			if(isEcoDevice()){
+// 				var id = $.getUrlParam("loginSid");
+				var userToken = $.getUrlParam("userToken");
+				if(userToken != null){
+					deviceLogin(userToken);
+					sessionStorage.setItem('ecoLogin', 'true');
+					//학생일떈 탭 가리기
+// 					if(sessionStorage.getItem('loginType') == "" || sessionStorage.getItem('loginType') == null ){
+					if(getCookie('loginType') == "" || getCookie('loginType') == null ){
+						$(".tab-list-grp").css("display","none");
+					}
+				}else{
+					//alert('에코 단말 로그인 실패');
+					sessionStorage.setItem('ecoLogin', 'false');
+					commonAlert("CU_0002_07");
+// 					closeWebView();
+				}
+			}
+		}
+	}
+
+	//로그인 사용자면서 학생일떈 탭 가리기
+// 	if(sessionStorage.getItem('loginSid') != null && (sessionStorage.getItem('loginType') == "" || sessionStorage.getItem('loginType') == null )){
+	if(getCookie('loginSid') != null && (getCookie('loginType') == "" || getCookie('loginType') == null )){
+		$(".tab-list-grp").css("display","none");
+	}
+
+
+	//결제 거쳤던 정보 삭제
+	sessionStorage.removeItem('spc');
+	sessionStorage.removeItem('ordrIdx');
+
+	if(payYn == "Y"){
+		if(sessionStorage.getItem("payPopup"+saleProductCode) != "Y"){
+			sessionStorage.setItem("payPopup"+saleProductCode, "Y");
+			//결제 완료 팝업 추가하기
+			if(vtpay == "Y"){
+				$('#alert2 .modal-content .modal-body').html('결제 요청이 완료되었어요.<br><p data-text="AD_0034_20"> 가상계좌로 입금 및 확인 완료 후 학습을 이용할 수 있어요.</p>')
+				$('#alert2 .modal-content .modal-body').data('text','AD_0034_19')
+			}else{
+				$('#alert2 .modal-content .modal-body').html('결제가 완료되었어요.<br><p data-text="AD_0034_07"> 홈런 에코를 실행하여 다운로드한 후 학습을 시작하세요.</p>')
+				$('#alert2 .modal-content .modal-body').data('text','AD_0034_06')
+			}
+			bundle('#alert2').modal('show');
+
+			$('#popupConfirm').on('click', function(){
+				if(loginType == "1" && firstYn == "Y"){
+					//앱 최초 결제인 경우
+					bundle('#alert3').modal('show');
+				}
+			});
+		}
+	}else{
+		if(payYn == "N"){//결제오류
+			commonAlert('CU_0002_05');
+		}
+		sessionStorage.removeItem("payPopup"+saleProductCode);
+
+	}
+
+	//pay/error 파라미터 삭제
+	if(!$.isEmpty(payYn) || !$.isEmpty(firstYn)){
+		history.pushState(null, '' , '/webapp/html/product/detail.html?saleProductCode='+saleProductCode);
+	}
+
+
+
+	var timer;
+// 	console.log('waiting…');
+	//기본 상세내용
+	fnDetailSearch(data);
+
+
+	var promise = process();
+	promise.done(function() {
+// 		console.log('done.');
+
+		//기본 사용자 정보화면세팅
+	 	fnUserInfo();
+
+		//학습소개 default 호출
+		fnDescSearch(data);
+		//리뷰
+		//btnMore초기화
+		resetBtnMore();
+		//chart
+		fnReviewSearch(data);
+		//list
+		fnReviewListSearch(data);
+
+	});
+	promise.progress(function() {
+// 		console.log('progress' + '.');
+	});
+
+	function process() {
+	  var deferred = $.Deferred();
+
+	  timer = setInterval(function() {
+	    deferred.notify();
+	  }, 1000);
+
+	  setTimeout(function() {
+	     clearInterval(timer);
+	     deferred.resolve();
+	  }, 1000);
+
+	  return deferred.promise();
+	}
+
+
+
+
+	//팝업도 안보이게
+	//이미 구매해서 disabled라면
+	if($('.buyMe').hasClass('disabled')){
+		sessionStorage.setItem("dontShowAgain","Y");
+		$('._please').find('.info').hide();
+	}
+
+
+	//로그인하기
+	$('.goLogin').on('click', function(e) {
+		var lang = sessionStorage.lang;
+		sessionStorage.clear();
+		clearMarketCookie();
+		sessionStorage.setItem('lang',lang);
+		location.href = '/webapp/html/login/login.html';
+	});
+
+
+	/**
+	기본화면 action
+	**/
+	//학생 조르기버튼 안내 - 닫기 클릭 시
+    $('._please').on('click', '.info .btn-primary', function () {
+      $('._please').find('.info').hide();
+    });
+    //학생 조르기버튼 안내 - 다시 보지 않기
+    $('._please').on('click', '.info .btn-outline', function () {
+      $('._please').find('.info').hide();
+      //쿠키 기능 삽입
+		sessionStorage.setItem("dontShowAgain", "Y");
+    });
+
+  	/*
+    $('.preview').on('click', function(){
+    	//미리보기 화면 open
+    	var url = $('#previewUrl').attr('href');
+
+    	if(url.indexOf("youtube") != -1 || url.indexOf("youtu.be") != -1){
+    		//유튜브 영상
+    		if(url.indexOf("watch") != -1){
+    			url = url.replace('https://www.youtube.com/watch?v=','');
+    		}else{
+    			url = url.replace('https://youtu.be/','');
+    		}
+    		$('#previewIframeContent').css('display', '');
+    		$('#previewContent').css('display', 'none');
+    		$('#previewIframeContent').attr('src', 'https://www.youtube.com/embed/'+url);
+        	$('#previewIframeContent').css('width', $('#preview .modal-content').css('width'))
+    	}else{
+	    	$('#previewIframeContent').css('display', 'none');
+	    	$('#previewContent').css('display', 'none');
+	    	$('#previewContent').attr('src', url);
+	    	$('#previewContent').css('width', $('#preview .modal-content').css('width')) ;
+    	}
+
+    	bundle('#preview').modal('show');
+    });
+  */
+    //조르기
+    $('.buyMe').on('click', function(){
+    	if($(this).hasClass('install') && $(this).data('ordernumber')!=null){
+    		//설치
+    		$.postJSON("/marketplace/mypage/install", {orderNumber : $(this).data('ordernumber')}, function(resData){
+				if(!$.isEmpty(resData) && !$.isEmpty(resData.success) && resData.success == true){
+					$('.buyMe').addClass('disabled');
+					$('.buyMe').removeClass('install');
+					$('.buyMe').text(commonMessage('AD_0006_04'));
+
+				}
+			}, false);
+
+    	}else{
+	    	$.postJSON("/marketplace/product/buyMe", data, fnPleaseBuyMe , false);
+    	}
+    });
+
+  	//결제하기
+    $('.pay').on('click', function(){
+
+    	if(testerYn == "Y"){
+//     		commonAlert('테스터계정으로 무료 결제로 진행됩니다.','', function(){
+    			goPayinfo();
+
+// 			});
+    	}else{
+    		goPayinfo()
+    	}
+
+
+    });
+
+	/**
+	tab1>학습소개 탭 선택
+	$('#intro-home-tab').on('click', function(e) {
+		fnDescSearch(data);
+	});
+	**/
+
+	/**
+	tab2>리뷰 탭 선택
+	$('#nav-review-tab').on('click', function(e) {
+		//btnMore초기화
+		resetBtnMore();
+		//chart
+		fnReviewSearch(data);
+		//list
+		fnReviewListSearch(data);
+
+	});
+	**/
+
+	//올인원 유료 학습 신청 > 아이스크림 홈페이지 연결
+	$('.payExp').on('click', function(e) {
+		commonAlert('<strong>홈런 올인원 유료 학습 신청 안내</strong><br/><br/>유료 학습 신청은<br/>아이스크림 홈런 홈페이지에서 진행 됩니다.', '', function(){
+// 			window.open(oLink[oLink.env].eduPayExp, "_blank");
+			openNewBrowser(oLink[oLink.env].eduPayExp);
+		})
+	});
+
+	//초등홈런 무료체험 하기 > 올인원 초등 무료 상품으로 이동
+	$('.freeExpHrEs').on('click', function(e) {
+		if($.isEmpty($("#allinoneFreeEs").val())){
+			console.log("올인원 초등 무료 상품 코드 확인");
+		}else{
+			location.href = "/webapp/html/product/detail.html?saleProductCode="+$("#allinoneFreeEs").val();
+		}
+	});
+
+	//중등홈런 무료체험 하기 > 올인원 중등 무료 상품으로 이동
+	$('.freeExpHrMs').on('click', function(e) {
+		if($.isEmpty($("#allinoneFreeMs").val())){
+			console.log("올인원 중등 무료 상품 코드 확인");
+		}else{
+			location.href = "/webapp/html/product/detail.html?saleProductCode="+$("#allinoneFreeMs").val();
+		}
+	});
+
+
+	//무료 체험 신청 > 무료체험 신청 화면 이동
+	$('.freeExp').on('click', function(e) {
+		location.href = 'freeExp.html';
+	});
+
+	//리뷰 더보기 선택
+	$('#btnMore').on('click', function(e) {
+		fnReviewListMoreSearch(data);
+	});
+
+	//리뷰 평가
+	$('#ratingBtn').on('click', function () {
+		if($.isEmpty(loginSid)){
+			//로그인화면으로 이동
+			commonAlert('CU_0002_04','', function(){
+				$('.goLogin').trigger('click');
+			});
+
+		}else{
+			//창 초기화
+			$('#saveRating').prop('disabled', true);
+			 $('#ratingData a').removeClass('current');
+			 $('#ratingData a img.on').css('display','none');
+			 $('#ratingData a img.off').css('display','');
+
+			//구매한 경우만 평가 가능
+			//학생이 학습중인 경우 추가
+			$('#ratingData a img.on').css('display','none');
+			$('#ratingData a img.off').css('display','none');
+			$('#ratingData a.defaulton img.on').css('display','');
+			$('#ratingData a.defaultoff img.off').css('display','');
+			$('#ratingText').attr('placeholder', commonMessage('AD_0021_02'));
+			if(reviewAbleYn == 'Y'){
+				$('#ratingText').val('');
+				bundle('#rating').modal('show');
+				//평가하기 창 뒤에 스크롤
+				$("body").addClass("overflow-hidden");
+			}else{
+				commonAlert('AD_0015_03');
+			}
+		}
+// 		$('.modal-stack.modal-backdrop').removeClass('hide').addClass('show');
+// 		bundle('#rating modal-content').modal('show');
+	});
+
+
+	//평가하기 팝업
+    $('._rating').on('click', 'a', function () {
+        $(this).prevAll().addBack().find('.off').hide();
+        $(this).prevAll().addBack().find('.on').show();
+        $(this).nextAll().find('.off').show();
+        $(this).nextAll().find('.on').hide();
+        $(this).addClass('current').siblings().removeClass('current');
+        if($('#ratingData a.current').data('rating')*1 > 1 ){
+        	if( $('#ratingText').val() == '' ||  $('#ratingText').val() == null){
+	    		$('#saveRating').prop('disabled', true);
+	    	}else{
+	    		$('#saveRating').prop('disabled', false);
+	    	}
+        }else{
+	        $('#saveRating').prop('disabled', true);
+        }
+        $('#ratingData').data('ratingdata', $('#ratingData a.current').data('rating'));
+    })
+
+    //평가글
+    $('#ratingText').keyup(function(){
+    	if( $('#ratingData a.current').data('rating')*1 > 1){
+	    	if( $('#ratingText').val() == '' ||  $('#ratingText').val() == null){
+	    		$('#saveRating').prop('disabled', true);
+	    	}else{
+	    		$('#saveRating').prop('disabled', false);
+	    	}
+	    	//500자 제한
+	    	if($('#ratingText').val().length > 500) {
+				$('#ratingText').val($('#ratingText').val().substring(0, 500));
+			}
+		}
+	});
+
+    //평가글
+    $('#ratingData').click(function(){
+    	if( $('#ratingData').data('ratingdata')*1 >= 1){
+	    	if( $('#ratingText').val() == '' ||  $('#ratingText').val() == null){
+	    		$('#saveRating').prop('disabled', true);
+	    	}else{
+	    		$('#saveRating').prop('disabled', false);
+	    	}
+	    	//500자 제한
+	    	if($('#ratingText').val().length > 500) {
+				$('#ratingText').val($('#ratingText').val().substring(0, 500));
+			}
+		}
+	});
+
+	//평가완료 선택
+	$('#saveRating').on('click', function(e) {
+		if( $('#ratingData').data('ratingdata')*1 <1){
+			console.log('별점을 선택해 주세요.');
+			$('#ratingText').focus();
+			return;
+		}
+
+		if( $('#ratingText').val() == '' ||  $('#ratingText').val() == null){
+// 			alert('리뷰를 작성해 주세요.');
+			$('#ratingText').focus();
+			return;
+		}
+
+		var review = {};
+		review.saleProductCode = data.saleProductCode;
+		review.starCount = ($('#ratingData').data('ratingdata')*1);
+		review.review = $('#ratingText').val();
+
+		$.postJSON("/marketplace/product/addReview", review, fnAddReview , false);
+
+	});
+
+    //리뷰 정렬옵션 변경(도움되는 순)
+    $('#orderGood').on('click', function(){
+    	if(!$('#orderGood').hasClass('active')){
+	    	$('#orderNew').removeClass('active');
+	    	$('#orderGood').addClass('active');
+
+	    	//페이징 정보 초기화
+	    	resetBtnMore();
+	    	$("#btnMore").data("option",0);
+	    	fnReviewListSearch(data);
+    	}
+    });
+
+    //리뷰 정렬옵션 변경()
+    $('#orderNew').on('click', function(){
+    	if(!$('#orderNew').hasClass('active')){
+	    	$('#orderGood').removeClass('active');
+	    	$('#orderNew').addClass('active')
+	    	//페이징 초기화
+	    	resetBtnMore();
+			$("#btnMore").data("option",1);
+	    	fnReviewListSearch(data);
+    	}
+    });
+
+	/**
+	tab3>관련학습 탭 선택
+	**/
+	$('#nav-relative-tab').on('click', function(e) {
+		data.categoryId = $('#categoryId').val();
+		fnRelateSearch(data);
+	});
+
+	//별점 선택
+	$("#mod_rating ._rating").on("click", "a", function() {
+		$(this).prevAll().addBack().find(".off").hide();
+	    $(this).prevAll().addBack().find(".on").show();
+	    $(this).nextAll().find(".off").show();
+	    $(this).nextAll().find(".on").hide();
+	    $(this).addClass("current").siblings().removeClass("current");
+
+	    fnModifyYn();
+	});
+
+
+
+
+	//금칙어json 가져오기
+	getWord();
+});
+
+
+//변경여부 확인
+function fnModifyYn(){
+	var reviewId = $(".modSave").data("sid");
+	var star = $(".modSave").data("star");
+	var review = $(".modSave").data("review");
+
+	if(star != $("#mod_rating a.current").data("rating") || review != $("#reviewCont").val()
+			&& $("#reviewCont").val() != ''){
+		$("#mod_rating button[data-opt=U]").attr("disabled", false);
+	}else{
+		$("#mod_rating button[data-opt=U]").attr("disabled", true);
+	}
+
+}
+
+
+//리뷰 수정/삭제
+/*
+$(".modSave").on("click", function(e) {
+	onClickEventPrevent(e);
+
+	var data = {};
+	data.opt = $(this).data("opt");
+	data.reviewId = $(this).data("sid");
+	data.review = $("#reviewCont").val();
+	data.starCount = $("a.current").data("rating");
+
+	if(data.opt == "D"){
+		commonConfirm("MY_0050_04", {btnOk:"삭제"}, function(){
+			fnModifyReview(data);
+		});
+	}else{
+		fnModifyReview(data);
+	}
+});
+*/
+
+function goPayinfo(){
+
+	var learnerCnt = $('#learnerCnt').val()*1;
+	var studentCnt = $('#studentCnt').val()*1;
+	var useAccount = $('#useAccount').val()*1;
+
+	//학부모인 경우
+	if(loginType == '0' || loginType == '2'){
+		if(studentCnt == '0' || $.isEmpty(studentCnt)){
+	    	//자녀가 등록되지 않은 경우
+			$('.modal-title').css('display','none');
+			$('#modalContent').text(commonMessage('AD_0006_09'));
+			$('#modalContent').data('text','AD_0006_09');
+	    	bundle('#product1').modal('show');
+	    	return;
+		}else if(useAccount >= 2 && studentCnt < 2){
+		   	// 다계정 상품의 경우 자녀수가 2미만인 경우 pop
+			$('.modal-title').css('display','');
+			bundle('#product1').modal('show');
+		    return;
+		}else if(learnerCnt > 0 && learnerCnt == studentCnt){
+	    	//이미 결제한 학습인 경우
+			bundle('#product2').modal('show');
+			return;
+		}
+
+	//선생님인 경우
+	}else if(loginType == '1'){
+		if(learnerCnt > 0 && learnerCnt == studentCnt){
+	    	//이미 결제한 학습인 경우
+			bundle('#product2').modal('show');
+			return;
+		}else if(studentCnt == '0' || $.isEmpty(studentCnt)){
+	    	//자녀가 등록되지 않은 경우
+			$('.modal-title').css('display','none');
+			$('#modalContent').text(commonMessage('AD_0002_02'));
+			$('#modalContent').data('text','AD_0002_02');
+	    	bundle('#product1').modal('show');
+	    	return;
+		}
+	}
+	showLoadingbar();
+
+	//결제 화면으로 이동
+	location.href = 'payInfo.html?saleProductCode='+data.saleProductCode;
+}
+
+function fnModifyReview(data){
+	$.postJSON("/marketplace/mypage/modifyReview", data, function(resData){
+		//닫기
+		$("#mod_rating").modal("hide");
+// 		window.location.reload();
+		//초기화
+		$("#mod_rating ._rating a[data-rating=2]").click();
+		$("#reviewCont").val('');
+		$("#mod_rating .desc").text('');
+		$("#mod_rating button").data("sid", '');
+		$("#mod_rating button[data-opt=U]").attr("disabled", true);
+
+		$(".modSave").data('sid','');
+		$(".modSave").data('star','');
+		$(".modSave").data('review','');
+		$('#nav-review-tab').trigger('click');
+	}, false);
+}
+
+//리뷰 평가
+//clickRatingBtn(\''+item.reviewId+'\',\''+$('#title').text()+'\',\''+item.starCount+'\',\''+item.review+'\',\''+item.createId+'\');
+function clickRatingBtn(reviewId, productName, starCount, review, createId){
+	if(createId == loginSid){
+		//상품명 셋팅
+		$(".modSave").data('sid',reviewId);
+		$(".modSave").data('star',starCount);
+		$(".modSave").data('review',review);
+
+		$("#mod_rating .desc").text(nvl(productName));
+		//별점 셋팅
+		$("#mod_rating ._rating a[data-rating="+starCount+"]").click();
+		//리뷰 셋팅
+		$("#reviewCont").val(review);
+		//리뷰id 셋팅
+		$("#mod_rating button").data("sid", reviewId);
+		//수정버튼 disabled
+		$("#mod_rating button[data-opt=U]").attr("disabled", true);
+		bundle('#mod_rating').modal('show');
+// 		$("#mod_rating").modal("show");
+
+	}
+
+}
+
+var fnUserInfo = function(){
+	//로그인 case에 따라 변경
+// 	$('.app-icon span').css('display','');
+	$('.app-icon span').hide();
+	$('.card-price.parents').hide();
+	$('.card-price.expParents').hide();
+	$('.card-price.logout').hide();
+	$('.card-btn').hide();
+	$('.card-info').hide();
+	$('.sticky-btn').css('display','none');
+// 	$('#ratingBtn').hide();
+
+	if(loginSid == null){
+		//로그아웃상태
+		$('.card-btn.logout').show();
+		$('.card-btn.logout').css('display','block');
+		$('.sticky-btn.logout').css('display','block');
+		$('.card-price.logout').show();
+
+	}else{
+		$('.card-btn.logout').hide();
+		$('.card-btn.logout').css('display','none');
+		$('.sticky-btn.logout').css('display','none');
+
+	 	//divCd 10002:준회원 10003:정회원 10004:체험회원
+		if(loginType == '0' || loginType == '1'  || loginType == '2'){
+			$('.card-btn .freeExp').hide();
+			$('.card-btn .payExp').hide();
+			$('.card-btn .freeExpHr').hide();
+
+			$('.sticky-btn .stop').hide();
+			$('.sticky-btn .freeExp').hide();
+// 			$('.sticky-btn .learning').hide();
+			$('.sticky-btn .payExp').hide();
+			$('.sticky-btn .freeExpHr').hide();
+			$('.sticky-btn .product-btn').css('display','');
+			if($('#homelearnPd').val() == "Y"){
+				if(divCd == "10002" || divCd == "10003" ||divCd == "10004"  ){
+					//정회원, 준회원
+					//올인원초등중등상품인경우=(정회원or준회원)유료 학습 신청
+					$('.card-btn.expParents').show();
+					$('.card-btn .payExp').show();
+					$('.sticky-btn.parents').css('display','none');
+					$('.sticky-btn.expParents').css('display','block');
+					$('.sticky-btn .payExp span').remove();
+					$('.sticky-btn .payExp').show();
+
+// 				}else if(divCd == "10004" ){
+// 					//체험회원
+// 					$('.sticky-btn.expParents').css('display','block');
+// 					$('.card-btn.expParents').show();
+// 					$('.card-btn .freeExp').show();
+// 					$('.sticky-btn .freeExp').show();
+
+				}else if(divCd == "10005" ){
+					//모든 상품에 일반회원 (학습이력이 없거나 자녀가 없는) 경우 = 무료 체험 신청
+					$('.card-btn.expParents').show();
+					$('.card-btn .freeExp').show();
+					$('.sticky-btn.expParents').css('display','block');
+					$('.sticky-btn .freeExp').show();
+
+				}else{
+
+					//학부모&학습관
+					$('.card-btn.parents').show();
+					$('.card-btn.parents').css('display','');
+					$('.card-price.parents').show();
+					$('.card-price.parents').css('display','block');
+					$('.sticky-btn.parents').css('display','block');
+				}
+
+			}else{
+				//3rd party
+				//체험회원 = 유료학습 신청
+				if(divCd == "10004"){
+					//서드파티 상품인 경우=구매하기/학습중
+					//모든 상품에 일반회원 (학습이력이 없거나 자녀가 없는) 경우 = 무료 체험 신청
+					$('.card-btn.expParents').show();
+					$('.card-btn .payExp').show();
+					$('.sticky-btn.expParents').css('display','block');
+					$('.sticky-btn .payExp span').remove();
+					$('.sticky-btn .payExp').show();
+
+				}else if( divCd == "10005" ){
+					//일반회원 - 모두 무료체험 신청 버튼
+					$('.card-btn.expParents').show();
+// 					$('.card-btn .freeExpHr').show();
+					$('.sticky-btn.expParents').css('display','block');
+
+// 					if($('#marketCategoryId').val() ==  "CT100002"){
+						$('.card-btn .freeExpHr.freeExpHrMs').show();
+						$('.sticky-btn .freeExpHr.freeExpHrMs').show();
+// 					}else{
+						$('.card-btn .freeExpHr.freeExpHrEs').show();
+						$('.sticky-btn .freeExpHr.freeExpHrEs').show();
+// 					}
+
+				}else{
+					//학부모&학습관, 정회원,준회원
+					$('.card-btn.parents').show();
+					$('.card-btn.parents').css('display','');
+					$('.card-price.parents').show();
+					$('.card-price.parents').css('display','block');
+					$('.sticky-btn.parents').css('display','block');
+				}
+			}
+
+
+		}else if($.isEmpty(loginType)){
+			//학생
+// 			sessionStorage.setItem("loginType", '1');
+// 			console.log("dontShowAgain " + sessionStorage.getItem("dontShowAgain"));
+ 			if(sessionStorage.getItem("dontShowAgain") == 'Y'){
+ 				 $('._please').find('.info').hide();
+ 			}
+ 			$('#studentPop').css('display','block');
+			$('.card-btn.student').show();
+			$('.card-info.student').show();
+			$('.card-btn.student').css('display','block');
+			$('.card-info.student').css('display','block');
+			$('.sticky-btn.student').css('display','block');
+
+		}
+	}
+
+}
+
+var reviewAbleYn = 'N';
+
+//상품정보
+var fnDetailSearch = function(data){
+	$.postJSON("/marketplace/product/productInfo", data, fnProductDetail , false);
+}
+
+//상품정보 세팅
+var fnProductDetail = function(resData){
+	var totalCnt = 0;
+
+	console.log(resData);
+	if(!$.isEmpty(resData)){
+		if($.isEmpty(resData.product)){
+			commonAlert('AD_0006_14', '', function(){
+				location.replace('/webapp/html/main/main.html');
+			});
+		}
+		$("#allinoneFreeEs").val(resData.allinoneFreeEs);
+		$("#allinoneFreeMs").val(resData.allinoneFreeMs);
+		$("#marketCategoryId").val(resData.product.marketCategoryId);
+// 		$("#allinonePay").val(resData.allinonePay);
+
+		$('#mainIcon').attr('src', resData.product.icon);
+
+		$('#title').text(resData.product.productName);
+		$('.product-name').text(resData.product.productName);
+		data.productName = resData.product.productName;
+
+		$('#brandName').text(resData.product.brandName);
+
+		//변경 내역
+		if(!$.isEmpty(resData.product.changeLog)){
+			$('#changeLogTitle').css('display', '');
+			$('#changeLog').html(resData.product.changeLog);
+		}
+
+		//관련학습 제목
+// 		$('#brandNameOther').text(commonMessage('AD_0019_03',resData.product.brandName));
+// 		setLanguage('#brandNameOther');
+
+		var text2 = $.isEmpty(resData.product.learningTitle)? "-": resData.product.learningTitle
+		$('#learningTitle').text(text2);	//학습목차요약
+		$('#learningAge').data('age', resData.product.learningAge);
+		var text = $.isEmpty(resData.product.learningAge)? "7": resData.product.learningAge
+		$('#learningAge').text(makeStudentGradeByAgecode(text));//makeStudentGradeByCode(resData.product.learningAge)
+		var text1 = $.isEmpty(resData.product.learningTerm)? "-": resData.product.learningTerm
+		$('#learningTerm').text(text1);
+		$('#star').text(resData.product.starCount);
+		$('#categoryId').val(resData.product.categoryId);//카테고리 ID
+
+		//홈런 올인원인 경우
+		if(resData.product.allInOneYn == 'Y'){
+			$('#homelearnPd').val("Y");
+
+			//올인원인 경우 설명 열기
+			$('#detailDesc').removeClass('closed').addClass('open');
+			$('.detail-btn-state-area').hide();
+
+			$('.detail-etc.detail-index').addClass('on');
+
+			//변경 내역과 리뷰 영역 미노출
+			$('#changeLogTitle, .detail-review').css('display', 'none');
+
+		}
+
+		if(resData.product.homelearnBadgeYn == 'Y'){
+			$('.badge-homelearn').css('display','');
+			$('.i-badge-homelearn').css('display','');
+		}
+		if(resData.product.packageYn == 'Y'){
+			$('.badge-package').css('display','');
+			$('.i-badge-package').css('display','');
+		}
+		if(resData.product.freeBadgeYn =='Y'){
+			$('.badge-free').css('display','');
+			$('.i-badge-free').css('display','');
+		}
+		if(resData.product.discountBadgeYn == 'Y'){
+			$('.badge-percent').css('display','');
+			$('.i-badge-half').css('display','');
+			$('.i-badge-half i').text(Math.round(resData.product.discountPercent*100)+"%");
+		}
+
+		/* 사용자 정보 세팅시 세팅하도록 수정
+		if(loginType == '0' || loginType == '1'  || loginType == '2'){
+			$('.card-btn .freeExp').hide();
+			$('.card-btn .payExp').hide();
+			$('.card-btn .freeExpHr').hide();
+
+			$('.sticky-btn .stop').hide();
+			$('.sticky-btn .freeExp').hide();
+			$('.sticky-btn .learning').hide();
+			$('.sticky-btn .payExp').hide();
+			$('.sticky-btn .freeExpHr').hide();
+			if($('#homelearnPd').val() == "Y"){
+				//홈런 올인원 상품 <무료체험/유료학습버튼 노출>
+				if(divCd == "10002" || divCd == "10003" ){
+					//정회원, 준회원
+					//올인원초등중등상품인경우=(정회원or준회원)유료 학습 신청
+					$('.card-btn.expParents').show();
+					$('.card-btn .payExp').show();
+					$('.sticky-btn.parents').css('display','none');
+					$('.sticky-btn.expParents').css('display','block');
+					$('.sticky-btn .payExp').show();
+
+				}else if(divCd == "10004" ){
+					//체험회원
+					//모든 상품에 일반회원 (학습이력이 없거나 자녀가 없는) 경우 = 무료 체험 신청
+					$('.sticky-btn.expParents').css('display','block');
+					$('.card-btn.expParents').show();
+					$('.card-btn .freeExp').show();
+					$('.sticky-btn .freeExp').show();
+
+				}else if(divCd == "10005" ){
+					//일반회원 - 모두 무료체험 신청 버튼
+					$('.card-btn.expParents').show();
+					$('.card-btn .freeExp').show();
+					$('.sticky-btn.expParents').css('display','block');
+					$('.sticky-btn .freeExp').show();
+
+				}else{
+					//학부모&학습관
+					$('.card-btn.parents').show();
+					$('.card-btn.parents').css('display','');
+					$('.card-price.parents').show();
+					$('.sticky-btn.parents').css('display','block');
+				}
+			}else{
+				//3rd party
+				//준회원,체험회원 = 유료학습 신청
+				if(divCd == "10002" || divCd == "10004"){
+					//서드파티 상품인 경우=구매하기/학습중
+					//모든 상품에 일반회원 (학습이력이 없거나 자녀가 없는) 경우 = 무료 체험 신청
+					$('.card-btn.expParents').show();
+					$('.card-btn .payExp').show();
+					$('.sticky-btn.expParents').css('display','block');
+					$('.sticky-btn .payExp').show();
+
+				}else if( divCd == "10005" ){
+					//일반회원 - 모두 무료체험 신청 버튼
+					$('.card-btn.expParents').show();
+// 					$('.card-btn .freeExpHr').show();
+					if($('#learningAge').data('age') > 12){
+						$('.card-btn .freeExpHr.freeExpHrMs').show();
+					}else{
+						$('.card-btn .freeExpHr.freeExpHrEs').show();
+					}
+					$('.sticky-btn.expParents').css('display','block');
+
+					if($('#learningAge').data('age') > 12){
+						$('.sticky-btn .freeExpHr.freeExpHrMs').show();
+					}else{
+						$('.sticky-btn .freeExpHr.freeExpHrEs').show();
+					}
+
+				}else{
+					//학부모&학습관
+					$('.card-btn.parents').show();
+					$('.card-btn.parents').css('display','');
+					$('.card-price.parents').show();
+					$('.sticky-btn.parents').css('display','block');
+				}
+
+			}
+		}*/
+
+		//학부모/ 선생님/ 학습관 부모인 경우
+		if(loginType == '0' || loginType == '1' || loginType == '2' ){
+			if(loginType == '2' && resData.product.buyer == '2'){
+				//학습관학부모 > 학습관 교사 지도가 없는 학습입니다.
+				$('#noTeacher').css('display','');
+			}
+
+			if($.isEmpty(resData.learnerName)){
+				//아무도 안듣는 경우
+				$('.card-price.parents .state').hide();
+				//리뷰작성 못함
+				reviewAbleYn = 'N';
+				$("#ratingBtn").hide();
+
+			}else{
+				reviewAbleYn = 'Y';
+				$("#ratingBtn").show();
+				var name = resData.learnerName;
+				if(!$.isEmpty(resData.learnerCnt) && resData.learnerCnt > 1){
+					//다수가 듣는 경우 외n명
+					//AD_0001_04 -현재 %S님이 학습 중이에요.
+					//<span class="state" data-text="AD_0001_11">현재 <span class="text-secondary font-weight-bold" id="studentName"></span> <em data-text="AD_0001_10">님이 학습 중이에요.</em></span>
+// 					$('#studentName').text(resData.learnerName+' (외 '+((resData.learnerCnt*1)-1) +"명)");
+// 						name = '<span class="text-secondary font-weight-bold">'+name+' (외 '+((resData.learnerCnt*1)-1) +"명)</span>";
+
+					var args = [name+'(', resData.learnerCnt*1-1];
+					name = '<span class="text-secondary font-weight-bold">'+commonMessage("AD_0025_05", args)+')</span>';
+					$('#studentName').html(commonMessage("AD_0001_04", name));
+
+
+					$('#learnerCnt').val(resData.learnerCnt);	//학습자수
+// 					$('#studentCnt').val(resData.studentCnt);	//총학생수
+
+				}else if(!$.isEmpty(resData.learnerCnt) && resData.learnerCnt == 1){
+					//혼자인 경우
+					$('#studentName').html(commonMessage("AD_0001_04", '<span class="text-secondary font-weight-bold" >'+name+'</span>'));
+					$('#learnerCnt').val(resData.learnerCnt);	//학습자수
+				}else{
+					//no one
+					$('.card-price.parents .state').hide();
+					$('#learnerCnt').val(0);	//학습자수
+				}
+
+			}
+			$('#studentCnt').val(resData.studentCnt);	//총학생수
+
+			//판매 중지인 경우 --> 3이 판매중
+			//테스터의 경우 --> 0 & tester
+			//판매상태 : temp(0, "0", "임시"),\r\nwait(1, "1", "판매대기"),\r\nrequest(2, "2", "판매개시요청"),\r\nlaunch(3, "3", "판매중"),
+			//\r\ncancel(4, "4", "판매중지"),\r\noffRequest(5, "5", "서비스종료요청"),\r\noff(6, "6", "서비스종료");
+
+
+			if((testerYn == 'N' && resData.product.saleState != '3')){
+// 				alert('판매중지 상품입니다.');
+				$('.parents .learning').css('display','none');
+				$('.parents .pay').css('display','none');
+				$('.parents .stop').css('display','');
+
+				//판매가 중지되었어요 alert
+				if(resData.product.saleState == '6'){
+					var message = commonMessage("AD_0006_12");//판매가 중지되었어요
+					var title = commonMessage("AD_0006_14");
+					commonAlert(message, {title : title}, function(){
+						location.replace('/webapp/html/main/main.html');
+// 						location.replace("/webapp/html/product/detail.html?saleProductCode="+saleProductCode);
+					});
+				}
+
+			//등록된 학생이 있을때
+			}else if(resData.studentCnt > 0){
+
+				//20210119
+				if(loginType == '1' ){
+					//선생님의 경우 구매 수량보다 등록된 학생수가 많은경우 구매 가능해야 함
+					//==> 이제 학생수만큼만 구매 가능함
+					if(resData.quantity != 0 && resData.quantity >= resData.studentCnt){
+						//학생 수보다 많은 양 구매시
+// 						if(resData.learnerCnt == null || resData.learnerCnt == 0){
+// 							//모든 학생이 수강전인 경우 '결제하기'
+// 							$('.parents .pay').css('display','');
+// 							$('.parents .stop').css('display','none');
+// 							$('.parents .learning').css('display','none');
+// 							//console.log("결제하기");
+// 						}else
+						if(resData.learnerCnt == resData.studentCnt){
+							//모든 학생이 듣고있는 경우 '학습중'
+							$('.parents .pay').css('display','none');
+							$('.parents .stop').css('display','none');
+							$('.parents .learning').css('display','');
+							$('.sticky-btn .product-btn .learning').css('display','');
+
+							//console.log("학습중");
+						}else if(resData.learnerCnt < resData.studentCnt){
+							//학부모인 경우 '결제하기'
+							//선생님인 경우 '학습중'
+							//console.log("학부모인 경우 '결제하기'/선생님인 경우 '학습중");
+							$('.parents .pay').css('display','none');
+							$('.parents .learning').css('display','');
+							$('.product-btn').css('display','');
+							$('.sticky-btn .learning').css('display','');
+						}
+					}else{
+						//구매 가능 quantity가 0이거나 학생수가 더 많은 경우
+						$('.parents .pay').css('display','');
+						$('.parents .stop').css('display','none');
+						$('.parents .learning').css('display','none');
+
+					}
+
+				}else if(loginType == '0' || loginType == '2'){
+					//학부모
+					if(resData.learnerCnt == null || resData.learnerCnt == 0){
+						//모든 학생이 수강전인 경우 '결제하기'
+						$('.parents .pay').css('display','');
+						$('.parents .stop').css('display','none');
+						$('.parents .learning').css('display','none');
+						//console.log("결제하기");
+					}else if(resData.learnerCnt == resData.studentCnt){
+						//모든 학생이 듣고있는 경우 '학습중'
+						$('.parents .pay').css('display','none');
+						$('.parents .stop').css('display','none');
+						$('.parents .learning').css('display','');
+// 						$('.product-btn').css('display','');
+// 						$('.sticky-btn .learning').css('display','');
+						$('.sticky-btn .product-btn .learning').css('display','');
+
+						console.log("학습중");
+					}else if(resData.learnerCnt < resData.studentCnt){
+						//학부모인 경우 '결제하기'
+						//선생님인 경우 '학습중'
+						//console.log("학부모인 경우 '결제하기'/선생님인 경우 '학습중");
+						$('.parents .pay').css('display','none');
+						$('.parents .pay').css('display','');
+						$('.parents .learning').css('display','none');
+					}
+
+				}
+
+			}
+
+			//상단
+// 			$('.parents .total_price .plan').text(resData.product.contractMonth+'개월 약정')//약정내용
+// 			$('.parents .total_price .range').append(' / ') //n / 월
+// 			$('.parents .total_price .price').text('￦'+resData.product.price)//약정가격
+
+			//하단
+			//<div class="price" data-text="CU_0029_03">6개월 약정 <span>￦99,000</span> / 월</div>
+
+			//총학생수
+// 			$('#useAccount').val(resData.studentCnt);
+			$('#useAccount').val(resData.product.useAccount);
+
+			//결제하기버튼
+// 			if(resData.product.useAccount >= 2 && resData.studentCnt < 2){
+// 				$('.btn.pay').text(commonMessage('AD_0001_08'));
+// 			}
+
+
+		}else if($.isEmpty(loginType) && !$.isEmpty(loginSid)){
+
+			//선생님의 학생인 경우 추가 20210205
+			//학생의 경우(구매/조르기 여부)
+			if(resData.learningYn == "Y" || resData.buyMeYn == "Y" || resData.product.buyer == '1'){
+				$('.buyMe').addClass('disabled');
+				$('.buyMe').removeClass('install');
+				//팝업도 안보이게
+				sessionStorage.setItem("dontShowAgain","Y");
+				$('._please').find('.info').hide();
+// 				commonConfirm("MY_0050_04", {btnOk:"삭제"}, function(){
+// 					fnModifyReview(data);
+// 				});
+				$('#studentPop').css('display','none');
+			}else{
+				$('#studentPop').css('display','block');
+			}
+			//자기가 듣고 있는 수업이라면
+// 			console.log("학생?unInstallYn"+ resData.unInstallYn);
+// 			console.log("learningYn? "+resData.learningYn);
+			if(resData.learningYn == "Y"){
+				reviewAbleYn = 'Y';
+				$("#ratingBtn").show();
+				if(resData.unInstallYn == "Y"){
+					//설치 표시
+					$('.buyMe').removeClass('disabled');
+					$('.buyMe').addClass('install');
+					$('.buyMe').data('ordernumber', resData.orderNumber);
+					$('.buyMe').text(commonMessage('AD_0006_02'));
+				}else{
+					$('.buyMe').addClass('disabled');
+					$('.buyMe').removeClass('install');
+// 					$('.buyMe').text(commonMessage('AD_0006_01'));
+					$('.buyMe').text(commonMessage('AD_0006_04'));
+				}
+			}else{
+				$("#ratingBtn").hide();
+			}
+
+		}
+
+
+
+		//약정내용
+		var dt= '';
+		if(resData.product.contractMonth == 6){
+			dt = 'CU_0029_03';
+		}else if(resData.product.contractMonth == 12){
+			dt = 'CU_0029_04';
+		}else if(resData.product.contractMonth == 24){
+			dt = 'CU_0029_05';
+		}
+
+		var bPrice = 0;
+		var dPrice = 0;
+		if(!$.isEmpty(resData.product.price)){
+			bPrice = resData.product.price;
+			if(!$.isEmpty(resData.product.discountPercent)){
+// 				dPrice = resData.product.price*(1-Math.round(resData.product.discountPercent));
+				dPrice = resData.product.price*1 - Math.round(resData.product.price*1*resData.product.discountPercent);
+
+			}else{
+				dPrice = resData.product.price;
+			}
+		}
+
+
+		if(resData.product.saleType == 3 || $.isEmpty(resData.product.price) ||  resData.product.price == 0){
+			// 무료
+			$('.total_price').html('<span class="price"><span class="unit">'+commonMessage('AD_0034_18')+'</span></span>');
+			$('.total_price').addClass("top");
+			$('.price_bottom').html('<span>'+commonMessage('AD_0034_18')+'</span>');
+			//무료인 경우 '이용하기'
+			$('.pay').text('이용하기');
+
+		}else if(resData.product.saleType == 0){
+		//약정
+			$('.total_price').html('<span class="price"><span class="unit">￦</span>'+commaNum(dPrice)+'</span></span><span class="dashline">/</span><span class="range">'+commonMessage('CU_0029_07')+'<span class="plan">('+commonMessage(dt)+')</span></span>');
+// 			$('.total_price').html('<em class="plan" >'+commonMessage(dt)+'</em><span class="price">￦'+commaNum(dPrice)+'</span>'+' / <em><span class="range">'+commonMessage('CU_0029_07')+'</em>');
+			$('.price_bottom').html('<em>'+commonMessage(dt)+'</em> <span>￦'+commaNum(dPrice)+'</span>'+' / <em>'+commonMessage('CU_0029_07')+'</em>');
+
+
+		}else if(resData.product.saleType == 1){
+		//무제한 정기결제
+		$('.total_price').html('<span class="price"><span class="unit">￦</span>'+commaNum(dPrice)+'</span></span><span class="dashline">/</span><span class="range">'+commonMessage('CU_0029_07')+'</span>');
+// 			$('.total_price').html('<span class="price">￦'+commaNum(dPrice)+'</span>'+' / <span class="range">'+commonMessage('CU_0029_07')+'</em>');
+			$('.price_bottom').html('<span>￦'+commaNum(dPrice)+'</span>'+' / <em>'+commonMessage('CU_0029_07')+'</em>');
+
+		}else{
+		//1회성
+			//상단
+			$('.total_price').html('<span class="price">￦'+commaNum(dPrice)+'</span>');
+			//하단
+			$('.price_bottom').html('<span>￦'+commaNum(dPrice)+'</span>');
+		}
+
+
+		//미리보기 url
+		if(resData.product.previewUrl != null && resData.product.previewUrl != ""){
+// 			jQuery('.detail-slider').slick('slickAdd','<div><img src="'+resData.learning.image5+'"></div>');
+			videoData.url = resData.product.previewUrl;
+			$('#videoArea').css('display', '');
+			$("#videoData").attr('src', resData.product.previewUrl);
+			//canvasUsesEXIF(resData.product.previewUrl);
+
+		}else{
+			$('#videoArea').remove();
+		}
+
+
+		//팝업 제목.내용
+		$('#rating .desc').text(resData.product.productName);
+
+
+
+
+	}
+
+
+}
+
+
+//학습소개 default 호출
+var fnDescSearch = function(data){
+	$.postJSON("/marketplace/product/productLearningInfo", data, fnProductDesc , false);
+}
+
+//리뷰 상단
+var fnReviewSearch = function(data){
+	//별점 및 그래프
+	$.postJSON("/marketplace/product/reviewInfo", data, fnProductReview , false);
+}
+
+//리뷰 목록 조회
+var fnReviewListSearch = function(data){
+	$('#reviewContents').empty();
+	//페이징 정보
+	data.startRow = $("#btnMore").data("startrow");
+	data.pageRowCnt = $("#btnMore").data("pagerowcnt");
+	data.option = $("#btnMore").data("option");
+
+	$.postJSON("/marketplace/product/reviewList", data, fnProductReviewList , false);
+}
+
+//리뷰 목록 조회(더보기)
+var fnReviewListMoreSearch = function(data){
+	//페이징 정보
+	data.startRow = $("#btnMore").data("startrow");
+	data.pageRowCnt = $("#btnMore").data("pagerowcnt");
+	data.option = $("#btnMore").data("option");
+
+	$.postJSON("/marketplace/product/reviewList", data, fnProductReviewList , false);
+}
+
+
+
+//이 리뷰가 도움이 되었어요/취소
+var reviewGood = {};
+var fnGoodReview = function(reviewid, type){
+	reviewGood.saleProductCode = data.saleProductCode;
+	reviewGood.reviewCode = reviewid;
+	reviewGood.type = type;
+
+	$.postJSON("/marketplace/product/likeReview", reviewGood, fnAddGoodReview , false);
+/* 	if(loginSid == null ){
+		alert('로그인 후 이용하세요.');
+
+	}else{
+
+	} */
+}
+
+
+//리뷰 도움돼요, 취소
+var fnAddGoodReview = function(resData){
+// 	console.log(resData);
+
+	if(!$.isEmpty(resData) && resData.success ){
+		//완료
+		if(reviewGood.type == 0){
+			//추천 버튼으로 변경
+			$('#review_'+reviewGood.reviewCode).attr('onclick','fnGoodReview('+reviewGood.reviewCode+',1)');
+			$('#review_'+reviewGood.reviewCode).removeClass('active');
+// 			$('#review_'+reviewGood.reviewCode).removeClass('btn-primary').addClass('btn-outline');
+		}else{
+			//취소 버튼으로 변경
+			$('#review_'+reviewGood.reviewCode).attr('onclick','fnGoodReview('+reviewGood.reviewCode+',0)');
+			$('#review_'+reviewGood.reviewCode).addClass('active');
+// 			$('#review_'+reviewGood.reviewCode).removeClass('btn-outline').addClass('btn-primary');
+		}
+	}else{
+		//실패
+// 		alert('실패');
+	};
+}
+
+
+
+//관련 학습 조회
+var fnRelateSearch = function(data){
+	$.postJSON("/marketplace/product/relateProduct", data, fnProductRelate , false);
+}
+
+
+$(window).on('resize', function() {
+// 	jqSlick(".detail-slider").slick('unslick').slick();
+	jqSlick(".regular").slick('unslick');
+	if($(window).width() < 960) {
+		slickLoad_mobile();
+	}else{
+		slickLoad();
+	}
+});
+
+
+//학습소개세팅
+var fnProductDesc = function(resData){
+	var totalCnt = 0;
+	if(!$.isEmpty(resData)){
+	/*
+		var template = '';
+		template += '<div><img src="'+resData.learning.image1+'"></div>';
+		template += '<div><img src="'+resData.learning.image1+'"></div>';
+		template += '<div><img src="'+resData.learning.image1+'"></div>';
+		template += '<div><img src="'+resData.learning.image1+'"></div>';
+		template += '<div><img src="'+resData.learning.image1+'"></div>';
+		$(".detail-slider").append(template);
+		*/
+
+		if(!$.isEmpty(resData.learning.image1)){
+			//미리보기 url
+			$("#imgSlider1 img").prop('src', resData.learning.image1);
+		}else{
+			$('#imgSlider1').remove();
+		}
+
+		if(!$.isEmpty(resData.learning.image2)){
+			$("#imgSlider2 img").attr('src', resData.learning.image2);
+		}else{
+			$('#imgSlider2').remove();
+		}
+
+		if(!$.isEmpty(resData.learning.image3)){
+			$("#imgSlider3 img").attr('src', resData.learning.image3);
+		}else{
+			$('#imgSlider3').remove();
+		}
+
+		if(!$.isEmpty(resData.learning.image4)){
+			$("#imgSlider4 img").attr('src', resData.learning.image4);
+		}else{
+			$('#imgSlider4').remove();
+		}
+
+		if(!$.isEmpty(resData.learning.image5)){
+			$("#imgSlider5 img").attr('src', resData.learning.image5);
+		}else{
+			$('#imgSlider5').remove();
+		}
+		/*
+		if(!$.isEmpty(resData.learning.image2)){
+			jQuery('.detail-slider').slick('slickAdd','<div><img src="'+resData.learning.image2+'"></div>');
+		}
+		if(!$.isEmpty(resData.learning.image3)){
+			jQuery('.detail-slider').slick('slickAdd','<div><img src="'+resData.learning.image3+'"></div>');
+		}
+		if(!$.isEmpty(resData.learning.image4)){
+			jQuery('.detail-slider').slick('slickAdd','<div><img src="'+resData.learning.image4+'"></div>');
+		}
+		if(!$.isEmpty(resData.learning.image5)){
+			jQuery('.detail-slider').slick('slickAdd','<div><img src="'+resData.learning.image5+'"></div>');
+		}
+
+
+		setTimeout(function(){
+			jqSlick(".detail-slider").slick('unslick').slick();
+		}, 1000);
+		*/
+// 		jqSlick(".detail-slider").not('.slick-initialized').slick();
+
+		jqSlick(".regular").slick('unslick');
+		if($(window).width() < 960) {
+			slickLoad_mobile();
+		}else{
+			slickLoad();
+		}
+
+		///기존 소개 내용
+
+		$('#intro-home').empty();
+		$('#learningTitleList').empty();
+
+		//학습 소개 > 특징
+		var html = '';
+		//TXT: 일반 텍스트
+		//IMG: 이미지 파일 링크
+
+
+		if(resData.learning.descKind == "TXT" && !$.isEmpty(resData.learning.descText)){
+			//설명인 경우
+			html += '<article class="detail-article">';
+// 			html += '<div class="title"></div>';
+// 			html += '<div class="img"><img src="'+resData.learning.image1+'" alt=""></div>';
+			html += '<div class="desc" >'+replaceEnterToBr(resData.learning.descText)+'</div>';
+			html += '</article>';
+		}
+
+		if(resData.learning.descKind == "IMG" && (!$.isEmpty(resData.learning.descImgPc) || !$.isEmpty(resData.learning.descImgMobile))){
+			//이미지인 경우
+			html += '<article class="detail-article">';
+			html += '<div class="img device-pc"><img src="'+resData.learning.descImgPc+'" alt=""></div>';
+			html += '<div class="img device-mo"><img src="'+resData.learning.descImgMobile+'" alt=""></div>';
+			html += '</article>';
+		}
+
+
+		$('#intro-home').append(html);
+		if(html == ""){
+			$('#detailDesc').hide();
+		}
+
+		var html2 = '';
+		//학습 목차
+// 		html2 += '<hr class="detail-hr">';
+		html2 += '<article class="detail-article">';
+		html2 += '<div class="title">'+resData.learning.learningTitle+'</div>';
+		html2 += '<div class="desc" >'+replaceEnterToBr(resData.learning.learningContents)+'</div>';
+		html2 += '</article>';
+		$('#learningTitleList').append(html2);
+	}
+
+}
+
+//리뷰 별점 세팅
+var fnProductReview = function(resData){
+	//차트
+	$('#chart').empty();
+	var chartHtml = '';
+	var listCnt = 0;
+	console.log(resData);
+	if(!$.isEmpty(resData) && !$.isEmpty(resData.list)){
+
+		//별점표시
+		var iconHtml = '';
+		$('#starIcon').empty();
+		$('#starCount').text(resData.starCount);
+		if(resData.starCount == null || resData.starCount == 0){
+			for(var i = 0 ; i <5 ; i++){
+				iconHtml += '<img src="../../img/common/icon-42-star-off@2x.png" width="24" alt="">';
+			}
+		}else if(resData.starCount == 5){
+			for(var i = 0 ; i <5 ; i++){
+				iconHtml += '<img src="../../img/common/icon-24-star@2x.png" width="24" alt="">';
+			}
+		}else{
+			var starCnt = resData.starCount.substring(0,1)*1;
+			for(var i = 0 ; i <starCnt ; i++){
+				iconHtml += '<img src="../../img/common/icon-24-star@2x.png" width="24" alt="">';
+			}
+			var c = resData.starCount*10 ;
+			var starCntDot = c-starCnt*10;
+
+			if(starCntDot != 0){
+				iconHtml += '<img src="../../img/common/icon-24-star-'+starCntDot+'@2x.png" width="24" alt="">';
+				for(var i = 0 ; i <4-starCnt ; i++){
+					iconHtml += '<img src="../../img/common/icon-42-star-off@2x.png" width="24" alt="">';
+				}
+			}else{
+				for(var i = 0 ; i <5-starCnt ; i++){
+					iconHtml += '<img src="../../img/common/icon-42-star-off@2x.png" width="24" alt="">';
+				}
+			}
+		}
+		$('#starIcon').append(iconHtml);
+
+		//차트
+		listCnt = resData.list.length;
+		var sloop = 0;
+		var eloop = 0;
+		//최다학습연령이 초1, 초2인 경우
+		if(resData.studentCnt <= 0){
+			var recomAge0 = nvl($('#learningAge').data('age'), 0);
+			var recomAgeArr = recomAge0.split(',');
+			var recomAge = recomAgeArr[0];
+			if(recomAge < 7 && recomAge >= 4){
+				sloop = (recomAge*1)-4;
+				eloop = (recomAge*1)+1;
+			}else if(recomAge > 7){
+				sloop = 5;
+				eloop = 10;
+			}else{
+				sloop = 0;
+				eloop = 5;
+			}
+		}else if(resData.topChartLabel == '0' || resData.topChartLabel == '1'){
+			//0부터 5개
+			sloop = 0;
+			eloop = 5;
+		}else if(resData.topChartLabel == '8'|| resData.topChartLabel == '9'){
+			//[9월 버전] 고등 없음
+			sloop = 5;
+			eloop = 10;
+
+
+		//최다학습연령이 고3,고2인 경우
+// 		}else if(resData.topChartLabel == '9'|| resData.topChartLabel == '10'){
+// 			sloop = 5;
+// 			eloop = 10;
+
+		}else{
+			//최다학습 부터 +- 2개
+			sloop = resData.topChartLabel*1 -2;
+			eloop = resData.topChartLabel*1 +3;
+		}
+
+		var list = resData.list;
+		for(var i=sloop; i<eloop ; i++){
+		    var datatext = '';
+		    var studentAge = '';
+		    //전체=성
+			studentGrd = makeStudentGradeByCode(list[i].label).substring(0,1);
+			studentAge = makeStudentGradeByCode(list[i].label).substring(1,2);
+
+			if(studentGrd == '초'){
+				datatext = 'CU_0027_02';
+			}else if(studentGrd == '중'){
+			    datatext = 'CU_0027_03';
+// 			}else if(studentGrd == '고'){
+// 			    datatext = 'CU_0027_04';
+			}else if(studentGrd == '예'){//예비
+			    datatext = 'CU_0027_01';
+			    studentAge = '예비';
+// 			}else if(studentGrd == '전' || studentGrd == '전체'){//전체 99
+// 			    datatext = 'MA_0014_09';
+// 			    studentAge = '전체';
+// 			}else if(studentGrd == '성'){//성인
+// 			    datatext = 'CU_0027_05';
+// 			    studentAge = '성인';
+			}
+
+			if(resData.studentCnt <= 0){
+// 				chartHtml += '<div><span class="graph"><span class="bar" data-text="CU_0027_02" style="width:0%;"></span></span><span class="grade">'+makeStudentGradeByCode(list[i].label)+'</span><span class="num">0명</span></div>'
+				chartHtml += '<div><span class="graph"><span class="bar" style="width:0%;"></span></span><span class="grade">'+makeStudentGradeByCodeChangeLang(list[i].label)+'</span><span class="num">'+commonMessage('AD_0025_07','0')+'</span></div>'
+
+			}else if(list[i].data != null){
+				if(list[i].topData == 'Y'){
+					$('#reviewChart .summary .summary-wrap').removeClass('empty');
+				    $('#reviewChart .summary .summary-wrap').data('text','AD_0013_02');
+					//CU_0027_02: 'ENG초%S',
+				    //CU_0027_03: 'ENG중%S',
+				    //CU_0027_04//'ENG고%S',
+
+					var grade = '';
+					var msg = '';
+					if(studentGrd =="예" || studentGrd == '성' || studentGrd == '전' || studentGrd == '전체'){
+						msg = commonMessage("AD_0013_02", '<span class="font-weight-bold">'+commonMessage(datatext)+'</span>');
+						$('#reviewChart .summary .summary-wrap').html('<em>'+msg+'</em>');
+						chartHtml += '<div><span class="graph"><span class="bar"  style="width: '+list[i].data/resData.studentCnt*100+'%;"></span></span><span class="grade best" data-text="'+datatext+'" >'+studentAge+'</span><span class="num best" data-text="AD_0025_07;'+list[i].data+'">'+list[i].data+'</span></div>'
+					}else{
+						msg = commonMessage("AD_0013_02", '<span class="font-weight-bold">'+commonMessage(datatext, studentAge)+'</span>');
+						$('#reviewChart .summary .summary-wrap').html('<em>'+msg+'</em>');
+						chartHtml += '<div><span class="graph"><span class="bar"  style="width: '+list[i].data/resData.studentCnt*100+'%;"></span></span><span class="grade best" data-text="'+datatext+';'+studentAge+'" >'+studentAge+'</span><span class="num best" data-text="AD_0025_07;'+list[i].data+'">'+list[i].data+'</span></div>'
+					}
+
+
+				}else{
+
+				    $('#reviewChart .summary .summary-wrap').data('text','');
+					if(datatext == 'CU_0027_01' || datatext == 'CU_0027_05'){
+						chartHtml += '<div><span class="graph"><span class="bar"  style="width: '+list[i].data/resData.studentCnt*100+'%;"></span></span><span class="grade" data-text="'+datatext+'" >'+studentAge+'</span><span class="num"  data-text="AD_0025_07;'+list[i].data+'">'+list[i].data+'</span></div>'
+					}else{
+						chartHtml += '<div><span class="graph"><span class="bar"  style="width: '+list[i].data/resData.studentCnt*100+'%;"></span></span><span class="grade" data-text="'+datatext+';'+studentAge+'" >'+studentAge+'</span><span class="num"  data-text="AD_0025_07;'+list[i].data+'">'+list[i].data+'</span></div>'
+					}
+				}
+				if(!$('body').hasClass('eng')){
+					//.한국어 가장 많이 학습하고 있어요 > 상하 정렬
+					$('#reviewChart .summary em').css('line-height', '35px');
+				}
+
+			}
+		}
+
+	}
+	if(resData.studentCnt <= 0 ){
+		$('#reviewChart .summary ').addClass('empty');
+		$('#reviewChart .summary .summary-wrap').html('<em></em>');
+		$('#reviewChart .summary em').text(commonMessage("AD_0015_01"));
+	}
+	$('#chart').html(chartHtml);
+	setLanguage('#chart');
+	setLanguage('#reviewChart');
+
+}
+
+/*
+function makeStudentGradeByAge(age){
+	var text = '';
+
+	if(age >= 8 && age <= 13){
+		text = '초'+(age*1-7);
+	}else if(age <= 16){
+		text = '중'+(age*1-13);
+	}else if(age > 16){
+		text = '고'+(age*1-16);
+	}else{
+		text+='세';
+	}
+	return text;
+} */
+
+//코드->학년변경
+function makeStudentGradeByCode(code){
+	var text = '';
+	if(code == 0){
+		text = '예비'; //code*1+7//5, 6, 7
+	}else if(code <= 6){
+		text = '초'+code;
+	}else if(code <= 9){
+		text = '중'+(code*1-6);
+// 	}else if(code >= 10 && code <= 12 ){
+// 		text = '고'+(code*1-9);
+	}else{
+		text = '전체';
+	}
+	return text;
+}
+
+function makeStudentGradeByCodeChangeLang(code){
+	var text = '';
+	if(code == 0){
+		text = commonMessage('CU_0027_01');
+	}else if(code <= 6){
+		text = commonMessage('CU_0027_02', code);
+	}else if(code <= 9){
+		text = commonMessage('CU_0027_03', (code*1-6));
+	}else if(code == 99 || code == 10 ){
+		text = commonMessage('MA_0014_09'); //전체
+	}else if(code >= 10){
+// 		text = '고'+(code*1-9);
+// 		text = '성인';
+		text = commonMessage('MA_0014_09', (code*1-9));
+// 		text = commonMessage('CU_0027_05', (code*1-9));
+	}
+	return text;
+}
+
+function makeStudentGradeListByCodeChangeLang(codeList){
+	var text = '';
+	$.each(codeList, function(index, code){
+		if(index == 0){
+			if(code == 0){
+				text += commonMessage('CU_0027_01');
+			}else if(code <= 6){
+				text += commonMessage('CU_0027_02', code);
+			}else if(code <= 9){
+				text += commonMessage('CU_0027_03', (code*1-6));
+			}else if(code == 99 || code == 10 ){
+				text += commonMessage('MA_0014_09'); //전체
+			}else if(code >= 10){
+				text += commonMessage('CU_0027_05', (code*1-9));
+			}
+
+		}else{
+			if(code == 0){
+				text += ","+commonMessage('CU_0027_01');
+			}else if(code <= 6){
+				text += ","+commonMessage('CU_0027_02', code);
+			}else if(code <= 9){
+				text += ","+commonMessage('CU_0027_03', (code*1-6));
+			}else if(code == 99 || code == 10 ){
+				text += ","+commonMessage('MA_0014_09'); //전체
+			}else if(code >= 10){
+				text += ","+commonMessage('CU_0027_05', (code*1-9));
+			}
+		}
+	});
+	return text;
+}
+
+
+function makeStudentGradeByAgecode(codes){
+	var text = '';
+	if(codes != null && codes != ""){
+		var codeSpt = codes.split(',');
+		var code = '';
+		var codeText = '';
+		for ( var i in codeSpt ) {
+			code = codeSpt[i]*1;
+			if(code <= 7){
+				codeText = "7세 이하";
+
+			}else if(code >=17){
+				codeText = "17세 이상";
+
+			}else{
+				codeText = code+"세";
+
+			}
+			if(i == 0){
+				text += codeText;
+			}else{
+				text += ", " + codeText;
+			}
+
+
+// 			if(code == 10){
+// 				codeText = '성인';
+// 			}else
+		/* 	if(code <= 0){
+// 				codeText = '예비초등'; //code*1+7//5, 6, 7
+				codeText = commonMessage('CU_0027_01');
+			}else if(code <= 6){
+// 				codeText = '초'+code;
+				codeText = commonMessage('CU_0027_02', code);
+			}else if(code <= 9){
+// 				codeText = '중'+(code*1-6);
+				codeText = commonMessage('CU_0027_03', (code*1-6));
+// 			}else if(code = 10 && code <=12){
+// 				codeText = '고'+(code*1-9);
+// 				codeText = commonMessage('CU_0027_04', (code*1-9));
+			}else if(code == 99 || code == 10){
+// 				codeText = '전체';
+				codeText = commonMessage('MA_0014_09');
+			}else{
+// 				codeText = '성인';
+				codeText = commonMessage('CU_0027_05');
+			}
+			if(i == 0){
+				text = codeText;
+			}else{
+				text = ", " + codeText;
+			} */
+	    }
+
+
+	}
+	return text;
+}
+
+
+//리뷰 목록 세팅
+var fnProductReviewList = function(resData){
+
+	var btnNext = $("#btnMore");
+
+	var totalCnt = 0;
+	if(!$.isEmpty(resData) && !$.isEmpty(resData.reviewlist)){
+		$('#reviewEmpty').css('display', 'none');
+		$('#reviewSection').css('display', 'block');
+
+// 		$('#reviewCnt').text(resData.totalCnt==null?0:resData.totalCnt);
+		var reviewCnt = resData.totalCnt==null?0:resData.totalCnt;
+		if(reviewCnt > 10000000 && reviewCnt < 99999999){
+			reviewCnt = (reviewCnt+"").substring(0,1) +"천만";
+
+		}else if (reviewCnt > 1000000 ){
+			reviewCnt = (reviewCnt+"").substring(0,1) +"백만";
+
+		}else if (reviewCnt > 100000 ){
+			reviewCnt = (reviewCnt+"").substring(0,2) +"만";
+
+		}else if (reviewCnt > 10000 ){
+			reviewCnt = (reviewCnt+"").substring(0,1) +"." +reviewCnt.substring(1,2) +"만";
+
+		}else if (reviewCnt > 1000 ){
+			reviewCnt = (reviewCnt+"").substring(0,1) +"." +reviewCnt.substring(1,2)+ "천";
+
+		}
+
+		$('#reviewSection .reply-desc').html(commonMessage('AD_0013_03','<span id="reviewCnt">'+reviewCnt+'</span>'));
+
+
+		var totalCnt = resData.totalCnt;
+		var nextStartRow = btnNext.data("startrow") + btnNext.data("pagerowcnt");
+
+		var reviewHtml = '';
+		console.log(resData.reviewlist);
+
+		$.each(resData.reviewlist, function(index, item){
+			reviewHtml += '<div class="list">';
+			reviewHtml += '<div class="article">';
+
+			//별점
+			var iconHtml = '';
+			var starCount = item.starCount == null?0:item.starCount;
+			for(var i = 0 ; i <item.starCount ; i++){
+				iconHtml += '<img src="../../img/common/icon-20-star@2x.png" width="16">';
+			}
+			for(var i = 0 ; i <5-item.starCount ; i++){
+				iconHtml += '<img src="../../img/common/icon-20-star-none@2x.png" width="16">';
+			}
+
+			reviewHtml += '<div class="rating"><span class="star">'+iconHtml+'</span> </div>';
+
+		    var userInfo = '';
+			if(item.memberType == "" || item.memberType == null){
+				//학생
+				userInfo = makeStudentGradeByCodeChangeLang(item.studentGrade);
+			}else if(item.memberType == "1"){
+				//관리자
+				userInfo =  commonMessage('AD_0013_07'); //makeStudentGradeByCodeChangeLang(item.studentGrade)
+			}else if(item.memberType == "0" || item.memberType == "2"){
+				//학부모
+				if(item.studentGradeList != null){
+					userInfo = makeStudentGradeListByCodeChangeLang(item.studentGradeList)+ commonMessage('AD_0013_06');
+				}else{
+					userInfo = makeStudentGradeByCodeChangeLang(item.studentGrade)+ commonMessage('AD_0013_06');
+				}
+			}
+
+			reviewHtml += '<div class="name">';
+			reviewHtml += '<span class="user">'+item.createName+'</span>';
+			reviewHtml += '<span class="user-info">('+userInfo+')</span>';
+			reviewHtml += '<span class="date">'+item.regTime+'</span>';
+			reviewHtml += '</div>';
+
+			reviewHtml += '<div class="desc"  style="word-wrap: break-word;">'+filter(item.review)+'</div>';
+	        reviewHtml += '</div>';
+	        if(!$.isEmpty(item.answer)){
+		        reviewHtml += '<div class="reply">';
+		        reviewHtml += '<div class="name"><img src="../../img/common/icon-24-reply@2x.png" width="24"><span class="font-weight-bold">'+item.brandName+'</span><span class="date">'+item.answerTime+'</span></div>';
+		        reviewHtml += '<div class="desc"  style="word-wrap: break-word;">'+item.answer+'</div>';
+		        reviewHtml += '</div>';
+	        }
+
+
+// 			+item.createName+'<span class="font-weight-bold">('+userInfo+')</span></div>'; <span class="date">''</span>
+
+	        //비로그인인 경우 안보임
+	        if(loginSid != null ){
+		        reviewHtml += '<div class="help">';
+		        if(item.helpful){
+		        	//취소하는버튼
+			        reviewHtml += '<a onclick="fnGoodReview('+item.reviewId+',0);" class="btn btn-block btn-recommend active"  id="review_'+item.reviewId+'"><span class="txt-recommend">추천</span></a>';
+		        }else{
+		        	//도움이돼요
+		        	reviewHtml += '<a onclick="fnGoodReview('+item.reviewId+',1);" class="btn btn-block btn-recommend" id="review_'+item.reviewId+'"><span class="txt-recommend">추천</span></a>'
+		        }
+		        //리뷰 수정 버튼
+		        /*[9월 오픈] 리뷰수정 못함
+		        if(loginSid != null && item.createId == loginSid && $.isEmpty(item.answer)){
+			        reviewHtml += '<a onclick="clickRatingBtn(\''+item.reviewId+'\',\''+$('#title').text()+'\',\''+item.starCount+'\',\''+item.review+'\',\''+item.createId+'\');" class="btn btn-block btn-primary"  data-text="MY_0050_01" id="review_'+item.reviewId+'"> 평가 수정하기</a>';
+
+		        }*/
+		        reviewHtml += '</div>';
+	        }
+	        reviewHtml += '</div>';
+
+		});
+
+		$('#reviewContents').append(reviewHtml);
+
+		$("#reviewCont").on("keydown", function() {
+			fnModifyYn();
+	});
+
+		btnNext.data("startrow", nextStartRow)
+		setLanguage("#reviewSection");
+// 		btnNext.data("option", item.option);
+
+		//더보기 버튼
+		if(nextStartRow < totalCnt){
+			$('#btnMore').show();
+		}else{
+			$('#btnMore').hide();
+		}
+
+	}else{
+
+		//등록된 리뷰 없음
+		$('#reviewEmpty').css('display', 'block');
+		$('#reviewSection').css('display', 'none');
+	}
+}
+
+//평가하기
+var fnAddReview = function(resData){
+	bundle('#rating').modal('hide');
+	//평가하기 창 뒤에 스크롤
+	$("body").removeClass("overflow-hidden");
+	$('#ratingText').val('');
+	if(!$.isEmpty(resData) && resData.success ){
+		//완료
+// 		alert("평가가 완료되었습니다");
+// 		bundle('#rating').modal('hide');
+// 		$('.modal-stack.modal-backdrop').removeClass('show').addClass('hide');
+
+		//평가 완료 후 -리뷰 재조회
+		$('#orderNew').trigger('click');
+// 		$('#nav-review-tab').trigger('click');
+	}else{
+		//실패
+// 		alert(resData.errorMessage);
+// 		bundle('#rating').modal('hide');
+// 		$('.modal-stack.modal-backdrop').removeClass('show').addClass('hide');
+// 		$('.modal-stack.modal-backdrop').removeClass('modal-backdrop');
+	};
+}
+
+//관련학습 세팅
+/*
+var fnProductRelate = function(resData){
+	$('#similarSection').hide();
+	$('#withSection').hide();
+	$('#otherSection').hide();
+
+	$('#similarProduct').empty();
+	$('#withProduct').empty();
+	$('#otherProduct').empty();
+
+	if(!$.isEmpty(resData)){
+// 		console.log(resData);
+		var ck = 0;
+		//유사학습
+		if(!$.isEmpty(resData.similarList)){
+			var template = '';
+			$.each(resData.similarList, function(index, item){
+				template += '<li class="edu-item-list">';
+				template += '	<a href="javascript:;" onClick="goProducctDetailPage(\''+item.saleProductCode+'\')">';
+				template += '	<a href="/webapp/html/product/detail.html?saleProductCode='+item.saleProductCode+'">';
+				template += '		 <div class="img">';
+				template += '			<img src="'+item.icon+'" alt="'+item.productName+'">';
+// 				template += '			<div class="sticker-num"><span>'+item.rank+'<span></div>';
+				template += '		</div>';
+
+				template += '		<div class="list-body">';
+				template += '		<div class="sticker-area">';
+
+				//홈런배지여부
+				if(item.homelearnBadgeYn == "Y"){
+					template += '			<div class="sticker-homelearn"><span data-text="CU_0024_01">홈런 전용</span></div>';
+				}
+
+				//패키지 배지여부
+				if(item.packageBadgeYn == "Y"){
+					template += '			<div class="sticker-package"><span data-text="CU_0024_02">패키지</span></div>';
+				}
+
+				//무료배지여부, 할인배지여부
+				if(item.freeBadgeYn == "Y"){
+					template += '			<div class="sticker-free"><span data-text="CU_0024_04">FREE</span></div>';
+				}else if(item.discountBadgeYn == "Y"){
+					template += '		<div class="sticker-discount-sm">';
+					template += '			<span>'+Math.round(item.discountPercent*100)+'<i class="percent">%</i></span>';
+					template += '		</div>';
+				}
+
+				template += '		</div>';
+				template += '			<span class="title">'+item.productName+'</span>';
+
+				//별점
+				template += '			<span class="score">';
+// 				if(item.starCount > 0){
+					template += '			<i class="sprite icon-16-star"></i>'+item.starCount;
+// 				}else{
+// 					template += '			<i class="sprite"></i>';
+// 				}
+				template += '			</span>';
+
+				//학습중
+				if(item.subscribeYn == "Y"){
+// 					template += '		<span class="s-sticker"><i class="sprite icon-list-badge-subscribe"></i></span>';
+					template += '		<span class="badge-list" data-text="CU_0023_02">학습중</span>';
+				}
+
+				template += '		</div>';
+				template += '	</a>';
+				template += '</li>';
+			});
+			$('#similarProduct').html(template);
+			$('#similarSection').show();
+			setLanguage("#similarProduct");
+			ck++;
+		}
+
+		//함께 공부한 학습
+		if(!$.isEmpty(resData.withList)){
+			template = '';
+			$.each(resData.withList, function(index, item){
+
+				template += '<li class="edu-item-list">';
+				template += '	<a href="javascript:;" onClick="goProducctDetailPage(\''+item.saleProductCode+'\')">';
+				template += '	<a href="/webapp/html/product/detail.html?saleProductCode='+item.saleProductCode+'">';
+				template += '		 <div class="img">';
+				template += '			<img src="'+item.icon+'" alt="'+item.productName+'">';
+// 				template += '			<div class="sticker-num"><span>'+item.rank+'<span></div>';
+				template += '		</div>';
+
+				template += '		<div class="list-body">';
+				template += '		<div class="sticker-area">';
+
+				//홈런배지여부
+				if(item.homelearnBadgeYn == "Y"){
+					template += '			<div class="sticker-homelearn"><span data-text="CU_0024_01">홈런 전용</span></div>';
+				}
+
+				//패키지 배지여부
+				if(item.packageBadgeYn == "Y"){
+					template += '			<div class="sticker-package"><span data-text="CU_0024_02">패키지</span></div>';
+				}
+
+				//무료배지여부, 할인배지여부
+				if(item.freeBadgeYn == "Y"){
+					template += '			<div class="sticker-free"><span data-text="CU_0024_04">FREE</span></div>';
+				}else if(item.discountBadgeYn == "Y"){
+					template += '		<div class="sticker-discount-sm">';
+					template += '			<span>'+Math.round(item.discountPercent*100)+'<i class="percent">%</i></span>';
+					template += '		</div>';
+				}
+
+				template += '		</div>';
+				template += '			<span class="title">'+item.productName+'</span>';
+
+				//별점
+				template += '			<span class="score">';
+// 				if(item.starCount > 0){
+					template += '			<i class="sprite icon-16-star"></i>'+item.starCount;
+// 				}else{
+// 					template += '			<i class="sprite"></i>';
+// 				}
+				template += '			</span>';
+
+				//학습중
+				if(item.subscribeYn == "Y"){
+// 					template += '		<span class="s-sticker"><i class="sprite icon-list-badge-subscribe"></i></span>';
+					template += '		<span class="badge-list" data-text="CU_0023_02">학습중</span>';
+				}
+
+				template += '		</div>';
+				template += '	</a>';
+				template += '</li>';
+			});
+
+			$('#withProduct').html(template);
+			$('#withSection').show();
+			setLanguage("#withProduct");
+			ck++;
+		}
+
+		//동일 브랜드 다른 학습
+		if(!$.isEmpty(resData.otherList)){
+			template = '';
+			$.each(resData.otherList, function(index, item){
+				template += '<li class="edu-item-list">';
+				template += '	<a href="javascript:;" onClick="goProducctDetailPage(\''+item.saleProductCode+'\')">';
+				template += '	<a href="/webapp/html/product/detail.html?saleProductCode='+item.saleProductCode+'">';
+				template += '		 <div class="img">';
+				template += '			<img src="'+item.icon+'" alt="'+item.productName+'">';
+// 				template += '			<div class="sticker-num"><span>'+item.rank+'<span></div>';
+				template += '		</div>';
+
+				template += '		<div class="list-body">';
+				template += '		<div class="sticker-area">';
+
+				//홈런배지여부
+				if(item.homelearnBadgeYn == "Y"){
+					template += '			<div class="sticker-homelearn"><span data-text="CU_0024_01">홈런 전용</span></div>';
+				}
+
+				//패키지 배지여부
+				if(item.packageBadgeYn == "Y"){
+					template += '			<div class="sticker-package"><span data-text="CU_0024_02">패키지</span></div>';
+				}
+
+				//무료배지여부, 할인배지여부
+				if(item.freeBadgeYn == "Y"){
+					template += '			<div class="sticker-free"><span data-text="CU_0024_04">FREE</span></div>';
+				}else if(item.discountBadgeYn == "Y"){
+					template += '		<div class="sticker-discount-sm">';
+					template += '			<span>'+Math.round(item.discountPercent*100)+'<i class="percent">%</i></span>';
+					template += '		</div>';
+				}
+
+				template += '		</div>';
+				template += '			<span class="title">'+item.productName+'</span>';
+
+				//별점
+				template += '			<span class="score">';
+// 				if(item.starCount > 0){
+					template += '			<i class="sprite icon-16-star"></i>'+item.starCount;
+// 				}else{
+// 					template += '			<i class="sprite"></i>';
+// 				}
+				template += '			</span>';
+
+				//학습중
+				if(item.subscribeYn == "Y"){
+// 					template += '		<span class="s-sticker"><i class="sprite icon-list-badge-subscribe"></i></span>';
+					template += '		<span class="badge-list" data-text="CU_0023_02">학습중</span>';
+				}
+
+
+				template += '		</div>';
+				template += '	</a>';
+				template += '</li>';
+			});
+
+			$('#otherProduct').html(template);
+			$('#otherSection').show();
+			setLanguage("#otherProduct");
+			ck++;
+		}
+		//구분선 조정
+		if(ck == 1){
+			$('.relative-section').css('border-top','none');
+		}else if (ck == 2){
+			if(resData.similarList.length == 0){
+				$('#withSection.relative-section').css('border-top','none');
+			}else if(resData.withList.length == 0){
+				$('#otherSection.relative-section').css('border-top','none');
+			}
+
+		}
+
+	}
+}
+*/
+
+
+//페이징 정보 초기화
+function resetBtnMore(){
+	$("#btnMore").data("startrow",0);
+	$("#btnMore").data("pagerowcnt",20);
+	//$("#btnMore").data("option",0);//도움되는순
+}
+
+//조르기 결과
+var fnPleaseBuyMe = function(resData){
+	if(!$.isEmpty(resData) && resData.success ){
+		//완료
+		bundle('#alert').modal('show');
+		$('.buyMe').addClass('disabled');
+		$('.buyMe').removeClass('install');
+		//팝업도 안보이게
+		sessionStorage.setItem("dontShowAgain","Y");
+		$('._please').find('.info').hide();
+	}else{
+		//실패
+		commonAlert('CU_0002_01');
+	};
+
+}
+var wordjson = "";
+function getWord(){
+	$.getJSON('../word.json', function(data) {
+		wordjson = data.data;
+	});
+}
+function filter(txt){
+	$.each(wordjson, function(index, item){
+		txt = txt.replaceAll(item.word, "♡");
+	});
+	return txt;
+}
+String.prototype.replaceAll = function(org, dest) {
+    return this.split(org).join(dest);
+}
+
+</script>
+
+</body></html>

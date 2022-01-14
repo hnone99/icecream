@@ -1,0 +1,77 @@
+// ========================================================================
+// [mall] | 기존 css 추가 수정
+// ========================================================================
+// 콘사용 - 가상계좌 결제시 문구
+.cont-group .data-list .cont input:disabled{
+  // IOS 대응
+  opacity: 1 !important;
+}
+.cont-group .data-list .cont input.inp-txt:disabled{
+  background-color: transparent;
+  color: #bbb;
+  // IOS 대응
+  -webkit-text-fill-color: #bbb !important;
+}
+.mypage.cs .tbl-list.ty02 tbody tr td:first-child{
+  margin-right: 100px;
+}
+// 결제 취소 화면 - 텍스트 하단 이슈
+.cont-group#blkClaimComputeResult{
+  .txt-box{
+    padding: 1.083rem 0 40px 0;
+  }
+}
+// 마이페이지 포인트 아이콘
+.asset-card .card-cont-wrap ul li i:before{
+  width: 2.083rem;
+  height: 2.083rem;
+  background-image: url("#{$imgOldCommonPath}/ico_asset_card.png");
+  background-size: 8.333rem 2.083rem;
+  background-repeat: no-repeat;
+}
+.asset-card .card-cont-wrap ul li.point i:before{
+  background-position: -4.167rem 0;
+  background-size: 8.333rem 2.083rem;
+}
+// 마이페이지 나의 포인트 아이콘
+.asset-card.ty02 .card-top-wrap.mile .txt-box:before{
+  width: 4rem;
+  height: 4rem;
+  background-image: url("#{$imgOldCommonPath}/ico_asset_card.png");
+  background-position: -8rem 0;
+  background-size: 16rem 4rem;
+  background-repeat: no-repeat;
+}
+#rcvAddrDetail.inp-txt{
+  height: auto;
+}
+
+@media (min-width: 1025px){
+  .cont-group#blkClaimComputeResult{
+    .txt-box{
+      padding: 12px 0 40px 0;
+    }
+  }
+  // 마이페이지 아이콘
+  .asset-card .card-cont-wrap ul li i:before{
+    width: 40px;
+    height: 44px;
+    background-image: url("#{$imgOldCommonPath}/ico_asset_card.png");
+    background-size: 160px 40px;
+    background-repeat: no-repeat;
+  }
+  // 마이페이지 포인트 아이콘
+  .asset-card .card-cont-wrap ul li.point i:before{
+    background-position: -80px 4px;
+    background-size: 160px 40px;
+  }
+  // 마이페이지 나의 포인트 아이콘
+  .asset-card.ty02 .card-top-wrap.mile .txt-box:before{
+    width: 60px;
+    height: 60px;
+    background-image: url("#{$imgOldCommonPath}/ico_asset_card.png");
+    background-position: -120px 0;
+    background-size: 240px 60px;
+    background-repeat: no-repeat;
+  }
+}

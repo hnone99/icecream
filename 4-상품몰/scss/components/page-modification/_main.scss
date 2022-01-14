@@ -1,0 +1,17 @@
+// ========================================================================
+// [main] | 기존 css 추가 수정
+// ========================================================================
+// class가 같아 sub 페이지도 적용됨
+.product-area .product-list .thumb{
+  a{
+    border: 1px solid #e6e6e6;
+  }
+  img{
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}

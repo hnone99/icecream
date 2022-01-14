@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>홈런몰</title>
+	<link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/mall.css">
+	<!-- 210830 상단/하단 css추가 -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Exo:300,600,800&display=swap" rel="stylesheet"> <!-- 200213 수정 -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<!-- 210830 slick js 변경 -->
+	<script type="text/javascript" src="../js/slick.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+	<div id="wrap">
+
+		<!-- 210830 상단 GNB 추가 -->
+		<div class="ui-new">
+			<!-- ###ui-header-box -->
+		  <header class="ui-header-box">
+		    <div class="ui-header-box-wrap">
+		      <!-- ##로고 -->
+		      <h1 class="header-logo">
+		        <a href="#">
+		          <span class="img-logo">i-scream eco</span>
+		        </a>
+		      </h1>
+		      <!-- ##탭 -->
+		      <nav class="header-tab">
+		        <ul class="tab-list-grp">
+		          <!-- js 탭 활성화 on추가  -->
+		          <li class="tab-list">
+		            <span>학습<span class="txt-mall">mall</span></span>
+		          </li>
+		          <li class="tab-list on">
+		            <span>상품<span class="txt-mall">mall</span></span>
+		          </li>
+		        </ul>
+		      </nav>
+		      <!-- ##버튼 -->
+		      <div class="header-btn">
+		        <button class="btn-loginout">로그인</button>
+		        <button class="btn-joinus">회원가입</button>
+		      </div>
+		    </div>
+		  </header>
+		  <!-- //###ui-header-box -->
+
+			<!-- ###ui-sub-box -->
+		  <div class="ui-sub-box">
+		    <div class="ui-sub-box-wrap">
+		      <!-- #이전 버튼 -->
+		      <!-- js 이전 버튼 비활성화 off -->
+		      <div class="sub-prev-area off">
+		        <button class="sub-btn-prev">
+		          <i class="ico i-sub-btn-prev">이전</i>
+		        </button>
+		      </div>
+		      <!-- ##서브 메뉴 -->
+		      <div class="sub-menu-area">
+		        <ul class="sub-menu-grp device-pc">
+		          <!-- js 탭 활성화 on추가  -->
+		          <li class="sub-menu on">
+		            <a href="">#전체</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#진단검사도구</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#체험키트</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#체험캠프</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#홈런굿즈</a>
+		          </li>
+		          <li class="sub-menu">
+		            <a href="">#이벤트</a>
+		          </li>
+		        </ul>
+		        <!-- #서브 검색/모바일 메뉴 리스트 -->
+		        <!-- 모바일에서만 사용 -->
+		        <ul class="sub-menu-list-grp device-mo">
+		          <li class="sub-menu-list sl-search">
+		            <button class="sub-btn-util">
+		              <i class="ico i-top-search">검색</i>
+		            </button>
+		          </li>
+		          <li class="sub-menu-list sl-basket">
+		            <button class="sub-btn-util">
+		              <i class="ico i-top-basket">장바구니</i>
+		            </button>
+		          </li>
+		          <li class="sub-menu-list sl-menu">
+		            <button class="sub-btn-util">
+		              <i class="ico i-top-menu">메뉴리스트</i>
+		            </button>
+		          </li>
+		        </ul>
+		      </div>
+					<!-- //##서브 메뉴 -->
+
+		      <!-- ##서브 검색/마이페이지 -->
+		      <div class="sub-util-area">
+		        <button class="sub-btn-util">
+		          <i class="ico i-top-search">검색</i>
+		        </button>
+		        <button class="sub-btn-util">
+		          <i class="ico i-top-basket">장바구니</i>
+		        </button>
+		        <button class="sub-btn-util">
+		          <i class="ico i-top-member">마이페이지</i>
+		        </button>
+		      </div>
+					<!-- //##서브 검색/마이페이지 -->
+
+					<!-- ##서브 검색창 영역 / 기존 소스 활용 -->
+					<div class="search-box _searchBox" style="display: block">
+		        <div class="input-group">
+		          <!-- 검색 뒤로가기 -->
+		          <button class="btn-search-back">
+		            <i class="ico i-search-btn-back">검색 뒤로가기</i>
+		          </button>
+
+		          <input class="form-control _search" type="search" placeholder="검색어 입력" data-placeholder="CU_0010_01"  aria-label="Search">
+		          <a href="#" class="btn-search"><img src="../images/eco-common/btn-search-color-n@3x.png" alt=""></a>
+		          <a href="#" class="btn-search-close _searchClear"><img src="../images/eco-common/btn-text-delete-n@3x.png" alt="" width="16" height="16"></a>
+		          <button class="sub-btn-util btn-util-basket">
+		            <i class="ico i-top-basket">장바구니</i>
+		          </button>
+		          <button class="sub-btn-util btn-util-menu">
+		            <i class="ico i-top-menu">메뉴리스트</i>
+		          </button>
+		        </div>
+		        <div class="search-content">
+		          <div class="search-list">
+		            <p data-text="CU_0010_02">최근 검색어</p>
+		            <ul>
+		              <li>
+		                <a class="item-1" href="#">
+		                  <span class="img"><img src="../images/eco-common/icon-24-search-recent@3x.png" alt=""></span>
+		                  <span class="text">중등 수학</span>
+		                </a>
+		                <div class="item-2">
+		                  <span class="date">12. 06</span>
+		                  <a href="#"><img src="../images/eco-common/btn-delete-n@3x.png" alt="" width="20" height="20"></a>
+		                </div>
+		              </li>
+		              <li>
+		                <a class="item-1" href="#">
+		                  <span class="img"><img src="../images/eco-common/icon-24-search-recent@3x.png" alt=""></span>
+		                  <span class="text">연산</span>
+		                </a>
+		                <div class="item-2">
+		                  <span class="date">12. 03</span>
+		                  <a href="#"><img src="../images/eco-common/btn-delete-n@3x.png" alt="" width="20" height="20"></a>
+		                </div>
+		              </li>
+		              <li>
+		                <a class="item-1" href="#">
+		                  <span class="img"><img src="../images/eco-common/icon-24-search-recent@3x.png" alt=""></span>
+		                  <span class="text">영단어</span>
+		                </a>
+		                <div class="item-2">
+		                  <span class="date">12. 02</span>
+		                  <a href="#"><img src="../images/eco-common/btn-delete-n@3x.png" alt="" width="20" height="20"></a>
+		                </div>
+		              </li>
+		              <li>
+		                <a class="item-1" href="#">
+		                  <span class="img"><img src="../images/eco-common/icon-24-search-recent@3x.png" alt=""></span>
+		                  <span class="text">영문법</span>
+		                </a>
+		                <div class="item-2">
+		                  <span class="date">12. 01</span>
+		                  <a href="#"><img src="../images/eco-common/btn-delete-n@3x.png" alt="" width="20" height="20"></a>
+		                </div>
+		              </li>
+		            </ul>
+		          </div>
+		        </div>
+		      </div>
+					<!-- //##서브 검색창 영역 -->
+
+		    </div>
+		  </div>
+		  <!-- //###ui-sub-box -->
+
+			<!-- ui-container-box -->
+			<div class="ui-container-box">
+
+				<!-- ##ui-banner-box -->
+				<div class="ui-banner-box">
+					<section class="main-slider">
+						<div>
+							<a href="">
+								<img src="../images/_temp-new/img-slide-banner-1.jpg" alt="슬라이더 이미지" class="bg-img device-pc" width="1920" height="420">
+								<img src="../images/_temp-new/img-slide-banner-1@2x.jpg" alt="슬라이더 이미지" class="bg-img device-mo" width="480" height="420">
+							</a>
+						</div>
+						<div>
+							<a href="">
+								<img src="../images/_temp-new/img-slide-banner-2.jpg" alt="슬라이더 이미지" class="bg-img device-pc" width="1920" height="420">
+								<img src="../images/_temp-new/img-slide-banner-2@2x.jpg" alt="슬라이더 이미지" class="bg-img device-mo" width="480" height="420">
+							</a>
+						</div>
+						<div>
+							<a href="">
+								<img src="../images/_temp-new/img-slide-banner-3.jpg" alt="슬라이더 이미지" class="bg-img device-pc" width="1920" height="420">
+								<img src="../images/_temp-new/img-slide-banner-3@2x.jpg" alt="슬라이더 이미지" class="bg-img device-mo" width="480" height="420">
+							</a>
+						</div>
+					</section>
+				</div>
+				<!-- //##ui-banner-box -->
+
+				<!-- ##서브 메뉴 -->
+				<!-- 모바일에서만 사용 -->
+				<div class="sub-menu-area device-mo">
+					<ul class="sub-menu-grp">
+						<!-- js 탭 활성화 on추가  -->
+						<li class="sub-menu on">
+							<a href="">#전체</a>
+						</li>
+						<li class="sub-menu">
+							<a href="">#진단검사도구</a>
+						</li>
+						<li class="sub-menu">
+							<a href="">#체험키트</a>
+						</li>
+						<li class="sub-menu">
+							<a href="">#체험캠프</a>
+						</li>
+						<li class="sub-menu">
+							<a href="">#홈런굿즈</a>
+						</li>
+						<li class="sub-menu">
+							<a href="">#이벤트</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //ui-container-box -->
+		</div>
+		<!-- //210830 상단 GNB 추가 -->
+
+		<!-- container -->
+		<div class="container main-content">
+
+			<!-- 210830 main-visual-wrap 삭제 -->
+
+
+			<!-- 상단 상품영역 -->
+			<div class="main-mid-wrap">
+				<div class="left">
+					<div class="inner">
+						<div class="ad-wrap video">
+							<div class="thumb red-line">
+								<a href="">
+									<img src="../images/main/img_video.png" alt="" />
+								</a>
+							</div>
+							<a href="" class="ad-info">
+								<p class="tit">2019년 두근두근하는 크리스마스 패키지 언박싱!</p>
+								<span>리미티드로 나온 홈런프렌즈 만의 스폐셜 크리스마스 패키지</span>
+							</a>
+						</div>
+						<!-- 상품 목록 -->
+						<div class="product-area category">
+							<ul class="product-list">
+								<li>
+									<div class="thumb">
+										<a href="">
+											<img src="../images/sample/pdt_cup.jpg" alt="" />
+										</a>
+										<div class="pdt-badge">
+											<!-- [D] 200213 크리스마스 뱃지 추가 -->
+											<span class="badge red">크리스마스</span>
+											<!-- //[D] 200213 크리스마스 뱃지 추가 -->
+										</div>
+										<button type="button" class="icon like">찜</button>
+									</div>
+									<a href="" class="pdt-info">
+										<p class="tit">홈런프렌즈 2020년 컵</p>
+										<strong class="price"><span>22,000</span>원</strong>
+										<div class="pdt-tag-box">
+											<span class="tag">#태그</span>
+											<span class="tag">#태그</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<div class="thumb">
+										<a href="">
+											<img src="../images/sample/pdt_dduru.jpg" alt="" />
+										</a>
+										<div class="pdt-badge">
+											<!-- [D] 200213 크리스마스 뱃지 추가 -->
+											<span class="badge red">크리스마스</span>
+											<!-- //[D] 200213 크리스마스 뱃지 추가 -->
+										</div>
+										<button type="button" class="icon like">찜</button>
+									</div>
+									<a href="" class="pdt-info">
+										<p class="tit">뚜루뚜루 스카이 인형</p>
+										<strong class="price"><span>22,000</span>원</strong>
+										<div class="pdt-tag-box">
+											<span class="tag">#태그</span>
+											<span class="tag">#태그</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //상품 목록 -->
+					</div>
+				</div>
+				<div class="right">
+					<div class="inner">
+						<div class="ad-wrap">
+							<div class="thumb blue-line">
+								<a href="">
+									<img src="../images/main/img_exhibition01.png" alt="" />
+								</a>
+							</div>
+							<a href="" class="ad-info">
+								<p class="tit">2019년 두근두근하는 크리스마스 패키지 언박싱!</p>
+								<span>리미티드로 나온 홈런프렌즈 만의 스폐셜 크리스마스 패키지</span>
+							</a>
+						</div>
+						<!-- 상품 목록 -->
+						<div class="product-area category">
+							<ul class="product-list">
+								<li>
+									<div class="thumb">
+										<a href="">
+											<img src="../images/sample/pdt_dduru.jpg" alt="" />
+										</a>
+										<div class="pdt-badge ty02">
+											<!-- [D] 200213 기획전 뱃지 추가 -->
+											<span class="badge blue">기획전</span>
+											<!-- //[D] 200213 기획전 뱃지 추가 -->
+										</div>
+										<button type="button" class="icon like">찜</button>
+									</div>
+									<a href="" class="pdt-info">
+										<p class="tit">뚜루뚜루 스카이 인형</p>
+										<strong class="price"><span>22,000</span>원</strong>
+										<div class="pdt-tag-box">
+											<span class="tag">#태그</span>
+											<span class="tag">#태그</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<div class="thumb">
+										<a href="">
+											<img src="../images/sample/pdt_dduru.jpg" alt="" />
+										</a>
+										<div class="pdt-badge ty02">
+											<!-- [D] 200213 기획전 뱃지 추가 -->
+											<span class="badge blue">기획전</span>
+											<!-- [D] 200213 기획전 뱃지 추가 -->
+										</div>
+										<button type="button" class="icon like">찜</button>
+									</div>
+									<a href="" class="pdt-info">
+										<p class="tit">뚜루뚜루 스카이 인형</p>
+										<strong class="price"><span>22,000</span>원</strong>
+										<div class="pdt-tag-box">
+											<span class="tag">#태그</span>
+											<span class="tag">#태그</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //상품 목록 -->
+					</div>
+				</div>
+			</div>
+			<!--// 상단 상품영역 -->
+
+			<!-- 상품 중단 영역 새로나온 신상품 -->
+			<div class="main-tit">새로나온 신상품</div>
+			<div class="main-mid-wrap new-product">
+				<div class="left">
+					<div class="inner">
+						<!-- 상품 목록 -->
+						<div class="product-area category">
+							<ul class="product-list">
+								<li>
+									<div class="thumb">
+										<a href="">
+											<img src="../images/sample/pdt_cup.jpg" alt="" />
+										</a>
+										<button type="button" class="icon like">찜</button>
+									</div>
+									<a href="" class="pdt-info">
+										<p class="tit">홈런프렌즈 2020년 컵</p>
+										<strong class="price"><span>22,000</span>원</strong>
+										<div class="pdt-tag-box">
+											<span class="tag">#태그</span>
+											<span class="tag">#태그</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //상품 목록 -->
+					</div>
+				</div>
+				<div class="right">
+					<div class="inner">
+
+						<!-- 상품 목록 -->
+						<div class="product-area category">
+							<ul class="product-list">
+								<li>
+									<div class="thumb">
+										<a href="">
+											<img src="../images/sample/pdt_cup.jpg" alt="" />
+										</a>
+										<button type="button" class="icon like">찜</button>
+									</div>
+									<a href="" class="pdt-info">
+										<p class="tit">홈런프렌즈 2020년 컵</p>
+										<strong class="price"><span>22,000</span>원</strong>
+										<div class="pdt-tag-box">
+											<span class="tag">#태그</span>
+											<span class="tag">#태그</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<div class="thumb">
+										<a href="">
+											<img src="../images/sample/pdt_dduru.jpg" alt="" />
+										</a>
+										<button type="button" class="icon like">찜</button>
+									</div>
+									<a href="" class="pdt-info">
+										<p class="tit">뚜루뚜루 스카이 인형</p>
+										<strong class="price"><span>22,000</span>원</strong>
+										<div class="pdt-tag-box">
+											<span class="tag">#태그</span>
+											<span class="tag">#태그</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<div class="thumb">
+										<a href="">
+											<img src="../images/sample/pdt_cup.jpg" alt="" />
+										</a>
+										<button type="button" class="icon like">찜</button>
+									</div>
+									<a href="" class="pdt-info">
+										<p class="tit">홈런프렌즈 2020년 컵</p>
+										<strong class="price"><span>22,000</span>원</strong>
+										<div class="pdt-tag-box">
+											<span class="tag">#태그</span>
+											<span class="tag">#태그</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<div class="thumb">
+										<a href="">
+											<img src="../images/sample/pdt_dduru.jpg" alt="" />
+										</a>
+										<button type="button" class="icon like">찜</button>
+									</div>
+									<a href="" class="pdt-info">
+										<p class="tit">뚜루뚜루 스카이 인형</p>
+										<strong class="price"><span>22,000</span>원</strong>
+										<div class="pdt-tag-box">
+											<span class="tag">#태그</span>
+											<span class="tag">#태그</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //상품 목록 -->
+					</div>
+				</div>
+			</div>
+			<!--// 상품 중단 영역 -->
+
+			<!-- 상품 하단 영역 최고인기 상품 -->
+			<div class="main-tit">최고인기</div>
+			<div class="main-bot-wrap ad-product">
+				<div class="ad-wrap">
+					<a href="">
+						<img src="../images/main/img_ad1_m.png" class="img-m" alt="" />
+						<img src="../images/main/img_ad1_pc.png" class="img-pc" alt="" />
+					</a>
+				</div>
+				<!-- 상품 목록 -->
+				<div class="product-area category">
+					<ul class="product-list">
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //상품 목록 -->
+			</div>
+			<!--// 상품 하단 영역 -->
+
+			<!-- 상품 하단 영역 내 친구 뚜루뚜루 상품 -->
+			<div class="main-tit">내 친구 뚜루뚜루</div>
+			<div class="main-bot-wrap ad-product">
+				<div class="ad-wrap">
+					<a href="">
+						<img src="../images/main/img_ad2_m.png" class="img-m" alt="" />
+						<img src="../images/main/img_ad2_pc.png" class="img-pc" alt="" />
+					</a>
+				</div>
+				<!-- 상품 목록 -->
+				<div class="product-area category">
+					<ul class="product-list">
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_cup.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">홈런프렌즈 2020년 컵</p>
+								<strong class="price"><span>22,000</span>원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<div class="thumb">
+								<a href="">
+									<img src="../images/sample/pdt_dduru.jpg" alt="" />
+								</a>
+								<button type="button" class="icon like">찜</button>
+							</div>
+							<a href="" class="pdt-info">
+								<p class="tit">뚜루뚜루 스카이 인형</p>
+								<strong class="price"><span>22,000</span>원</strong>
+								<div class="pdt-tag-box">
+									<span class="tag">#태그</span>
+									<span class="tag">#태그</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //상품 목록 -->
+			</div>
+			<!--// 상품 하단 영역 -->
+
+			<!-- 하단 공지사항 이벤트 영역 -->
+			<div class="main-notice-wrap">
+				<div class="left">
+					<div class="inner">
+						<div class="notice-wrap">
+							<div class="main-tit2">공지사항</div>
+							<ul>
+								<li>
+									<a href="">[공지] 홈런프렌즈가 리뉴얼되어 오픈되었습오픈되었습홈런프렌즈가 리뉴얼되어 오픈되었습오픈되었습</a>
+									<span>2019-10-20</span>
+								</li>
+								<li>
+									<a href="">[공지] 홈런프렌즈가 리뉴얼되어</a>
+									<span>2019-10-20</span>
+								</li>
+								<li>
+									<a href="">[공지] 홈런프렌즈가 리뉴얼되어 오픈되었</a>
+									<span>2019-10-20</span>
+								</li>
+								<li>
+									<a href="">[공지] 홈런프렌즈가 리뉴얼되어 오픈되었</a>
+									<span>2019-10-20</span>
+								</li>
+							</ul>
+							<a href="" class="more">더보기</a>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="inner">
+						<div class="event-wrap">
+							<div class="main-tit2">이벤트</div>
+							<div class="event-slider">
+								<div><a href=""><img src="../images/main/img_event01.png" alt="" /></a></div>
+								<div><a href=""><img src="../images/main/img_event01.png" alt="" /></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 하단 공지사항 이벤트 영역 -->
+
+			<!-- 하단 sns영역 -->
+			<div class="main-ad-wrap">
+				<ul>
+					<li><a href=""><img src="../images/main/img_bot1.png" alt=""></a></li>
+					<li><a href=""><img src="../images/main/img_bot2.png" alt=""></a></li>
+					<li><a href=""><img src="../images/main/img_bot3.png" alt=""></a></li>
+					<li><a href=""><img src="../images/main/img_bot4.png" alt=""></a></li>
+					<li><a href=""><img src="../images/main/img_bot5.png" alt=""></a></li>
+					<li><a href=""><img src="../images/main/img_bot6.png" alt=""></a></li>
+					<li><a href=""><img src="../images/main/img_bot7.png" alt=""></a></li>
+					<li><a href=""><img src="../images/main/img_bot8.png" alt=""></a></li>
+				</ul>
+			</div>
+			<!--// 하단 sns영역 -->
+		</div>
+		<!-- //container -->
+
+		<!-- 210830 하단 footer 추가 -->
+		<div class="ui-new">
+			<!-- 학습몰 이전 소스 활용 -->
+			<footer class="footer-box">
+			  <div class="container-footer">
+			    <div class="policy">
+			      <ul class="clearfix">
+			        <li class="item"><a href="#" data-text="CU_0018_01">회사소개</a></li>
+			        <li><a href="#" data-text="CU_0018_02">이용약관</a></li>
+			        <li><a href="#" data-text="CU_0018_03">개인정보처리방침</a></li>
+			      </ul>
+			    </div>
+			    <div class="family">
+			      <div class="input-group">
+							<select name="" id="" class="custom-select">
+								<option value="" data-text="CU_0018_12">FAMILY SITE</option>
+								<option value="" data-text="CU_0018_13">아이스크림홈런</option>
+								<option value="" data-text="CU_0018_14">아이스크림홈런중등</option>
+								<option value="" data-text="CU_0018_15">아이스크림에듀</option>
+								<option value="" data-text="CU_0018_16">아이스크림미디어</option>
+								<option value="" data-text="CU_0018_17">아이스크림</option>
+								<option value="" data-text="CU_0018_18">아이스크림몰</option>
+								<option value="" data-text="CU_0018_19">아이스크림연수원</option>
+							</select>
+			      </div>
+			    </div>
+			    <address>
+			      <p>
+			         <span class="address">
+								<em data-text="CU_0018_04">(주)아이스크림에듀<br>
+								서울특별시 강남구 테헤란로88길 15</em>
+								<em data-text="CU_0018_05">대표 : 조용상</em><br>
+		            <em data-text="CU_0018_06">상담 및 문의전화 : 1544-0910</em>
+								<em data-text="CU_0018_07">팩스 : (02)3448-5262</em><br>
+								<em data-text="CU_0018_08">사업자등록번호 : 120-87-97004</em>
+		            <em data-text="CU_0018_09">통신판매신고번호 : 제2013-서울강남-01379호</em><br>
+		            <em data-text="CU_0018_10">호스팅사업자 : AWS</em><br>
+							</span>
+			        <span class="copyright" data-text="CU_0018_11">Copyright © i-Scream edu Corporation. All rights reserved.</span>
+			      </p>
+			    </address>
+			  </div>
+			</footer>
+		</div>
+		<!-- //210830 하단 footer 추가 -->
+
+
+		<div class="fixed-btn-wrap">
+			<a href="" class="btn-customer"><span class="icon customer"></span>고객센터</a>
+			<a href="" class="btn-apply"><span class="icon apply"></span>홈런신청</a>
+			<button type="button" class="btn-top">Top</button>
+		</div>
+
+		<!-- [D] 200226 이벤트 팝업 추가 -->
+		<!-- pop-wrap -->
+		<!-- <div id="pop-join" class="pop-wrap fixed pop-main-event">
+			<div class="pop-wrap-inner">
+				<div class="pop-cont-inner">
+					<img src="../images/main/img_pop_event.jpg" alt="" />
+
+					<div class="btn-box">
+						<div class="chk-box">
+							<input type="checkbox" id="chk1">
+							<label for="chk1">일주일간 보지 않기</label>
+						</div>
+						<button class="btn-close" onclick="layerPop.hide(this)">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- //pop-wrap -->
+		<!-- //[D] 200226 이벤트 팝업 추가 -->
+
+	</div>
+	<!-- //wrap -->
+
+<script>
+	$(document).ready(function(){
+	  $('.main-visual-wrap').slick({
+	  	dots: true,
+	  	slidesToShow: 1,
+	  	slidesToScroll: 1,
+			fade: true,
+			autoplay: true // [D] 200310 자동 슬라이드 적용
+	  });
+	  $('.event-slider').slick({
+	  	dots: true,
+	  	slidesToShow: 1,
+	  	slidesToScroll: 1,
+	    fade: true
+	  });
+
+		// [S] 210830 메인 슬라이드 추가
+		// 메인 슬라이드
+
+	  $(".main-slider").slick({
+	    infinite: false,
+	    dots: true,
+	    arrows : true,
+	    speed : 300,
+	    autoplay : true,
+	    autoplaySpeed : 5000,
+			variableWidth: true,
+	    responsive: [
+	      {
+	        breakpoint: 1279,
+	        settings: {
+	          arrows : false,
+						dots: true
+	        }
+	      },
+				{
+	        breakpoint: 960,
+	        settings: {
+	          arrows : false,
+						dots: true,
+						variableWidth: false
+	        }
+	      }
+	    ]
+	  });
+		// $(".main-slider .slick-dots").wrap( "<div class='slick-dots-wrap'></div>" );
+		// $( ".main-slider" ).wrap( "<div class='main-slider-box'></div>" );
+	  // $( ".main-slider .slick-dots" ).wrap( "<div class='slick-dots-wrap'></div>" );
+		// [E] 210830 메인 슬라이드 추가
+
+	});
+
+	//인스타그램
+	var instaSettings = {
+		draggable:true,
+		swipeToSlide:true,
+		infinite:true,
+		speed:600,
+		//slidesToShow:6,
+		autoplay:false,
+		autoplaySpeed:2000,
+		dots:false,
+		arrows:false,
+		variableWidth:true,
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: "unslick"
+			}
+		]
+	};
+
+	var instaSlider = $('.main-ad-wrap ul').slick(instaSettings);
+
+	$(window).on('resize', function() {
+		if( $(window).width() > 1024 && !instaSlider.hasClass('slick-initialized')) {
+			//instagram slick destroy
+			$('.main-ad-wrap ul').slick(instaSettings);
+		}
+	});
+
+	//이벤트 팝업
+	function popImgReize(){
+		var eventImg = $('.pop-main-event .pop-cont-inner img');
+		var orgSizeImg = new Image();
+		orgSizeImg.src = eventImg.attr('src');
+
+		var pcWid = orgSizeImg.width/2;
+		var moWid = orgSizeImg.width;
+
+		$('.pop-main-event').css({'opacity':1});
+		if($(window).innerWidth() > 1024){
+			eventImg.css({'width':pcWid});
+			eventImg.parents('.pop-cont-inner').css({'max-width':pcWid});
+		}else{
+			eventImg.css({'width':moWid});
+			eventImg.parents('.pop-cont-inner').css({'max-width':moWid});
+		}
+
+	}
+
+	$(window).on('load resize',function(){
+		popImgReize();
+	});
+</script>
+
+</body>
+
+</html>

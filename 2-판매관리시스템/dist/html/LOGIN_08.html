@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-title" content="i-Scream" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="i-Scream"/>
+  <meta name="keywords" content="i-Scream"/>
+  <title>아이스크림 에듀 에코 판매관리</title>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/fonts/fontAwesomepro.css"/>
+  <script src="../js/bundle.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+  }
+</style>
+
+<div class="wrap">
+
+  
+
+  <!-- S content -->
+  <div class="contents">
+    <div class="page-content pl-5 pr-5">
+
+      <div class="title-content">
+        <div class="logo"><a href="#"><img src="../img/common/logo.png" alt=""></a></div>
+        <div class="title"  data-text="CR_0001_01">홈런 에코 판매관리 시스템</div>
+        <div class="p-right">
+          <a href="#"  data-text="CR_0001_03"><i class="fal fa-sign-in-alt"></i>로그인</a>
+          <!--          <a href="#"  data-text="CR_0001_06">회원가입</a>-->
+        </div>
+      </div>
+
+      <div class="page-sign-in">
+        <p class="title"  data-text="CR_0001_06">회원가입</p>
+
+        <div class="clearfix mb-5">
+          <ul class="step">
+            <li class="active" data-text="LJ_0101_09">약관동의</li>
+            <li class="current" data-text="LJ_0101_10">정보입력</li>
+            <li data-text="LJ_0101_11">승인안내</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="page-sign-in">
+
+        <div class="mb-5 card-shadow"> <!-- card-shadow 클래스 추가 --- 2020.11.27 -->
+          <div class="info-box mb-0 clearfix">
+            <div class="info">
+              <span data-text="LJ_0102_01">담당자 정보</span>
+            </div>
+          </div>
+          <div class="table table-vertical">
+            <table class="v-table">
+              <colgroup>
+                <col style="width: 15%;">
+                <col style="width: 85%;">
+              </colgroup>
+              <tbody>
+              <tr>
+                <td data-text="LJ_0102_03">아이디<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="name" class="font-weight-bold"></label>
+                    <input type="text" data-placeholder="LJ_0102_04" placeholder="영문 대소문자, 숫자 조합 (6~10자)" id="name" class="form-control form-control-sm"
+                           style="width: 400px">
+                    <span class="text text-error pt-2 d-block" data-text="LJ_0102_05">이미 가입한 아이디 입니다</span>
+                  </div>
+                  <div class="float-left">
+                    <a class="btn btn-sm btn-outline-dark btn-detail ml-2" href="#" data-text="LJ_0102_07">중복 확인</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0102_08">비밀번호<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="pw" class="font-weight-bold"></label>
+                    <input type="text" data-placeholder="LJ_0102_09" placeholder="영문 대소문자, 숫자, 특수문자 조합 (8~16자)" id="pw"
+                           class="form-control form-control-sm" style="width: 400px">
+                    <!--                  <span class="text text-error pt-2 d-block" data-text="LJ_0102_05">이미 가입한 아이디 입니다</span>-->
+                  </div>
+                  <!--                <div class="float-left">-->
+                  <!--                  <a class="btn btn-sm btn-outline-dark btn-detail ml-2" data-toggle="modal" data-target="#contentSearchPopup" href="#" data-text="LJ_0102_07">중복 확인</a>-->
+                  <!--                </div>-->
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0102_10">비밀번호 확인<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="pwCheck" class="font-weight-bold"></label>
+                    <input type="text" placeholder="비빌번호 재입력" data-placeholder="LJ_0102_11" id="pwCheck" class="form-control form-control-sm"
+                           style="width: 400px">
+                    <!--                  <span class="text text-error pt-2 d-block" data-text="LJ_0102_05">이미 가입한 아이디 입니다</span>-->
+                  </div>
+                  <!--                <div class="float-left">-->
+                  <!--                  <a class="btn btn-sm btn-outline-dark btn-detail ml-2" data-toggle="modal" data-target="#contentSearchPopup" href="#" data-text="LJ_0102_07">중복 확인</a>-->
+                  <!--                </div>-->
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0102_12">국가<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="input-group d-inline-block" style="width: 400px">
+                    <select class="custom-select custom-select-sm" title="">
+                      <option selected="" data-text="PD_0001_20">선택</option>
+                      <option data-text="PD_0001_20">선택</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0002_03">이름<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="user" class="font-weight-bold"></label>
+                    <input type="text" id="user" class="form-control form-control-sm"
+                           style="width: 400px">
+                    <!--                  <span class="text text-error pt-2 d-block" data-text="LJ_0102_05">이미 가입한 아이디 입니다</span>-->
+                  </div>
+                  <!--                <div class="float-left">-->
+                  <!--                  <a class="btn btn-sm btn-outline-dark btn-detail ml-2" data-toggle="modal" data-target="#contentSearchPopup" href="#" data-text="LJ_0102_07">중복 확인</a>-->
+                  <!--                </div>-->
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0002_04">이메일<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="email" class="font-weight-bold"></label>
+                    <input type="text" id="email" class="form-control form-control-sm"
+                           style="width: 400px">
+                    <span class="text text-primary pt-2 d-block" data-text="LJ_0102_16">사용가능한 이메일 입니다</span>
+                  </div>
+                  <div class="input-group d-inline-block float-left ml-2" style="width: 200px">
+                    <select class="custom-select custom-select-sm" title="">
+                      <option selected="" data-text="LJ_0102_14">직접입력</option>
+                      <option data-text="PD_0001_20">선택</option>
+                    </select>
+                  </div>
+                  <div class="float-left">
+                    <a class="btn btn-sm btn-outline-dark btn-detail ml-2" data-toggle="modal"
+                       data-target="#contentSearchPopup" href="#" data-text="LJ_0102_07">중복 확인</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0102_17">전화번호 <i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="tel" class="font-weight-bold"></label>
+                    <input type="text" data-placeholder="LJ_0102_18" placeholder="'-' 없이 입력" id="tel" class="form-control form-control-sm"
+                           style="width: 400px">
+                    <!--                  <span class="text text-error pt-2 d-block" data-text="LJ_0102_05">이미 가입한 아이디 입니다</span>-->
+                  </div>
+                  <!--                <div class="float-left">-->
+                  <!--                  <a class="btn btn-sm btn-outline-dark btn-detail ml-2" data-toggle="modal" data-target="#contentSearchPopup" href="#" data-text="LJ_0102_07">중복 확인</a>-->
+                  <!--                </div>-->
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0102_19">휴대폰 번호<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="phone" class="font-weight-bold"></label>
+                    <input type="text" data-placeholder="LJ_0102_18" placeholder="'-' 없이 입력" id="phone" class="form-control form-control-sm"
+                           style="width: 400px">
+                    <!--                  <span class="text text-error pt-2 d-block" data-text="LJ_0102_05">이미 가입한 아이디 입니다</span>-->
+                  </div>
+                  <!--                <div class="float-left">-->
+                  <!--                  <a class="btn btn-sm btn-outline-dark btn-detail ml-2" data-toggle="modal" data-target="#contentSearchPopup" href="#" data-text="LJ_0102_07">중복 확인</a>-->
+                  <!--                </div>-->
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mb-5 card-shadow">  <!-- card-shadow 클래스 추가 --- 2020.11.27 -->
+          <div class="info-box mb-0 clearfix">
+            <div class="info">
+              <span data-text="LJ_0102_20">사업장 정보</span>
+            </div>
+          </div>
+          <div class="table table-vertical">
+            <table class="v-table">
+              <colgroup>
+                <col style="width: 15%;">
+                <col style="width: 35%;">
+                <col style="width: 15%;">
+                <col style="width: 35%;">
+              </colgroup>
+              <tbody>
+              <tr>
+                <td data-text="LJ_0102_21">회사명<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="companyName" class="font-weight-bold"></label>
+                    <input type="text" placeholder="" id="companyName" class="form-control form-control-sm"
+                           style="width: 400px">
+                  </div>
+                </td>
+                <td data-text="LJ_0102_22">대표자 성명<i class="fas fa-check icon-check"></i></td>
+                <td>
+                  <div class="form-group d-inline-block float-left">
+                    <label for="cName" class="font-weight-bold"></label>
+                    <input type="text" placeholder="" id="cName" class="form-control form-control-sm">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0102_23">사업자 등록번호<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2" colspan="3">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="cNumber" class="font-weight-bold"></label>
+                    <input type="text" placeholder="" id="cNumber" class="form-control form-control-sm" style="width: 400px">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0102_24">법인 등록번호<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2" colspan="3">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="cRNumber" class="font-weight-bold"></label>
+                    <input type="text" placeholder="" id="cRNumber" class="form-control form-control-sm" style="width: 400px">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="2" data-text="LJ_0102_25">사업장 주소<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2" colspan="3">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="address1" class="font-weight-bold"></label>
+                    <input type="text" placeholder="" id="address1" class="form-control form-control-sm"
+                           style="width: 500px">
+                  </div>
+                  <div class="float-left">
+                    <a class="btn btn-sm btn-outline-dark btn-detail ml-2" data-toggle="modal" data-target="#contentSearchPopup" href="#" data-text="LJ_0102_26">주소조회</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="pt-2 pb-2 bg-white" colspan="3">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="address2" class="font-weight-bold"></label>
+                    <input type="text" placeholder="" id="address2" class="form-control form-control-sm"
+                           style="width: 500px">
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card-shadow mb-5 pb-5">  <!-- card-shadow , mb-5 , pb-5 클래스 추가 --- 2020.11.27 -->
+          <div class="info-box mb-0 clearfix">
+            <div class="info">
+              <span data-text="LJ_0102_27">정산 정보</span>
+            </div>
+          </div>
+          <div class="table table-vertical mb-0">
+            <table class="v-table">
+              <colgroup>
+                <col style="width: 15%;">
+                <col style="width: 85%;">
+              </colgroup>
+              <tbody>
+              <tr>
+                <td data-text="LJ_0102_28">금융기관<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="input-group d-inline-block" style="width: 200px">
+                    <select class="custom-select custom-select-sm" title="">
+                      <option selected="" data-text="PD_0001_20">선택</option>
+                      <option data-text="PD_0001_20">선택</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0102_30">예금주<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="bankUser" class="font-weight-bold"></label>
+                    <input type="text" placeholder="" id="bankUser" class="form-control form-control-sm"
+                           style="width: 400px">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-text="LJ_0102_31">계좌번호<i class="fas fa-check icon-check"></i></td>
+                <td class="pt-2 pb-2">
+                  <div class="form-group d-inline-block float-left">
+                    <label for="bNumber" class="font-weight-bold"></label>
+                    <input type="text" placeholder="" id="bNumber" class="form-control form-control-sm"
+                           style="width: 400px">
+                    <span class="text text-primary pt-2 d-block" data-text="LJ_0102_16">사용가능한 이메일 입니다</span>
+                    <span class="text text-error pt-2 d-block" data-text="LJ_0102_32">존재하지 않는 계좌 입니다</span>
+                  </div>
+                  <div class="float-left">
+                    <a class="btn btn-sm btn-outline-dark btn-detail ml-2" data-toggle="modal"
+                       data-target="#contentSearchPopup" href="#" data-text="LJ_0102_34">계좌인증</a>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="wrap-btn mb-5">
+          <a href="#" class="btn btn-outline-dark btn-lg mr-2" data-text="LJ_0101_07">취소</a>
+          <a href="#" class="btn btn-primary btn-lg" data-text="LJ_0100_03">가입하기</a>
+        </div>
+      </div>
+
+    </div>
+    <footer>
+      <div class="footer">
+        <ul class="t-info pl-100">
+          <li><a href="#" data-text="FT_0001_01">아이스크림 홈런 서비스</a></li>
+          <li><a href="#" data-text="FT_0002_01">이용약관</a></li>
+          <li><a href="#" data-text="FT_0002_02">개인정보 처리방침</a></li>
+        </ul>
+        <div class="box pl-100">
+          <ul class="c-info">
+            <li>
+              <span class="bar">(우) 06180 서울특별시 강남구 테헤란로88길 15</span>
+              <span class="bar" data-text="FT_0003_02">대표이사 : 조용상</span>
+              <span data-text="FT_0003_03">사업자등록번호 : 120-87-97004</span>
+            </li>
+            <li>
+              <span class="bar" data-text="FT_0003_04">통신판매신고번호 : 제2013-서울강남-01379호</span>
+              <span class="text-lg" data-text="FT_0003_04">전자출판물인증번호 : I410-ECN-0199-2013-001-002535352</span>
+            </li>
+            <li class="mb-2">
+              <span class="bar">Tel : <a href="tel:1544-0910">1544-0910</a></span>
+              <span class="bar">Fax : <a href="tel:02-3448-5262">02-3448-5262</a></span>
+              <span class="email">Email : <a href="homemaster@home-learn.com/">homemaster@home-learn.com</a></span>
+            </li>
+            <li>
+              <span class="desc text-lg">아이스크림 홈런은 한국콘텐츠진흥원에서 주관하는 '뉴미디어 연계 콘텐츠 지원사업' 대상으로 선정되어 사업비의 일부를 지원받았습니다.</span>
+            </li>
+            <li>
+              <span class="desc text-lg" data-text="FT_0003_09"><i class="far fa-copyright"></i>i-Scream edu Corporation all rights reserved.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- E content -->
+</div>
+</body>
+</html>

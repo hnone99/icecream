@@ -1,0 +1,110 @@
+// ========================================================================
+// [page] | 상세 페이지
+// ========================================================================
+@media all and (max-width: 960px){
+  .ui-new{
+    .detail-card{
+      width: 100%;
+      min-height: 170px;
+      border-radius: 0;
+      box-shadow: none;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      .card-name {
+        position: relative;
+        height: auto;
+        padding-left: 240px;
+        margin-bottom: 18px;
+      }
+    }
+    .detail-review{
+      .review-count{
+        width: 100%;
+        .count > div{
+          .graph{
+            width: 60%;
+          }
+        }
+      }
+      .review-reply{
+        position: relative;
+        .reply-desc{
+          padding-top: 30px;
+          margin-bottom: 50px;
+          border-top: 1px solid #e1e1e1;
+          font-weight: $fw-regular;
+          span{
+            margin-left: 3px;
+          }
+        }
+        .sort{
+          @include top-right(30px, 30px);
+        }
+        .list-wrap{
+          position: relative;
+          .help{
+            @include top-right(9px, 0);
+          }
+          .list{
+            position: relative;
+            border-bottom: 1px solid #e1e1e1;
+            &:last-child{
+              border-bottom: 0 none;
+            }
+            .article{
+              .user, .user-info, .date{
+                font-size: 15px;
+              }
+            }
+            .btn{
+              height: 42px;
+              line-height: 40px;
+              padding: 0 27px
+            }
+            .reply{
+              position: relative;
+              padding: 20px;
+              border-radius: 10px;
+              &::before{
+                @include top-left(-9px, 50%);
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent #eeeeee transparent;
+                content: '';
+              }
+              .name{
+                margin-bottom: 10px;
+                font-size: 17px;
+              }
+              .desc{
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .detail-contents-area{
+      .detail-article{
+        padding: 30px;
+      }
+    }
+  }
+}
+@media all and (max-width: 479px){
+  .ui-new{
+    .detail-review{
+      .review-count{
+        .count > div{
+          .graph{
+            width: 50%;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

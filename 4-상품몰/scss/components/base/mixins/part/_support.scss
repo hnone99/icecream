@@ -1,0 +1,140 @@
+// *! support.scss © choa712@gmail.com, 2020 */
+
+// @mixin old-ie {
+//   @if $old-ie {
+//     @content;
+//   }
+// }
+
+// @mixin class-ie(
+//   $ie6: $legacy-support-for-ie6,
+//   $ie7: $legacy-support-for-ie7,
+//   $ie8: $legacy-support-for-ie8
+// ){
+//   @if $legacy-support-for-ie8 {
+//     .lt-ie8 &{
+//       @content;}
+//   }
+// }
+
+// hand over to old-ie mixin (<IE9)
+// @if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+//   @include padding-bug {
+
+//   }
+// }
+
+// $mobile-support-android: true;
+
+
+// @mixin android-support {
+//   @if $mobile-support-android {
+//     @mixin bg-img-size
+//   }
+//   @if $mobile-support-android {
+//     @mixin bg-img-size@2x
+//   }
+// }
+
+
+// IE 하위브라우저 지원
+@mixin ie-support{
+  // IE8 미만
+  @if $legacy-support-for-ie8 {
+    .lt-ie8 &{
+      // #{$property}: $values
+      @content;
+    }
+  }
+  // IE7 미만
+  @if $legacy-support-for-ie7 {
+    .lt-ie7 &{
+      // #{$property}: $values
+      @content;
+    }
+  }
+}
+
+// 모바일 지원
+@mixin ios-support {
+  @if $mobile-support-iOS {
+    @content;
+  }
+}
+@mixin android-support {
+  @if $mobile-support-android {
+    @content;
+  }
+}
+// ios/android 포함
+@mixin mobile-support {
+  @if $mobile-support {
+    @content;
+  }
+  @include ios-support {
+  }
+  @include android-support {
+  }
+}
+
+// ie6,7 padding bug
+// .lt-ie6 input, .lt-ie6 button, .lt-ie7 input, .lt-ie7 button
+//   overflow: visible
+
+// // $browser-minimum-versions: ('ie': "7")
+
+// @mixin padding-bug{
+//   @if for-legacy-browser("ie", "8"){
+//    .lt-ie8 & {
+//       @content;
+//      }
+//   }
+// }
+
+
+@mixin font-size($values: $base-size){
+  @each $value in $values{
+    @if type-of($value) == number and not unitless($value) and (unit($value) == "%"){
+      @include rem(font-size, 1.6rem);
+    }@else if type-of($value) == (unit($value) == "px"){
+      @include x-rem(16px, font-size);
+    }
+  }
+}
+
+@mixin word-break {
+  @if $word-break {
+    //단어별 띄어쓰기
+    word-break: keep-all;
+  }
+  @else {
+     //단어별 띄어쓰기 안함
+    word-break: break-all;
+  }
+}
+
+
+@mixin ellipsis-auto($max-width: 100px){
+  overflow: hidden;
+  width: auto;
+  max-width: $max-width;
+  @extend %ellipsis;
+}
+
+@mixin table-support {
+  @if $table-support {
+  	@content;
+  }
+}
+
+@mixin placeholder-support {
+  @if $placeholder-support {
+    @content;
+  }
+}
+
+@mixin select-support {
+  @if $select-support {
+    @content;
+  }
+}

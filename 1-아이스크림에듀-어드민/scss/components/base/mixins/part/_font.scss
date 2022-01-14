@@ -1,0 +1,81 @@
+// *! font.scss © choa712@gmail.com, 2020 */
+//
+// * --------------------------------
+// * font-face
+// * --------------------------------
+
+// +font-face()
+// EOT(Embedded Open Type) : IE 6 ~ 11
+
+// OTF(OpenType Font) : Chrome 4+, Firefox 3.5, Opera 10, Safari 3~5, android, iOS
+
+// WOFF(Web Open Font Format) : Chrome 6+, Firefox 3.6+, Opera 11+, IE 9+, Safari 5.1+, Android browser 4.4+
+
+// WOFF2 시험 버전
+
+// OTF/TTF 쉽게 불법 복제될 수 있는 형식 보완, 웹 사용 목적, 빠르게 로드됨
+
+// TTF  : Chrome 4+, Firefox 3.5, Opera 10, Safari 3~5, Android browser 2.2 ~ 4.4.3
+// TTF(True Type Font)는 운영체제 시스템에 설치되는 화면용 서체여서 용량이 크기 때문에, 이 파일이 다운로드 되기 전에 WOFF 파일을 내려받을 수 있도록 먼저 선언해 줍니다.
+
+// SVG/SVGZ(SVG 압축)(Scalable Vector Graphics Font) : Chrome, Opera, Safari
+// Firefox, IE 지원하지 않음
+
+@mixin font-face(
+	$font-name,
+	$file-name,
+	$file-fath,
+	$weight: normal,
+	$style: normal){
+
+	@font-face {
+		font-family: $font-name;
+		font-weight: $weight;
+		font-style: $style;
+		src: local($file-name);
+		src: url( $file-fath + $file-name + '.eot');
+		src:
+				url( $file-fath + $file-name + '.eot?#iefix') format('embedded-opentype'),
+				url( $file-fath + $file-name + '.woff') format('woff'),
+				url( $file-fath + $file-name + '.ttf') format('truetype'),
+				url( $file-fath + $file-name + '.svg##{$font-name}') format('svg')
+	}
+}
+// 사용 방법
+// @include font-face("NanumGothic", NanumGothic,  "../fonts/", 400);
+
+
+// **** OS font ****
+// * OSX
+// - El Capitan : San Fransisco
+// - Yosemite: Helvetica Neue
+// - Mountain Lion: Apple SD Gothic Neo(한글서체)
+// - Lion: Apple Gothic(한글서체)
+// - Kodiak ~ Mavericks: Lucida Grande
+
+// * Windows
+// - Vista: Segoe UI
+// - XP: Tahoma
+// - 3.1 ~ ME: Microsoft Sans Serif
+
+// * Adroid
+// - Ice Cream Sandwich: Roboto
+// - Cupcake ~ Jelly Bean: Droid Sans
+
+// * iOS
+// - system, -apple-system (웹뷰 시스템 폰트 이용할 때)
+
+// * Ubuntu
+// - Ubuntu
+
+// * 본고딕(Noto Sans)
+// 한중일 통합서체 모음
+// http://blog.typekit.com/alternate/source-han-sans-kor/
+
+// * 중국어 번체
+// - Helvetica, Arial, "Microsoft MingLiU", "新細明體", sans-serif
+// * 중국어 간체
+// - Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif
+// * 일본어( 아래위 1px 작음)
+// - "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka, Meiryo, "メイリオ", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif
+// http://blog.aliencube.org/ko/2013/07/19/displaying-fonts-for-chinese-simplified-chinese-traditional-and-japanese

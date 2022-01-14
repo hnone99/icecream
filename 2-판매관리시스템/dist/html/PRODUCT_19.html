@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-title" content="i-Scream" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="i-Scream"/>
+  <meta name="keywords" content="i-Scream"/>
+  <title>아이스크림 에듀 에코 판매관리</title>
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="../css/fonts/fontAwesomepro.css"/>
+  <script src="../js/bundle.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+  }
+</style>
+
+<div class="wrap">
+
+  <!-- S SNB -->
+<div class="main-menu">
+  <div class="header_wrap">
+    <div class="login_section">
+      <a href="#" class="logo _logo">
+        <img src="../img/common/logo.png" alt="로고">
+      </a>
+      <div class="login_wrap">
+        <span class="login_name"><span class="name">관리자</span>님(System)</span>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="btn-lang dropdown-toggle" href="#" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-globe"></i>한국어</a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">한국어</a>
+        <a class="dropdown-item" href="#" data-text="PD_0105_10">영어</a>
+        <a class="dropdown-item" href="#">베트남어</a>
+      </div>
+    </div>
+    <ul class="icon_menu">
+      <li class="login_icon" id="logOutLi" data-text="HOM_0101_008"><i class="fal fa-sign-out-alt"></i>로그아웃</li>
+    </ul>
+  </div>
+  <div class="main-menu-content _scroll" style="height: calc(100% - 179px);">
+    <ul class="navigation">
+      <li class="navigation-header"><i class="fas fa-info-circle"></i><span class="menu-title" data-text="CR_0002_01">상품등록/관리</span></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_01">상품관리</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_02">콘텐츠 관리</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_03">플랫폼 콘텐츠관리</span></a></li>
+      <li class="navigation-header"><i class="fas fa-info-circle"></i><span class="menu-title" data-text="CR_0002_02">판매관리</span></li>
+      <li class="nav-item has-sub">
+        <a href="#"><span class="menu-title" data-text="CR_0003_04">판매현황</span><i class="fal fa-chevron-right"></i></a>
+        <ul class="menu-content"> <!-- 3depth 메뉴 활성화, on 클래스 추가, style="display:block" -->
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_05">판매현황 대시보드</span></a></li> <!-- 3depth 활성화, active 클래스 추가 -->
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_06">일별 판매현황</span></a></li>
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_07">월별 판매현황</span></a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="#"><span class="menu-title" data-text="CR_0003_08">프로모션</span><i class="fal fa-chevron-right"></i></a>
+        <ul class="menu-content"> <!-- 3depth 메뉴 활성화, on 클래스 추가, style="display:block" -->
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_09">할인판매</span></a></li> <!-- 3depth 활성화, active 클래스 추가 -->
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_10">판매자 배너신청</span></a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_11">구매취소내역</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_12">정산/송금현황</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_13">상품리뷰관리</span></a></li>
+      <li class="navigation-header"><i class="fas fa-box-alt"></i><span class="menu-title" data-text="CR_0002_03">통계</span></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_14">프로모션 배너 통계</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_15">상품 이용 통계</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_16">카테고리 랭킹</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_17">상품구매 랭킹</span></a></li>
+      <li class="navigation-header"><i class="fas fa-calculator-alt"></i><span class="menu-title" data-text="CR_0002_04">정보센터</span></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_18">공지사항</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_19">FAQ</span></a></li>
+      <li class="nav-item"><a href="#"><span class="menu-title" data-text="CR_0003_20">1:1 문의</span></a></li>
+      <li class="nav-item has-sub">
+        <a href="#"><span class="menu-title" data-text="CR_0003_21">자료실</span><i class="fal fa-chevron-right"></i></a>
+        <ul class="menu-content">
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_22">이용안내</span></a></li>
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_23">운영가이드</span></a></li>
+          <li><a class="menu-item" href="#"><span data-text="CR_0003_24">SDK</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- S SNB -->
+<script>
+  $('._scroll').mCustomScrollbar();
+  $('.has-sub > a').on('click',function (){
+    $(this).siblings('.menu-content').slideToggle(200).toggleClass('on');
+  })
+  /**
+   * 활성화
+   */
+  function setGnbActive (depth1,depth2,depth3) {
+    var elWrap = $('.main-menu-content');
+    var items2depth = elWrap.find('.navigation-header').eq(depth1).nextUntil('.navigation-header').eq(depth2);
+
+    if (items2depth.hasClass('has-sub')) {
+      items2depth.find('ul').show().addClass('on');
+      items2depth.find('li').eq(depth3).addClass('active');
+    } else {
+      items2depth.addClass('on');
+    }
+  }
+  setGnbActive(0,0,0);
+  // setGnbActive(0,1);
+  // setGnbActive(2,1,1);
+</script>
+
+
+  <!-- S content -->
+  <div class="contents">
+    <div class="page-content mb-5"> <!-- mb-5 클래스 추가 --- 2020.11.27 -->
+      <div class="title-content">홈런학교공부4학년전과목</div>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#"  data-text="CR_0002_01">상품등록/관리</a></li>
+          <li class="breadcrumb-item"><a href="#" data-text="CR_0003_02">콘텐츠관리</a></li><!-- 다국어 코드 수정 -- 2020.09.23 -->
+          <li class="breadcrumb-item"><a href="#" data-text="PD_0110_04">상세_URL</a></li>
+          <li class="breadcrumb-item active" aria-current="page" data-text="PD_0108_10">업데이트</li>
+        </ol>
+      </nav>
+
+      <div class="mb-5 card-shadow"> <!-- card-shadow 클래스 추가 --- 2020.11.27 -->
+        <div class="info-box mb-0 clearfix">
+          <div class="info">
+            <span data-text="PD_0110_02">URL 버전 정보</span>
+          </div>
+        </div>
+        <div class="table mb-5">
+          <table class="v-table">
+            <colgroup>
+              <col style="width: 15%;">
+              <col style="width: 85%;">
+            </colgroup>
+            <tbody>
+            <tr>
+              <td>URL<i class="fas fa-check icon-check"></i></td>
+              <td><input type="text" class="form-control form-control-sm float-left" title="text"
+                         value="http://www.aaaaaaaa.com/index.jsp" style="width: 600px"></td>
+            </tr>
+            <tr>
+              <td data-text="PD_0103_02">설치 아이콘<i class="fas fa-check icon-check"></i></td>
+              <td class="img-list p-2">
+                <ul class="clearfix">
+                  <li class="mb-0">
+                    <span class="img"><img src="../img/temp/_temp_img.png" alt=""></span>
+                    <div class="img-title">
+                      <a class="file-name color-skyblue" href="#">파일명.jpg</a>
+                      <a class="btn-close" href="#"><i class="fal fa-times"></i></a>
+                    </div>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td data-text="PD_0103_03">콘텐츠 버전<i class="fas fa-check icon-check"></i></td>
+              <td>
+                <input class="form-control form-control-sm d-inline-block text-center" title="" type="text"
+                       style="width: 30px" value="1">
+                <span class="mr-2 ml-2">.</span>
+                <input class="form-control form-control-sm d-inline-block text-center" title="" type="text"
+                       style="width: 30px" value="0">
+                <span class="mr-2 ml-2">.</span>
+                <input class="form-control form-control-sm d-inline-block text-center" title="" type="text"
+                       style="width: 30px" value="0">
+                <span class="badge badge-primary ml-1" data-text="SL_0003_03">검증완료</span>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card-shadow"> <!-- card-shadow 클래스 추가 --- 2020.11.27 -->
+        <div class="info-box mb-0 clearfix">
+          <div class="info">
+            <span data-text="PD_0108_11">새로운 기능<i class="fas fa-check icon-check"></i></span>
+          </div>
+        </div>
+        <div> <!-- mb-5 클래스 제거 --- 2020.11.27 -->
+          <div class="box-text">
+            <div class="form-group">
+              <label for="textarea"></label>
+              <span class="count">(0/300)</span>
+              <textarea class="form-control pt-3" id="textarea" style="resize: none; width: 100%; height: 100px">*** 상품은 5세부터 12세 아이가 교육하기에 적합한 상품으로써</textarea>
+            </div>
+          </div>
+          <div class="info-box border-bottom-0 mt-3 clearfix">
+            <div class="wrap-btn">
+              <a class="btn btn-outline-dark" href="#" data-text="LJ_0101_07">취소</a>
+              <a class="btn btn-outline-dark" href="#" data-text="PD_0002_45">임시저장</a>
+              <a class="btn btn-primary" href="#" data-text="PD_0108_10">업데이트 등록</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+  <div class="footer">
+    <ul class="t-info">
+      <li><a href="#" data-text="FT_0001_01">아이스크림 홈런 서비스</a></li>
+      <li><a href="#" data-text="FT_0002_01">이용약관</a></li>
+      <li><a href="#" data-text="FT_0002_02">개인정보 처리방침</a></li>
+    </ul>
+    <div class="box">
+      <ul class="c-info">
+        <li>
+          <span class="bar">(우) 06180 서울특별시 강남구 테헤란로88길 15</span>
+          <span class="bar" data-text="FT_0003_02">대표이사 : 조용상</span>
+          <span data-text="FT_0003_03">사업자등록번호 : 120-87-97004</span>
+        </li>
+        <li>
+          <span class="bar" data-text="FT_0003_04">통신판매신고번호 : 제2013-서울강남-01379호</span>
+          <span class="text-lg" data-text="FT_0003_04">전자출판물인증번호 : I410-ECN-0199-2013-001-002535352</span>
+        </li>
+        <li class="mb-2">
+          <span class="bar">Tel : <a href="tel:1544-0910">1544-0910</a></span>
+          <span class="bar">Fax : <a href="tel:02-3448-5262">02-3448-5262</a></span>
+          <span class="email">Email : <a href="homemaster@home-learn.com/">homemaster@home-learn.com</a></span>
+        </li>
+        <li>
+          <span class="desc text-lg">아이스크림 홈런은 한국콘텐츠진흥원에서 주관하는 '뉴미디어 연계 콘텐츠 지원사업' 대상으로 선정되어 사업비의 일부를 지원받았습니다.</span>
+        </li>
+        <li>
+          <span class="desc text-lg" data-text="FT_0003_09"><i class="far fa-copyright"></i>i-Scream edu Corporation all rights reserved.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <!-- E content -->
+</div>
+</body>
+</html>
