@@ -21,11 +21,6 @@
     .drawer-header{
       padding: 16px 20px;
       .drawer-title{
-        &::after{
-          @include top-right(50%, 20px);
-          @include bg-img-size(9px, 15px, $imgMobilePath, 'i-top-btn-next@2x');
-          margin-top: -5px;
-        }
         .grade,
         .study-access{
           height: 16px;

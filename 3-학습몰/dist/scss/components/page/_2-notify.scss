@@ -61,9 +61,11 @@
       .name{
         height: 100%;
         font-size: 24px;
-        background-image: url(#{$imgNewPath}/btn-tag-more-arrow-n.png);
-        background-size: 13px 21px;
-        background-position: 336px 0;
+        display: flex;justify-content: space-between;align-items: center;background: none;
+        span{
+          font-size: 14px;color: #ff7602;transform: translateY(1px);
+          background: url(#{$imgNewPath}/btn-tag-more-arrow-orange.svg) no-repeat 100% 50%;padding-right: 14px;
+        }
       }
       .study-access{
         position: relative;

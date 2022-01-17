@@ -157,7 +157,8 @@
     // 하단 플로팅 버튼
     .fixed-btn{
       .cs,
-      .top{
+      .top,
+      .back{
         position: relative;
         width: 55px;
         height: 55px;
@@ -190,6 +191,16 @@
           @include bg-img-size(20px, 25px, $imgMobilePath, 'i-bottom-top@2x');
           margin-top: -12px;
           margin-left: -10px;
+          content: ''
+        }
+      }
+      .back{
+        background-color: #202020;
+        &::before{
+          @include top-left(50%, 50%);
+          @include bg-img-size(19px, 18px, $imgMobilePath, 'i-bottom-back@2x');
+          margin-top: -9px;
+          margin-left: -9px;
           content: ''
         }
       }

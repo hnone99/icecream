@@ -70,13 +70,6 @@
       padding: 20px 30px;
       .drawer-title{
         line-height: 1;
-        &::after{
-          @include top-right(50%, 30px);
-          @include bg-img-size(13px, 21px, $imgMobilePath, 'i-top-btn-next@2x');
-          margin-top: -10px;
-          vertical-align: middle;
-          content: '';
-        }
         .grade, .study-access{
           line-height: 23px;
           font-size: 15px;
