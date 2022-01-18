@@ -162,7 +162,38 @@
       width: calc(100% - 90px);
     }
   }
+
+  .payment{
+    margin: 0 -30px;
+    .total-bottom{
+      padding-left: 0 !important;padding-right: 0 !important;
+      .custom-radio{
+        .custom-control-input + .custom-control-label{padding-left: 12px;font-size: 14px;}
+      }
+      .title{font-size: 15px !important;}
+      .form-label{font-size: 15px;}
+      .item{
+        padding: 18px 0;
+        > .row + .row{margin-top: 14px;}
+        .custom-select{min-width: auto;width: 100%;}
+      }
+      .payment-method-detail{
+        .credit{
+          margin-top: 20px;
+        }
+        .account{
+          .receipt{
+            margin-top: 20px;padding-top: 20px;
+          }
+          .receipt-form{margin-top: 15px;
+            > .row{margin-top: 20px;margin-bottom: 15px;}
+          }
+        }
+      }
+    }
+  }
 }
+
 @media all and (max-width: 960px){
   .ui-new{
     .wrap .container{
@@ -186,5 +217,9 @@
         }
       }
     }
+  }
+
+  .detail-swiper{
+    .swiper-slide{width: 340px !important;height: 210px !important;}
   }
 }

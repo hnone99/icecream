@@ -25,6 +25,9 @@
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="../js/slick.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/custom.js" type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" href="../css/swiper-bundle.min.css">
+<script src="../js/swiper-bundle.min.js"></script>
 </head>
 
 <!-- 210727 ui-new 추가 -->
@@ -220,6 +223,63 @@
           <!-- 레아아웃별 그룹화: wide  -->
           <div class="detail-wide">
             <div class="detail-wide-wrap">
+              <div class="detail-swiper">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="item video">
+                        <img src="../img/_temp-new/slide-3.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <img src="../img/_temp-new/slide-2.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <img src="../img/_temp-new/slide-3.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <img src="../img/_temp-new/slide-2.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <img src="../img/_temp-new/slide-3.jpg">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+              <script>
+                const swiper = new Swiper('.detail-swiper .swiper-container', {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                  observer: true,
+                  observeParents: true,
+                  observeSlideChildren: true,
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
+                  pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                  },
+                  breakpoints: {
+                    960: {
+                      slidesPerView: 'auto',
+                      centeredSlides: true,
+                    }
+                  }
+                });
+              </script>
               <section class="detail-slider regular slider">
                 <div>
                   <!-- 210830 영상 소스 수정 -->

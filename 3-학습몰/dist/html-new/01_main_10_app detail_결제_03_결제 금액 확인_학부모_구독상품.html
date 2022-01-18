@@ -306,33 +306,23 @@
                 </div>
                 <div id="collapseThirdMenu" class="collapse show" aria-labelledby="headingThirdMenu" data-parent="#paymentAccordion">
                   <div class="card-body">
-                    <div class="total-list">
-                      <div class="total-price"><span class="price">￦198,000</span>/ 월 (2명 X 99,000/월)</div>
-                      <p class="desc-01" data-text="AD_0033_02">
-                        다음 정기 결제는 현재 구독이 만료되면 시작됩니다. 갱신일 하루 전까지 마이페이지에서 취소할 수 있습니다. 취소할 때까지 구독이 자동 갱신됩니다.
-                      </p>
-                      <!-- S 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
-                      <p class="desc-02"><em data-text="AD_0033_11">다음 결제일 </em> <span class="font-weight-bold" data-text="AD_0033_12">2020. 12. 02</span>
-                        <em data-text="AD_0033_13">결제 예정</em>
-                      </p>
-                      <!-- E 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
-                    </div>
+                    <!-- S 결제 정보 추가 -- 2022.01.18 -->
                     <div class="total-bottom">
                       <div class="item">
                         <div class="row">
-                          <div class="col-auto">
+                          <div class="col-12 col-xl-auto">
                             <p class="title">약관 동의 <i><img src="../img/common/icon-16-dot@3x.png" alt="" width="16"></i></p>
                           </div>
-                          <div class="col">
-                            <ul>
-                              <li>
+                          <div class="col-12 col-xl">
+                            <ul class="row">
+                              <li class="col-12 col-xl">
                                 <div class="custom-control custom-checkbox d-inline-block">
                                   <input type="checkbox" class="custom-control-input" id="list1">
                                   <label class="custom-control-label" for="list1" data-text="AD_0033_07">개인정보수집 약관 동의 (필수)</label>
                                 </div>
                                 <a href="#" data-text="AD_0033_09">자세히 보기</a>
                               </li>
-                              <li>
+                              <li class="col-12 col-xl">
                                 <div class="custom-control custom-checkbox d-inline-block">
                                   <input type="checkbox" class="custom-control-input" id="list2">
                                   <label class="custom-control-label" for="list2" data-text="AD_0033_08">환불 규정 안내 동의 (필수)</label>
@@ -346,31 +336,128 @@
                       <div class="item">
                         <div class="row">
                           <div class="col-auto">
-                            <p class="title">약관 동의 <i><img src="../img/common/icon-16-dot@3x.png" alt="" width="16"></i></p>
+                            <p class="title">결제 정보 <i><img src="../img/common/icon-16-dot@3x.png" alt="" width="16"></i></p>
                           </div>
                         </div>
-                        <div class="row">
+                        <div class="row justify-content-between justify-content-xl-start">
                           <div class="col-auto">
                             <div class="form-label">총 상품 가격</div>
                           </div>
-                          <div class="col">
-                            <div class="total-list">
-                              <div class="total-price"><span class="price">￦198,000</span>/ 월 (2명 X 99,000/월)</div>
-                              <p class="desc-01" data-text="AD_0033_02">다음 정기 결제는 현재 구독이 만료되면 시작됩니다. 갱신일 하루 전까지 마이페이지에서 취소할 수 있습니다. 취소할 대까지 구독이 자동 갱신됩니다.</p>
-                              <!-- S 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
-                              <p class="desc-02"><em data-text="AD_0033_11">다음 결제일,</em> <span class="font-weight-bold" data-text="AD_0033_12">YYYY. MM. DD</span>
-                                <em data-text="AD_0033_13">결제 예정</em>
-                              </p>
-                              <!-- E 다국어 적용을 위한 마크업 변경 -- 2020.09.04 -->
+                          <div class="col-auto col-xl">
+                              <div class="finally-price"><span class="price">￦198,000</span></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-xl-auto">
+                            <div class="form-label mb-1 mb-xl-0">결제 방법</div>
+                          </div>
+                          <div class="col-12 col-xl">
+                            <div class="payment-method">
+                              <div class="custom-control custom-radio custom-control-inline mr-md-4">
+                                <input type="radio" id="payment1" name="payment" class="custom-control-input line">
+                                <label class="custom-control-label" for="payment1">신용카드</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline mr-md-4">
+                                <input type="radio" id="payment2" name="payment" class="custom-control-input line">
+                                <label class="custom-control-label" for="payment2">계좌이체</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline mr-0">
+                                <input type="radio" id="payment3" name="payment" class="custom-control-input line">
+                                <label class="custom-control-label" for="payment3">무통장입금(가상계좌)</label>
+                              </div>
+                            </div>
+                            <div class="payment-method-detail">
+                              <div class="credit">
+                                <div class="row row-15">
+                                  <div class="col-12 col-xl-auto">
+                                    <select class="custom-select">
+                                      <option value="">카드사 선택</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-12 col-xl-auto m-t-6 mt-xl-0">
+                                    <select class="custom-select">
+                                      <option value="">할부 선택</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <!-- <div class="discount-info">
+                                  <a href="">카드 할인 및 무이자할부 안내</a>
+                                </div> -->
+                              </div>
+                              <div class="account">
+                                <div>
+                                  <select class="custom-select">
+                                    <option value="">은행 선택</option>
+                                  </select>
+                                </div>
+                                <div class="receipt">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="receiptSelect">
+                                    <label class="custom-control-label" for="receiptSelect">현금 영수증 신청</label>
+                                  </div>
+                                  <div class="receipt-form">
+                                    <div class="custom-control custom-radio custom-control-inline mr-4">
+                                      <input type="radio" id="receipt1" name="receipt" class="custom-control-input line">
+                                      <label class="custom-control-label" for="receipt1">소득공제</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline mr-4">
+                                      <input type="radio" id="receipt2" name="receipt" class="custom-control-input line">
+                                      <label class="custom-control-label" for="receipt2">지출증빙</label>
+                                    </div>
+                                    <div class="row row-15">
+                                      <div class="col-12 col-xl-auto">
+                                        <select class="custom-select">
+                                          <option value="">휴대폰 번호</option>
+                                        </select>
+                                      </div>
+                                      <div class="col-12 col-xl m-t-6 mt-xl-0">
+                                        <input type="tel" class="form-control" placeholder="숫자만 입력해주세요">
+                                      </div>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                      <input type="checkbox" class="custom-control-input" id="collectAgree">
+                                      <label class="custom-control-label" for="collectAgree">현금영수증 발급을 위하여 휴대폰번호 또는 현금영수증카드번호를 수집하며, 5년간 처리에 동의합니다.</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-
                     </div>
+                    <!-- E 결제 정보 추가 -- 2022.01.18 -->
                   </div>
                 </div>
               </div>
+
+              <script>
+                //결제방법 선택
+                $('[name="payment"]').on('change', function(){
+                  if($('#payment1').is(':checked')){
+                    $('.payment-method-detail .account').hide();
+                    $('.payment-method-detail .credit').show();
+                  }
+                  else if($('#payment2').is(':checked')){
+                    $('.payment-method-detail .credit').hide();
+                    $('.payment-method-detail .account').show();
+                  }
+                  else if($('#payment3').is(':checked')){
+                    $('.payment-method-detail .credit').hide();
+                    $('.payment-method-detail .account').hide();
+                  }
+                });
+                //현금영수증 신청
+                $('#receiptSelect').on('change', function(){
+                  if($(this).is(':checked')){
+                    $('.receipt-form').show();
+                  }
+                  else{
+                    $('.receipt-form').hide();
+                  }
+                });
+              </script>
+
             </div>
           </div>
 

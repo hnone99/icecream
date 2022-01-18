@@ -1,0 +1,27 @@
+// ========================================================================
+// [page] | 서브
+// ========================================================================
+@media all and (max-width: 479px){
+  .ui-new{
+    .payment{
+      margin: 0 -20px;
+      .form-label{width: auto;}
+      .item{
+        > .row + .row{margin-top: 10px;}
+        .finally-price{font-size: 18px;}
+      }
+      .payment-method-detail{
+        .credit{
+          .discount-info{
+            margin-top: 8px;
+            > a{font-size: 13px;}
+          }
+        }
+      }
+    }
+  }
+
+  .detail-swiper{
+    .swiper-slide{width: 226px !important;height: 140px !important;}
+  }
+}

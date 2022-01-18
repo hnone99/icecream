@@ -24,6 +24,7 @@ body{
   color: #000000;
   overflow: hidden;
   background-color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 body.overflow-auto{
   overflow: auto;
@@ -164,3 +165,36 @@ a.sem-admin-link{
   }
 }
 //---------------------------------------------------------------------
+
+@media all and (max-width: 479px){
+  .custom-radio{
+    line-height: 20px;
+    .custom-control-input{
+      width: 20px;height: 20px;
+      & ~ .custom-control-label{
+        padding-left: 6px !important;font-size: 12px !important;
+        &::before{width: 20px;height: 20px;}
+      }
+      &:checked{
+        & ~ .custom-control-label{
+          &::after{width: 10px;height: 10px;top: 5px;left: -15px;}
+        }
+      }
+    }
+  }
+  .custom-checkbox{
+    line-height: 20px;
+    .custom-control-input{
+      width: 20px;height: 20px;
+      & ~ .custom-control-label{
+        font-size: 12px;padding-left: 6px !important;
+        &::before{top: 1px;}
+      }
+      &:checked{
+        & ~ .custom-control-label{
+          &::after{top: 1px;border-radius: 2px;}
+        }
+      }
+    }
+  }
+}

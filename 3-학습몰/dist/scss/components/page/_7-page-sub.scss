@@ -175,4 +175,48 @@
       }
     }
   }
+
+  .total-bottom{
+    p.title{font-size: 18px;font-weight: 700;float: none !important;width: 208px !important;margin-right: 0 !important;}
+    .form-label{width: 208px;font-size: 18px;color: #666;}
+    .custom-radio{
+      .custom-control-input + .custom-control-label{padding-left: 18px;font-size: 18px;font-weight: 700;color: #333;}
+    }
+    .item{
+      border-top: 2px solid rgba(224, 224, 224, .5);padding: 30px 0;
+      .finally-price{font-size: 24px;font-weight: 700;color: #333;}
+      > .row + .row{margin-top: 28px;}
+      .custom-select{min-width: 246px;width: auto;}
+      .receipt{
+        border-top: 2px solid #efefef;
+      }
+    }
+    .payment-method-detail{
+      .credit{
+        margin-top: 27px;display: none;
+        .discount-info{
+          margin-top: 12px;
+          > a{
+            margin-left: 16px;
+            &::after{content: '';display: inline-block;vertical-align: middle;width: 0;height: 0;border-style: solid;border-width: 3px 0 3px 4px;border-color: transparent transparent transparent #666666;margin-left: 5px;}
+          }
+        }
+      }
+      .account{
+        margin-top: 27px;display: none;
+        .receipt{margin-top: 26px;border-top: 2px solid rgba(224, 224, 224, .5);padding-top: 26px;}
+        .receipt-form{
+          margin-top: 26px;display: none;
+          > .row{margin-top: 26px;margin-bottom: 20px;}
+        }
+      }
+    }
+  }
+}
+
+.detail-swiper{
+  .item{width: 100%;height: 100%;
+    img{width: 100%;height: 100%;object-fit: cover;}
+  }
+  .swiper-container{}
 }
