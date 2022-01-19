@@ -6831,6 +6831,9 @@ a.btnui1.btnui_1 {
   .payment .total-bottom .payment-method-detail .credit {
     margin-top: 20px;
   }
+  .payment .total-bottom .payment-method-detail .credit > .row > .col-12 + .col-12 {
+    margin-top: 6px;
+  }
   .payment .total-bottom .payment-method-detail .account .receipt {
     margin-top: 20px;
     padding-top: 20px;
@@ -6841,6 +6844,9 @@ a.btnui1.btnui_1 {
   .payment .total-bottom .payment-method-detail .account .receipt-form > .row {
     margin-top: 20px;
     margin-bottom: 15px;
+  }
+  .payment .total-bottom .payment-method-detail .account .receipt-form > .row > .col-12 + .col-12 {
+    margin-top: 6px;
   }
 }
 

@@ -180,13 +180,18 @@
       .payment-method-detail{
         .credit{
           margin-top: 20px;
+          > .row{
+            > .col-12 + .col-12{margin-top: 6px;}
+          }
         }
         .account{
           .receipt{
             margin-top: 20px;padding-top: 20px;
           }
           .receipt-form{margin-top: 15px;
-            > .row{margin-top: 20px;margin-bottom: 15px;}
+            > .row{margin-top: 20px;margin-bottom: 15px;
+              > .col-12 + .col-12{margin-top: 6px;}
+            }
           }
         }
       }

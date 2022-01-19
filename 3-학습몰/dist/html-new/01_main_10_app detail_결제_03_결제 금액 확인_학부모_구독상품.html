@@ -306,7 +306,8 @@
                 </div>
                 <div id="collapseThirdMenu" class="collapse show" aria-labelledby="headingThirdMenu" data-parent="#paymentAccordion">
                   <div class="card-body">
-                    <!-- S 결제 정보 추가 -- 2022.01.18 -->
+                    <!-- 210119 결제정보 추가 -->
+                    <!-- S 결제 정보 -->
                     <div class="total-bottom">
                       <div class="item">
                         <div class="row">
@@ -374,7 +375,7 @@
                                       <option value="">카드사 선택</option>
                                     </select>
                                   </div>
-                                  <div class="col-12 col-xl-auto m-t-6 mt-xl-0">
+                                  <div class="col-12 col-xl-auto">
                                     <select class="custom-select">
                                       <option value="">할부 선택</option>
                                     </select>
@@ -410,7 +411,7 @@
                                           <option value="">휴대폰 번호</option>
                                         </select>
                                       </div>
-                                      <div class="col-12 col-xl m-t-6 mt-xl-0">
+                                      <div class="col-12 col-xl">
                                         <input type="tel" class="form-control" placeholder="숫자만 입력해주세요">
                                       </div>
                                     </div>
@@ -426,37 +427,36 @@
                         </div>
                       </div>
                     </div>
-                    <!-- E 결제 정보 추가 -- 2022.01.18 -->
+                    <script>
+                      //결제방법 선택
+                      $('[name="payment"]').on('change', function(){
+                        if($('#payment1').is(':checked')){
+                          $('.payment-method-detail .account').hide();
+                          $('.payment-method-detail .credit').show();
+                        }
+                        else if($('#payment2').is(':checked')){
+                          $('.payment-method-detail .credit').hide();
+                          $('.payment-method-detail .account').show();
+                        }
+                        else if($('#payment3').is(':checked')){
+                          $('.payment-method-detail .credit').hide();
+                          $('.payment-method-detail .account').hide();
+                        }
+                      });
+                      //현금영수증 신청
+                      $('#receiptSelect').on('change', function(){
+                        if($(this).is(':checked')){
+                          $('.receipt-form').show();
+                        }
+                        else{
+                          $('.receipt-form').hide();
+                        }
+                      });
+                    </script>
+                    <!-- E 결제 정보 추가 -->
                   </div>
                 </div>
               </div>
-
-              <script>
-                //결제방법 선택
-                $('[name="payment"]').on('change', function(){
-                  if($('#payment1').is(':checked')){
-                    $('.payment-method-detail .account').hide();
-                    $('.payment-method-detail .credit').show();
-                  }
-                  else if($('#payment2').is(':checked')){
-                    $('.payment-method-detail .credit').hide();
-                    $('.payment-method-detail .account').show();
-                  }
-                  else if($('#payment3').is(':checked')){
-                    $('.payment-method-detail .credit').hide();
-                    $('.payment-method-detail .account').hide();
-                  }
-                });
-                //현금영수증 신청
-                $('#receiptSelect').on('change', function(){
-                  if($(this).is(':checked')){
-                    $('.receipt-form').show();
-                  }
-                  else{
-                    $('.receipt-form').hide();
-                  }
-                });
-              </script>
 
             </div>
           </div>
