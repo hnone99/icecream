@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>벡터 고급 개체</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="벡터-고급-개체" transform="translate(2.000000, 2.000000)">
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="4" cx="21.62" cy="21.62" r="21.62"></circle>
+            <path d="M16.55,14.44 L16.55,28.8 C16.5459381,29.5126979 16.9410711,30.16773 17.5733989,30.4965405 C18.2057268,30.825351 18.9688899,30.7726329 19.55,30.36 L29.83,23.18 C30.336642,22.8242832 30.6382239,22.2440481 30.6382239,21.625 C30.6382239,21.0059519 30.336642,20.4257168 29.83,20.07 L19.53,12.88 C18.9488899,12.4673671 18.1857268,12.414649 17.5533989,12.7434595 C16.9210711,13.07227 16.5259381,13.7273021 16.529969,14.44" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

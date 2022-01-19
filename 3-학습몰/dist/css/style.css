@@ -2559,7 +2559,7 @@ footer .family .input-group select {
 
 .ui-new .total-bottom .payment-method-detail .account .receipt {
   margin-top: 26px;
-  border-top: 2px solid rgba(224, 224, 224, 0.5);
+  border-top: 2px solid rgba(224, 224, 224, 0.3);
   padding-top: 26px;
 }
 
@@ -2573,15 +2573,205 @@ footer .family .input-group select {
   margin-bottom: 20px;
 }
 
+.detail-tab {
+  border-bottom: 1px solid #ededed;
+  margin-top: 63px;
+  margin-bottom: 74px;
+}
+
+.detail-tab ul {
+  display: flex;
+}
+
+.detail-tab li {
+  flex: 1;
+  text-align: center;
+}
+
+.detail-tab a {
+  display: block;
+  text-align: center;
+  font-size: 19px;
+  color: #828282;
+  letter-spacing: -0.92px;
+  padding: 22px 0;
+}
+
+.detail-swiper {
+  padding: 0 80px;
+  position: relative;
+  margin: 39px auto 74px;
+  max-width: 1200px;
+}
+
 .detail-swiper .item {
   width: 100%;
   height: 100%;
+  position: relative;
+  display: block;
 }
 
 .detail-swiper .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.detail-swiper .item.video::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.detail-swiper .item.video::after {
+  content: '';
+  display: block;
+  background: url(../../../img/new/i-video.svg) no-repeat 0 0;
+  background-size: contain;
+  width: 67px;
+  height: 67px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.detail-swiper .swiper-button-prev,
+.detail-swiper .swiper-container-rtl .swiper-button-next {
+  background: #fff url(../../../img/new/slide-i-arrow-prev.png) no-repeat 50% 50%;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  left: 0;
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+
+.detail-swiper .swiper-button-next,
+.detail-swiper .swiper-container-rtl .swiper-button-prev {
+  background: #fff url(../../../img/new/slide-i-arrow-next.png) no-repeat 50% 50%;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  right: 0;
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+
+.detail-swiper .swiper-pagination {
+  text-align: center;
+  right: 0;
+  left: 0;
+  padding-top: 26px;
+}
+
+.detail-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+}
+
+.detail-swiper .swiper-pagination-bullet-active {
+  background: #000;
+}
+
+.modal-detail-video {
+  padding-right: 0 !important;
+}
+
+.modal-detail-video .close {
+  color: #fff;
+  position: absolute;
+  right: -4px;
+  top: -45px;
+  font-size: 44px;
+}
+
+.modal-detail-video .modal-dialog {
+  max-width: 980px !important;
+}
+
+.modal-detail-video .modal-content {
+  padding: 0;
+  background: #000;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.modal-detail-video .modal-body {
+  margin: 0;
+}
+
+.modal-detail-video .video {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.modal-detail-video .video iframe,
+.modal-detail-video .video video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+  vertical-align: top;
+}
+
+.modal-detail-slider {
+  padding-right: 0 !important;
+}
+
+.modal-detail-slider .close {
+  color: #fff;
+  position: absolute;
+  right: -4px;
+  top: -45px;
+  font-size: 44px;
+}
+
+.modal-detail-slider .item {
+  text-align: center;
+}
+
+.modal-detail-slider .modal-dialog {
+  max-width: 980px !important;
+}
+
+.modal-detail-slider .modal-content {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.modal-detail-slider .modal-body {
+  margin: 0;
+}
+
+.modal-detail-slider .swiper-button-prev,
+.modal-detail-slider .swiper-container-rtl .swiper-button-next {
+  background: url(../../../img/new/swiper-i-prev-white.png) no-repeat 50% 50%;
+  width: 33px;
+  height: 64px;
+  left: -63px;
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+
+.modal-detail-slider .swiper-button-next,
+.modal-detail-slider .swiper-container-rtl .swiper-button-prev {
+  background: url(../../../img/new/swiper-i-next-white.png) no-repeat 50% 50%;
+  width: 33px;
+  height: 64px;
+  right: -63px;
+  margin-top: 0;
+  transform: translateY(-50%);
 }
 
 .free-experience-box {
@@ -3640,8 +3830,8 @@ footer .family .input-group select {
 
 .ui-new .detail-wide .detail-wide-wrap {
   display: inline-block;
-  width: 1280px;
-  padding: 0 60px 0 60px;
+  width: 1320px;
+  padding: 0 20px;
 }
 
 .ui-new .detail-fit {
@@ -6680,9 +6870,54 @@ a.btnui1.btnui_1 {
     background-size: 14px 8px;
     background-repeat: no-repeat;
   }
+  .detail-swiper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .detail-swiper .item:focus {
+    outline: 0;
+  }
   .detail-swiper .swiper-slide {
     width: 340px !important;
     height: 210px !important;
+  }
+  .detail-swiper .swiper-button-next,
+  .detail-swiper .swiper-button-prev {
+    display: none;
+  }
+  .modal-detail-video .modal-dialog {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .modal-detail-video .close {
+    top: auto;
+    bottom: -50px;
+    right: auto;
+    left: 50%;
+    margin-left: -21px;
+    background: #828282;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 26px;
+  }
+  .modal-detail-slider .modal-dialog {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .modal-detail-slider .close {
+    top: auto;
+    bottom: -50px;
+    right: auto;
+    left: 50%;
+    margin-left: -21px;
+    background: #828282;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 26px;
   }
 }
 
@@ -8273,8 +8508,8 @@ a.btnui1.btnui_1 {
     font-size: 13px;
   }
   .detail-swiper .swiper-slide {
-    width: 226px !important;
-    height: 140px !important;
+    width: 260px !important;
+    height: 160px !important;
   }
 }
 
@@ -8359,9 +8594,6 @@ a.btnui1.btnui_1 {
   }
   .ui-new .detail-card-spec .info .txt {
     font-size: 12px;
-  }
-  .ui-new .detail-wide .detail-wide-wrap {
-    padding: 0 0 0 30px;
   }
   .ui-new .detail-review .review-reply .list-wrap .help {
     position: relative;

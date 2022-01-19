@@ -220,6 +220,21 @@
   }
 
   .detail-swiper{
+    padding-left: 0 !important;padding-right: 0 !important;
+    .item:focus{outline: 0;}
     .swiper-slide{width: 340px !important;height: 210px !important;}
+    .swiper-button-next,
+    .swiper-button-prev{display: none;}
   }
+
+  .modal-detail-video{
+    .modal-dialog{margin-left: 0;margin-right: 0;}
+    .close{top: auto;bottom: -50px;right: auto;left: 50%;margin-left: -21px;background: #828282;width: 42px;height: 42px;border-radius: 50%;overflow: hidden;font-size: 26px;}
+  }
+
+  .modal-detail-slider{
+    .modal-dialog{margin-left: 0;margin-right: 0;}
+    .close{top: auto;bottom: -50px;right: auto;left: 50%;margin-left: -21px;background: #828282;width: 42px;height: 42px;border-radius: 50%;overflow: hidden;font-size: 26px;}
+  }
+
 }

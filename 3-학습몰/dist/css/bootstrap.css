@@ -8395,7 +8395,7 @@ a.close.disabled {
 }
 
 .modal-backdrop.show {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .modal-header {
@@ -21733,7 +21733,7 @@ body.eng .review-wrap .review-count .count > div .grade {
     line-height: 1.5;
   }
 
-  .pwChange__txt + 
+  .pwChange__txt +
   .pwChange__txt {
     margin-top: 2px;
   }

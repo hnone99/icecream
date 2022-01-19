@@ -22,7 +22,7 @@
 <!-- 210830 thumb-video.js삭제  -->
 
 <!-- 210727 slick slider 추가 -->
-<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
 <script src="../js/slick.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/custom.js" type="text/javascript" charset="utf-8"></script>
 
@@ -227,50 +227,51 @@
                 <div class="swiper-container">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="item video">
-                        <img src="../img/_temp-new/slide-3.jpg">
-                      </div>
+                      <a href="javascript:;" class="item video" role="button" data-toggle="modal" data-target="#modalDetailVideo">
+                        <img src="../img/_temp-new/slide-lg-3.png">
+                      </a>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item">
-                        <img src="../img/_temp-new/slide-2.jpg">
-                      </div>
+                      <a href="javascript:;" class="item" role="button" data-toggle="modal" data-target="#modalDetailSlider" data-img-idx="1">
+                        <img src="../img/_temp-new/slide-lg-2.png">
+                      </a>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item">
-                        <img src="../img/_temp-new/slide-3.jpg">
-                      </div>
+                      <a href="javascript:;" class="item" role="button" data-toggle="modal" data-target="#modalDetailSlider" data-img-idx="2">
+                        <img src="../img/_temp-new/slide-lg-3.png">
+                      </a>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item">
-                        <img src="../img/_temp-new/slide-2.jpg">
-                      </div>
+                      <a href="javascript:;" class="item" role="button" data-toggle="modal" data-target="#modalDetailSlider" data-img-idx="3">
+                        <img src="../img/_temp-new/slide-lg-2.png">
+                      </a>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item">
-                        <img src="../img/_temp-new/slide-3.jpg">
-                      </div>
+                      <a href="javascript:;" class="item" role="button" data-toggle="modal" data-target="#modalDetailSlider" data-img-idx="4">
+                        <img src="../img/_temp-new/slide-lg-3.png">
+                      </a>
                     </div>
                   </div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
                 </div>
+                <div class="swiper-pagination swiper-pagination-detail"></div>
+                <div class="swiper-button-prev swiper-button-prev-detail"></div>
+                <div class="swiper-button-next swiper-button-next-detail"></div>
               </div>
               <script>
-                const swiper = new Swiper('.detail-swiper .swiper-container', {
+                const detailSwiper = new Swiper('.detail-swiper .swiper-container', {
                   slidesPerView: 3,
                   spaceBetween: 10,
                   observer: true,
                   observeParents: true,
                   observeSlideChildren: true,
                   navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-button-next-detail',
+                    prevEl: '.swiper-button-prev-detail',
                   },
                   pagination: {
-                    el: '.swiper-pagination',
+                    el: '.swiper-pagination-detail',
                     type: 'bullets',
+                    clickable: true,
                   },
                   breakpoints: {
                     960: {
@@ -280,37 +281,25 @@
                   }
                 });
               </script>
-              <section class="detail-slider regular slider">
-                <div>
-                  <!-- 210830 영상 소스 수정 -->
-                  <div class="video-area-1">
-                    <video controls controlsList="nodownload" disablePictureInPicture src="../img/_temp-new/sample.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <!-- //210830 영상 소스 수정 -->
-                </div>
-                <div>
-                  <img src="../img/_temp-new/slide-2.jpg">
-                </div>
-                <div>
-                  <img src="../img/_temp-new/slide-3.jpg">
-                </div>
-                <div>
-                  <img src="../img/_temp-new/slide-2.jpg">
-                </div>
-                <div>
-                  <img src="../img/_temp-new/slide-3.jpg">
-                </div>
-              </section>
             </div>
           </div>
 
           <!-- 레아아웃별 그룹화: fit  -->
           <div class="detail-fit detail-fit-2">
             <div class="detail-fit-wrap">
+              <!-- #tab -->
+              <nav class="detail-tab d-none d-lg-block">
+                <ul>
+                  <li><a href="#section1"><span>상품소개</span></a></li>
+                  <li><a href="#section2"><span>학습목차</span></a></li>
+                  <li><a href="#section3"><span>변경이력</span></a></li>
+                  <li><a href="#section3"><span>환불/해지</span></a></li>
+                  <li><a href="#section4"><span>리뷰</span></a></li>
+                </ul>
+              </nav>
               <!-- #상품 상세페이지 -->
               <!-- js open: 상세페이지 펼친상태 / closed: 상세페이지 닫힌상태 -->
-              <section class="detail-page closed">
+              <section class="detail-page closed" id="section1">
                 <h3 class="title-detail-area">상세 페이지</h3>
                 <div class="detail-contents-area">
                   <!-- 상세 / 이전 소스 활용 -->
@@ -352,7 +341,7 @@
               <!-- //#상품 상세페이지 -->
 
               <!-- #상품 학습 목차 -->
-              <section class="detail-etc detail-index">
+              <section class="detail-etc detail-index" id="section2">
                 <h3 class="title-detail-area">학습 목차</h3>
                 <div class="detail-index-area">
                   <ul class="index-list-grp">
@@ -364,7 +353,7 @@
               <!-- //#상품 학습 목차 -->
 
               <!-- #상품 변경 내역 -->
-              <section class="detail-etc detail-history">
+              <section class="detail-etc detail-history" id="section3">
                 <h3 class="title-detail-area">변경 내역</h3>
                 <div class="detail-history-area">
                   <ul class="history-list-grp">
@@ -385,7 +374,7 @@
               <!-- //#상품 변경 내역 -->
 
               <!-- #상품 사용자 후기 -->
-              <section class="detail-etc detail-review">
+              <section class="detail-etc detail-review" id="section4">
                 <h3 class="title-detail-area">사용자 후기</h3>
                 <!-- 리뷰 / 이전 소스 활용 -->
                 <!-- 리뷰 있을 때 상단 -->
@@ -625,6 +614,93 @@
   </div>
 </footer>
 <!-- //### 하단 -->
+
+<!-- S 슬라이더 비디오 확대 모달 -->
+<div class="modal modal-detail-video" id="modalDetailVideo" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="video">
+          <video controls controlsList="nodownload" disablePictureInPicture src="../img/_temp-new/sample.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  //모달 열 때 비디오 재생
+  /* $('#modalDetailVideo').on('shown.bs.modal', function (event) {
+    $('.modal-detail-video video').trigger('play');
+  }); */
+  //모달 닫을 때 비디오 정지
+  $('#modalDetailVideo').on('hidden.bs.modal', function (event) {
+    $('.modal-detail-video video').trigger('pause');
+  });
+</script>
+<!-- E 슬라이더 비디오 확대 모달 -->
+<!-- S 슬라이더 썸네일 확대 모달 -->
+<div class="modal modal-detail-slider" id="modalDetailSlider" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="detail-modal-swiper">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="item">
+                  <img src="../img/_temp-new/slide-lg-2.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="item">
+                  <img src="../img/_temp-new/slide-lg-3.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="item">
+                  <img src="../img/_temp-new/slide-lg-2.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="item">
+                  <img src="../img/_temp-new/slide-lg-3.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev swiper-button-prev-detail-modal"></div>
+          <div class="swiper-button-next swiper-button-next-detail-modal"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('#modalDetailSlider').on('show.bs.modal', function (event) {
+    var clicked = $(event.relatedTarget); // 클릭된 슬라이드
+    var idx = clicked.data('img-idx') - 1; // 클릭된 슬라이드의 index
+
+    const detailSwiper = new Swiper('.modal-detail-slider .swiper-container', {
+      initialSlide: idx,
+      centeredSlides: true,
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+      navigation: {
+        nextEl: '.swiper-button-next-detail-modal',
+        prevEl: '.swiper-button-prev-detail-modal',
+      },
+    });
+  })
+</script>
+<!-- E 슬라이더 썸네일 확대 모달 -->
 
 <!-- E content -->
 </body>
