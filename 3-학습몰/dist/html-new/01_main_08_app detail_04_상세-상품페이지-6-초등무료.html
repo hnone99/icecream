@@ -16,15 +16,19 @@
 <!-- 210727 css 추가 -->
 <link type="text/css" rel="stylesheet" href="../css/style.css">
 
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<!-- 210727 slick slider 추가 -->
+<script type="text/javascript">
+  var jqSlick = $.noConflict();
+</script>
+
+<script src="../js/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/custom.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/bundle.js"></script>
 <script src="../js/lang/lang.js"></script>
 
 <!-- 210830 thumb-video.js삭제  -->
 
-<!-- 210727 slick slider 추가 -->
-<!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
-<script src="../js/slick.js" type="text/javascript" charset="utf-8"></script>
-<script src="../js/custom.js" type="text/javascript" charset="utf-8"></script>
 
 <link rel="stylesheet" href="../css/swiper-bundle.min.css">
 <script src="../js/swiper-bundle.min.js"></script>
@@ -627,7 +631,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <div class="video">
-          <video controls controlsList="nodownload" disablePictureInPicture src="../img/_temp-new/sample.mp4" type="video/mp4">
+          <video controls controlsList="nodownload" disablePictureInPicture poster="../img/_temp-new/slide-lg-3.png" src="../img/_temp-new/sample.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -687,6 +691,7 @@
 </div>
 <script>
   $('#modalDetailSlider').on('show.bs.modal', function (event) {
+    console.log(1);
     var clicked = $(event.relatedTarget); // 클릭된 슬라이드
     var idx = clicked.data('img-idx') - 1; // 클릭된 슬라이드의 index
 

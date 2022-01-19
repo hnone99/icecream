@@ -233,12 +233,12 @@
   }
 
   .modal-detail-video{
-    .modal-dialog{margin-left: 0;margin-right: 0;}
+    .modal-dialog{margin:0;height: 100%;}
     .close{top: auto;bottom: -50px;right: auto;left: 50%;margin-left: -21px;background: #828282;width: 42px;height: 42px;border-radius: 50%;overflow: hidden;font-size: 26px;}
   }
 
   .modal-detail-slider{
-    .modal-dialog{margin-left: 0;margin-right: 0;}
+    .modal-dialog{margin: 0;height: 100%;}
     .close{top: auto;bottom: -50px;right: auto;left: 50%;margin-left: -21px;background: #828282;width: 42px;height: 42px;border-radius: 50%;overflow: hidden;font-size: 26px;}
   }
 
