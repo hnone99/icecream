@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>회원가입 &gt; 서비스선택</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var len = $('.profile_wrap li').length;
+            if(len >= 6){
+                $('.profile_wrap').addClass('scroll');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container login">
+    <!-- S 콘텐츠 영역 -->
+        <a href="#none" class="btn_close"><img src="./imgs/common/btn_end.png" alt="로그아웃, 앱종료"></a>
+        <section class="contents">
+            <h1><img src="./imgs/login/txt_login_title.png" alt="olleh tv 홈스쿨 x i-Scream AI홈런"></h1>
+            <h2>서비스 이용 방법을 선택하세요</h2>
+            <ul class="service_choice_wrap">
+                <li>
+                    <a href="#none" class="colorType1">
+                        <strong>무료 체험</strong>
+                        <span class="service_title">7일간<br>olleh tv 홈스쿨 x AI홈런을<br>체험하세요!</span>
+                        <span class="service_btn_name">체험시작</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none" class="colorType2">
+                        <strong>월정액 가입</strong>
+                        <span class="service_title">전과목 AI홈스쿨링을<br>무제한 이용해보세요!</span>
+                        <span class="service_btn_name">가입하기</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    <!-- E 콘텐츠 영역 -->
+    </div>
+</body>
+</html>

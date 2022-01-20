@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 &gt; 오늘의 학습 무료체험중 월정액 가입 팝업</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.css">
+    <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/lib/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var link_mainBannerSwiper;
+            link_mainBannerSwiper = new Swiper('.link_mainBanner_wrap', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            $.fn.openPopup('popupSample');
+        });
+    </script>
+</head>
+<body>
+    <div class="container main">
+        <a href="#none" class="btn_close"><img src="./imgs/common/btn_end.png" alt="로그아웃, 앱종료"></a>
+    <!-- S 사용자 정보 & GNB 영역 -->
+        <nav>
+        <!-- S > 사용자 정보 -->
+            <h1><img src="./imgs/common/bg_ci.png" alt="olleh tv 홈스쿨 x i-Scream AI 홈런"></h1>
+            <div class="userInfo">
+                <div class="userImg_wrap"><img src="./imgs/dummy/dummy_userImg.png" alt="dummy Image"></div>
+                <strong class="userName">홍길동<span class="userGrade">(4학년)</span></strong>
+                <!-- <span class="userCorn">5,200 콘</span> -->
+                <a href="#none" class="btn_joinPaid">월정액 가입</a>
+                <a href="#none" class="btn_my"><img src="./imgs/common/btn/btn_gnb_my.png" alt="마이"></a>
+            </div>
+        <!-- E > 사용자 정보 -->
+        <!-- S > GNB 영역 -->
+            <a href="#none" class="ico_gnb_today active"><span>오늘의학습</span></a>
+            <a href="#none" class="ico_gnb_study"><span>교과학습</span></a>
+            <a href="#none" class="ico_gnb_test"><span>평가학습</span></a>
+            <a href="#none" class="ico_gnb_kor"><span>국어공부</span></a>
+            <a href="#none" class="ico_gnb_math"><span>수학공부</span></a>
+            <a href="#none" class="ico_gnb_eng"><span>영어공부</span></a>
+            <a href="#none" class="ico_gnb_special"><span>특별학습</span></a>
+            <a href="#none" class="ico_gnb_tele"><span>화상교육</span></a>
+        <!-- E > GNB 영역 -->
+        </nav>
+    <!-- E 사용자 정보 & GNB 영역 -->
+    <!-- S 콘텐츠 영역 -->
+        <section class="contents">
+        <!-- S > 주간 날씨 표시
+            Description:
+            - class 'ico_arrow'에 class 'dimmed' 추가시 dim 처리
+        -->
+            <article class="calendar_wrap">
+                <a href="#none" class="ico_arrow btn_prevWeekly">이전주로 이동</a>
+                <a href="#none" class="btn_day" data-date="2월 22일">월</a>
+                <a href="#none" class="btn_day active" data-date="2월 23일">화</a>
+                <a href="#none" class="btn_day" data-date="2월 24일">수</a>
+                <a href="#none" class="btn_day" data-date="2월 25일">목</a>
+                <a href="#none" class="btn_day" data-date="2월 26일">금</a>
+                <a href="#none" class="btn_day" data-date="2월 27일">토</a>
+                <a href="#none" class="btn_day" data-date="2월 28일">일</a>
+                <a href="#none" class="ico_arrow btn_nextWeekly">다음주로 이동</a>
+                <a href="#none" class="btn_calendar"><img src="" alt=""></a>
+            </article>
+        <!-- E > 주간 날씨 표시 -->
+        <!-- S > 오늘의 교과 + 평가학습 -->
+            <article class="evaluation_wrap">
+                <h1 data-total="3">오늘의 <strong>교과 + 평가학습</strong></h1>
+                <div class="com_list_wrap">
+                    <div class="com_inner_list_wrap">
+                        <ul class="evaluation_list">
+                            <li class="stateIng">
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_kor.png" alt="국어"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="lang_kor">
+                                        <span class="subject">학교공부예복습</span>
+                                        <span class="paragraph">1단원 &gt; 3장</span>
+                                    </strong>
+                                    <span>이야기 읽고 다른 사람에게 들려주기 이야기 읽고 다른 사람에게 들려주기</span>
+                                </div>
+                            </li>
+                            <li class="stateComplete">
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_math.png" alt="수학"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="math">
+                                        <span class="subject">학교공부예복습</span>
+                                        <span class="paragraph">6단원 &gt; 30장</span>
+                                    </strong>
+                                    <span>변의 길이와 각의 크기가 같은 다각형을 알아볼까요?</span>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_society.png" alt="사회"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="society">
+                                        <span class="subject">평가학습> 서술형평가 > 사회</span>
+                                        <span class="paragraph">1단원 > 1중단원 > 3장</span>
+                                    </strong>
+                                    <span>민주주의 발전과 시민 참여</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_science.png" alt="과학"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="science">
+                                        <span class="subject">평가학습 > 시험대비특강 > 과학</span>
+                                        <span class="paragraph">12단원 > 5장</span>
+                                    </strong>
+                                    <span>계절에 따라 보이는 별자리가 달라지는 까닭</span>
+                                </div>
+                            </li> 
+                            <li>
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_eng.png" alt="영어"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="lang_eng">
+                                        <span class="subject">평가학습 > 시험대비특강 > 과학</span>
+                                        <span class="paragraph">12단원 > 5장</span>
+                                    </strong>
+                                    <span>계절에 따라 보이는 별자리가 달라지는 까닭</span>
+                                </div>
+                            </li>-->
+                            <li>
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_science.png" alt="과학"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="science">
+                                        <span class="subject">학교공부예복습</span>
+                                        <span class="paragraph">12단원 &gt; 5장</span>
+                                    </strong>
+                                    <span>계절에 따라 보이는 별자리가 달라지는 까닭</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_all.png" alt="통합"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="all">
+                                        <span class="subject">학교공부예복습</span>
+                                        <span class="paragraph">12단원 &gt; 5장</span>
+                                    </strong>
+                                    <span>계절에 따라 보이는 별자리가 달라지는 까닭</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        <!-- E > 오늘의 교과 + 평가학습 -->
+            <article class="specialStudy_wrap">
+            <!-- S > 오늘의 국수영 + 특별학습 -->
+                <h1 data-total="6">오늘의 <strong>국수영 + 특별학습</strong></h1>
+                <div class="com_list_wrap">
+                    <div class="com_inner_list_wrap">
+                        <ul class="specialStudy_list">
+                            <li class="stateComplete">
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_special_01.png" alt="속담의 달인"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="lang_kor">국어</strong>
+                                    <span>속담의 달인</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_special_04.png" alt="홈런북카페"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="special">특별학습</strong>
+                                    <span>홈런북카페</span>
+                                </div>
+                            </li>
+                            <li class="stateComplete">
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_special_02.png" alt="그래머탐험대"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="lang_eng">영어</strong>
+                                    <span>그래머탐험대</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_special_05.png" alt="홈런AI교과서"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="special">특별학습</strong>
+                                    <span>홈런AI교과서</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_special_03.png" alt="유형히어로즈"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="math">수학</strong>
+                                    <span>유형히어로즈</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumnail_wrap"><img src="./imgs/thumnail/img_today_special_06.png" alt="3D체험관"></div>
+                                <div class="thumnailTxt_wrap">
+                                    <strong class="special">특별학습</strong>
+                                    <span>3D체험관</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- E > 오늘의 국수영 + 특별학습 -->
+            <!-- S > 배너 -->
+                <div class="swiper-container link_mainBanner_wrap">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#none"><img src="./imgs/dummy/dummy_mainBanner.png" alt="dummy Image"></a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="./imgs/dummy/dummy_mainBanner.png" alt="dummy Image"></a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="./imgs/dummy/dummy_mainBanner.png" alt="dummy Image"></a></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            <!-- E > 배너 -->
+            </article>
+        </section>
+    <!-- E 콘텐츠 영역 -->
+    <!-- S 개인화 영역
+        Description:
+        - 개인화 영역 캐릭터 생성은 class 'init' 추가 
+        - 개인화 영역 캐릭터 애니메이션은 class 'init'에 class 'playing' 추가시 실행
+    -->
+        <aside class="init playing">
+            <div class="personalMenu">
+                <a href="#none" class="ico_note"><span>오답노트</span></a>
+                <a href="#none" class="ico_box"><span>내공상자</span></a>
+                <a href="#none" class="ico_ai"><span>AI생기부</span></a>
+                <a href="#none" class="ico_check"><span>출석체크</span></a>
+                <a href="#none" class="ico_event"><span>이벤트</span></a>
+                <!-- <a href="#none" class="ico_shop"><span>코니월드</span></a> -->
+                <a href="#none" class="ico_talk"><span>홈런톡</span></a>
+                <a href="#none" class="ico_test"><span>심리검사</span></a>
+            </div>
+        </aside>
+    <!-- E 개인화 영역 -->
+    <!-- S Popup 영역 -->
+        <section class="popup_wrap">
+            <div class="popup_common joinPaid" id="popupSample">
+                <div class="pop_header">
+                    <strong>월정액 가입</strong>
+                    <a href="#none" class="btn_close_popup"><img src="./imgs/popup/btn_popup_close.png" alt="팝업 닫기"></a>
+                </div>
+                <div class="pop_container">
+                    <strong>무료체험 진행중입니다.</strong>
+                    <p class="remainingPeriod">
+                        <strong>03일</strong>
+                        <span>남은 기간</span>
+                    </p>
+                    <span>월정액에 가입하시면 olleh tv 홈스쿨 α AI홈런의<br>모든 콘텐츠를 무제한 이용하실 수 있습니다.</span>
+                </div>
+                <!-- <h1 class="popup_commonTitle">콘텐츠 영역<br>텍스트 / 디자인 요소 모두 가능</h1> -->
+                <div class="pop_btn_wrap">
+                    <a href="#none" class="btn_joinPaid">월정액 가입하기</a>
+                </div>
+            </div>
+        </section>
+    <!-- E Popup 영역 -->
+    </div>
+</body>
+</html>

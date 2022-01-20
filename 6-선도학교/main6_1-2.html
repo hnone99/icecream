@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 &gt; 특별학습 1-2학년</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.studySpecial_list > li').each(function(idx){
+                var subListLen = $(this).find('.studySpecialDetail_list >li').length;
+
+                if(subListLen > 8){
+                    $(this).find('.studySpecialDetail_list').addClass('scroll');
+                }else{
+                    $(this).find('.studySpecialDetail_list').removeClass('scroll');
+                }
+
+                $(this).find('> a').on({
+                    click:function(e){
+                        var idx = $(e.target).index() + 1;
+                        var listIdx = $(e.target).parent('li').index();
+                        
+                        $(e.target).parent().siblings().removeClass('active');
+                        $(e.target).parents('.studySpecial_list').find('.studySpecialDetailList_wrap').attr('data-active-index', 0);
+                        $(e.target).parents('li').addClass('active');
+                        $(e.target).parent().children('.studySpecialDetailList_wrap').attr('data-active-index', idx);
+
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <a href="#none" class="btn_close"><img src="./imgs/common/btn_end.png" alt="로그아웃, 앱종료"></a>
+    <!-- S 사용자 정보 & GNB 영역 -->
+        <nav>
+        <!-- S > 사용자 정보 -->
+            <h1><img src="./imgs/common/bg_ci.png" alt="olleh tv 홈스쿨 x i-Scream AI 홈런"></h1>
+            <div class="userInfo">
+                <div class="userImg_wrap"><img src="./imgs/dummy/dummy_userImg.png" alt="dummy Image"></div>
+                <strong class="userName">홍길동<span class="userGrade">(4학년)</span></strong>
+                <span class="userCorn">5,200 콘</span>
+                <a href="#none" class="btn_my"><img src="./imgs/common/btn/btn_gnb_my.png" alt="마이"></a>
+            </div>
+        <!-- E > 사용자 정보 -->
+        <!-- S > GNB 영역 -->
+            <a href="#none" class="ico_gnb_today"><span>오늘의학습</span></a>
+            <a href="#none" class="ico_gnb_study"><span>교과학습</span></a>
+            <a href="#none" class="ico_gnb_test"><span>평가학습</span></a>
+            <a href="#none" class="ico_gnb_kor"><span>국어공부</span></a>
+            <a href="#none" class="ico_gnb_math"><span>수학공부</span></a>
+            <a href="#none" class="ico_gnb_eng"><span>영어공부</span></a>
+            <a href="#none" class="ico_gnb_special active"><span>특별학습</span></a>
+            <a href="#none" class="ico_gnb_tele"><span>화상교육</span></a>
+        <!-- E > GNB 영역 -->
+        </nav>
+    <!-- E 사용자 정보 & GNB 영역 -->
+    <!-- S 콘텐츠 영역 -->
+        <section class="contents">
+            <h1 class="studyTitle_wrap">
+                <strong class="studyTitle">특별<span>학습</span></strong>
+                <div class="character">캐릭터</div>
+                <div class="balloon_wrap">
+                    <span class="balloonTxt">특별학습은 미래 글로벌 인재가 되기 위한 인성과 창의성 교육을 키워줘.</span>
+                </div>
+            <!-- S > 학기선택 -->
+                <div class="com_dropDown_wrap" data-type="dropDown">
+                    <a href="#none" class="select">4학년 1학기</a>
+                    <a href="#none" class="active">4학년 1학기</a>
+                    <a href="#none" class="">여름방학</a>
+                    <a href="#none" class="">4학년 2학기</a>
+                    <a href="#none" class="">겨울방학</a>
+                </div>
+            <!-- E > 학기선택 -->
+            </h1>
+        <!-- S > 학습 목록
+            Description:
+            - 상세 목록이 있는 학습은 선택시 상세 목록 그룹 노출
+            - 선택한 class 'studySpecialDetailList_wrap'에 class 'active' 추가하고 data-active-index 속성에 index 값으로 포커스되는 아이템 표시( 1 ~ 5 )
+            - class 'studySpecialDetail_list'의 li가 8개가 넘을경우 class 'scroll' 추가  
+            - 1~2학년:  안녕학교 | 동화누리 | 음악누리 | 미술누리 | 인물 한국사 | 홈런공부송 | 코딩송 | 문장연습 | 홈런타자연습 | 홈트레이닝 생활체조
+            - 3~6학년:  홈런공부송 | 한국문화100 | 한자서당 | 열려라 코딩 | 미래직업 탐색 | 홈런 AI교과서 | 홈런타자연습 | 홈트레이닝 생활체조 | 일상의 소리
+        -->
+            <article class="studyList_wrap studySpecial_wrap">
+                <ul class="studySpecial_list">
+                    <li>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_01.png" alt="안녕학교"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_02.png" alt="동화누리"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_03.png" alt="음악누리"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_04.png" alt="미술누리"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_05.png" alt="인물 한국사"></a>
+                        <div class="studySpecialDetailList_wrap" data-active-index="0">
+                            <ul class="studySpecialDetail_list">
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_01.png" alt="한자서당"><span>한자서당</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_02.png" alt="마법천자문"><span>마법천자문</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
+                            </ul>    
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_06.png" alt="홈런공부송"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_07.png" alt="코딩송"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_08.png" alt="한자서당"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_09.png" alt="홈런타자연습"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_10.png" alt="홈트레이닝 생활체조"></a>
+                        <div class="studySpecialDetailList_wrap" data-active-index="0">
+                            <ul class="studySpecialDetail_list">
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_01.png" alt="한자서당"><span>한자서당</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_02.png" alt="마법천자문"><span>마법천자문</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_01.png" alt="한자서당"><span>한자서당</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_02.png" alt="마법천자문"><span>마법천자문</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+        <!-- E > 학습 목록 -->
+        </section>
+    <!-- E 콘텐츠 영역 -->
+    <!-- S 개인화 영역 -->
+        <aside>
+            <div class="personalMenu">
+                <a href="#none" class="ico_note"><span>오답노트</span></a>
+                <a href="#none" class="ico_box"><span>내공상자</span></a>
+                <a href="#none" class="ico_ai"><span>AI생기부</span></a>
+                <a href="#none" class="ico_check"><span>출석체크</span></a>
+                <!-- <a href="#none" class="ico_event"><span>이벤트</span></a> -->
+                <!-- <a href="#none" class="ico_shop"><span>코니월드</span></a> -->
+                <a href="#none" class="ico_talk"><span>홈런톡</span></a>
+                <a href="#none" class="ico_test"><span>심리검사</span></a>
+            </div>
+        </aside>
+    <!-- E 개인화 영역 -->
+    </div>
+</body>
+</html>

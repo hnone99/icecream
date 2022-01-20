@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 &gt; 오늘의 학습 무료체험중 월정액 가입 팝업</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <!-- 210603 dmahn | 스크롤 플러그인 추가 -->
+    <script src="./js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- ----------------------------------- -->
+
+    <script>
+        $(document).ready(function(){
+            //커스텀 스크롤 outside 에 적용
+            $(".mCustomScroll.outside").mCustomScrollbar({
+                theme: "dark",
+                scrollbarPosition: "outside"
+            });
+
+            //커스텀 스크롤 적용
+            $(".mCustomScroll").mCustomScrollbar({
+                theme: "dark"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container login">
+        <h2 class="btn-logo">
+            <img src="./imgs/login/img_login_logo.png" alt="아이스크림 홈런 로고">
+        </h2>
+        <a href="#none" class="btn_close"><img src="./imgs/common/btn_end.png" alt="로그아웃, 앱종료"></a>
+    <!-- S 콘텐츠 영역 -->
+        <section class="contents">
+
+            <form action="">
+                <!-- 로그인 입력 폼 -->
+                <div class="loginArea">
+                    <div class="loginBox">
+                        <div class="title">
+                            <span class="tit-point">아이스크림 홈런</span>로그인
+                        </div>
+                        
+                        <div class="flex row align-items_center justify-content_between margin-top_20">
+                            <div class="formBox">
+                                <input type="text" placeholder="아이디" />
+                                <input type="password" placeholder="비밀번호" class="margin-top_10" />
+                            </div>
+                            <div class="buttonBox">
+                                <button type="button" class="b2b_btn grow"><span data-text="COM_001_002">로그인</span></button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex row align-items_center justify-content_between margin-top_30">
+                            <p class="com_checkbox_wrap">
+                                <input type="checkbox" id="com_checkbox1" checked><label for="com_checkbox1">자동 로그인</label>
+                            </p>
+
+                            <a href="#" class="findIdPw">아이디 / 비밀번호 찾기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 로그인 입력 폼 -->
+            </form>
+        </section>
+    <!-- E 콘텐츠 영역 -->
+
+    <!-- 210603 dmahn | 모달 창 커스텀 -->
+        <!-- js on: 활성화 -->
+        <div id="layers" class="on">
+            <div class="alertBox">
+                <div class="header">아이디/비밀번호 찾기</div>
+                <div class="grayBox flex column">
+                    <div class="subTitle">학생 아이디를 선택하신 후<br>“로그인” 또는 “비밀번호 재설정”을 선택해 주세요.</div>
+                    <ul class="studentList_find margin-top_40 mCustomScroll">
+                        <li data-value="1" class="on">박연우(dsdawf)</li>
+                        <li data-value="2">박지우(pinkpink)</li>
+                        <li data-value="3">박선우(prettyywljk)</li>
+                        <li data-value="4">박선아(okCoral)</li>
+                        <li data-value="5">박연우(dsdawf)</li>
+                        <li data-value="6">박지우(pinkpink)</li>
+                        <li data-value="7">박선우(prettyywljk)</li>
+                        <li data-value="8">박선아(okCoral)</li>
+                        <li data-value="9">박연우(dsdawf)</li>
+                        <li data-value="10">박지우(pinkpink)</li>
+                        <li data-value="11">박선우(prettyywljk)</li>
+                        <li data-value="12">박선아(okCoral)</li>
+                    </ul>
+                </div>
+                <div class="buttonBox margin-top_20">
+                    <button type="button" class="b2b_btn">
+                        로그인
+                    </button>
+                    <button type="button" class="b2b_btn no">
+                        비밀번호 재설정
+                    </button>
+                </div>
+                <div class="closeBox"></div>
+            </div>
+        </div>
+    <!-- //210603 dmahn | 모달 창 커스텀 -->
+    </div>
+
+    <script type="text/javascript">
+	$(".studentList_find li").click(function(){
+		$(this).addClass("on").siblings().removeClass("on");
+		var value = $(this).attr("data-value");
+		console.log(value);
+	});
+	</script>
+</body>
+</html>

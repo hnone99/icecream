@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 &gt; 로그인 프로필등록_01 팝업</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.fn.openPopup('popupSample');
+        });
+    </script>
+</head>
+<body>
+    <div class="container login">
+        <a href="#none" class="btn_close"><img src="./imgs/common/btn_end.png" alt="로그아웃, 앱종료"></a>
+    <!-- S 콘텐츠 영역 -->
+        <section class="contents">
+            <h1><img src="./imgs/login/txt_login_title.png" alt="olleh tv 홈스쿨 x i-Scream AI홈런"></h1>
+            <h2>올레tv 홈스쿨xAI홈런을 이용할 프로필을 선택하세요.</h2>
+            <ul class="profile_wrap">
+                <li>
+                    <a href="#none" class="colorType1">
+                        <div class="img_wrap"><img src="./imgs/login/img_login_profile02.png" alt="profile2"></div>
+                        <span class="grade">4학년</span>
+                        <span class="profileName">김빙빙</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none" class="colorType2">
+                        <div class="img_wrap"><img src="./imgs/login/img_login_profile02.png" alt="profile2"></div>
+                        <span class="grade">4학년</span>
+                        <span class="profileName">김빙빙</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none" class="colorType3">
+                        <div class="img_wrap"><img src="./imgs/login/img_login_profile03.png" alt="profile3"></div>
+                        <span class="grade">2학년</span>
+                        <span class="profileName">방울이</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none" class="colorType4">
+                        <div class="img_wrap"><img src="./imgs/login/img_login_profile01.png" alt="profile1"></div>
+                        <span class="grade">1학년</span>
+                        <span class="profileName">홍길동</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none" class="btn_addProfile">
+                        <div class="img_wrap"><img src="./imgs/login/btn_addProfile.png" alt="프로필 추가"></div>
+                        프로필 추가
+                    </a>
+                </li>
+            </ul>
+        </section>
+    <!-- E 콘텐츠 영역 -->
+    <!-- S Popup 영역
+        Description:
+        - class 'btn_comfirm' 비활성화시 class 'dimmed' 추가
+     -->
+        <section class="popup_wrap">
+            <div class="popup_profile" id="popupSample">
+                <a href="#none" class="btn_close_popup"><img src="./imgs/popup/btn_popup_close.png" alt="팝업 닫기"></a>
+                <h1 class="popup_profileTitle">프로필을 등록해 주세요.</h1>
+                <div class="img_contentsWrap">
+                    <div class="img_wrap"><img src="./imgs/login/img_login_profile_default.png" alt="Default Images"></div>
+                    <a href="#none" class="btn_profileSetting"><img src="./imgs/popup/btn_login_setting.png" alt="프로필 세팅"></a>
+                </div>
+                <input type="text" placeholder="이름을 입력하세요">
+                <div class="com_loginDropDown_wrap" data-type="loginDropDown">
+                    <a href="#none" class="value">- 학년 선택 - </a>
+                    <div class="com_loginDropDown_inner_wrap">
+                        <ul class="com_loginDropDown_contents">
+                            <li><a href="#none">1학년</a></li>
+                            <li><a href="#none">2학년</a></li>
+                            <li><a href="#none">3학년</a></li>
+                            <li><a href="#none">4학년</a></li>
+                            <li><a href="#none">5학년</a></li>
+                            <li><a href="#none">6학년</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pop_btn_wrap">
+                    <a href="#none" class="btn_comfirm dimmed">확인</a>
+                </div>
+            </div>
+        </section>
+    <!-- E Popup 영역 -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 &gt; 공통 앱 사용 권한 안내</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.fn.openPopup('popupPermissionUse');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+    <!-- S 콘텐츠 영역 -->
+        
+    <!-- E 콘텐츠 영역 -->
+    <!-- S Popup 영역 -->
+        <section class="popup_wrap">
+            <div class="popup_common permissionUse" id="popupPermissionUse">
+                <div class="pop_header">
+                    <strong>앱 사용 권한 안내</strong>
+                    <a href="#none" class="btn_close_popup"><img src="./imgs/popup/btn_popup_close.png" alt="팝업 닫기"></a>
+                </div>
+                <div class="pop_container">
+                    <dl class="permissionUse_list">
+                        <dt>카메라 <strong>(필수)</strong></dt>
+                        <dd>프로필 사진 촬영</dd>
+                        <dt>마이크 <strong>(필수)</strong></dt>
+                        <dd>컨텐츠 진행 시 학생 목소리 녹음</dd>
+                        <dt>저장공간 <strong>(필수)</strong></dt>
+                        <dd>프로필 이미지 설정 및 음원 녹음 파일 저장</dd>
+                        <dd class="permissionUse_info">정보통신망 법령에 따라 꼭 필요한 항목만 필수 접근 합니다.</dd>
+                    </dl>
+                </div>
+                <div class="pop_btn_wrap">
+                    <a href="#none" class="btn_comfirm">확인</a>
+                </div>
+            </div>
+        </section>
+    <!-- E Popup 영역 -->
+    </div>
+</body>
+</html>

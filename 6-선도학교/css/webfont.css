@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "NanumSquare";
+  font-style: normal;
+  font-weight: 400;
+  src: local("NanumSquareR"), /* computer */
+    url("./../font/NanumSquareR.eot"), /* IE9 Compat Modes */
+    url("./../font/NanumSquareR.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../font/NanumSquareR.woff2") format("woff2"), /* Modern Browsers */
+    url("./../font/NanumSquareR.woff") format("woff"), /* Modern Browsers */
+    url("./../font/NanumSquareR.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-style: normal;
+  font-weight: 700;
+  src: local("NanumSquareB"), /* computer */
+    url("./../font/NanumSquareB.eot"), /* IE9 Compat Modes */
+    url("./../font/NanumSquareB.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../font/NanumSquareB.woff2") format("woff2"), /* Modern Browsers */
+    url("./../font/NanumSquareB.woff") format("woff"), /* Modern Browsers */
+    url("./../font/NanumSquareB.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-style: normal;
+  font-weight: 800;
+  src: local("NanumSquareEB"), /* computer */
+    url("./../font/NanumSquareEB.eot"), /* IE9 Compat Modes */
+    url("./../font/NanumSquareEB.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../font/NanumSquareEB.woff2") format("woff2"), /* Modern Browsers */
+    url("./../font/NanumSquareEB.woff") format("woff"), /* Modern Browsers */
+    url("./../font/NanumSquareEB.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "NanumSquareRound";
+  font-style: normal;
+  font-weight: 700;
+  src: local("NanumSquareRoundB"), /* computer */
+    url("./../font/NanumSquareRoundB.eot"), /* IE9 Compat Modes */
+    url("./../font/NanumSquareRoundB.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../font/NanumSquareRoundB.woff2") format("woff2"), /* Modern Browsers */
+    url("./../font/NanumSquareRoundB.woff") format("woff"), /* Modern Browsers */
+    url("./../font/NanumSquareRoundB.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "NanumSquareRound";
+  font-style: normal;
+  font-weight: 800;
+  src: local("NanumSquareRoundEB"), /* computer */
+    url("./../font/NanumSquareRoundEB.eot"), /* IE9 Compat Modes */
+    url("./../font/NanumSquareRoundEB.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../font/NanumSquareRoundEB.woff2") format("woff2"), /* Modern Browsers */
+    url("./../font/NanumSquareRoundEB.woff") format("woff"), /* Modern Browsers */
+    url("./../font/NanumSquareRoundEB.ttf") format("truetype"); /* Safari, Android, iOS */
+}
