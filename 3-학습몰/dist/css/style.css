@@ -817,7 +817,7 @@ a.sem-admin-link {
   display: inline-block;
   width: 22px;
   height: 21px;
-  background: url("../../../img/new/i-top-search.png");
+  background: url("../img/new/i-top-search.png");
   background-position: 0 0;
 }
 
@@ -825,7 +825,7 @@ a.sem-admin-link {
   display: inline-block;
   width: 20px;
   height: 21px;
-  background: url("../../../img/new/i-top-member.png");
+  background: url("../img/new/i-top-member.png");
   background-position: 0 0;
 }
 
@@ -833,7 +833,7 @@ a.sem-admin-link {
   display: inline-block;
   width: 20px;
   height: 21px;
-  background-image: url("../../../img/new/i-top-basket.png");
+  background-image: url("../img/new/i-top-basket.png");
   background-position: 0 0;
   background-size: 20px 21px;
   background-repeat: no-repeat;
@@ -843,7 +843,7 @@ a.sem-admin-link {
   display: inline-block;
   width: 12px;
   height: 20px;
-  background: url("../../../img/new/i-sub-prev.png");
+  background: url("../img/new/i-sub-prev.png");
   background-position: 0 0;
 }
 
@@ -851,7 +851,7 @@ a.sem-admin-link {
   display: inline-block;
   width: 21px;
   height: 21px;
-  background: url("../../../img/new-tablet/top-i-back.png");
+  background: url("../img/new-tablet/top-i-back.png");
   background-position: 0 0;
   vertical-align: bottom;
 }
@@ -860,7 +860,7 @@ a.sem-admin-link {
   display: inline-block;
   width: 110px;
   height: 110px;
-  background: url("../../../img/new/i-released-band.png");
+  background: url("../img/new/i-released-band.png");
   background-position: 0 0;
 }
 
@@ -930,7 +930,7 @@ a.sem-admin-link {
 }
 
 .ui-new .btn.btn.btn-recommend.active .txt-recommend::before {
-  background-image: url("../../../img/new/detail-i-recommend-on.png");
+  background-image: url("../img/new/detail-i-recommend-on.png");
 }
 
 .ui-new .btn .txt-recommend {
@@ -947,7 +947,7 @@ a.sem-admin-link {
   display: inline-block;
   width: 16px;
   height: 20px;
-  background: url("../../../img/new/detail-i-recommend-off.png");
+  background: url("../img/new/detail-i-recommend-off.png");
   background-position: 0 0;
   content: '';
 }
@@ -978,7 +978,7 @@ a.sem-admin-link {
   display: inline-block;
   width: 14px;
   height: 8px;
-  background-image: url("../../../img/new/detail-i-arrow-open.png");
+  background-image: url("../img/new/detail-i-arrow-open.png");
   background-position: 0 0;
   background-size: 14px 8px;
   background-repeat: no-repeat;
@@ -994,7 +994,7 @@ a.sem-admin-link {
   display: inline-block;
   width: 14px;
   height: 8px;
-  background: url("../../../img/new/main-i-arrow-open.png");
+  background: url("../img/new/main-i-arrow-open.png");
   background-position: 0 0;
 }
 
@@ -1135,7 +1135,7 @@ footer .family .input-group select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: #fff url(../../../img/new/btn-open-n@3x.png) no-repeat right 14px center/16px 16px;
+  background: #fff url(../img/new/btn-open-n@3x.png) no-repeat right 14px center/16px 16px;
 }
 
 .ui-new .wrap {
@@ -1178,7 +1178,7 @@ footer .family .input-group select {
   display: inline-block;
   width: 223px;
   height: 32px;
-  background: url("../../../img/new/logo.png");
+  background: url("../img/new/logo.png");
   background-position: 0 0;
 }
 
@@ -1224,7 +1224,7 @@ footer .family .input-group select {
 }
 
 .ui-new .header-tab .tab-list.on .txt-mall {
-  background-image: url("../../../img/new/tab-mall-on.png");
+  background-image: url("../img/new/tab-mall-on.png");
 }
 
 .ui-new .header-tab .tab-list:last-child {
@@ -1235,7 +1235,7 @@ footer .family .input-group select {
   display: inline-block;
   width: 44px;
   height: 20px;
-  background: url("../../../img/new/tab-mall-off.png");
+  background: url("../img/new/tab-mall-off.png");
   background-position: 0 0;
   margin-left: 3px;
 }
@@ -1280,7 +1280,7 @@ footer .family .input-group select {
   display: inline-block;
   width: 33px;
   height: 16px;
-  background: url("../../../img/new-tablet/top-txt-mall.png");
+  background: url("../img/new-tablet/top-txt-mall.png");
   background-position: 0 0;
 }
 
@@ -1363,7 +1363,7 @@ footer .family .input-group select {
   font-size: 14px;
   color: #ff7602;
   transform: translateY(1px);
-  background: url(../../../img/new/btn-tag-more-arrow-orange.svg) no-repeat 100% 50%;
+  background: url(../img/new/btn-tag-more-arrow-orange.svg) no-repeat 100% 50%;
   padding-right: 14px;
 }
 
@@ -1875,7 +1875,7 @@ footer .family .input-group select {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("../../../img/new/i-released-time.png");
+  background: url("../img/new/i-released-time.png");
   background-position: 0 0;
   margin-top: -7px;
   content: '';
@@ -1965,7 +1965,7 @@ footer .family .input-group select {
   display: inline-block;
   width: 1200px;
   height: 28px;
-  background: url("../../../img/new/detail-bg-shadow.png");
+  background: url("../img/new/detail-bg-shadow.png");
   background-position: 0 0;
   content: '';
 }
@@ -1993,7 +1993,7 @@ footer .family .input-group select {
   display: inline-block;
   width: 14px;
   height: 8px;
-  background-image: url("../../../img/new/detail-i-arrow-open.png");
+  background-image: url("../img/new/detail-i-arrow-open.png");
   background-position: 0 0;
   background-size: 14px 8px;
   background-repeat: no-repeat;
@@ -2630,7 +2630,7 @@ footer .family .input-group select {
 .detail-swiper .item.video::after {
   content: '';
   display: block;
-  background: url(../../../img/new/i-video.svg) no-repeat 0 0;
+  background: url(../img/new/i-video.svg) no-repeat 0 0;
   background-size: contain;
   width: 67px;
   height: 67px;
@@ -2642,7 +2642,7 @@ footer .family .input-group select {
 
 .detail-swiper .swiper-button-prev,
 .detail-swiper .swiper-container-rtl .swiper-button-next {
-  background: #fff url(../../../img/new/slide-i-arrow-prev.png) no-repeat 50% 50%;
+  background: #fff url(../img/new/slide-i-arrow-prev.png) no-repeat 50% 50%;
   width: 63px;
   height: 63px;
   border-radius: 50%;
@@ -2653,7 +2653,7 @@ footer .family .input-group select {
 
 .detail-swiper .swiper-button-next,
 .detail-swiper .swiper-container-rtl .swiper-button-prev {
-  background: #fff url(../../../img/new/slide-i-arrow-next.png) no-repeat 50% 50%;
+  background: #fff url(../img/new/slide-i-arrow-next.png) no-repeat 50% 50%;
   width: 63px;
   height: 63px;
   border-radius: 50%;
@@ -2757,7 +2757,7 @@ footer .family .input-group select {
 
 .modal-detail-slider .swiper-button-prev,
 .modal-detail-slider .swiper-container-rtl .swiper-button-next {
-  background: url(../../../img/new/swiper-i-prev-white.png) no-repeat 50% 50%;
+  background: url(../img/new/swiper-i-prev-white.png) no-repeat 50% 50%;
   width: 33px;
   height: 64px;
   left: -63px;
@@ -2767,7 +2767,7 @@ footer .family .input-group select {
 
 .modal-detail-slider .swiper-button-next,
 .modal-detail-slider .swiper-container-rtl .swiper-button-prev {
-  background: url(../../../img/new/swiper-i-next-white.png) no-repeat 50% 50%;
+  background: url(../img/new/swiper-i-next-white.png) no-repeat 50% 50%;
   width: 33px;
   height: 64px;
   right: -63px;
@@ -3455,7 +3455,7 @@ footer .family .input-group select {
   display: inline-block;
   width: 13px;
   height: 22px;
-  background: url("../../../img/new/slide-i-arrow-prev.png");
+  background: url("../img/new/slide-i-arrow-prev.png");
   background-position: 0 0;
 }
 
@@ -3561,7 +3561,7 @@ footer .family .input-group select {
   display: inline-block;
   width: 67px;
   height: 67px;
-  background: url("../../../img/new/slide-btn-video.png");
+  background: url("../img/new/slide-btn-video.png");
   background-position: 0 0;
   content: '';
   z-index: 2;
@@ -3580,7 +3580,7 @@ footer .family .input-group select {
 }
 
 .detail-slider #thumbImg-1 {
-  background-image: url("../../../img/_temp-new/slide-1.jpg");
+  background-image: url("../img/_temp-new/slide-1.jpg");
 }
 
 .ui-container-box {
@@ -3689,7 +3689,7 @@ footer .family .input-group select {
   display: inline-block;
   width: 22px;
   height: 17px;
-  background: url("../../../img/new/main-slider-btn-view.png");
+  background: url("../img/new/main-slider-btn-view.png");
   background-position: 0 0;
   content: '';
 }
@@ -3749,7 +3749,7 @@ footer .family .input-group select {
 }
 
 .main-slider .slick-next::before, .main-slider .slick-prev::before {
-  background-image: url("../../../img/new/main-slide-i-arrow-prev.png");
+  background-image: url("../img/new/main-slide-i-arrow-prev.png");
 }
 
 .main-slider .slick-next::after, .main-slider .slick-prev::after {
@@ -5000,7 +5000,7 @@ a.btnui1.btnui_1 {
   font-size: 16px;
   color: #666666;
   letter-spacing: -0.05em;
-  background: url("../../../img/new/chkui_mark.png") no-repeat center;
+  background: url("../img/new/chkui_mark.png") no-repeat center;
   background-size: contain;
   content: '';
   display: block;
@@ -5020,7 +5020,7 @@ a.btnui1.btnui_1 {
 }
 
 .chkui > input[type=checkbox]:checked + div:before {
-  background-image: url("../../../img/new/chkui_mark_on.png");
+  background-image: url("../img/new/chkui_mark_on.png");
 }
 
 .chkui1 {
@@ -5068,11 +5068,11 @@ a.btnui1.btnui_1 {
 }
 
 .chkui1 > input[type=checkbox]:checked + div:before {
-  background-image: url("../../../img/new/chkui1_mark_on.png");
+  background-image: url("../img/new/chkui1_mark_on.png");
 }
 
 .chkui1 > input[type=checkbox] + div:before {
-  background: url("../../../img/new/chkui1_mark.png") no-repeat center;
+  background: url("../img/new/chkui1_mark.png") no-repeat center;
   width: 20px;
   height: 58px;
   content: '';
@@ -5117,7 +5117,7 @@ a.btnui1.btnui_1 {
   position: absolute;
   top: 0px;
   left: 0px;
-  background: url("../../../img/new/rdoui_mark.png") no-repeat center;
+  background: url("../img/new/rdoui_mark.png") no-repeat center;
   background-size: contain;
   width: 20px;
   height: 100%;
@@ -5126,7 +5126,7 @@ a.btnui1.btnui_1 {
 }
 
 .rdoui > input[type=radio]:checked + div:before {
-  background-image: url("../../../img/new/rdoui_mark_on.png");
+  background-image: url("../img/new/rdoui_mark_on.png");
 }
 
 /* [ @~ta ] 1023이하 - 태블릿 세로 이하▼ 화면*/
@@ -5888,7 +5888,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 22px;
     height: 21px;
-    background-image: url("../../../img/new-mobile/top-i-mo-menu@2x.png");
+    background-image: url("../img/new-mobile/top-i-mo-menu@2x.png");
     background-position: 0 0;
     background-size: 22px 21px;
     background-repeat: no-repeat;
@@ -5908,7 +5908,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 22px;
     height: 21px;
-    background-image: url("../../../img/new-mobile/i-top-search@2x.png");
+    background-image: url("../img/new-mobile/i-top-search@2x.png");
     background-position: 0 0;
     background-size: 22px 21px;
     background-repeat: no-repeat;
@@ -5917,7 +5917,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 36px;
     height: 36px;
-    background-image: url("../../../img/new-mobile/i-top-btn-prev@2x.png");
+    background-image: url("../img/new-mobile/i-top-btn-prev@2x.png");
     background-position: 0 0;
     background-size: 36px 36px;
     background-repeat: no-repeat;
@@ -5927,7 +5927,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 13px;
     height: 21px;
-    background-image: url("../../../img/new-mobile/i-top-btn-next@2x.png");
+    background-image: url("../img/new-mobile/i-top-btn-next@2x.png");
     background-position: 0 0;
     background-size: 13px 21px;
     background-repeat: no-repeat;
@@ -5937,7 +5937,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 13px;
     height: 21px;
-    background-image: url("../../../img/new-mobile/i-search-btn-prev@2x.png");
+    background-image: url("../img/new-mobile/i-search-btn-prev@2x.png");
     background-position: 0 0;
     background-size: 13px 21px;
     background-repeat: no-repeat;
@@ -5946,7 +5946,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 36px;
     height: 36px;
-    background-image: url("../../../img/new-mobile/i-top-btn-home@2x.png");
+    background-image: url("../img/new-mobile/i-top-btn-home@2x.png");
     background-position: 0 0;
     background-size: 36px 36px;
     background-repeat: no-repeat;
@@ -5955,7 +5955,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 23px;
     height: 21px;
-    background-image: url("../../../img/new-mobile/i-top-close@2x.png");
+    background-image: url("../img/new-mobile/i-top-close@2x.png");
     background-position: 0 0;
     background-size: 23px 21px;
     background-repeat: no-repeat;
@@ -5964,7 +5964,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 21px;
     height: 23px;
-    background-image: url("../../../img/new-mobile/i-top-basket@2x.png");
+    background-image: url("../img/new-mobile/i-top-basket@2x.png");
     background-position: 0 0;
     background-size: 21px 23px;
     background-repeat: no-repeat;
@@ -5973,7 +5973,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 33px;
     height: 16px;
-    background-image: url("../../../img/new-mobile/sub-title-mall@2x.png");
+    background-image: url("../img/new-mobile/sub-title-mall@2x.png");
     background-position: 0 0;
     background-size: 33px 16px;
     background-repeat: no-repeat;
@@ -6099,7 +6099,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 40px;
     height: 32px;
-    background-image: url("../../../img/new-mobile/i-bottom-cs@2x.png");
+    background-image: url("../img/new-mobile/i-bottom-cs@2x.png");
     background-position: 0 0;
     background-size: 40px 32px;
     background-repeat: no-repeat;
@@ -6117,7 +6117,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 20px;
     height: 25px;
-    background-image: url("../../../img/new-mobile/i-bottom-top@2x.png");
+    background-image: url("../img/new-mobile/i-bottom-top@2x.png");
     background-position: 0 0;
     background-size: 20px 25px;
     background-repeat: no-repeat;
@@ -6135,7 +6135,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 19px;
     height: 18px;
-    background-image: url("../../../img/new-mobile/i-bottom-back@2x.png");
+    background-image: url("../img/new-mobile/i-bottom-back@2x.png");
     background-position: 0 0;
     background-size: 19px 18px;
     background-repeat: no-repeat;
@@ -6194,7 +6194,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 144px;
     height: 22px;
-    background-image: url("../../../img/new-mobile/logo@2x.png");
+    background-image: url("../img/new-mobile/logo@2x.png");
     background-position: 0 0;
     background-size: 144px 22px;
     background-repeat: no-repeat;
@@ -6531,7 +6531,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 14px;
     height: 14px;
-    background-image: url("../../../img/new-mobile/i-released-time@2x.png");
+    background-image: url("../img/new-mobile/i-released-time@2x.png");
     background-position: 0 0;
     background-size: 14px 14px;
     background-repeat: no-repeat;
@@ -6753,7 +6753,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 9px;
     height: 14px;
-    background-image: url("../../../img/new-mobile/mypage-i-arrow-modify@2x.png");
+    background-image: url("../img/new-mobile/mypage-i-arrow-modify@2x.png");
     background-position: 0 0;
     background-size: 9px 14px;
     background-repeat: no-repeat;
@@ -6872,7 +6872,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 14px;
     height: 8px;
-    background-image: url("../../../img/new-mobile/detail-i-arrow-open@2x.png");
+    background-image: url("../img/new-mobile/detail-i-arrow-open@2x.png");
     background-position: 0 0;
     background-size: 14px 8px;
     background-repeat: no-repeat;
@@ -7103,7 +7103,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 26px;
     height: 20px;
-    background-image: url("../../../img/new-mobile/main-slider-btn-view@2x.png");
+    background-image: url("../img/new-mobile/main-slider-btn-view@2x.png");
     background-position: 0 0;
     background-size: 26px 20px;
     background-repeat: no-repeat;
@@ -7259,7 +7259,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 22px;
     height: 21px;
-    background-image: url("../../../img/new-mobile/i-top-search-on@2x.png");
+    background-image: url("../img/new-mobile/i-top-search-on@2x.png");
     background-position: 0 0;
     background-size: 22px 21px;
     background-repeat: no-repeat;
@@ -7385,7 +7385,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 21px;
     height: 13px;
-    background-image: url("../../../img/new-mobile/detail-i-arrow@2x.png");
+    background-image: url("../img/new-mobile/detail-i-arrow@2x.png");
     background-position: 0 0;
     background-size: 21px 13px;
     background-repeat: no-repeat;
@@ -7704,7 +7704,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background-image: url("../../../img/new-mobile/top-i-mo-menu@2x.png");
+    background-image: url("../img/new-mobile/top-i-mo-menu@2x.png");
     background-position: 0 0;
     background-size: 15px 15px;
     background-repeat: no-repeat;
@@ -7713,7 +7713,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background-image: url("../../../img/new-mobile/i-top-search@2x.png");
+    background-image: url("../img/new-mobile/i-top-search@2x.png");
     background-position: 0 0;
     background-size: 15px 15px;
     background-repeat: no-repeat;
@@ -7722,7 +7722,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-image: url("../../../img/new-mobile/i-top-btn-prev@2x.png");
+    background-image: url("../img/new-mobile/i-top-btn-prev@2x.png");
     background-position: 0 0;
     background-size: 24px 24px;
     background-repeat: no-repeat;
@@ -7732,7 +7732,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 13px;
     height: 21px;
-    background-image: url("../../../img/new-mobile/i-top-btn-next@2x.png");
+    background-image: url("../img/new-mobile/i-top-btn-next@2x.png");
     background-position: 0 0;
     background-size: 13px 21px;
     background-repeat: no-repeat;
@@ -7742,7 +7742,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 9px;
     height: 15px;
-    background-image: url("../../../img/new-mobile/i-search-btn-prev@2x.png");
+    background-image: url("../img/new-mobile/i-search-btn-prev@2x.png");
     background-position: 0 0;
     background-size: 9px 15px;
     background-repeat: no-repeat;
@@ -7751,7 +7751,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-image: url("../../../img/new-mobile/i-top-btn-home@2x.png");
+    background-image: url("../img/new-mobile/i-top-btn-home@2x.png");
     background-position: 0 0;
     background-size: 24px 24px;
     background-repeat: no-repeat;
@@ -7760,7 +7760,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 14px;
     height: 13px;
-    background-image: url("../../../img/new-mobile/i-top-close@2x.png");
+    background-image: url("../img/new-mobile/i-top-close@2x.png");
     background-position: 0 0;
     background-size: 14px 13px;
     background-repeat: no-repeat;
@@ -7769,7 +7769,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 21px;
     height: 23px;
-    background-image: url("../../../img/new-mobile/i-top-basket@2x.png");
+    background-image: url("../img/new-mobile/i-top-basket@2x.png");
     background-position: 0 0;
     background-size: 21px 23px;
     background-repeat: no-repeat;
@@ -7778,7 +7778,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 33px;
     height: 16px;
-    background-image: url("../../../img/new-mobile/sub-title-mall@2x.png");
+    background-image: url("../img/new-mobile/sub-title-mall@2x.png");
     background-position: 0 0;
     background-size: 33px 16px;
     background-repeat: no-repeat;
@@ -7801,7 +7801,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 10px;
     height: 6px;
-    background-image: url("../../../img/new/detail-i-arrow-open.png");
+    background-image: url("../img/new/detail-i-arrow-open.png");
     background-position: 0 0;
     background-size: 10px 6px;
     background-repeat: no-repeat;
@@ -7908,7 +7908,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 27px;
     height: 21px;
-    background-image: url("../../../img/new-mobile/i-bottom-cs@2x.png");
+    background-image: url("../img/new-mobile/i-bottom-cs@2x.png");
     background-position: 0 0;
     background-size: 27px 21px;
     background-repeat: no-repeat;
@@ -7919,7 +7919,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 13px;
     height: 17px;
-    background-image: url("../../../img/new-mobile/i-bottom-top@2x.png");
+    background-image: url("../img/new-mobile/i-bottom-top@2x.png");
     background-position: 0 0;
     background-size: 13px 17px;
     background-repeat: no-repeat;
@@ -7930,7 +7930,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 13px;
     height: 12px;
-    background-image: url("../../../img/new-mobile/i-bottom-back@2x.png");
+    background-image: url("../img/new-mobile/i-bottom-back@2x.png");
     background-position: 0 0;
     background-size: 13px 12px;
     background-repeat: no-repeat;
@@ -7975,7 +7975,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 100px;
     height: 15px;
-    background-image: url("../../../img/new-mobile/logo@2x.png");
+    background-image: url("../img/new-mobile/logo@2x.png");
     background-position: 0 0;
     background-size: 100px 15px;
     background-repeat: no-repeat;
@@ -7994,7 +7994,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 25px;
     height: 11px;
-    background-image: url("../../../img/new/tab-mall-off.png");
+    background-image: url("../img/new/tab-mall-off.png");
     background-position: 0 0;
     background-size: 25px 11px;
     background-repeat: no-repeat;
@@ -8109,7 +8109,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-image: url("../../../img/new-mobile/i-top-search-on@2x.png");
+    background-image: url("../img/new-mobile/i-top-search-on@2x.png");
     background-position: 0 0;
     background-size: 12px 12px;
     background-repeat: no-repeat;
@@ -8169,7 +8169,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 62px;
     height: 60px;
-    background-image: url("../../../img/new-mobile/i-released-band@2x.png");
+    background-image: url("../img/new-mobile/i-released-band@2x.png");
     background-position: 0 0;
     background-size: 62px 60px;
     background-repeat: no-repeat;
@@ -8255,7 +8255,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 42px;
     height: 42px;
-    background-image: url("../../../img/new-mobile/i-released-band@2x.png");
+    background-image: url("../img/new-mobile/i-released-band@2x.png");
     background-position: 0 0;
     background-size: 42px 42px;
     background-repeat: no-repeat;
@@ -8358,7 +8358,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 15px;
     height: 10px;
-    background-image: url("../../../img/new-mobile/detail-i-arrow@2x.png");
+    background-image: url("../img/new-mobile/detail-i-arrow@2x.png");
     background-position: 0 0;
     background-size: 15px 10px;
     background-repeat: no-repeat;
@@ -8483,7 +8483,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 10px;
     height: 6px;
-    background-image: url("../../../img/new/detail-i-arrow-open.png");
+    background-image: url("../img/new/detail-i-arrow-open.png");
     background-position: 0 0;
     background-size: 10px 6px;
     background-repeat: no-repeat;
@@ -8618,7 +8618,7 @@ a.btnui1.btnui_1 {
     display: inline-block;
     width: 10px;
     height: 6px;
-    background-image: url("../../../img/new/detail-i-arrow-open.png");
+    background-image: url("../img/new/detail-i-arrow-open.png");
     background-position: 0 0;
     background-size: 10px 6px;
     background-repeat: no-repeat;
