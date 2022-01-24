@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/common_rwd.css">
     <link rel="stylesheet" href="./css/lib/jquery-ui.css">
     <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css">
-    
+
     <script src="./js/lib/jquery.min.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/lib/swiper-bundle.min.js"></script>
@@ -42,7 +42,7 @@
                         $('body').addClass('calenderBg');
                         setTimeout(function() {
                             var confirm = $("<button type='button' class='btn_calendarConfirm'>확인</button>");
-                        
+
                             confirm.off("click").on("click", function() {
 
                             });
@@ -58,7 +58,7 @@
                     onChangeMonthYear:function(year, month, inst){
                         setTimeout(function() {
                             var confirm = $("<button type='button' class='ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all' data-handler='hide' data-event='click'>Done</button><button class='btn_calendarConfirm'>확인</button>");
-                        
+
                             confirm.off("click").on("click", function() {
 
                             });
@@ -80,7 +80,7 @@
                         inst.inline = true;
                         setTimeout(function() {
                             var confirm = $("<button type='button' class='ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all' data-handler='hide' data-event='click'>Done</button><button class='btn_calendarConfirm'>확인</button>");
-                        
+
                             confirm.off("click").on("click", function() {
 
                             });
@@ -111,9 +111,9 @@
             $.fn.setCalendar('calendar_wrap', {
                 'month':[3, 3, 3, 3, 3, 3, 3],
                 'date':[15, 16, 17, 18, 19, 20, 21],
-                'activeIdx':2 /* 포커스된 날짜, 범위: 0 ~ 6 */ 
+                'activeIdx':2 /* 포커스된 날짜, 범위: 0 ~ 6 */
             });
-        /* E 달력 날짜 세팅 샘플 */            
+        /* E 달력 날짜 세팅 샘플 */
         });
     </script>
 </head>
@@ -123,7 +123,7 @@
     <!-- S 사용자 정보 & GNB 영역 -->
         <nav>
         <!-- S > 사용자 정보 -->
-            <h1><img src="./imgs/common/bg_ci.png" alt="olleh tv 홈스쿨 x i-Scream AI 홈런"></h1>
+            <h1><img src="./imgs/common/bg_ci.svg" alt="olleh tv 홈스쿨 x i-Scream AI 홈런"></h1>
             <div class="userInfo">
                 <div class="userImg_wrap"><img src="./imgs/dummy/dummy_userImg.png" alt="dummy Image"></div>
                 <strong class="userName">홍길동<span class="userGrade">(4학년)</span></strong>
@@ -305,7 +305,7 @@
         <!-- E 콘텐츠 영역 -->
         <!-- S 개인화 영역
             Description:
-            - 개인화 영역 캐릭터 생성은 class 'init' 추가 
+            - 개인화 영역 캐릭터 생성은 class 'init' 추가
             - 개인화 영역 캐릭터 애니메이션은 class 'init'에 class 'playing' 추가시 실행
         -->
         <aside class="init playing">

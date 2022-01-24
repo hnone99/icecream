@@ -191,7 +191,7 @@ $(document).ready(function () {
 
 	//공통팝업
 //	fnOpenKtClosePopup();
-	 	
+
 	//마이페이지 이동
 	$('nav .btn_my').on('click', function(){
 //		alert("SAID확인 "+ sessionStorage.getItem("SAID"))
@@ -328,7 +328,7 @@ $(document).ready(function () {
 		   	    			closeWebView();
 		   	    		}
 		   	    	}
-					
+
 				}else if (chref.indexOf("modifyInfo") > -1){
 					if(modYn == "Y"){
 		    			$('.popup_wrap > div').css('display','none');
@@ -347,8 +347,8 @@ $(document).ready(function () {
 					closeWebView();
 				}
 			}
-	
-			
+
+
 		}
 	}
 	//새창 목록의 공통 닫기 css에 닫기 이벤트 설정
@@ -563,7 +563,7 @@ function fnCheckLogin(isSessionOut){
 //console.trace("알 수 없는 경로로부터 세션 만료 알림 받음", (typeof EUSER_INFO != "undefined" ? EUSER_INFO : null));
 		var href = location.href;
 		if (href.indexOf("/intro/") > 0) {
-		
+
 		} else if (href.indexOf("login.html") < 0) {
 
 			// 20210324 ynjoung modified.
@@ -577,7 +577,7 @@ function fnCheckLogin(isSessionOut){
 					//TODO 확인필요
 					//getJoinNSaid();
 					//location.reload();
-					
+
 					commonAlert("일시적인 오류가 발생했습니다. <br/>잠시 후 다시 시도해주세요.", null, function () { userLogout("Y") });
 				}
 				else{//메뉴바가 없는 경우
@@ -598,7 +598,7 @@ function fnCheckLogin(isSessionOut){
 
 				if (href.indexOf("/html/main") > -1) {//메뉴바가 있는 메인 페이지인 경우
 //					msCommonAlert("사용자 세션이 만료되었거나, 다른곳에서 로그인하였습니다.", null, function () { userLogout("Y") });
-					
+
 					//getJoinNSaid();
 					//location.reload();
 					commonAlert("일시적인 오류가 발생했습니다. <br/>잠시 후 다시 시도해주세요.", null, function () { userLogout("Y") });
@@ -1178,9 +1178,9 @@ function fnOpenKtClosePopup(){
 	if ($(".opacity7").length > 0) {
 		$(".opacity7").remove();
 	}
-		
+
 		$(document.body).append('<section class="popup_wrap opacity7"></section>');
-		
+
 		if(!$('.popup_common').hasClass('end')){
 			includeHtmlKt('.opacity7', '../../html/common/closePopup.html', function() {
 			   	$('body > .container > .btn_close').on('click', function () {
@@ -1191,26 +1191,26 @@ function fnOpenKtClosePopup(){
 			   	});
 			});
 		}
-		
+
 		if(!$('.popup_common').hasClass('joinPaidIng')){
 			includeHtmlKt('.opacity7', '../../html/common/joinPopup.html', function() {
-		
+
 	//			$.fn.openPopup('joinPopup');
 				var ds = sessionStorage.getItem("DEMO_REST_DATE");
 				var dd = String(ds).length === 1 ? '0' + ds : ds;
 				$('#remainDate').text(dd+'일');
-					
+
 	//		   	$('#closeJoinPopup').on('click', function () {
 	//		   		$.fn.closePopup('joinPopup');
 	//		   	});
 			});
 		}
-		
+
 		if(!$('.popup_common').hasClass('joinPaidEnd')){
 			includeHtmlKt('.opacity7', '../../html/common/expPopup.html', function() {
-				
+
 	//			$.fn.openPopup('expPopup');
-							
+
 	//		   	$('#closeExpPopup').on('click', function () {
 	//		   		$.fn.closePopup('expPopup');
 	//		   	});
@@ -1233,7 +1233,7 @@ function fnOpenKtClosePopup(){
 					$.fn.openPopup('expPopup');
 				}
 			})
-		 }, 500);	
+		 }, 500);
 
 }
 
@@ -1448,7 +1448,7 @@ function openWebView(link) {
 		if(Object.keys(ES_PAGES).includes(link)) {
 			xNaviEvent2({
 				name: ES_PAGES[link],
-				content_desc: ES_PAGES[link], 
+				content_desc: ES_PAGES[link],
 				objType: "M",
 //				url: path
 			});
@@ -1563,7 +1563,7 @@ function userLogout(isNoMsg) {
 function fnRunLogOut() {
 
 	fnGoLoginHome();
- 
+
 //	if (Global.isApp) {
 //		ifNativeRun("userLogout", null, null);
 //	}
@@ -1635,7 +1635,7 @@ function ifIsKT() {
 
 /**
  * 홈런 for anydevice 앱의 정보를 native로 부터 조회 callback (ifGetAppInfo 함수 실행 뒤 호출)
- * @param {json string} appInfo 
+ * @param {json string} appInfo
  */
 function callbackAppInfo(appInfo){
 
@@ -1714,7 +1714,7 @@ function callbackBtBInfo(btbInfo) {
 
 /**
  * 홈런 for anydevice 앱의 정보를 native로 부터 조회 callback (ifGetAppInfo 함수 실행 뒤 호출)
- * @param {json string} appInfo 
+ * @param {json string} appInfo
  */
 function callbackAppInfo(appInfo){
 
@@ -1745,16 +1745,16 @@ function callbackAppInfo(appInfo){
 function callTodayReload(){
 	var href = location.href;
 	if (href.indexOf("odayStudy") > -1) {
-		var year = sessionStorage.getItem('ts_year');	
-		var month = sessionStorage.getItem('ts_month');	
-		var day = sessionStorage.getItem('ts_day');	
+		var year = sessionStorage.getItem('ts_year');
+		var month = sessionStorage.getItem('ts_month');
+		var day = sessionStorage.getItem('ts_day');
 		if(!$.isEmpty(year) && !$.isEmpty(month) && !$.isEmpty(day) ){
 			sessionStorage.removeItem('ts_year');
 			sessionStorage.removeItem('ts_month');
 			sessionStorage.removeItem('ts_day');
 			location.href = "todayStudy.html?year="+year+"&month="+month+"&day="+day
 		}else{
-			location.reload();	
+			location.reload();
 		}
 	}
 }
@@ -1790,7 +1790,7 @@ function callStudyxCaliper(eventType, actionType, studyId, studyType, studyTitle
 		"\nstudyType: " + studyType +
 		"\nstudyTitle: " + studyTitle +
 		"\nstudyKind: " + studyKind +
-		"\nstudyProgDay: " + studyProgDay + 
+		"\nstudyProgDay: " + studyProgDay +
 		"\nedappVersion: " + edappVersion +
 		"\nedappName: " + edappName); */
 	var version = "1.0", appname = "KT초등";
@@ -2384,7 +2384,7 @@ function commonAlert(message, option, okCallback) {
 	template += '		</div>';
 	template += '	</div>';
 	template += '</section>';
-			
+
 	$("body div.container").append(template);
 
 	var commonAlertPopup = $("#commonPopup");
@@ -3250,7 +3250,7 @@ function fnJoinSchemeObj(oScheme) {
  */
 function fnGetGrade() {
 	var grade;
-	
+
 	try {
 		var euserInfo = JSON.parse(sessionStorage.getItem("EUSER_INFO"));
 		grade = euserInfo.GRADE_GBN;
@@ -3278,9 +3278,9 @@ function fnGetTerm() {
 	if(termEl.length > 0) {
 		if($(termEl[0]).hasClass("1"))
 			term = 1;
-		else 
+		else
 			term = 2;
-		
+
 	}
 
 	return term;
@@ -3423,7 +3423,7 @@ function getJoinNSaid() {
 }
 
 function sendJoinNSaid(join, said) {
-	// said가 빈 값으로 넘어와서 이하 로직이 전부 망가질때를 대비한 방어코드 
+	// said가 빈 값으로 넘어와서 이하 로직이 전부 망가질때를 대비한 방어코드
 	if(said == "") said = " ";
 
 	sessionStorage.setItem("SAID", said);
@@ -3535,7 +3535,7 @@ function loadParentToken() {
 				g_TOKEN = resp.userInfo.token;
 			else
 				g_TOKEN = null;
-				
+
 //			console.log(resp.userInfo.loginId);
 //			resp.userInfo.loginId = kt.cipher.dec(resp.userInfo.loginId);
 			sessionStorage.setItem("PAR_TOKEN", g_TOKEN);
@@ -3574,7 +3574,7 @@ function getAllDataForKt(completeCallback) {
 	getHomelearnRegAndDemo();
 	// 학부모 토큰을 가져온다
 	loadParentToken();
-	
+
 	var checkInterval = 300;
 	var checkCnt = 0;
 	var checkDataLoadedComplete;
@@ -3597,7 +3597,7 @@ function getAllDataForKt(completeCallback) {
 				return;
 			}
 		}
-		
+
 		console.log("전체 로드 완료");
 
 		if(typeof completeCallback == "function") {
@@ -3672,7 +3672,7 @@ function setMyConBtn(){
 
     		}
     	});
-//	} 
+//	}
 }
 
 
@@ -3710,7 +3710,7 @@ function fnKtElLandDrawGnb(activeClass) {
 	var gnbTags = "" +
 		'<a href="#none" class="btn_close"><img src="../../imgs/common/btn_end.png" alt="로그아웃, 앱종료"></a>' +
 		'<nav>' +
-		'	<h1><img src="../../imgs/common/bg_ci.png" alt="초등랜드"></h1>' +
+		'	<h1><img src="../../imgs/common/bg_ci.svg" alt="초등랜드"></h1>' +
 		'	<div class="userInfo">' +
 		'		<div class="userImg_wrap"><img src="../../imgs/dummy/dummy_userImg.png" alt="dummy Image"></div>' +
 		'		<strong class="userName">' + studentName + '<span class="userGrade">(' + studentGrade + '학년)</span></strong>' ;
@@ -3742,7 +3742,7 @@ function fnKtElLandDrawGnb(activeClass) {
 
 	//공통팝업 처리
 //	fnOpenKtClosePopup();
-	
+
 	//월정액가입 버튼
 //	if(demoYn == "Y"){
 		/*$('nav .btn_joinPaid').on('click', function(){
@@ -3947,16 +3947,16 @@ function __fnKtShowPopup__(popOpt) {
 		'<section class="popup_wrap">' +
 		'	<div class="popup_common' + (wide ? " pop_terms" : "") + '" id="">';
 	if(title != null) {
-		popupTags += 
+		popupTags +=
 			'		<div class="pop_header">' +
 			'			<strong>' + title + '</strong>';
-		
+
 		if(showClose) {
 			popupTags += "" +
 			'				<a href="#none" class="btn_close_popup"><img src="../../imgs/popup/btn_popup_close.png" alt="팝업 닫기"></a>';
 		}
 
-		popupTags += 
+		popupTags +=
 			'		</div>';
 	}
 	if(body != null) {
@@ -4099,7 +4099,7 @@ function fnKtLoginProfile(memberStudentSid) {
 		said: kt.cipher.enc(said),
 		userId: kt.cipher.enc(memberStudentSid),
 	}
-	
+
 	// native dimm 이벤트를 직접 제어하기 위해, 공통 postJSON이 아닌 plain jQuery Ajax 함수를 사용한다
 	$.ajax({
 		url: Global[Global.env].eco + url,
@@ -4203,7 +4203,7 @@ function fnKtLoginProfile(memberStudentSid) {
 			sessionStorage.setItem("EUSER_INFO", JSON.stringify(euserInfo));
 			EUSER_INFO = JSON.parse(JSON.stringify(euserInfo));
 			ifNativeRun("setUserInfo", JSON.stringify(userInfo));
-			
+
 			// 페이지 이동하기 전에 xCaliper 호출
 			xLogin();
 
@@ -4318,7 +4318,7 @@ function fnKtIsValidPwdPolicy(pwd) {
 	const ALPHABET_LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
 	const NUMBERS = "0123456789";
 	const SPECIAL_CHARS = "!@#$%^&*";
-	
+
 	if(length == 0) return false;
 	if(length < minLength || length > maxLength) return false;
 
@@ -4357,7 +4357,7 @@ function fnKtIsValidPwdPolicy(pwd) {
 		}
 	}
 	if(!isIncludeSpecialChars) return false;
-	
+
 	return true;
 }
 
@@ -4445,7 +4445,7 @@ $.fn.openPopup = function(_targetId, _isBgEvent){
 
 	//$('.popup_wrap').css({'display':'flex'});
 	target.parents(".popup_wrap").css({'display':'flex'});
-	
+
 	target.fadeIn(function(){
 		if(isBgEvent){
 			target.parents('.popup_wrap').off('click').on({
@@ -4491,7 +4491,7 @@ $(document).ready(function(evt) {
 			var currentTarget = e.currentTarget || null;;
 			var $parent;
 			var isOpen;
-			
+
 			if( currentTarget != null){
 				$parent = $(currentTarget).parent();
 				isOpen = $parent.hasClass('open')

@@ -25,7 +25,7 @@
                     click:function(e){
                         var idx = $(e.target).index() + 1;
                         var listIdx = $(e.target).parent('li').index();
-                        
+
                         $(e.target).parent().siblings().removeClass('active');
                         $(e.target).parents('.studySpecial_list').find('.studySpecialDetailList_wrap').attr('data-active-index', 0);
                         $(e.target).parents('li').addClass('active');
@@ -43,7 +43,7 @@
     <!-- S 사용자 정보 & GNB 영역 -->
         <nav>
         <!-- S > 사용자 정보 -->
-            <h1><img src="./imgs/common/bg_ci.png" alt="olleh tv 홈스쿨 x i-Scream AI 홈런"></h1>
+            <h1><img src="./imgs/common/bg_ci.svg" alt="olleh tv 홈스쿨 x i-Scream AI 홈런"></h1>
             <div class="userInfo">
                 <div class="userImg_wrap"><img src="./imgs/dummy/dummy_userImg.png" alt="dummy Image"></div>
                 <strong class="userName">홍길동<span class="userGrade">(4학년)</span></strong>
@@ -85,7 +85,7 @@
             Description:
             - 상세 목록이 있는 학습은 선택시 상세 목록 그룹 노출
             - 선택한 class 'studySpecialDetailList_wrap'에 class 'active' 추가하고 data-active-index 속성에 index 값으로 포커스되는 아이템 표시( 1 ~ 5 )
-            - class 'studySpecialDetail_list'의 li가 8개가 넘을경우 class 'scroll' 추가  
+            - class 'studySpecialDetail_list'의 li가 8개가 넘을경우 class 'scroll' 추가
             - 1~2학년:  안녕학교 | 동화누리 | 음악누리 | 미술누리 | 인물 한국사 | 홈런공부송 | 코딩송 | 문장연습 | 홈런타자연습 | 홈트레이닝 생활체조
             - 3~6학년:  홈런공부송 | 한국문화100 | 한자서당 | 열려라 코딩 | 미래직업 탐색 | 홈런 AI교과서 | 홈런타자연습 | 홈트레이닝 생활체조 | 일상의 소리
         -->
@@ -103,7 +103,7 @@
                                 <li><a href="#none"><img src="./imgs/img_study_specialSub_02.png" alt="마법천자문"><span>마법천자문</span></a></li>
                                 <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
                                 <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
-                            </ul>    
+                            </ul>
                         </div>
                     </li>
                     <li>

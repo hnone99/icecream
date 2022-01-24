@@ -569,8 +569,8 @@ textarea::placeholder{color:#ccc}
 
 .mCSB_scrollTools .mCSB_buttonUp {
      background-position: 0 0;
-     /* 
-		sprites locations 
+     /*
+		sprites locations
 		light: 0 0, -1.25vw 0, -2.5vw 0, -3.75vw 0, 0 -5.63vw, -1.25vw -5.63vw, -2.5vw -5.63vw
 		dark: -6.25vw 0, -7.5vw 0, -8.75vw 0, -10vw 0, -6.25vw -5.63vw, -7.5vw -5.63vw, -8.75vw -5.63vw
 		*/
@@ -578,7 +578,7 @@ textarea::placeholder{color:#ccc}
 
 .mCSB_scrollTools .mCSB_buttonDown {
      background-position: 0 -1.56vw;
-     /* 
+     /*
 		sprites locations
 		light: 0 -1.56vw, -1.25vw -1.56vw, -2.5vw -1.56vw, -3.75vw -1.56vw, 0 -7.19vw, -1.25vw -7.19vw, -2.5vw -7.19vw
 		dark: -6.25vw -1.56vw, -7.5vw -1.56vw, -8.75vw -1.56vw, -10vw -1.56vw, -6.25vw -7.19vw, -7.5vw -7.19vw, -112 -7.19vw
@@ -587,8 +587,8 @@ textarea::placeholder{color:#ccc}
 
 .mCSB_scrollTools .mCSB_buttonLeft {
      background-position: 0 -3.13vw;
-     /* 
-		sprites locations 
+     /*
+		sprites locations
 		light: 0 -3.13vw, -1.56vw -3.13vw, -3.13vw -3.13vw, -4.69vw -3.13vw, 0 -8.75vw, -1.56vw -8.75vw, -3.13vw -8.75vw
 		dark: -6.25vw -3.13vw, -7.81vw -3.13vw, -9.38vw -3.13vw, -10.94vw -3.13vw, -6.25vw -8.75vw, -7.81vw -8.75vw, -9.38vw -8.75vw
 		*/
@@ -596,8 +596,8 @@ textarea::placeholder{color:#ccc}
 
 .mCSB_scrollTools .mCSB_buttonRight {
      background-position: 0 -4.38vw;
-     /* 
-		sprites locations 
+     /*
+		sprites locations
 		light: 0 -4.38vw, -1.56vw -4.38vw, -3.13vw -4.38vw, -4.69vw -4.38vw, 0 -10vw, -1.56vw -10vw, -3.13vw -10vw
 		dark: -6.25vw -4.38vw, -7.81vw -4.38vw, -9.38vw -4.38vw, -10.94vw -4.38vw, -6.25vw -10vw, -7.81vw -10vw, -9.38vw -10vw
 		*/
@@ -2006,7 +2006,7 @@ textarea::placeholder{color:#ccc}
      justify-content: center;
 }
 .loginBox {
-     padding: 3.5vw 4.25vw;
+     padding: 4.65vw 4.25vw 4vw;
      max-width: 45vw;
      height: 33.5vw;
      border-radius: 2vw;
@@ -2024,6 +2024,10 @@ textarea::placeholder{color:#ccc}
      line-height: 5.4vw;
      text-align: left;
      letter-spacing: -0.11vw;
+     margin-bottom: 4vw;
+}
+.loginBox .logo {
+     max-width: 28.5vw;
 }
 .loginBox .title+input {
      margin-top: 1.25vw;
@@ -2104,7 +2108,7 @@ textarea::placeholder{color:#ccc}
      min-width: 10.05vw;
      border-radius: 0.5vw;
      height: 8.62vw;
-     background-color: #ff5400;
+     background-color: #00b6d4;
      border: none;
      font-size: 2.3vw;
      font-weight: 800;
