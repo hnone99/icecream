@@ -1285,13 +1285,13 @@ $(document).ready(function() {
 
 	$(window).scroll(function(event){
 		if(document.documentElement.scrollTop < 5){
-			$(".top").hide();
+			$(".fixed .top").hide();
 		}else{
-			$(".top").show();
+			$(".fixed .top").show();
 		}
 	});
 
-	$(".top").click(function(e){
+	$(".fixed .top").click(function(e){
 		onClickEventPrevent(e);
 		scrollTop();
 	});

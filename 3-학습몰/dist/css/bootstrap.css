@@ -21700,6 +21700,12 @@ body.eng .review-wrap .review-count .count > div .grade {
   color: #ff7600;
 }
 
+@media (max-width: 400px) {
+  .pwChange__btnWrap button{
+    padding-left: 0;padding-right: 0;font-size: 13px;
+  }
+}
+
 .pwChange__btnWrap .ctb {
   background-color: #ff7600;
   color: #fff;
@@ -25633,6 +25639,7 @@ body.eng .payment .p-info .accordion .card .card-body .delivery-info .form-group
 .mypage .edu-list li img {
   float: left;
   width: 50px;
+  cursor: pointer;
 }
 
 .mypage .edu-list li h2 {
@@ -25643,6 +25650,7 @@ body.eng .payment .p-info .accordion .card .card-body .delivery-info .form-group
   font-size: 18px;
   line-height: 1.33;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .mypage .edu-list li p {
