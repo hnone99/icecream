@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home Learn Hybrid</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<style type="text/css">
+.box { padding: 26px 33px 18px 13px; height: 487px; }
+aside { margin-left: 20px; }
+</style>
+<body class="bg noStudyToday"><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+	<div class="wrap">
+		<main>
+
+			<!-- dateNav-->
+			<nav class="dateNav">
+	<a class="goPrev"></a>
+	<a data-text="HOM_001_007">월</a>
+	<a data-text="HOM_001_008">화</a>
+	<a class="on"><span data-text="HOM_001_009">수</span><span>07월 08일</span></a>
+	<a data-text="HOM_001_010">목</a>
+	<a data-text="HOM_001_011">금</a>
+	<a data-text="HOM_001_012">토</a>
+	<a data-text="HOM_001_013">일</a>
+	<a class="goNext"></a>
+	<a class="calendar"></a>
+</nav>
+
+			<!-- end of dateNav -->
+
+			<section class="main margin-top_30">
+
+				<div class="box blueBox flex column withOffsetTitle">
+					<div class="boxTitle offset todaySchoolStudy"><span class="pool">4</span></div>
+					<div class="titleBox">
+						<div class="oneLineBox">
+							<div class="element grow headLabel oneLine"><label class="color_white" data-text="HOM_001_017">오답노트</label>최근 등록된 오답노트 <span class="wrongCount">2</span>개</div>
+							<div class="element grow oneLine margin-left_5 newBadge"><span class="memoIcon"></span><span class="teacherUnderline" data-text="HOM_001_019">선생님 채점 결과</span></div>
+						</div>
+					</div>
+
+					<div class="element grow example noStudyBanner01">
+						<img src="../img/examples/0001.png" />
+					</div>
+				</div>
+				<div class="box yellowBox flex column withOffsetTitle">
+					<div class="boxTitle offset todaySpecialStudy"><span class="pool">10</span></div>
+					<div class="element margin-top-0 headLabel darkOrange oneLine">
+						<label class="white"><span data-text="SUB_110_005">홈런연산</span></label>연산테마파크로 모험을 떠나 보아요.!
+					</div>
+					<div class="element headLabel darkOrange oneLine">
+						<label class="white"><span data-text="SUB_110_005">홈런연산</span></label>연산테마파크로 모험을 떠나 보아요.!
+					</div>
+					<div class="element headLabel darkOrange oneLine">
+						<label class="white"><span data-text="SUB_110_005">홈런연산</span></label>연산테마파크로 모험을 떠나 보아요.!
+					</div>
+
+					<div class="element grow example noStudyBanner02">
+						<img src="../img/examples/0002.png" />
+					</div>
+
+				</div>
+			</section>
+
+			<!-- footNav -->
+			<nav class="bottomNav 1">
+	<div>
+		<div class="icon homeLearnBookCafe"></div>
+		<div><span data-text="SUB_039_012">홈북카페</span></div>
+	</div>
+	<div class="verticalLine"></div>
+	<div>
+		<div class="icon textBookDic"></div>
+		<div data-text="SUB_001_024">교과서사전</div>
+	</div>
+	<div class="verticalLine"></div>
+	<div>
+		<div class="icon studyEncy"></div>
+		<div data-text="SUB_001_025">학습백과</div>
+	</div>
+	<div class="verticalLine"></div>
+	<div>
+		<div class="icon pointDic"></div>
+		<div data-text="SUB_001_020">핵심전과</div>
+	</div>
+</nav>
+
+			<!-- end of footNav -->
+
+		</main>
+
+		<!-- aside -->
+		<aside class="@@class">
+	<section class="profileSection">
+		<div class="profileIcon">
+			<figure>
+				<img src="../img/samples/sampleProfileImage.png" />
+			</figure>
+			<div class="editGear"></div>
+		</div>
+		<ul class="personalInfoList">
+			<li>김홈런</li>
+			<li><span data-text="HOM_002_010">4학년</span> <span class="bull"></span><span data-text="HOM_002_011">박민지 선생님</span></li>
+			<li><span class="iceCream"></span><span data-text="HOM_002_012">11,500콘</span> </li>
+		</ul>
+
+		<ul class="buttonList">
+			<li class="skyBg">
+				<div>
+					<div class="icon wrongAnswerNote"></div><span data-text="HOM_002_013">내<br />오답노트</span>
+				</div>
+				<div>
+            <div class="icon naigongBox"></div><span data-text="HOM_002_014">내공<br />상자</span>
+				</div>
+				<div>
+					<div class="icon aILifeNote"></div><span data-text="HOM_002_015">AI<br />생활기록부</span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<div class="icon attendCheck"></div><span data-text="HOM_002_016">출석체크</span>
+				</div>
+				<div>
+					<div class="icon eventBox"><span class="alert">10</span></div><span data-text="HOM_002_017">이벤트</span>
+				</div>
+				<div>
+					<div class="icon coneyWorld"></div><span data-text="HOM_002_018">코니월드</span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<div class="icon homeLearnTalk"><span class="alert">5</span></div><span data-text="HOM_002_019">홈런톡</span>
+				</div>
+				<div>
+					<div class="icon homeLearnMagazine"></div><span data-text="HOM_002_020">홈런<br />매거진</span>
+				</div>
+				<div>
+					<div class="icon askMyQuestion"></div><span data-text="HOM_002_021">내<br />문제질문</span>
+				</div>
+			</li>
+
+		</ul>
+
+	</section>
+	<section>
+		<div class="horizonIcons">
+			<div class="icon myAppDrawer"></div>
+			<div class="verticaBorder"><span data-text="HOM_002_022">내앱<br />서랍</span></div>
+			<div class="icon homeLearnMarket"></div>
+			<div><span data-text="HOM_002_023">>홈런<br />마켓</span></div>
+		</div>
+	</section>
+
+<section class="bannerSection">
+	<div class="scrollXMandatory">
+		<img data-href="https://www.google.com/search?q=%ED%99%88%EB%9F%B0+AI+%EC%88%98%ED%95%99&oq=%ED%99%88%EB%9F%B0+AI+%EC%88%98%ED%95%99&aqs=chrome..69i57.4705j0j7&sourceid=chrome&ie=UTF-8" src="../img/samples/sampleBanner01.jpg" />
+		<img data-href="myClassroom_noStudy.html" src="../img/samples/sampleBanner01.jpg" />
+		<img data-href="todayStudy_calendar.html" src="../img/samples/sampleBanner01.jpg" />
+	</div>
+	<ul class="bannerIndicator">
+		<li class="on"></li>
+		<li></li>
+		<li></li>
+	</ul>
+</section>
+
+</aside>
+
+		<!-- end of aside -->
+
+	</div>
+	<script type="text/javascript">
+	$(".arrow.left, .arrow.right").on("click", function(e) {
+		var $scrollBox = $(".horizonScrollBox > ul");
+		if ($scrollBox.data("scrolling")) return;
+		// $scrollBox.data("scrolling", true);
+		$scrollBox.removeClass("scrollMandatory");
+		var scrollLeft = $scrollBox.scrollLeft();
+		var w = $scrollBox.children("li").eq(1).outerWidth(true);
+		if ($(this).hasClass("left")) {
+			scrollLeft += w;
+		} else {
+			scrollLeft -= w;
+		}
+
+		$scrollBox.animate({
+			scrollLeft: scrollLeft
+		});
+	});
+
+	$.fn.scrollEnd = function(callback, timeout) {
+		timeout = timeout || 200;
+		$(this).scroll(function(){
+			var $this = $(this);
+			if ($this.data('scrollTimeout')) {
+				clearTimeout($this.data('scrollTimeout'));
+			}
+			$this.data('scrollTimeout', setTimeout(function(){
+				callback($this);
+			}, timeout));
+		});
+	};
+
+	$(".horizonScrollBox > ul").scrollEnd(function($this){
+		$this.addClass("scrollMandatory");
+		$this.data("scrolling", false);
+	}, 200);
+
+	$(".bannerSection > div").scrollEnd(function($this){
+		var $dots = $this.siblings(".bannerIndicator");
+		var scrollLeft = $this[0].scrollLeft;
+		var itemWidth = $this.children().eq(0).width();
+		var index = Math.round(scrollLeft / itemWidth);
+		$dots.children().eq(index).addClass("on").siblings().removeClass("on");
+	});
+
+	</script>
+</body>
+</html>

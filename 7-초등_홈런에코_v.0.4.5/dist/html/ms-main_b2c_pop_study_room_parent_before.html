@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home Learn Hybrid - Middle School</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+
+<body id="ms"><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+	<div class="entireWrap">
+
+<!-- header -->
+
+<header class="ms">
+	<div>
+		<i class="ms-header_menu_icon"></i>
+		<a href class="on" data-text="HOM_001_001">오늘의 학습</a>
+		<a href>내신학습</a>
+		<a href>영수전문과</a>
+		<a href><span data-text="HOM_001_036">특별학습</span></a>
+		<a href class="outline">나대로</a>
+	</div>
+
+	<div>
+		<i class="nm_2"></i>
+		<i class="nm_1"></i>
+		<span class="time"><span data-text="COM_001_015">오후</span> 2:46</span>
+		<i class="setting"></i>
+		<i class="power"></i>
+	</div>
+</header>
+
+<!-- header 끝 -->
+
+		<section class="wrapper">
+			<main>
+
+				<div class="navyBox">
+
+<nav class="ms-cal_nav">
+	<i class="ms-lt"></i>
+	<a data-text="HOM_001_007">월</a>
+	<a data-text="HOM_001_008">화</a>
+	<a class="on"> 07 / 07 <span data-text="HOM_001_009">수</span></a>
+	<a data-text="HOM_001_010">목</a>
+	<a data-text="HOM_001_011">금</a>
+	<a data-text="HOM_001_012">토</a>
+	<a class="margin-right_10" data-text="HOM_001_013">일</a>
+	<i class="ms-gt"></i>
+	<i class="ms-nm_todaylearning_ic_calendar"></i>
+	<span class="ms-nm_todaylearning_today">오늘</span>
+</nav>
+
+
+					<div class="turquoiseBox flex">
+						<section class="flex_column">
+							<h4>내신학습<span class="ball">1</span>&nbsp;<span class="rest">/4 완료</span></h4>
+
+							<div class="scroll_area mCustomScroll">
+
+								<div class="rectangle narrow korean">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_020">국어</span>
+											<span class="subject_category">내신집중</span>
+										</li>
+										<li>Ⅱ. 문학(소설/ 수필/ 극문학)</li>
+										<li>9장 한국의 정원, 선비가 거닐던 세계</li>
+									</ul>
+
+									<div class="progress_box">
+										<span>57%</span>
+										<div class="bar">
+											<div style="width: 57%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow math">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_021">수학</span>
+											<span class="subject_category">시험만점 > <span data-text="SUB_001_010">실력평가</span></span>
+										</li>
+										<li>Ⅰ. 듣기말하기</li>
+										<li><label class="type_label">기본</label>4장. 만족이나 불만족 표현하기</li>
+									</ul>
+									<div class="progress_box">
+										<span>20%</span>
+										<div class="bar">
+											<div style="width: 20%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow english">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_024">영어</span>
+											<span class="subject_category">시험만점 > <span data-text="SUB_001_010">실력평가</span></span>
+										</li>
+										<li>Ⅰ. 유리수와 순환소수</li>
+										<li><label class="type_label concept">개념</label>시험만점문제 3. 지수법칙과 단항식의 계산</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow society">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_022">사회</span>
+											<span class="subject_category">내신집중</span>
+										</li>
+										<li>Ⅱ. 문학(소설/ 수필/ 극문학)</li>
+										<li>9장 한국의 정원, 선비가 거닐던 세계</li>
+									</ul>
+
+									<div class="progress_box">
+										<span>57%</span>
+										<div class="bar">
+											<div style="width: 57%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow science">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_023">과학</span>
+											<span class="subject_category">시험만점 > <span data-text="SUB_001_010">실력평가</span></span>
+										</li>
+										<li>Ⅰ. 듣기말하기</li>
+										<li><label class="type_label">기본</label>4장. 만족이나 불만족 표현하기</li>
+									</ul>
+									<div class="progress_box">
+										<span>20%</span>
+										<div class="bar">
+											<div style="width: 20%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow history">
+									<ul class="msi">
+										<li>
+											<span class="subject_label">역사</span>
+											<span class="subject_category">시험만점 > <span data-text="SUB_001_010">실력평가</span></span>
+										</li>
+										<li>Ⅰ. 유리수와 순환소수</li>
+										<li>시험만점문제 3. 지수법칙과 단항식의 계산</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow special">
+									<ul class="msi">
+										<li>
+											<span class="subject_label">종합</span>
+											<span class="subject_category">시험만점 > 실력평가</span>
+										</li>
+										<li>Ⅰ. 유리수와 순환소수</li>
+										<li>시험만점문제 3. 지수법칙과 단항식의 계산</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+							</div>
+
+						</section>
+
+						<section class="flex_column">
+							<h4>전문학습<span class="ball">1</span>&nbsp;<span class="rest">/3 완료</span></h4>
+
+							<div class="main_horizon_scroll noScrollBar">
+								<div class="item toppingEnglish">
+									<p>토핑영어<br/>LISTENING</p>
+									<i></i>
+									<div class="next_circle"></div>
+								</div>
+								<div class="item jelly_math">
+									<p>젤리수학<br />개념</p>
+									<i></i>
+									<div class="next_circle"></div>
+								</div>
+								<div class="item brain_training">
+									<p>브레인<br />트레이닝</p>
+									<i></i>
+									<div class="next_circle"></div>
+								</div>
+							</div>
+
+							<div class="scroll_area mCustomScroll">
+
+								<div class="rectangle narrow special complete">
+									<ul class="msi">
+										<li>
+											<span class="subject_label">인증시험</span>
+											<span class="subject_category">내신집중</span>
+										</li>
+										<li>중1, 중2, 중3</li>
+										<li>NEW 한국사능력검정시험</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow korean complete">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_020">국어</span>
+											<span class="subject_category">시험만점 > 실력평가</span>
+										</li>
+										<li>Ⅰ. 듣기말하기</li>
+										<li><label class="type_label">기본</label>4장. 만족이나 불만족</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow english complete">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_024">영어</span>
+											<span class="subject_category">시험만점 > 실력평가</span>
+										</li>
+										<li>Ⅰ. 유리수와 순환소수</li>
+										<li><label class="type_label concept">개념</label>시험만점문제 3. 지수법칙과 단항식의 계산</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow society complete">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_022">사회</span>
+											<span class="subject_category">내신집중</span>
+										</li>
+										<li>Ⅱ. 문학(소설/ 수필/ 극문학)</li>
+										<li>9장 한국의 정원, 선비가 거닐던 세계</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow science complete">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_023">과학</span>
+											<span class="subject_category">시험만점 > 실력평가</span>
+										</li>
+										<li>Ⅰ. 듣기말하기</li>
+										<li><label class="type_label">기본</label>4장. 만족이나 불만족 표현하기</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow math complete">
+									<ul class="msi">
+										<li>
+											<span class="subject_label" data-text="HOM_001_021">수학</span>
+											<span class="subject_category">시험만점 > 실력평가</span>
+										</li>
+										<li>Ⅰ. 듣기말하기</li>
+										<li><label class="type_label">기본</label>4장. 만족이나 불만족 표현하기</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+								<div class="rectangle narrow history complete">
+									<ul class="msi">
+										<li>
+											<span class="subject_label">역사</span>
+											<span class="subject_category">시험만점 > 실력평가</span>
+										</li>
+										<li>Ⅰ. 듣기말하기</li>
+										<li><label class="type_label">기본</label>4장. 만족이나 불만족 표현하기</li>
+									</ul>
+									<div class="progress_box">
+										<span>80%</span>
+										<div class="bar">
+											<div style="width: 80%"></div>
+										</div>
+									</div>
+									<div class="complete_stamp"></div>
+								</div>
+
+							</div>
+						</section>
+					</div>
+				</div>
+
+<div class="bottom_buttons @@class">
+	<a href="#" class="item">
+		<i class="ms-book"></i>
+		<p>한 달에 한 권<br />
+			끝까지 읽기</p>
+	</a>
+	<a href="#" class="item">
+		<i class="ms-robot"></i>
+		<p>토핑영어<br />
+			LISTENING</p>
+	</a>
+	<a href="#" class="item">
+		<i class="ms-dice"></i>
+		<p>젤리수학<br class="br" />-개념</p>
+	</a>
+	<a href="#" class="item">
+		<i class="ms-magnify"></i>
+		<p>별별탐구</p>
+	</a>
+</div>
+
+			</main>
+
+<!-- aside -->
+<aside class="ms">
+
+	<section class="profile_section">
+		<div class="profile_picture">
+			<figure>
+				<img src="../img/samples/sample_profile_pop.png" />
+			</figure>
+			<div class="edit_btn"></div>
+		</div>
+
+		<ul class="profile_info">
+			<li>박하늘별님구름달님햇님내님</li>
+			<li><i class="teacher"></i><span>이친절멋진예쁜</span> 선생님</li>
+			<li><i class="cookie"></i><span>28,555</span> 쿠키</li>
+		</ul>
+	</section>
+
+
+
+	<section>
+		<ul class="icon_list">
+			<li class="new">
+				<i class="m_01"></i>
+				<span>스쿨링톡</span>
+			</li>
+			<li>
+				<i class="m_02"></i>
+				<span>내공상자</span>
+			</li>
+			<li>
+				<i class="m_03"></i>
+				<span data-text="HOM_002_015">AI생활기록부</span>
+			</li>
+			<li>
+				<i class="m_04"></i>
+				<span>문제은행</span>
+			</li>
+			<li class="new">
+				<i class="m_05"></i>
+				<span>스터디헬퍼</span>
+			</li>
+			<li>
+				<i class="m_06"></i>
+				<span data-text="HOM_001_017">오답노트</span>
+			</li>
+			<li>
+				<i class="m_07"></i>
+				<span><span data-text="HOM_002_016">출석체크</span></span>
+			</li>
+			<li>
+				<i class="m_08"></i>
+				<span>쿠키랜드</span>
+			</li>
+			<li class="new">
+				<i class="m_09"></i>
+				<span><span data-text="HOM_002_017">이벤트</span></span>
+			</li>
+			<li>
+				<i class="m_10"></i>
+				<span>커뮤니티</span>
+			</li>
+			<li>
+				<i class="m_11"></i>
+				<span data-text="HOM_002_022">내앱서랍</span>
+			</li>
+			<li>
+				<i class="m_12"></i>
+				<span><span data-text="HOM_002_023">홈런마켓</span></span>
+			</li>
+
+		</ul>
+	</section>
+
+	<section class="banner_section">
+		<div class="scrollXMandatory">
+			<img src="../img/samples/ms-banner_monthbook.png" />
+			<img src="../img/samples/ms-banner_exbank.png" />
+			<img src="../img/samples/ms-banner_global.png" />
+		</div>
+		<ul class="banner_dots">
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+		</dul>
+	</section>
+</aside>
+
+<!-- end of aside -->
+
+<div class="ready_tag">예비중학</div>
+
+		</section>
+	</div>
+
+	<div id="layers">
+		<div class="layer id_layer">
+			<section class="header">
+				<span data-text="COM_007_001">학부모 단말기 사용 인증</span>
+			</section>
+			<section class="content">
+				<p class="main_content">학부모님의 회원정보를 입력해주세요.</p>
+				<ul class="layer_inner">
+					<li><input type="text" placeholder="학부모 아이디"/></li>
+					<li class="margin-top_40"><input type="password" placeholder="비밀번호" data-placeholder="COM_001_004"/></li>
+					<li class="sub_content margin-top_20">학부모님의 회원정보는 홈페이지에서 확인하시거나 고객센터로 문의 바랍니다.<br />
+						www.home-learn.co.kr   1544-0910</li>
+					</ul>
+				<div class="button_box margin-top_50">
+					<button type="button" class="ms-btn">취소</button>
+					<button type="button" class="ok ms-btn" disabled data-text="COM_002_002">확인</button>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+	</script>
+</body>
+
+</html>

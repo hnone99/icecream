@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home Learn Hybrid</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+	<div class="entireWrap grayBg">
+		<header class="whiteHeader">
+			<div class="flex align-items_center">
+				<i class="book margin-right_10"></i>
+				<span data-text="SUB_110_001">전체학습메뉴</span>
+				<div class="customSelect margin-left_15"><span data-text="HOM_002_010">4학년</span>
+					<ul>
+						<li data-value="1" data-text="HOM_002_010">1학년</li>
+						<li data-value="2" data-text="HOM_002_010">2학년</li>
+						<li data-value="4" data-text="HOM_002_010">3학년</li>
+						<li data-value="4" data-text="HOM_002_010">4학년</li>
+						<li data-value="5" data-text="HOM_002_010">5학년</li>
+						<li data-value="6" data-text="HOM_002_010">6학년</li>
+					</ul>
+					<input type="hidden" name="customSelect" />
+				</div>
+			</div>
+			<div class="closeBox"></div>
+		</header>
+		<div class="wrap type02 scrollAtRight mCustomScroll">
+			<div class="bigMenu">
+				<div class="bigMenuTitle" data-text="HOM_001_002">학교공부</div>
+				<div class="flex">
+					<div class="studyMenu">
+						<div class="studyMenuTitle"><span data-text="HOM_001_028">학교공부예복습</span></div>
+						<ul>
+							<li data-text="HOM_001_020">국어</li>
+							<li data-text="HOM_001_021">수학</li>
+							<li data-text="HOM_001_022">사회</li>
+							<li data-text="HOM_001_023">과학</li>
+							<li data-text="HOM_001_024">영어</li>
+						</ul>
+					</div>
+
+					<div class="studyMenu">
+						<div class="studyMenuTitle"><span data-text="HOM_001_029">평가학습</span></div>
+						<ul>
+							<li><span data-text="SUB_001_010">실력평가</span></li>
+							<li><span data-text="SUB_001_011">단원평가</span></li>
+							<li><span data-text="SUB_001_012">서술형평가</span></li>
+							<li>수행평가</li>
+							<li data-text="HOM_001_017">오답노트</li>
+						</ul>
+					</div>
+
+					<div class="studyMenu">
+						<div class="studyMenuTitle"><span data-text="HOM_001_030">시험실전학습</span></div>
+						<ul>
+							<li><span data-text="SUB_001_015">요점노트</span></li>
+							<li><span data-text="SUB_001_016">족집게문제</span></li>
+							<li><span data-text="SUB_001_017">시험대비특강</span></li>
+							<li>TOP SECRET</li>
+							<li><span data-text="SUB_001_018">성취도평가</span></li>
+							<li><span data-text="SUB_001_019">모의고사</span></li>
+						</ul>
+					</div>
+
+					<div class="studyMenu flex-grow_3">
+						<div class="studyMenuTitle"><span data-text="SUB_101_007">학습자료</span></div>
+						<ul>
+							<li data-text="SUB_001_020">핵심전과</li>
+							<li><span data-text="SUB_001_021">체험학습</span></li>
+							<li><span data-text="SUB_001_021">체험학습</span></li>
+							<li><span data-text="SUB_001_023">테마숙제</span></li>
+							<li data-text="SUB_001_024">교과서사전</li>
+							<li data-text="SUB_001_025">학습백과</li>
+							<li><span data-text="SUB_001_026">어학사전</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="rowMenu blue">
+				<div class="rowMenuTitle">
+					<span data-text="HOM_001_003">수학완성</span>
+				</div>
+				<ul>
+					<li><span data-text="SUB_017_001">1%연산</span></li>
+					<li><span data-text="SUB_017_002">마스연산</span></li>
+					<li><span data-text="SUB_110_005">홈런연산</span></li>
+					<li><span data-text="SUB_017_004">영역별 수학</span></li>
+					<li><span data-text="SUB_017_005">수학경시</span></li>
+				</ul>
+			</div>
+
+			<div class="rowMenu violet">
+				<div class="rowMenuTitle">
+					<span data-text="HOM_001_034">영어완성</span>
+				</div>
+				<ul>
+					<li><span data-text="SUB_029_003">알파벳</span></li>
+					<li><span data-text="SUB_029_004">파닉스</span></li>
+					<li><span data-text="SUB_029_005">영어단어암기</span></li>
+					<li><span data-text="SUB_029_006">영역별학습</span></li>
+					<li><span data-text="SUB_029_007">과목별학습</span></li>
+					<li><span data-text="SUB_029_008">영어신문</span></li>
+					<li><span data-text="SUB_029_009">영어동화</span></li>
+					<li><span data-text="SUB_029_010">영어송</span></li>
+					<li><span data-text="SUB_029_011">인기DVD</span></li>
+					<li><span data-text="SUB_029_012">영어책읽기</span></li>
+				</ul>
+			</div>
+
+			<div class="rowMenu purple">
+				<div class="rowMenuTitle">
+					<span data-text="HOM_001_036">특별학습</span>
+				</div>
+				<ul>
+					<li><span data-text="SUB_107_006">홈런픽</span></li>
+					<li><span data-text="SUB_039_012">홈북카페</span></li>
+					<li><span data-text="SUB_107_008">AI교과서</span></li>
+					<li><span data-text="SUB_107_009">3D체험관</span></li>
+					<li><span data-text="SUB_107_010">홈런타자연습</span></li>
+					<li><span data-text="SUB_107_011">읽기마당</span></li>
+					<li><span data-text="SUB_107_012">열려라코딩</span></li>
+					<li><span data-text="SUB_107_014">실험의달인</span></li>
+					<li><span data-text="SUB_107_015">애니특별관</span></li>
+					<li><span data-text="SUB_107_013">한국사</span></li>
+				</ul>
+			</div>
+
+			<div class="rowMenu orange withBg">
+				<div class="rowMenuTitle">
+					<span data-text="SUB_112_003">나의 메뉴</span>
+				</div>
+				<ul>
+					<li data-text="HOM_002_015">AI생활기록부</li>
+					<li><span data-text="PRI_005_001">월간학습현황</span></li>
+					<li data-text="HOM_001_017">오답노트</li>
+					<li><span data-text="SUB_014_001">내공상자</span></li>
+					<li><span data-text="HOM_002_021">내문제질문</span></li>
+					<li><span data-text="HOM_002_017">이벤트</span></li>
+					<li><span data-text="HOM_002_018">코니월드</span></li>
+					<li><span data-text="HOM_002_019">홈런톡</span></li>
+					<li><span data-text="HOM_002_016">출석체크</span></li>
+					<li><span data-text="SUB_112_001">회원정보</span></li>
+					<li data-text="HOM_002_022">내앱서랍</li>
+					<li><span data-text="HOM_002_023">홈런마켓</span></li>
+				</ul>
+			</div>
+
+			<div class="rowMenu green withBg">
+				<div class="rowMenuTitle">
+					<span data-text="SUB_112_003">나의 메뉴</span>
+				</div>
+				<ul>
+					<li data-text="HOM_002_015">AI생활기록부</li>
+					<li><span data-text="PRI_005_001">월간학습현황</span></li>
+					<li data-text="HOM_001_017">오답노트</li>
+					<li><span data-text="SUB_014_001">내공상자</span></li>
+					<li><span data-text="HOM_002_021">내문제질문</span></li>
+					<li><span data-text="HOM_002_017">이벤트</span></li>
+					<li><span data-text="HOM_002_018">코니월드</span></li>
+					<li><span data-text="HOM_002_019">홈런톡</span></li>
+					<li><span data-text="HOM_002_016">출석체크</span></li>
+					<li><span data-text="SUB_112_001">회원정보</span></li>
+					<li data-text="HOM_002_022">내앱서랍</li>
+					<li><span data-text="HOM_002_023">홈런마켓</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

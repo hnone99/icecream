@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="btn_area text-center mt-5">
+  <a href="#" data-toggle="modal" data-target="#introStudyBook">팝업열기</a>
+</div>
+<div class="modal modal-info etc_info fade show" id="introStudyBook" data-backdrop="static" tabindex="-1" role="dialog" aria-modal="true" style="display: block;">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <a href="#" class="btn-close" data-dismiss="modal" aria-label="Close"><img src="../img/element/special/koreanHistory/btn_X.png" alt=""></a>
+      <div class="content">
+        <img data-text="SUB_229_005" src="../img/element/special/koreanHistory/history_pop_planinfo.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('#introStudyBook').modal('show')
+</script>
+</body>
+</html>

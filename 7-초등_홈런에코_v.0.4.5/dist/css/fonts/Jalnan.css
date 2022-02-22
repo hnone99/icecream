@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Jalnan';
+  src: url("../fonts/Jalnan/yg-jalnan.otf") format("embedded-opentype"), url("../fonts/Jalnan/yg-jalnan.woff2") format("woff2"), url("../fonts/Jalnan/yg-jalnan.woff") format("woff"), url("../fonts/Jalnan/yg-jalnan.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal; }

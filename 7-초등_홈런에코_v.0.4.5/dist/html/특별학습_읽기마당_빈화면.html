@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="entireWrap">
+  <div class="wrap_reading">
+    <div class="top_area">
+      <div class="title-area clearfix">
+        <p class="title"><span data-text="SUB_107_011">읽기마당</span><a href="#" class="badge-info"><img
+          src="../img/element/special/reading/badge_info.png" alt=""></a></p>
+        <div class="customSelect"><span>5~6학년</span>
+          <ul>
+            <li data-value="1">1~2학년</li>
+            <li data-value="2">2~3학년</li>
+            <li data-value="3">3~4학년</li>
+            <li data-value="4">4~5학년</li>
+            <li class="active" data-value="5">5~6학년</li>
+          </ul>
+          <input type="hidden" name="customSelect" value="5">
+        </div>
+        <a href="#" class="btn-close"><img src="../img/element/special/reading/btn_close.png" alt=""></a>
+      </div>
+      <div class="tab-area">
+        <a class="ic-char" href="#"><img src="../img/element/special/reading/ic_char.png" alt=""></a>
+        <div class="tab _tab">
+          <ul class="clearfix">
+            <li class="active"><a href="#" data-text="SUB_212_001">추천마당</a></li>
+            <li><a href="#" data-text="SUB_212_002">동시</a></li>
+            <li><a href="#" data-text="SUB_212_003">동화</a></li>
+            <li><a href="#" data-text="SUB_212_004">생활문</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-content">
+        <div class="left-side">
+          <p class="tit" data-text="SUB_212_006">주간 <em>추천</em></p>
+          <div class="section">
+            <p class="tit orange" data-text="SUB_212_002">동시<i class="line"></i></p>
+            <div class="s-item">
+              <div class="img">
+                <img src="../img/element/special/temp/m_banner_sm.png" alt="">
+                <a href="#" class="a-box"><i class="ic_box"><img src="../img/element/special/reading/btn_box.png"
+                                                                 alt=""></i><span
+                  data-text="HOM_002_014">내공상자</span></a>
+              </div>
+              <div class="ic-thumsup"></div>
+              <span class="tit">길</span>
+            </div>
+            <div class="s-item">
+              <div class="img">
+                <img src="../img/element/special/temp/m_banner_sm.png" alt="">
+                <a href="#" class="a-box"><i class="ic_box"><img src="../img/element/special/reading/btn_box.png"
+                                                                 alt=""></i><span
+                  data-text="HOM_002_014">내공상자</span></a>
+              </div>
+              <div class="ic-thumsup"></div>
+              <span class="tit">버려진 깡통 속에서</span>
+            </div>
+          </div>
+          <div class="section">
+            <p class="tit red" data-text="SUB_212_003">동화<i class="line"></i></p>
+            <div class="s-item">
+              <div class="img">
+                <img src="../img/element/special/temp/m_banner_sm.png" alt="">
+                <a href="#" class="a-box"><i class="ic_box"><img src="../img/element/special/reading/btn_box.png"
+                                                                 alt=""></i><span
+                  data-text="HOM_002_014">내공상자</span></a>
+              </div>
+              <div class="ic-thumsup"></div>
+              <span class="tit">바리데기</span>
+            </div>
+            <div class="s-item">
+              <div class="img">
+                <img src="../img/element/special/temp/m_banner_sm.png" alt="">
+                <a href="#" class="a-box"><i class="ic_box"><img src="../img/element/special/reading/btn_box.png"
+                                                                 alt=""></i><span
+                  data-text="HOM_002_014">내공상자</span></a>
+              </div>
+              <div class="ic-thumsup"></div>
+              <span class="tit">우리 가족의 겨울 우리 가족의 겨울</span>
+            </div>
+          </div>
+          <div class="section">
+            <p class="tit lime" data-text="SUB_212_004">생활문<i class="line"></i></p>
+            <div class="s-item">
+              <div class="img">
+                <img src="../img/element/special/temp/m_banner_sm.png" alt="">
+                <a href="#" class="a-box"><i class="ic_box"><img src="../img/element/special/reading/btn_box.png"
+                                                                 alt=""></i><span
+                  data-text="HOM_002_014">내공상자</span></a>
+              </div>
+              <div class="ic-thumsup"></div>
+              <span class="tit">바리데기</span>
+            </div>
+            <div class="s-item">
+              <div class="img">
+                <img src="../img/element/special/temp/m_banner_sm.png" alt="">
+                <a href="#" class="a-box"><i class="ic_box"><img src="../img/element/special/reading/btn_box.png"
+                                                                 alt=""></i><span
+                  data-text="HOM_002_014">내공상자</span></a>
+              </div>
+              <div class="ic-thumsup"></div>
+              <span class="tit">우리 가족의 겨울 우리 가족의 겨울</span>
+            </div>
+          </div>
+        </div>
+        <div class="right-side empty">
+          <p class="tit clearfix">
+            <span class="tit-left">주간 <em>BEST</em>소감</span>
+            <span data-text="SUB_212_008">BEST 소감으로 선정되면 콘을 선물로 드려요.</span>
+          </p>
+          <div class="empty-content">
+            <p data-text="SUB_212_013">지금은 BEST 소감이 없어요</p>
+            <div class="img">
+              <img src="../img/element/special/reading/empty.png" alt="">
+              <span class="text">
+                <em data-text="SUB_212_014">BEST 소감으로 선정되는 방법!</em><br/>
+                <em data-text="SUB_212_015">동시/동화/생활문을 학습하며</em><br/>
+                <em data-text="SUB_212_016">느낀 점과 재미있는 점을 잘</em><br/>
+                <em data-text="SUB_212_017">표현하면 선정될 수 있어요!</em><br/>
+                <em data-text="SUB_212_018">파이팅!</em>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('._scrollRight').mCustomScrollbar({
+      theme: 'dark'
+    })
+
+  $('._tab li a').click(function () {
+      $('._rightSide').removeClass('active')
+      $('._rightSide[data-id=\'' + $(this).attr('data-id') + '\']').addClass('active')
+      $('._tab li a').parent().removeClass('active')
+      $(this).parent().addClass('active')
+    })
+
+  $('._memoList .btn-more').on('click',function (e){
+    e.preventDefault()
+    let list = $(this).parent().parent().parent();
+    let thisText = $(this)
+
+    if(list.hasClass('open')) {
+      list.removeClass('open')
+      thisText.html('<a class="btn-more" href="#" data-text="HOM_006_003">더보기<i class="ic-arrow-down"></i></a>')
+    }
+    else {
+      list.addClass('open')
+      thisText.html('<a class="btn-more" href="#" data-text="COM_103_011">닫기<i class="ic-arrow-up"></i></a>')
+    }
+  })
+</script>
+</body>
+</html>

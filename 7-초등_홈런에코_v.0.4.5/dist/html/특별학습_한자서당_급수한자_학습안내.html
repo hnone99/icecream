@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<!--글로벌-->
+<div class="entireWrap">
+  <!--  페이지 요소-->
+  <div class="wrap_chinese_character">
+    <div class="top-area">
+      <ul>
+        <li class="on"><a href="#"><img src="../img/element/special/chinese/btn_gnb_level.png"/><img src="../img/element/special/chinese/btn_gnb_level_on.png" class="on"/></a></li>
+        <li><a href="#"><img src="../img/element/special/chinese/btn_gnb_word.png"/><img src="../img/element/special/chinese/btn_gnb_word_on.png" class="on"/></a></li>
+        <li><a href="#"><img src="../img/element/special/chinese/btn_gnb_class.png"/><img src="../img/element/special/chinese/btn_gnb_class_on.png" class="on"/></a></li>
+        <li><a href="#"><img src="../img/element/special/chinese/btn_gnb_4word.png"/><img src="../img/element/special/chinese/btn_gnb_4word_on.png" class="on"/></a></li>
+      </ul>
+      <a class="btn-close" href="#"><img src="../img/element/special/chinese/btn_close.png"/></a>
+    </div>
+    <div class="contents">
+      <div class="menu-list">
+        <ul class="list _menuList">
+          <li class="on"><a href="#"><span data-text="SUB_001_005">학습안내</span></a></li>
+          <li><a href="#" data-text="SUB_218_009">8급</a></li>
+          <li><a href="#" data-text="SUB_218_009">7급</a></li>
+          <li><a href="#" data-text="SUB_218_009">6급</a></li>
+          <li><a href="#" data-text="SUB_218_009">5급</a></li>
+          <li><a href="#" data-text="SUB_218_009">4급</a></li>
+          <li><a href="#" data-text="SUB_218_009">3급</a></li>
+          <li><a href="#" data-text="SUB_218_009">2급</a></li>
+          <li><a href="#" data-text="SUB_218_009">1급</a></li>
+          <li><a href="#" data-text="SUB_218_010">부수특강</a></li>
+        </ul>
+      </div>
+      <!--_menuContent : js 요소-->
+      <div class="menu-content _menuContent">
+          <div class="info">
+            <div class="title"><img data-src="SUB_218_005" src="../img/element/special/chinese/img_info.png"/></div>
+            <div class="chapter">
+              <a href="#"><img src="../img/element/special/chinese/img_info_01.png"/></a>
+              <a href="#"><img src="../img/element/special/chinese/img_info_02.png"/></a>
+              <a href="#"><img src="../img/element/special/chinese/img_info_03.png"/></a>
+          </div>
+        </div>
+      </div>
+      <!--_menuContent : js 요소-->
+    </div>
+  </div>
+</div>
+<script>
+  $('.top-area').on('click', 'li > a', function () {
+      $(this).parent().addClass('on').siblings().removeClass('on')
+    })
+  $('._menuList').on('click', 'li > a', function () {
+      $(this).parent().addClass('on').siblings().removeClass('on')
+    })
+
+</script>
+</body>
+</html>

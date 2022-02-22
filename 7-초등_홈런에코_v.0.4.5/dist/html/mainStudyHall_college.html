@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home Learn Hybrid</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<style type="text/css">
+.blueBox { padding: 20px 41px 20px 45px; }
+.blueBox .slideWrap { align-items: start; height: 307px; width: 835px; }
+</style>
+<body class="bg"><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+	<div class="wrap">
+		<main>
+
+			<!-- dateNav-->
+			<nav class="dateNav">
+	<a class="goPrev"></a>
+	<a data-text="HOM_001_007">월</a>
+	<a data-text="HOM_001_008">화</a>
+	<a class="on"><span data-text="HOM_001_009">수</span><span>07월 08일</span></a>
+	<a data-text="HOM_001_010">목</a>
+	<a data-text="HOM_001_011">금</a>
+	<a data-text="HOM_001_012">토</a>
+	<a data-text="HOM_001_013">일</a>
+	<a class="goNext"></a>
+	<a class="calendar"></a>
+</nav>
+
+			<!-- end of dateNav -->
+
+			<section class="main">
+
+				<div class="box blueBox slidePadding flex column">
+
+					<div class="titleBox">
+						<div>
+							<div class="boxTitle inline todayStudy"><span class="pool">4</span>총 4개의 학습이 있습니다.</div>
+						</div>
+
+						<div class="oneLineBox">
+							<div class="element oneLine">최근 등록된 오답노트 <span class="wrongCount">2</span>개</div>
+							<div class="element oneLine"><span class="memoIcon"></span><span
+									class="teacherUnderline" data-text="HOM_001_019">선생님 채점 결과</span></div>
+						</div>
+					</div>
+
+					<div class="slideWrap scrollXMandatory">
+
+						<div class="element korean subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_020">국어</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">9단원</span> &gt; <span data-text="HOM_001_032">24장</span></li>
+									<li>이야기 읽고 다른<br />사람에게 들려주기</li>
+								</ul>
+								<div class="kidIcon complete badge">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="element math subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_021">수학</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">6단원</span> &gt; <span data-text="HOM_001_032">30장</span></li>
+									<li>변의 길이와 각의 크기가 같은 다격형을 알아보기</li>
+								</ul>
+								<div class="kidIcon">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="element english subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_024">영어</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">8단원</span> &gt; <span data-text="HOM_001_032">2장</span></li>
+									<li>이야기를 읽고 이야기 해 보기</li>
+								</ul>
+								<div class="kidIcon complete badge">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="element korean subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_020">국어</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">9단원</span> &gt; <span data-text="HOM_001_032">24장</span></li>
+									<li>이야기 읽고 다른<br />사람에게 들려주기</li>
+								</ul>
+								<div class="kidIcon complete badge">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="element math subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_021">수학</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">6단원</span> &gt; <span data-text="HOM_001_032">30장</span></li>
+									<li>변의 길이와 각의 크기가 같은 다격형을 알아보기</li>
+								</ul>
+								<div class="kidIcon">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="element society subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_020">국어</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">9단원</span> &gt; <span data-text="HOM_001_032">24장</span></li>
+									<li>이야기 읽고 다른<br />사람에게 들려주기</li>
+								</ul>
+								<div class="kidIcon complete badge">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="element science subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_021">수학</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">6단원</span> &gt; <span data-text="HOM_001_032">30장</span></li>
+									<li>변의 길이와 각의 크기가 같은 다격형을 알아보기</li>
+								</ul>
+								<div class="kidIcon">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="element english subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_024">영어</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">8단원</span> &gt; <span data-text="HOM_001_032">2장</span></li>
+									<li>이야기를 읽고 이야기 해 보기</li>
+								</ul>
+								<div class="kidIcon complete badge">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="element total subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_020">국어</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">9단원</span> &gt; <span data-text="HOM_001_032">24장</span></li>
+									<li>이야기 읽고 다른<br />사람에게 들려주기</li>
+								</ul>
+								<div class="kidIcon complete badge">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="element math subjectLabel vertical">
+							<div>
+								<ul class="subjectInfo">
+									<li data-text="HOM_001_021">수학</li>
+									<li class="typeLabel black">4-22 <span data-text="HOM_001_028">학교공부 예복습</span></li>
+								</ul>
+								<div class="subjectIcon"></div>
+							</div>
+							<div class="relative">
+								<ul>
+									<li><span data-text="HOM_001_031">6단원</span> &gt; <span data-text="HOM_001_032">30장</span></li>
+									<li>변의 길이와 각의 크기가 같은 다격형을 알아보기</li>
+								</ul>
+								<div class="kidIcon">
+									<div></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="arrowLeft dim"></div>
+					<div class="arrowRight"></div>
+
+
+				</div>
+
+			</section>
+
+			<!-- footNav -->
+			<nav class="bottomNav recommend">
+	<span class="navTitle" data-text="HOM_006_002">추천 학습</span>
+	<div class="flex">
+		<div>
+			<img src="../img/samples/sampleAppIcon_01.png" />
+			<div>기적의 6000<br />단어</div>
+		</div>
+		<div class="verticalLine"></div>
+		<div>
+			<img src="../img/samples/sampleAppIcon_02.png" />
+			<div>파닉스 영어</div>
+		</div>
+		<div class="verticalLine"></div>
+		<div>
+			<img src="../img/samples/sampleAppIcon_03.png" />
+			<div>ABC Kids - <br />잉글리시</div>
+		</div>
+		<div class="verticalLine"></div>
+		<div>
+			<img src="../img/samples/sampleAppIcon_04.png" />
+			<div>실험의 달인</div>
+		</div>
+	</div>
+	<span class="more" data-text="HOM_006_003">더보기</span>
+</nav>
+
+			<!-- end of footNav -->
+
+		</main>
+
+		<!-- aside -->
+		<aside class="@@class">
+	<section class="profileSection">
+		<div class="profileIcon">
+			<figure>
+				<img src="../img/samples/sampleProfileImage.png" />
+			</figure>
+			<div class="editGear"></div>
+		</div>
+		<ul class="personalInfoList">
+			<li>김홈런</li>
+			<li><span data-text="HOM_002_010">4학년</span> <span class="bull"></span><span data-text="HOM_002_011">박민지 선생님</span></li>
+			<li><span class="iceCream"></span><span data-text="HOM_002_012">11,500콘</span> </li>
+		</ul>
+
+		<ul class="buttonList">
+			<li class="skyBg">
+				<div>
+					<div class="icon wrongAnswerNote"></div><span data-text="HOM_002_013">내<br />오답노트</span>
+				</div>
+				<div>
+            <div class="icon naigongBox"></div><span data-text="HOM_002_014">내공<br />상자</span>
+				</div>
+				<div>
+					<div class="icon aILifeNote"></div><span data-text="HOM_002_015">AI<br />생활기록부</span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<div class="icon attendCheck"></div><span data-text="HOM_002_016">출석체크</span>
+				</div>
+				<div>
+					<div class="icon eventBox"><span class="alert">10</span></div><span data-text="HOM_002_017">이벤트</span>
+				</div>
+				<div>
+					<div class="icon coneyWorld"></div><span data-text="HOM_002_018">코니월드</span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<div class="icon homeLearnTalk"><span class="alert">5</span></div><span data-text="HOM_002_019">홈런톡</span>
+				</div>
+				<div>
+					<div class="icon homeLearnMagazine"></div><span data-text="HOM_002_020">홈런<br />매거진</span>
+				</div>
+				<div>
+					<div class="icon askMyQuestion"></div><span data-text="HOM_002_021">내<br />문제질문</span>
+				</div>
+			</li>
+
+		</ul>
+
+	</section>
+	<section>
+		<div class="horizonIcons">
+			<div class="icon myAppDrawer"></div>
+			<div class="verticaBorder"><span data-text="HOM_002_022">내앱<br />서랍</span></div>
+			<div class="icon homeLearnMarket"></div>
+			<div><span data-text="HOM_002_023">>홈런<br />마켓</span></div>
+		</div>
+	</section>
+
+<section class="bannerSection">
+	<div class="scrollXMandatory">
+		<img data-href="https://www.google.com/search?q=%ED%99%88%EB%9F%B0+AI+%EC%88%98%ED%95%99&oq=%ED%99%88%EB%9F%B0+AI+%EC%88%98%ED%95%99&aqs=chrome..69i57.4705j0j7&sourceid=chrome&ie=UTF-8" src="../img/samples/sampleBanner01.jpg" />
+		<img data-href="myClassroom_noStudy.html" src="../img/samples/sampleBanner01.jpg" />
+		<img data-href="todayStudy_calendar.html" src="../img/samples/sampleBanner01.jpg" />
+	</div>
+	<ul class="bannerIndicator">
+		<li class="on"></li>
+		<li></li>
+		<li></li>
+	</ul>
+</section>
+
+</aside>
+
+		<!-- end of aside -->
+
+	</div>
+
+
+	<script type="text/javascript">
+
+	$(".blueBox .slideWrap").scrollBox(".blueBox .arrowLeft", ".blueBox .arrowRight");
+
+	</script>
+</body>
+
+</html>

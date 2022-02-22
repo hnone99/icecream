@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home Learn Hybrid</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+	<div class="entireWrap lhl">
+<header id="menubar">
+	<div class="left_side">
+		<i class="menubar_menu_btn"></i>
+		<div class="scrollWrap">
+			<div class="menu_item on" data-href="#" data-text="HOM_001_001">오늘의 학습</div>
+			<div class="menu_item" data-href="#" data-text="HYB_005_004">국어누리</div>
+			<div class="menu_item" data-href="#" data-text="HYB_005_005">수학누리</div>
+			<div class="menu_item" data-href="#" data-text="HYB_005_006">영어누리</div>
+			<div class="menu_item" data-href="#"><span data-text="HOM_001_036">특별학습</span></div>
+			<div class="menu_item" data-href="#" data-text="HYB_005_004">국어누리</div>
+			<div class="menu_item" data-href="#" data-text="HYB_005_005">수학누리</div>
+			<div class="menu_item" data-href="#" data-text="HYB_005_006">영어누리</div>
+			<div class="menu_item" data-href="#"><span data-text="HOM_001_036">특별학습</span></div>
+		</div>
+		<div data-href="#" class="roundButton" data-text="SUB_107_018">글로벌리더십</div>
+	</div>
+
+	<div class="right_side">
+		<i class="menubar_battery"></i>
+		<span class="time"><span data-text="COM_001_015">오후</span> 12:27</span>
+		<i class="menubar_bell"><label class="noti">10</label></i>
+		<i class="menubar_personal"></i>
+		<i class="menubar_wifi"></i>
+		<i class="menubar_config"></i>
+		<i class="menubar_quit"></i>
+	</div>
+</header>
+
+		<div class="wrap">
+			<main>
+				<div class="yellowPanel">
+					<nav class="blueRoundNavBar">
+						<div class="thick"></div>
+						<div class="surface">
+							<span class="prevBtn"></span>
+							<a href="" data-text="HOM_001_007">월</a>
+							<a href="" data-text="HOM_001_008">화</a>
+							<a class="on" href=""><span data-text="HOM_001_009">수</span> <span data-text="HOM_001_014">12월 18일</span></a>
+							<a href="" data-text="HOM_001_010">목</a>
+							<a href="" data-text="HOM_001_011">금</a>
+              <a href="" data-text="HOM_001_012">토</a>
+							<a href="" data-text="HOM_001_013">일</a>
+							<span class="nextBtn"></span>
+							<span class="calendarIcon"></span>
+						</div>
+						<div class="main_little_week_logo"></div>
+					</nav>
+
+					<div class="leftPane">
+						<div class="paneTitle main_little_today_title_study"><span class="redBall">2</span></div>
+						<div class="paneSlide scrollYMandatory">
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0001.png" data-url="HOM_002_001" />
+									<div class="ti"><span data-text="SUB_107_024">받아쓰기연습</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+									<div class="bt">4-2<span data-text="SUB_001_010">실력평가</span></div>
+								</div>
+								<div class="prettyStar"></div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0002.png" data-url="HOM_002_002" />
+									<div class="ti">한글</div>
+									<div class="lb"><span>1단계 1장</span></div>
+									<div class="bt">4-2<span data-text="SUB_001_010">실력평가</span></div>
+								</div>
+								<div class="prettyStar"></div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0003.png" />
+									<div class="ti"><span data-text="SUB_107_035">국어생활</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+								<div class="studying"></div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0004.png" />
+									<div class="ti"><span data-text="HYB_007_005">재미수학</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0005.png" />
+									<div class="ti"><span data-text="HYB_009_006">자연관찰</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+								<div class="prettyStar"></div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0006.png" />
+									<div class="ti"><span data-text="SUB_107_026">안녕!학교</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0007.png" />
+									<div class="ti"><span data-text="SUB_107_032">처음한자</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0008.png" />
+									<div class="ti"><span data-text="SUB_107_031">인물한국사</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="arrow_u"></div>
+						<div class="arrow_d"></div>
+					</div>
+
+					<div class="rightPane">
+						<div class="paneTitle main_little_today_title_special"><span class="redBall">10</span></div>
+						<div class="paneSlide scrollYMandatory">
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0005.png" />
+									<div class="ti"><span data-text="HYB_009_006">자연관찰</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+								<div class="prettyStar"></div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0006.png" />
+									<div class="ti"><span data-text="SUB_107_026">안녕!학교</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+								<div class="prettyStar"></div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0007.png" />
+									<div class="ti"><span data-text="SUB_107_032">처음한자</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0008.png" />
+									<div class="ti"><span data-text="SUB_107_031">인물한국사</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+								<div class="studying"></div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0002.png" data-url="HOM_002_002" />
+									<div class="ti">한글</div>
+									<div class="lb"><span>1단계 1장</span></div>
+									<div class="bt">4-2<span data-text="SUB_001_010">실력평가</span></div>
+								</div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0003.png" />
+									<div class="ti"><span data-text="SUB_107_035">국어생활</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+							</div>
+							<div class="lhItem">
+								<div class="rounder">
+									<img src="../img/upload/bb_0004.png" />
+									<div class="ti"><span data-text="HYB_007_005">재미수학</span></div>
+									<div class="lb"><span>1단계 1장</span></div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="arrow_u"></div>
+						<div class="arrow_d"></div>
+					</div>
+
+				</div>
+				<div class="main_little_img_characterbg"></div>
+			</main>
+
+			<aside>
+				<section class="profileInfo">
+					<div class="profileIcon">
+						<figure>
+							<img src="../img/samples/sampleProfileImage.png">
+						</figure>
+						<div class="editGear"></div>
+					</div>
+					<ul class="personalInfoList">
+						<li>김홈런</li>
+						<li><span class="bull"></span><span data-text="HOM_002_011">박민지 선생님</span></li>
+						<li><label><span class="iceCream"></span><span data-text="HOM_002_012">11,500콘</span></label></li>
+					</ul>
+				</section>
+
+				<section>
+					<ul class="iconList">
+						<li>
+							<i class="i-01"></i>
+							<span data-text="SUB_209_002">채점결과</span>
+						</li>
+						<li>
+							<i class="i-02"></i>
+							<span data-text="SUB_014_001">내공상자</span>
+						</li>
+						<li>
+							<i class="i-03"></i>
+							생활기록부
+						</li>
+						<li>
+							<i class="i-04"></i>
+							<span data-text="HOM_002_016">출석체크</span>
+						</li>
+						<li>
+							<i class="i-05"><span class="noti">5</span></i>
+							<span data-text="HOM_002_017">이벤트</span>
+						</li>
+						<li>
+							<i class="i-06"></i>
+							<span data-text="HOM_002_018">코니월드</span>
+						</li>
+						<li>
+							<i class="i-07"><span class="noti">10</span></i>
+							<span data-text="HOM_002_019">홈런톡</span>
+						</li>
+						<li>
+							<i class="i-08"></i>
+							<span data-text="HOM_002_020">매거진</span>
+						</li>
+						<li>
+							<i class="i-09"></i>
+							<span data-text="HOM_002_021">내문제질문</span>
+						</li>
+						<li>
+							<i class="i-10"></i>
+							<span data-text="HOM_002_022">내앱서랍</span>
+						</li>
+						<li>
+							<i class="i-11"></i>
+							홈런서랍
+						</li>
+					</ul>
+				</section>
+<section class="bannerSection">
+	<div class="scrollXMandatory">
+		<img data-href="https://www.google.com/search?q=%ED%99%88%EB%9F%B0+AI+%EC%88%98%ED%95%99&oq=%ED%99%88%EB%9F%B0+AI+%EC%88%98%ED%95%99&aqs=chrome..69i57.4705j0j7&sourceid=chrome&ie=UTF-8" src="../img/samples/sampleBanner03.jpg" />
+		<img data-href="myClassroom_noStudy.html" src="../img/samples/sampleBanner03.jpg" />
+		<img data-href="todayStudy_calendar.html" src="../img/samples/sampleBanner03.jpg" />
+	</div>
+	<ul class="bannerIndicator">
+		<li class="on"></li>
+		<li></li>
+		<li></li>
+	</ul>
+</section>
+
+			</aside>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(".arrow_u, .arrow_d").click(function(){
+		if ($(this).hasClass("dim")) return;
+		var snap = false;
+		var $scrollBox = $(this).siblings(".paneSlide");
+		var h = $scrollBox.children().last().outerHeight(true);
+		var scrollTop = $scrollBox.scrollTop();
+
+		if ($(this).attr("class").indexOf("_d") > -1) {
+			scrollTop += h;
+		} else {
+			scrollTop -= h;
+		}
+
+		if ($scrollBox.hasClass("scrollYMandatory")) {
+			$scrollBox.removeClass("scrollYMandatory");
+			snap = true;
+		}
+		$scrollBox.animate({
+			scrollTop : scrollTop
+		}, function(){
+			if (snap) $scrollBox.addClass("scrollYMandatory");
+		});
+	});
+	</script>
+</body>
+</html>

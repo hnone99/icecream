@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<header id="menubar" class="type2">
+  <div class="left_side">
+    <i class="menubar_menu_btn"></i>
+    <div class="scrollWrap">
+      <a href="#" class="menu_item" >오늘의 학습</a>
+      <a href="#" class="menu_item" >학교공부</a>
+      <a href="#" class="menu_item " ><span data-text="HOM_001_035">수학완성</span></a>
+      <a href="#" class="menu_item" ><span data-text="HOM_001_034">영어완성</span></a>
+      <a href="#" class="menu_item active" ><span data-text="HOM_001_036">특별학습</span></a>
+    </div>
+    <a href="#"  class="roundButton"><span data-text="SUB_107_018">글로벌리더십</span></a>
+    <a href="#"  class="roundButton"><span>미래를 보는 창</span></a>
+  </div>
+  <div class="right_side">
+    <div style="width: 35px; height: auto"><img src="../img/common/menubar_icon.png" alt="아이콘이미지" class="width_100"></div>
+    <a href="#"><i class="menubar_bell"><label class="noti">7</label></i></a>
+    <a href="#"><i class="menubar_personal"></i></a>
+    <a href="#"><i class="menubar_config"></i></a><a href="#"><i class="menubar_wifi"></i></a><i class="menubar_battery"></i><span class="time"><span data-text="COM_001_015">오후</span> 01:36</span>
+    <a href="#"><i class="menubar_quit"></i></a>
+  </div>
+</header>
+<div class="wrap_flex lightPink">
+  <div class="semester_select spec-bg">
+    <div class="wrap_header">
+      <div class="flex">
+        <div class="customSelect selected"><span><span data-text="HOM_002_010">5학년</span></span>
+          <ul>
+            <li data-value="1"><span data-text="SUB_101_002">리틀홈런</span></li>
+            <li data-value="2"><span data-text="HOM_002_010">1학년</span></li>
+            <li data-value="4"><span data-text="HOM_002_010">2학년</span></li>
+            <li data-value="4"><span data-text="HOM_002_010">3학년</span></li>
+            <li data-value="5"><span data-text="HOM_002_010">3학년</span></li>
+            <li data-value="6"><span data-text="HOM_002_010">5학년</span></li>
+            <li data-value="8"><span data-text="HOM_002_010">6학년</span></li>
+          </ul>
+          <input type="hidden" name="customSelect" value="5">
+        </div>
+        <i class="ic_sub_noti"></i>
+        <strong>미래 글로벌 인재가 되기 위한 인성 및 창의성 교육!</strong>
+      </div>
+      <div class="study_guide spec-label-bg"><a href="#" class="d-block"><span data-text="SUB_001_005">학습안내</span></a></div>
+    </div>
+  </div>
+  <div class="wrap_home_special type2">
+    <div class="edu-list">
+      <div class="scroll">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_01.png" alt=""></span>
+              <div class="area-text">
+                <p class="tit" data-text="SUB_029_003">알파벳</p>
+                <p class="desc" data-text="SUB_029_016">재미있는 알파벳</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_02.png" alt=""></span>
+              <div class="area-text">
+                <p class="tit" data-text="SUB_029_009">영어동화</p>
+                <p class="desc" data-text="SUB_029_017">재미있는 스토리</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_03.png" alt=""></span>
+              <div class="area-text"><p class="tit">영단어암기</p>
+                <p class="desc" data-text="SUB_029_018">하루 15분 5개 단어 암기</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_04.png" alt=""></span>
+              <div class="area-text"><p class="tit" data-text="SUB_029_008">영어신문</p>
+                <p class="desc" data-text="SUB_029_019">매주 새로운 뉴스</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_05.png" alt=""></span>
+              <div class="area-text"><p class="tit" data-text="SUB_029_006">영역별학습</p>
+                <p class="desc" data-text="SUB_029_020">영어 필수 요소</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_06.png" alt=""></span>
+              <div class="area-text"><p class="tit" data-text="SUB_029_004">파닉스</p>
+                <p class="desc">초등 기본 단어 정복</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_07.png" alt=""></span>
+              <div class="area-text"><p class="tit" data-text="SUB_029_014">영어도서관</p>
+                <p class="desc" data-text="SUB_029_022">미국 유명 출판사의 10,000권 책 읽기</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_08.png" alt=""></span>
+              <div class="area-text"><p class="tit" data-text="SUB_029_015">그래머탐험대</p>
+                <p class="desc" data-text="SUB_029_023">매일매일 모험하며 배우는 영문법</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_04.png" alt=""></span>
+              <div class="area-text"><p class="tit" data-text="SUB_029_008">영어신문</p>
+                <p class="desc" data-text="SUB_029_019">매주 새로운 뉴스</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="img"><img src="../img/element/english/temp/thum_05.png" alt=""></span>
+              <div class="area-text"><p class="tit" data-text="SUB_029_006">영역별학습</p>
+                <p class="desc" data-text="SUB_029_020">영어 필수 요소</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul id="pagination" class="pagination">
+        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">6</a></li>
+        <li class="page-item"><a href="#" class="page-link">7</a></li>
+        <li class="page-item"><a href="#" class="page-link">8</a></li>
+        <li class="page-item"><a href="#" class="page-link">9</a></li>
+        <li class="page-item"><a href="#" class="page-link">10</a></li>
+      </ul>
+      <script>
+        $('#pagination').twbsPagination({
+          totalPages: 2,
+          visiblePages: 10,
+          prev: false,
+          next: false,
+          first: false,
+          last: false,
+          onPageClick: function (event, page) {
+            $('#page-content').text('Page ' + page)
+          }
+        })
+      </script>
+    </div>
+    <div class="aside">
+      <ul>
+        <li>
+          <p data-text="SUB_107_003"><span class="tit">이번 주</span><span class="desc">홈런픽</span></p>
+          <a class="img" href="#">
+            <img src="../img/element/english/temp/banner_02.png" alt="">
+          </a>
+        </li>
+        <li>
+          <p data-text="SUB_107_004"><span class="tit">요즘,</span><span class="desc">이 책</span></p>
+          <a class="img" href="#">
+            <img src="../img/element/english/temp/banner_02.png" alt="">
+          </a>
+        </li>
+        <li>
+          <p data-text="SUB_107_005"><span class="tit">추천</span><span class="desc">콘텐츠</span></p>
+          <a class="img" href="#">
+            <img src="../img/element/english/temp/banner_02.png" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

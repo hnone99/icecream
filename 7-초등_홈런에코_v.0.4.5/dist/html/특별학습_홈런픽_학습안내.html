@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="btn_area text-center mt-5">
+  <a href="#" data-toggle="modal" data-target="#introHomelearnPick">팝업열기</a>
+</div>
+<div class="modal modal-big modal-info v_spec fade" id="introHomelearnPick" data-backdrop="static" tabindex="-1" role="dialog" aria-modal="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title"><i class="i-info"></i><span data-text="SUB_001_005">학습안내</span></span>
+        <a href="#" class="close closeBox" data-dismiss="modal" aria-label="Close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="box-grey">
+          <p class="desc">※ <span data-text="SUB_201_007">픽[PICK] 선택하다, 뽑다, 고르다.</span></p>
+          <div class="title-area">
+            <p class="tit" data-text="SUB_201_008">홈런픽</p>
+            <p class="desc" data-text="SUB_201_009">홈런이 선택하고 홈런이 뽑은 '꼭' 필요한 내용을 '콕' 골라 모아 놓은 맞춤 콘텐츠 큐레이션</p>
+          </div>
+          <div class="box-card">
+            <div class="clearfix">
+              <div>
+                <div class="img"><img data-src="SUB_201_010" src="../img/element/special/info/info_01.png" alt=""></div>
+              </div>
+              <div>
+                <div class="img"><img data-src="SUB_201_015" src="../img/element/special/info/info_02.png" alt=""></div>
+                <div class="img"><img data-src="SUB_201_016" src="../img/element/special/info/info_03.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('#introHomelearnPick').modal('show')
+</script>
+</body>
+</html>

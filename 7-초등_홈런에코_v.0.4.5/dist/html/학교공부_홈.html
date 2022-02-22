@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>학교공부</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<header id="menubar">
+  <div class="left_side">
+    <i class="menubar_menu_btn"></i>
+    <div class="scrollWrap">
+      <a href="#" class="menu_item" >오늘의 학습</a>
+      <a href="#" class="menu_item active" >학교공부</a>
+      <a href="#" class="menu_item " ><span data-text="HOM_001_035">수학완성</span></a>
+      <a href="#" class="menu_item" ><span data-text="HOM_001_034">영어완성</span></a>
+      <a href="#" class="menu_item " ><span data-text="HOM_001_036">특별학습</span></a>
+    </div>
+    <a href="#"  class="roundButton"><span data-text="SUB_107_018">글로벌리더십</span></a>
+  </div>
+  <div class="right_side">
+    <i class="menubar_battery"></i>
+    <span class="time"><span data-text="COM_001_015">오후</span> 01:36</span>
+    <a href="#"><i class="menubar_bell"><label class="noti">7</label></i></a>
+    <a href="#"><i class="menubar_personal"></i></a>
+    <a href="#"><i class="menubar_wifi"></i></a>
+    <a href="#"><i class="menubar_config"></i></a>
+    <a href="#"><i class="menubar_quit"></i></a>
+  </div>
+</header>
+<div class="wrap_flex schoolStudyContainer lightGreen">
+  <div class="semester_select study-bg">
+    <div class="wrap_header">
+      <div class="flex">
+        <div class="customSelect"><span><span data-text="HOM_002_010">5학년</span></span>
+          <ul>
+            <li data-value="1"><span data-text="SUB_101_002">리틀홈런</span></li>
+            <li data-value="2"><span data-text="HOM_002_010">1학년</span></li>
+            <li data-value="4"><span data-text="HOM_002_010">2학년</span></li>
+            <li data-value="4"><span data-text="HOM_002_010">3학년</span></li>
+            <li data-value="5"><span data-text="HOM_002_010">3학년</span></li>
+            <li data-value="6"><span data-text="HOM_002_010">5학년</span></li>
+            <li data-value="8"><span data-text="HOM_002_010">6학년</span></li>
+          </ul>
+          <input type="hidden" name="customSelect" value="5">
+        </div>
+        <i class="ic_sub_noti"></i>
+        <strong>개념부터 핵심까지 학교공부 완벽 예복습</strong>
+        <!--        <i class="icon_new"></i>-->
+      </div>
+      <div class="study_guide study-label-bg"><a href="#" class="d-block"><span data-text="SUB_001_005">학습안내</span></a></div>
+    </div>
+  </div>
+  <div class="wrap_home">
+    <div class="subject_panel study-bg study-border-color">
+      <div class="boxTitle schoolStudyTitle01"></div>
+      <p data-text="SUB_001_006">학교 공부에 최적화된 과목별 개념 학습</p>
+      <div class="menu-list">
+        <ul>
+          <li>
+            <a href="#">
+              <div>
+                <span class="badge kor"><i class="i-size ic-kor"></i></span>
+                <div class="t-area">
+                  <span class="tit"><span data-text="HOM_001_020">국어</span></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <span class="badge math"><i class="i-size ic-math"></i></span>
+                <div class="t-area">
+                  <span class="tit"><span data-text="HOM_001_021">수학</span></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <span class="badge society"><i class="i-size ic-society"></i></span>
+                <div class="t-area">
+                  <span class="tit"><span data-text="HOM_001_022">사회</span></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <span class="badge science"><i class="i-size ic-combine"></i></span>
+                <div class="t-area">
+                  <span class="tit"><span data-text="HOM_001_023">과학</span></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <span class="badge eng"><i class="i-size ic-eng"></i></span>
+                <div class="t-area">
+                  <span class="tit"><span data-text="HOM_001_024">영어</span><em class="badge-value">5종</em></span>
+                </div>
+              </div>
+            </a>
+          </li>
+<!--          <li>-->
+<!--            <a href="#">-->
+<!--              <div>-->
+<!--                <span class="badge combine"><i class="i-size ic-combine"></i></span>-->
+<!--                <div class="t-area">-->
+<!--                  <span class="tit"><span data-text="HOM_001_025">통합</span></span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </li>-->
+        </ul>
+      </div>
+    </div>
+    <div>
+      <ul class="studyList">
+        <li class="title">
+          <div class="boxTitle schoolStudyTitle02"></div>
+          <span data-text="SUB_001_007">다양한 유형별 평가학습</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-01"></i>
+            <span class="tit" data-text="SUB_001_010">실력평가</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-02"></i>
+            <span class="tit" data-text="SUB_001_011">단원평가</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-03"></i>
+            <span class="tit" data-text="SUB_001_012">서술형평가</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-04"></i>
+            <span class="tit">수행평가</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-05"></i>
+            <span class="tit" data-text="HOM_001_017">오답노트</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul class="studyList small">
+        <li class="title">
+          <div class="boxTitle schoolStudyTitle03"></div>
+          <span data-text="SUB_001_008">실전대비 특강과 학업성취도평가</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-06"></i>
+            <span class="tit" data-text="SUB_001_015">요점노트</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-07"></i>
+            <span class="tit" data-text="SUB_001_016">족집게문제</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-08"></i>
+            <span class="tit" data-text="SUB_001_017">시험대비특강</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-09"></i>
+            <span class="tit">TOP SECRET</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-10"></i>
+            <span class="tit" data-text="SUB_001_018">성취도평가</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size ss-11"></i>
+            <span class="tit" data-text="SUB_001_019">모의고사</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul class="studyList large">
+        <li class="title">
+          <div class="boxTitle schoolStudyTitle04"></div>
+          <span data-text="SUB_001_009">전과목 개념과 요점으로 숙제해결</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-img"><img src="../img/element/schoolStudy/common/-ge-school_btn_homework_1.png" alt=""></i>
+            <span class="tit" data-text="SUB_001_020">핵심전과</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-img"><img src="../img/element/schoolStudy/common/-ge-school_btn_homework_2.png" alt=""></i>
+            <span class="tit" data-text="SUB_001_021">체험학습</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-img"><img src="../img/element/schoolStudy/common/-ge-school_btn_homework_3.png" alt=""></i>
+            <span class="tit" data-text="SUB_001_022">숙제자료</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-img"><img src="../img/element/schoolStudy/common/-ge-school_btn_homework_4.png" alt=""></i>
+            <span class="tit" data-text="SUB_001_023">테마숙제</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="vertical-list">
+      <ul class="clearfix">
+        <li>
+          <a href="#">
+            <i class="img ss-12"><img src="../img/element/schoolStudy/common/ic_book_dic.png" alt=""></i>
+            <span class="tit" data-text="SUB_001_024">교과서사전</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="img ss-13"><img src="../img/element/schoolStudy/common/ic_study_dic.png" alt=""></i>
+            <span class="tit" data-text="SUB_001_025">학습백과</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="img ss-14"><img src="../img/element/schoolStudy/common/ic_lang_dic.png" alt=""></i>
+            <span class="tit" data-text="SUB_001_026">어학사전</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

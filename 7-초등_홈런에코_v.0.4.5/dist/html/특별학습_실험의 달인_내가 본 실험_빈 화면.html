@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<!--글로벌-->
+<div class="entireWrap">
+  <!--  페이지 요소-->
+  <div class="wrap_master_experiment">
+    <div class="top-area">
+      <div class="logo"><img data-src="SUB_230_002" src="../img/element/special/master/logo.png"/></div>
+      <div class="search"><input type="text" name="search" id="" placeholder="검색어입력" data-placeholder="SUB_104_021"><a href="#"><img src="../img/element/special/master/ico_search.png"/></a></div>
+      <div class="info"><a href="#"><img src="../img/element/special/master/img_info.png"/></a></div>
+      <a class="btn-close" href="#"><img src="../img/element/special/master/close.png"/></a>
+    </div>
+    <div class="contents">
+      <div class="menu-list">
+        <!--_menuList : js 요소-->
+        <ul class="list  _menuList _list">
+          <li>
+            <a href="#"><img data-src="SUB_230_010" src="../img/element/special/master/ico_list_01.png"/><img src="../img/element/special/master/ico_collapse.png" class="ico_collapse"></a>
+            <ul>
+              <li class="on"><a href="#">ㄴ <span data-text="HOM_002_010">3학년</span></a></li>
+              <li><a href="#">ㄴ <span data-text="HOM_002_010">3학년</span></a></li>
+              <li><a href="#">ㄴ <span data-text="HOM_002_010">5학년</span></a></li>
+              <li><a href="#">ㄴ <span data-text="HOM_002_010">6학년</span></a></li>
+            </ul>
+          </li>
+          <li class="open">
+            <a href="#"><img data-src="SUB_230_011" src="../img/element/special/master/ico_list_02.png"/><img src="../img/element/special/master/ico_collapse.png" class="ico_collapse"></a>
+            <ul>
+              <li class="on"><a href="#">ㄴ 운동과 에너지</a></li>
+              <li><a href="#">ㄴ 물질</a></li>
+              <li><a href="#">ㄴ 생명</a></li>
+              <li><a href="#">ㄴ 지구와 우주</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="mybox">
+          <h3><img src="../img/element/special/master/ico_list_05.png"></h3>
+          <ul class="list list_box _list_box active">
+            <li class="on">
+              <a href="#"><img data-src="SUB_230_014" src="../img/element/special/master/ico_list_03.png"/><img src="../img/element/special/master/ico_list_03_on.png" class="on"/></a>
+            </li>
+            <li>
+              <a href="#"><img src="../img/element/special/master/ico_list_04.png"/><img src="../img/element/special/master/ico_list_04_on.png" class="on"/></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--_menuContent : js 요소-->
+      <div class="menu-content _menuContent">
+        <div class="scroll transparent _scrollRight1" style="height: 670px">
+          <div class="area_top">
+            <div class="title" data-text="SUB_230_004">내가 본 실험 <span data-text="FOL_001_002">0개</span></div>
+          </div>
+          <div class="content_tab">
+            <div class="empty">
+              <span class="desc">내가 본 실험이 없어요.</span>
+              <span class="img"><img src="../img/element/special/master/img_empty.png" height="145" width="164"/></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+  $('._scrollRight1')
+    .mCustomScrollbar({
+      theme: 'dark'
+    })
+  $('._scrollRight2')
+    .mCustomScrollbar({
+      theme: 'dark'
+    })
+  $('._menuList').on('click', '> li > a' , function ( ) {
+    $(this).parent().addClass('open').siblings().removeClass('open');
+  })
+  $('._menuList').on('click', 'ul li a' , function ( ) {
+    $(this).parent().addClass('on').siblings().removeClass('on');
+    $('._list, ._list_box').removeClass('active');
+    $(this).parents('._list').addClass('active');
+  })
+
+  $('._filter').on('click', 'ul li a' , function ( ) {
+    $(this).parent().addClass('on').siblings().removeClass('on');
+  })
+  $('._list_box').on('click', 'li a' , function ( ) {
+    $(this).parent().addClass('on').siblings().removeClass('on');
+    $('._list, ._list_box').removeClass('active');
+    $(this).parents('._list_box').addClass('active');
+  })
+
+
+
+
+
+
+</script>
+</body>
+</html>

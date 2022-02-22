@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>영어완성</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="entireWrap">
+  <div class="wrap_english">
+    <div class="area_top">
+      <div class="title"><img src="../img/element/english/common/title_eng.png" alt=""></div>
+      <a href="#" class="closeBtn"><img src="../img/element/english/common/btn_close.png" alt=""></a>
+    </div>
+    <div class="tab_top _tabTop">
+      <ul class="clearfix">
+        <li><a href="#" data-id="tab1" data-text="SUB_029_003">알파벳</a></li>
+        <li><a href="#" data-id="tab2" data-text="SUB_029_004">파닉스</a></li>
+        <li><a href="#" data-id="tab3" data-text="SUB_029_005">영단어 암기</a></li>
+        <li><a href="#" data-id="tab4" data-text="SUB_029_006">영역별 학습</a></li>
+        <li><a href="#" data-id="tab5" data-text="SUB_029_007">영어 교과 강의</a></li>
+        <li class="active"><a href="#" data-id="tab6" data-text="SUB_029_008">영어신문</a></li>
+        <li><a href="#" data-id="tab7" data-text="SUB_029_009">영어동화</a></li>
+        <li><a href="#" data-id="tab8" data-text="SUB_029_010">영어송</a></li>
+        <li><a href="#" data-id="tab9" data-text="SUB_029_011">인기 DVD</a></li>
+      </ul>
+    </div>
+    <div class="tab_content _tabContent active" data-id="tab6">
+      <div class="container-half">
+        <div class="area-top">
+          <div class="tit-left">
+            <div class="img" style="width: 70px; height: auto;">
+              <img src="../img/element/english/song/tit_basic.png" alt="">
+            </div>
+          </div>
+          <div class="tit-right">
+            <div class="img" style="width: 145px; height: auto;">
+              <img src="../img/element/english/song/tit_challenge.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="clearfix">
+          <div class="area-left">
+            <div class="swiper-container _leftSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="list-content">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <div class="img"><img src="../img/element/english/temp/pic_01.png" alt=""></div>
+                          <div class="info">
+                            <span class="tit">[Around the World] Australia</span>
+                            <span class="date">2020.09.04</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="img"><img src="../img/element/english/temp/pic_02.png" alt=""></div>
+                          <div class="info">
+                            <span class="tit">[Around the World] Australia</span>
+                            <span class="date">2020.09.04</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="img"><img src="../img/element/english/temp/pic_01.png" alt=""></div>
+                          <div class="info">
+                            <span class="tit">[Around the World] Australia</span>
+                            <span class="date">2020.09.04</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div>
+              </div>
+              <div class="pagination-container">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="area-right">
+            <div class="swiper-container _rightSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="list-content">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <div class="img"><img src="../img/element/english/temp/pic_01.png" alt=""></div>
+                          <div class="info">
+                            <span class="tit">[Around the World] Australia</span>
+                            <span class="date">2020.09.04</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="img"><img src="../img/element/english/temp/pic_02.png" alt=""></div>
+                          <div class="info">
+                            <span class="tit">[Around the World] Australia</span>
+                            <span class="date">2020.09.04</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="img"><img src="../img/element/english/temp/pic_01.png" alt=""></div>
+                          <div class="info">
+                            <span class="tit">[Around the World] Australia</span>
+                            <span class="date">2020.09.04</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div>
+              </div>
+              <div class="pagination-container">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    // 상단 탭
+    $('._tabTop li a').click(function(){
+      $("._tabContent").removeClass('active');
+      $("._tabContent[data-id='"+$(this).attr('data-id')+"']").addClass("active");
+      $("._tabTop li a").parent().removeClass('active');
+      $(this).parent().addClass('active');
+    });
+    // 사이드 메뉴
+    $('._sideMenu li a').click(function(){
+      $("._menuContent").removeClass('active');
+      $("._menuContent[data-id='"+$(this).attr('data-id')+"']").addClass("active");
+      $("._sideMenu li a").parent().removeClass('active');
+      $(this).parent().addClass('active');
+    });
+  })
+</script>
+<script>
+  var swiper = new Swiper('._leftSlider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+  });
+
+  var swiper = new Swiper('._rightSlider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+  });
+</script>
+</body>
+</html>

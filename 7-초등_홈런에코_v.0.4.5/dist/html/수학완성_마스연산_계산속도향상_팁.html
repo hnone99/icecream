@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>마스연산</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="btn_area text-center mt-5">
+  <a href="#" data-toggle="modal" data-target="#popupMas">팝업열기</a>
+</div>
+<div class="modal modal-big modal-mas fade" id="popupMas" tabindex="-1" role="dialog" aria-modal="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="tab-top _popupTab">
+        <ul>
+          <li class="active"><a href="#" data-id="popupTab1"><span data-text="SUB_021_001">마스 연산의 '계산 속도' 학습법</span></a></li>
+          <li><a href="#" data-id="popupTab2"><span data-text="SUB_021_002">'계산 속도 향상'의 단계적 사용법</span></a></li>
+          <li><a href="#" data-id="popupTab3"><span data-text="SUB_021_003">'기본 나눗셈 100제'의 사용법과 효과</span></a></li>
+        </ul>
+        <a href="#" class="btn-close" data-dismiss="modal" aria-label="Close"><span class="sr-only">close</span></a>
+      </div>
+      <div class="tab-content _popupTabContent active" data-id="popupTab1">
+        <div class="tit">1. <span data-text="SUB_021_001">마스연산의 '계산 속도 향상' 학습법</span></div>
+        <p class="desc">
+            <span data-text="SUB_021_007">
+            ‘계산 속도 향상’은 기본 덧셈, 뺄셈, 곱셈을 빠른 속도로 풀어나가는 연습으로, 계산의 숙련도를 높일 뿐 아니라, 아이들의 뇌를 활성화시키는 학습 방법으로서 세계 각국에서 주목받고 있는
+            학습법입니다.</span>
+          <span data-text="SUB_021_008">
+              어려운 문제를 푸는 것보다, 간단한 문제를 빠른 속도로 풀어 나가는 훈련을 함으로써 아이들의 뇌를 단련시킬 수 있습니다.</span>
+          <span data-text="SUB_021_009">
+              그런 방법으로 뇌를 단련시킨다면, 자신감이 향상되어 어려운 문제에도 거부감 없이 도전할 수 있습니다.</span>
+          <br/><br/>
+          <span data-text="SUB_021_010">
+            ‘계산 속도 향상’ 학습을 할 때에는 시간을 기록하여 매일매일 실력이 향상되고 있다는 느낌을 아이들이 느낄 수 있도록
+              하는 것, 그리고 도달한 레벨에 따라 문제의 수를 단계적으로 늘려 나가는 것이 매우 중요합니다.‘10칸 계산’, ‘30칸 계산’,
+            ‘50칸 계산’ 그리고 ‘100칸 계산’을 향해 달려가되, 목표 시간을 달성하는 만큼 무리 없이 진행하는 것이 중요합니다.</span>
+          <span data-text="SUB_021_011">
+              마지막 목표는 덧셈, 뺄셈, 곱셈의 모든 ‘100칸 계산’을 2분 동안 틀린 문제 없이 모두 풀어 내는 것입니다.</span>
+        </p>
+        <a href="#" class="btn-next"><span class="sr-only"><span data-text="SUB_021_004">다음으로</span></span></a>
+      </div>
+      <div class="tab-content _popupTabContent" data-id="popupTab2">
+        <div class="tit">2. <span data-text="SUB_021_002">‘계산 속도 향상’의 단계적 사용법</span></div>
+        <div class="tit-sm" data-text="SUB_021_013">10칸 계산(덧셈,뺄셈,곱셈)</div>
+        <p class="desc" data-text="SUB_021_014">왼쪽의 수와 위의 수를 보고, 덧셈, 뺄셈, 곱셈의 계산을 10회 실시합니다. 처음에는 천천히 풀어도 좋습니다. ‘왼쪽의 수가 어떤 수이더라도 10회의 계산이 20초 만에 가능해질 때’까지 반복하여 연습합니다.</p>
+
+        <div class="tit-sm" data-text="SUB_021_015">30칸 계산(덧셈,뺄셈,곱셈)</div>
+        <p class="desc" data-text="SUB_021_016">‘10칸 계산’의 3배에 달하는 양을 풀어 나갑니다. ‘10칸 계산’으로 단련된 수 십초 동안의 집중력을 1분까지 유지시키는 것이 과제
+          입니다. ‘왼쪽의 수가 어떤 수이더라도, 30회의 계산이 1분만에 가능해질 때’까지 매일 반복하여 연습합니다.</p>
+
+        <div class="tit-sm" data-text="SUB_021_017">50칸 계산(덧셈,뺄셈,곱셈)</div>
+        <p class="desc" data-text="SUB_021_018">여기서부터가 기본 계산을 빠른 속도로 풀어 나가는 실전입니다. ‘30칸 계산’으로 1칸에 2초의 레벨로 단련시킨 계산력을 1칸에 1.8초의 레벨로 끌어올리는 것이 ‘50칸 계산’입니다. ‘왼쪽의 수가 어떤 수이더라도 50회의 계산이 1분 30초만에 가능해질 때’까지 매일 반복하여 연습합니다.</p>
+
+        <div class="tit-sm" data-text="SUB_021_019">100칸 계산(덧셈,뺄셈,곱셈)</div>
+        <p class="desc" data-text="SUB_021_020">‘50칸 계산’으로 1칸에 1.8초에 레벨로 단련시킨 계산력을 1칸에 1.5초의 레벨(2학년까지), 또는 1칸에 1.2초의 레벨 (3학년 이상)
+          까지 끌어올리는 것을 목표로 하는 ‘100칸 계산’은, 뇌를 단련시키는 완성 단계입니다. 두 개의 수를 보기만 하더라도 딱 정답이 떠오르게 하는 것이 목표입니다. </p>
+        <a href="#" class="btn-prev"><span class="sr-only"><span data-text="SUB_021_005">이전으로</span></span></a>
+        <a href="#" class="btn-next"><span class="sr-only"><span data-text="SUB_021_004">다음으로</span></span></a>
+      </div>
+      <div class="tab-content _popupTabContent" data-id="popupTab3">
+        <div class="tit">3. <span data-text="SUB_021_003">‘기본 나눗셈 100제’의 사용법과 효과</span></div>
+        <div class="tit-sm" data-text="SUB_021_022">기본 나눗셈 100제</div>
+        <p class="desc"  data-text="SUB_021_023">나눗셈은 곱셈을 기반으로 답을 이끌어냅니다. 예를 들어 8÷2라면, 2x□=8로 생각하여 2x4=8이므로, 8÷2=4로 생각할 수 있습니다. 이렇듯 기본 곱셈 1회를 기반으로 나눗셈의 답과 나머지를 구하는 계산은 전부 460종류가 있습니다. 딱 떨어지는 나눗셈(A타입)이 90종류, 나머지를 구할 때의 뺄셈이 받아내림되지 않는 나눗셈(B타입)이 270종류, 그리고 나머지를 구할 때의 뺄셈이 받아내림되는 나눗셈(C타입)이 100종류입니다.
+          <br/><br/>
+          <span data-text="SUB_021_024">‘나머지를 구할 때의 뺄셈이 받아내림되는 나눗셈(C타입)’ 100 종류는 아이들의 뇌를 단련시키는 데 있어 최고의 연산입니다.</span> <span  data-text="SUB_021_025">왜냐하면 덧셈, 뺄셈, 곱셈의 계산 모두에 숙련되어 있고, 더불어 집중력도 단련되어 있지 않으면, 100종류의 계산을 5분 이내에
+              모두 풀어낼 수 있는 것은 불가능하기 때문입니다. 하지만 어느 날 갑자기 술술 5분만에 달성하게 되는 때가 올 것입니다.</span>
+          <br/><br/>
+          5분만에 달성하게 된다면 아이들의 뇌는 아주 훌륭하게 단련되어 있는 것입니다. 그리고 더 나아가 3분 이내를 목표로 하여 달성했을 때에는 아이들의 뇌는 최대한의 단련 상태가 됩니다. 그 뇌는 어떤 계산의 어려운 문제도 풀어낼 수 있을 뿐만 아니라, 국어, 과학, 역사 등 모든 학습 활동을 지지하는 힘이 길러진 뇌로서, 아이들 일생의 재산이 될 것입니다.</p>
+        <a href="#" class="btn-prev"><span class="sr-only"><span data-text="SUB_021_005">이전으로</span></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $('#popupMas').modal('show');
+</script>
+</body>
+</html>

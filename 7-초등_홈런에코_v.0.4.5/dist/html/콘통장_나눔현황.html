@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>코니월드</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="btn_area text-center mt-5">
+  <a href="#" data-toggle="modal" data-target="#sharingStatus">팝업열기</a>
+</div>
+<div class="modal modal-info sharingStatus fade show" id="sharingStatus" data-backdrop="static" tabindex="-1" role="dialog" aria-modal="true">
+  <div class="modal-dialog modal-dialog-centered" role="dialog">
+    <div class="modal-content">
+      <a href="#" class="btn-close" data-dismiss="modal" aria-label="Close"><img src="../img/element/coneyWorld/btn_close.png" alt=""></a>
+      <div class="content">
+        <img src="../img/element/coneyWorld/pop_bg_share_corn.png" alt="">
+        <div class="title-area clearfix">
+          <span class="title" data-text="PRI_011_001">나눔현황</span>
+          <span class="desc" data-text="PRI_011_002">따뜻한 마음을 가진 홈런키즈들의 아이스크림 콘 나눔 내역입니다.</span>
+        </div>
+        <div class="sum-corn">
+          <div class="year">2020년</div>
+          <div class="info-box">
+            <div class="item">
+              <span class="tit" data-text="PRI_011_003">총 기부 홈런키즈</span>
+              <span class="val" data-text="PRI_011_006">52,880명</span>
+            </div>
+            <div class="item">
+              <span class="tit" data-text="PRI_011_004">총 기부 횟수</span>
+              <span class="val" data-text="PRI_011_007">186,337회</span>
+            </div>
+            <div class="item">
+              <span class="tit" data-text="PRI_011_005">총 기부 콘</span>
+              <span class="val" data-text="HOM_002_012">135,110,004콘</span>
+            </div>
+          </div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="badge">2018년</div>
+              <div class="img"><img src="../img/samples/coney_sample.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="badge">2017년</div>
+              <div class="img"><img src="../img/samples/coney_sample.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="badge">2016년</div>
+              <div class="img"><img src="../img/samples/coney_sample.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="badge">2015년</div>
+              <div class="img"><img src="../img/samples/coney_sample.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="badge">2018년</div>
+              <div class="img"><img src="../img/samples/coney_sample.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="badge">2017년</div>
+              <div class="img"><img src="../img/samples/coney_sample.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="badge">2016년</div>
+              <div class="img"><img src="../img/samples/coney_sample.png" alt=""></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="badge">2015년</div>
+              <div class="img"><img src="../img/samples/coney_sample.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <script>
+          var slider = window.setTimeout(makeSlider, 300);
+
+          function makeSlider() {
+            var swiper = new Swiper('.swiper-container', {
+              slidesPerView: 4,
+              spaceBetween: 20,
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('#sharingStatus').modal('show')
+</script>
+</body>
+</html>

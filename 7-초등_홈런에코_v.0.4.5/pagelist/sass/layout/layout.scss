@@ -1,0 +1,24 @@
+/**
+layout
+ */
+.area_body{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.area_full
+{
+    width: 100% !important;
+    overflow: hidden;
+    position: relative;
+}
+
+.area .left{
+    margin-right: 10px;
+}
+.area .left,
+.area .right
+{
+    width: calc(50% - 5px);
+    float: left;
+}

@@ -1,0 +1,340 @@
+/**
+layout
+ */
+
+#wrap {
+ /* padding: 50px;
+  min-width: 1280px; */
+
+  min-width: 1000px;
+  padding-top: 50px;
+}
+
+a {
+  all: initial;
+}
+
+.nav {
+  position: absolute;
+  width: 25px;
+  height: 100%;
+  background-color: $bgColor-dark;
+  color: $textColor;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 100;
+
+  & i {
+    color: $textColor;
+  }
+
+  & a {
+    display: block;
+    text-align: center;
+
+    & img {
+      width: 40px;
+      display: inline-block;
+    }
+
+    &:not(.link_home) {
+      margin-bottom: 10px;
+    }
+
+    & span {
+      font-size: 12px;
+      color: $textColor;
+      display: block;
+    }
+
+  }
+
+  & .logo {
+    padding: 30px 0;
+    display: inline-block;
+
+    & a {
+      color: #ffffff;
+      display: block;
+      margin-top: 0;
+
+      & img {
+        width: 40px;
+      }
+
+      & .link {
+        display: block;
+        position: relative;
+      }
+    }
+  }
+
+  & .btn_open_depths {
+    width: 35px;
+    height: 35px;
+    left: 359px;
+    top: 91px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: $bgColor-light;
+    background-size: 28px;
+    transition: .5s;
+    cursor: pointer;
+    & i{
+      margin-top: 10px;
+    }
+    &.close {
+      left: 6.5px;
+    }
+  }
+}
+
+/*nav 2depths*/
+.nav_depth_2 {
+  position: absolute;
+  left: 25px;
+  z-index: 90;
+  width: 350px;
+  height: 100%;
+  background: $bgColor;
+  transition: .5s;
+  box-shadow: 2px 2px 3px #666;
+  padding: 28px 20px 0 ;
+
+  &.close {
+    width: 0;
+    transition: 0.5s;
+    padding: 28px 0 0;
+
+    & > * {
+      display: none;
+    }
+  }
+
+  & .title {
+    position: relative;
+    margin-bottom: 20px;
+
+    & h2 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $textColor;
+      color: $textColor;
+    }
+
+    & .btn_control_all {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 61px;
+      height: 30px;
+      display: block;
+      background: $bgColor;
+      color: $textColor;
+      line-height: 30px;
+      position: relative;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        color: $bgColor-dark;
+      }
+
+      &::after {
+        content: '모두 닫기';
+        font-size: 10px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 30px;
+        width: 100%;
+        text-align: center;
+      }
+
+      &.close::after {
+        content: '모두 열기';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 30px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    & p {
+      text-align: right;
+
+      & a {
+        color: $textColor;
+        cursor: pointer;
+        & .fa-check-square {
+          display: none;
+          }
+        &.checked .fa-square {
+          display: none;
+        }
+
+        &.checked .fa-check-square {
+          display: inline-block;
+        }
+      }
+    }
+
+    & i {
+      font-size: 13px;
+    }
+
+  }
+
+  & .wrap_scroll {
+    overflow: scroll;
+    height: calc(100% - 120px);
+    width: 100%;
+    overflow-x: hidden;
+
+    & .title_page_category {
+      position: relative;
+
+      & li:hover {
+        background-color: $bgColor-dark;
+        color: $textColor;
+      }
+      & > h3 {
+        font-size: 16px;
+        height: 34px;
+        line-height: 34px;
+        position: relative;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        color: $textColor;
+        background-color: $bgColor-light;
+      }
+
+      & ul {
+        padding-bottom: 10px;
+
+        & span{
+          color: $textColor;
+          &.depths_2_filename {
+            font-weight: bold;
+          }
+          &.tooltip {
+            font-size: 12px;
+          }
+        }
+        & .fas {
+          position: absolute;
+          right: 3px;
+          top: 10px;
+          color: $textColor;
+        }
+      }
+
+      & .ing {
+        font-size: 14px;
+        width: 100%;
+        display: block;
+        padding-bottom: 10px;
+        padding-top: 5px;
+
+        & i {
+          color: #aaa;
+          font-size: 16px;
+          display: inline-block;
+          margin-left: 5px;
+        }
+
+        & span {
+          position: relative;
+          width: 23%;
+          display: inline-block;
+          text-align: right;
+        }
+
+        & strong {
+          color: #999;
+
+          &.percent {
+            color: #333;
+            font-size: 16px;
+          }
+        }
+
+        & em {
+          position: relative;
+          top: -3px;
+          display: inline-block;
+          background-color: #f00;
+          font-size: 10px;
+          color: #ffffff;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          width: 16px;
+          height: 16px;
+          font-style: normal;
+          text-align: center;
+          margin-top: -3px;
+          line-height: 15px;
+        }
+
+        & .circle_waiting {
+          background-color: #333333;
+        }
+
+        & .circle_working {
+          background-color: #ffa726;
+        }
+
+        & .circle_complete {
+          background-color: #29b6f6;
+        }
+
+      }
+    }
+
+    & ul li {
+      position: relative;
+      margin-bottom: 5px;
+      font-size: 16px;
+
+      & .link , .unlink{
+        position: relative;
+        display: block;
+        padding: 7px 18px 7px 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &.focus {
+          background-color: #ccc;
+        }
+
+        &:hover span, &.focus span {
+          color: $textColor;
+        }
+
+        &.focus span.depths_2_filename {
+          position: relative;
+          line-height: 20px;
+        }
+      }
+
+      &:hover, &.nav_depth_2 .wrap_scroll ul li .link.focus {
+        background: $bgColor;
+      }
+
+      &:hover .fa-external-link-alt:before {
+        color: $textColor;
+      }
+
+    }
+  }
+}
+
+

@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'BMJUA';
+  font-style: normal;
+  font-weight: normal;
+  src: local("BMJUA"), url("../fonts/BMJUA/BMJUA.woff") format("woff"), url("../fonts/BMJUA/BMJUA.woff2") format("woff2"), url("../fonts/BMJUA/BMJUA.ttf") format("TrueType"); }

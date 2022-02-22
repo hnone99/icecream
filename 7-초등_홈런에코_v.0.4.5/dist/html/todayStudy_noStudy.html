@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home Learn Hybrid</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body class="bg"><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+	<div class="wrap">
+		<main>
+
+<!-- dateNav-->
+<nav class="dateNav">
+	<a class="goPrev"></a>
+	<a data-text="HOM_001_007">월</a>
+	<a data-text="HOM_001_008">화</a>
+	<a class="on"><span data-text="HOM_001_009">수</span><span>07월 08일</span></a>
+	<a data-text="HOM_001_010">목</a>
+	<a data-text="HOM_001_011">금</a>
+	<a data-text="HOM_001_012">토</a>
+	<a data-text="HOM_001_013">일</a>
+	<a class="goNext"></a>
+	<a class="calendar"></a>
+</nav>
+
+<!-- end of dateNav -->
+
+			<section class="main">
+
+				<div class="box blueBox flex column noItem grow">
+					<div class="boxTitle inside todayStudy"><span class="pool">8</span></div>
+					<span data-text="HOM_006_004">진행중인 학습이 없습니다.</span>
+				</div>
+
+			</section>
+
+			<!-- footNav -->
+			<nav class="bottomNav big">
+	<div>
+		<div class="icon homeLearnBookCafe"></div>
+		<div><span data-text="SUB_039_012">홈북카페</span></div>
+	</div>
+	<div class="verticalLine"></div>
+	<div>
+		<div class="icon textBookDic"></div>
+		<div data-text="SUB_001_024">교과서사전</div>
+	</div>
+	<div class="verticalLine"></div>
+	<div>
+		<div class="icon studyEncy"></div>
+		<div data-text="SUB_001_025">학습백과</div>
+	</div>
+	<div class="verticalLine"></div>
+	<div>
+		<div class="icon pointDic"></div>
+		<div data-text="SUB_001_020">핵심전과</div>
+	</div>
+</nav>
+
+			<!-- end of footNav -->
+
+		</main>
+
+		<!-- aside -->
+		<aside class="type2">
+	<section class="profileSection">
+		<div class="flex align-items-center">
+			<div class="profileIcon">
+				<figure>
+					<img src="../img/samples/sampleProfileImage.png" />
+				</figure>
+				<div class="editGear"></div>
+			</div>
+			<ul class="personalInfoList">
+				<li>김홈런</li>
+				<li data-text="HOM_002_010">4학년</li>
+			</ul>
+		</div>
+
+		<div class="grayBox">종로학원하늘교육</div>
+
+		<ul class="iconList">
+			<li class="icon attendCheck" data-text="HOM_006_012">출석현황</li>
+			<li class="icon wrongAnswerNote" data-text="HOM_002_013">내오답노트</li>
+			<li class="icon aILifeNote" data-text="HOM_002_015">AI생활기록부</li>
+			<li class="icon myAppDrawer" data-text="HOM_002_022">내앱서랍</li>
+		</ul>
+
+
+
+	</section>
+
+	<section class="bannerSection">
+	<div class="scrollXMandatory">
+		<img data-href="https://www.google.com/search?q=%ED%99%88%EB%9F%B0+AI+%EC%88%98%ED%95%99&oq=%ED%99%88%EB%9F%B0+AI+%EC%88%98%ED%95%99&aqs=chrome..69i57.4705j0j7&sourceid=chrome&ie=UTF-8" src="../img/samples/sampleBanner01.jpg" />
+		<img data-href="myClassroom_noStudy.html" src="../img/samples/sampleBanner01.jpg" />
+		<img data-href="todayStudy_calendar.html" src="../img/samples/sampleBanner01.jpg" />
+	</div>
+	<ul class="bannerIndicator">
+		<li class="on"></li>
+		<li></li>
+		<li></li>
+	</ul>
+</section>
+</aside>
+
+		<!-- end of aside -->
+
+	</div>
+
+
+	<script type="text/javascript">
+	$(".arrow.left, .arrow.right").on("click", function(e) {
+		var $scrollBox = $(".horizonScrollBox > ul");
+		if ($scrollBox.data("scrolling")) return;
+		// $scrollBox.data("scrolling", true);
+		$scrollBox.removeClass("scrollMandatory");
+		var scrollLeft = $scrollBox.scrollLeft();
+		var w = $scrollBox.children("li").eq(1).outerWidth(true);
+		if ($(this).hasClass("left")) {
+			scrollLeft += w;
+		} else {
+			scrollLeft -= w;
+		}
+
+		$scrollBox.animate({
+			scrollLeft: scrollLeft
+		});
+	});
+
+	$.fn.scrollEnd = function(callback, timeout) {
+		timeout = timeout || 200;
+		$(this).scroll(function(){
+			var $this = $(this);
+			if ($this.data('scrollTimeout')) {
+				clearTimeout($this.data('scrollTimeout'));
+			}
+			$this.data('scrollTimeout', setTimeout(function(){
+				callback($this);
+			}, timeout));
+		});
+	};
+
+	$(".horizonScrollBox > ul").scrollEnd(function($this){
+		$this.addClass("scrollMandatory");
+		$this.data("scrolling", false);
+	}, 200);
+
+	$(".bannerSection > div").scrollEnd(function($this){
+		var $dots = $this.siblings(".bannerIndicator");
+		var scrollLeft = $this[0].scrollLeft;
+		var itemWidth = $this.children().eq(0).width();
+		var index = Math.round(scrollLeft / itemWidth);
+		$dots.children().eq(index).addClass("on").siblings().removeClass("on");
+	});
+	</script>
+</body>
+</html>

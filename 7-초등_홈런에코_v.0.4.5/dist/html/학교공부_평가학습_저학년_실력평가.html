@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>학교공부</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="entireWrap">
+  <div class="wrap_school_study testStudy">
+    <div class="bg_top_large">
+      <div class="bg_top">
+        <div class="tit"><span data-text="SUB_010_001">학교공부평가</span><a class="badge-info" href="#"><img src="../img/element/schoolStudy/studyTest/btn_info.png" alt=""></a></div>
+        <div class="customSelect"><span data-text="SUB_101_001">6학년 2학기</span>
+          <ul>
+        <li data-value="1" data-text="SUB_101_001">1학년 1학기</li>
+    <li data-value="2" data-text="SUB_101_001">1학년 2학기</li>
+    <li data-value="4" data-text="SUB_101_001">2학년 1학기</li>
+    <li data-value="4" data-text="SUB_101_001">2학년 2학기</li>
+    <li data-value="5" data-text="SUB_101_001">3학년 1학기</li>
+    <li data-value="6" data-text="SUB_101_001">3학년 2학기</li>
+    <li data-value="7" data-text="SUB_101_001">4학년 1학기</li>
+    <li data-value="8" data-text="SUB_101_001">4학년 2학기</li>
+    <li data-value="9" data-text="SUB_101_001">5학년 1학기</li>
+    <li data-value="10" data-text="SUB_101_001">5학년 2학기</li>
+    <li data-value="11" data-text="SUB_101_001">6학년 1학기</li>
+    <li class="active" data-value="12" data-text="SUB_101_001">6학년 2학기</li>
+          </ul>
+          <input type="hidden" name="customSelect" value="4">
+        </div>
+        <a href="#" class="btn-close"><span class="sr-only">close</span></a>
+      </div>
+      <div class="menu_top">
+        <ul>
+          <li class="active"><a href="#" data-text="SUB_001_010">실력평가</a></li>
+          <li><a href="#" data-text="SUB_001_011">단원평가</a></li>
+          <li><a href="#" data-text="SUB_001_015">요점노트</a></li>
+          <li><a href="#" data-text="SUB_001_012">서술형평가</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="category_content _categoryContent active" data-id="categoryMenu1">
+      <div class="cMenu active _cMenu">
+        <ul>
+          <li class="active kor"><a href="#" data-id="menu1"><i class="ic-img ic-kor"></i><span class="tit"><span data-text="HOM_001_020">국어</span></span></a></li>
+          <li class="math"><a href="#" data-id="menu2"><i class="ic-img ic-math"></i><span class="tit"><span data-text="HOM_001_021">수학</span></span></a></li>
+          <li class="combine"><a href="#" data-id="menu3"><i class="ic-img ic-combine"></i><span class="tit"><span data-text="HOM_001_025">통합</span></span></a></li>
+        </ul>
+      </div>
+      <div class="cStep active _cStep kor" data-id="menu1"> <!-- kor, math, english, society, combine -->
+        <div class="scroll transparent _stepScroll">
+          <ul>
+            <li class="active"><a href="#" data-id="step1"><span class="step"><span data-text="SUB_017_026">1단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step2"><span class="step"><span data-text="SUB_017_026">2단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step3"><span class="step"><span data-text="SUB_017_026">3단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step4"><span class="step"><span data-text="SUB_017_026">4단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step5"><span class="step"><span data-text="SUB_017_026">5단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step5"><span class="step"><span data-text="SUB_017_026">6단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cStep _cStep math" data-id="menu2"> <!-- kor, math, english, society, combine -->
+        <div class="scroll transparent _stepScroll">
+          <ul>
+            <li class="active"><a href="#" data-id="step1"><span class="step"><span data-text="SUB_017_026">1단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step2"><span class="step"><span data-text="SUB_017_026">2단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step3"><span class="step"><span data-text="SUB_017_026">3단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step4"><span class="step"><span data-text="SUB_017_026">4단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step5"><span class="step"><span data-text="SUB_017_026">5단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step5"><span class="step"><span data-text="SUB_017_026">6단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cStep _cStep combine" data-id="menu3"> <!-- kor, math, english, society, combine -->
+        <div class="scroll transparent _stepScroll">
+          <ul>
+            <li class="active"><a href="#" data-id="step1"><span class="step"><span data-text="SUB_017_026">1단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step2"><span class="step"><span data-text="SUB_017_026">2단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step3"><span class="step"><span data-text="SUB_017_026">3단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step4"><span class="step"><span data-text="SUB_017_026">4단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step5"><span class="step"><span data-text="SUB_017_026">5단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+            <li><a href="#" data-id="step5"><span class="step"><span data-text="SUB_017_026">6단원</span></span><span class="tit">바른자세로 읽고 쓰기</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cContent cContentSmall _cContent active" data-id="step1">
+        <div class="desc" data-text="SUB_007_001">100점이나 틀린 문제 다시풀기를 하면 <i class="i-star"></i>1개, 보충문제를 풀면<i class="i-star"></i>1개</div>
+        <div class="scroll transparent _contentScroll">
+          <ul>
+            <li>
+              <a href="#">
+                <div class="num"><span data-text="SUB_017_026">1단원</span></div>
+                <div class="con">
+                  <span class="page">8~15<span data-text="SUB_005_003">쪽</span></span>
+                  <span class="tit">소중한 책을 소개해요</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="num"><span data-text="SUB_017_026">1단원</span></div>
+                <div class="con">
+                  <span class="page">8~15<span data-text="SUB_005_003">쪽</span></span>
+                  <span class="tit">소중한 책을 소개해요</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn-bingbing"><a href="#"><img src="../img/element/schoolStudy/studyTest/btn_bingbing_math.png" alt=""></a></div>
+      </div>
+      <div class="cContent cContentSmall _cContent" data-id="step2">
+        <div class="desc" data-text="SUB_007_001">100점이나 틀린 문제 다시풀기를 하면 <i class="i-star"></i>1개, 보충문제를 풀면<i class="i-star"></i>1개</div>
+        <div class="scroll transparent _contentScroll">
+          <ul>
+            <li>
+              <a href="#">
+                <div class="num"><span data-text="SUB_017_026">1단원</span></div>
+                <div class="con">
+                  <span class="page">8~15<span data-text="SUB_005_003">쪽</span></span>
+                  <span class="tit">소중한 책을 소개해요</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="num"><span data-text="SUB_017_026">1단원</span></div>
+                <div class="con">
+                  <span class="page">8~15<span data-text="SUB_005_003">쪽</span></span>
+                  <span class="tit">소중한 책을 소개해요</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn-bingbing"><a href="#"><img src="../img/element/schoolStudy/studyTest/btn_bingbing_kor.png" alt=""></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+      $('._contentScroll').mCustomScrollbar();
+      $('._stepScroll').mCustomScrollbar();
+
+      $('._cMenu li a').click(function () {
+        $('._cStep').removeClass('active');
+          $('._cStep[data-id=\'' + $(this).attr('data-id') + '\']').addClass('active');
+          $('._cMenu li a').parent().removeClass('active');
+          $(this).parent().addClass('active')
+          })
+
+      $('._cStep li a').click(function () {
+        $('._cContent').removeClass('active');
+        $('._cContent[data-id=\'' + $(this).attr('data-id') + '\']').addClass('active');
+        $('._cStep li a').parent().removeClass('active');
+        $(this).parent().addClass('active')
+      })
+    })
+</script>
+</body>
+</html>

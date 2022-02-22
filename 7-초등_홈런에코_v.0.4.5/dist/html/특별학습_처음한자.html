@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="entireWrap">
+  <div class="wrap_first-chinese">
+    <div class="bg_top">
+      <div class="tit">
+        <a href="#"><img src="../img/element/special/first-chinese/btn_info.png" alt=""></a>
+      </div>
+      <a href="#" class="btn-close"><img src="../img/element/special/first-chinese/img_close.png" alt=""></a>
+    </div>
+    <div class="category_menu ">
+      <ul class="_stepScroll">
+        <li class="active"><a href="#" data-id="categoryMenu1"><span class="step">1단계</span><span class="title">통통 숫자를 나타내요</span></a></li>
+        <li><a href="#" data-id="categoryMenu2"><span class="step">2단계</span><span class="title">콕콕 방향을 나타내요</span></a></li>
+        <li><a href="#" data-id="categoryMenu3"><span class="step">3단계</span><span class="title">솔솔 자연을 나타내요</span></a></li>
+        <li><a href="#" data-id="categoryMenu4"><span class="step">4단계</span><span class="title">튼튼 사람을 나타내요</span></a></li>
+        <li><a href="#" data-id="categoryMenu4"><span class="step">5단계</span><span class="title">튼튼 사람을 나타내요</span></a></li>
+        <li><a href="#" data-id="categoryMenu4"><span class="step">6단계</span><span class="title">튼튼 사람을 나타내요</span></a></li>
+        <li><a href="#" data-id="categoryMenu4"><span class="step">7단계</span><span class="title">튼튼 사람을 나타내요</span></a></li>
+        <li><a href="#" data-id="categoryMenu4"><span class="step">8단계</span><span class="title">튼튼 사람을 나타내요</span></a></li>
+      </ul>
+    </div>
+    <div class="category_content _categoryContent" data-id="categoryMenu1">
+      <ul>
+        <li><a href="#"><img src="../img/element/special/first-chinese/img_step1.png"></a></li>
+        <li><a href="#"><img src="../img/element/special/first-chinese/img_step1.png"></a></li>
+        <li><a href="#"><img src="../img/element/special/first-chinese/img_step1.png"></a></li>
+        <li><a href="#"><img src="../img/element/special/first-chinese/img_step1.png"></a></li>
+        <li><a href="#"><img src="../img/element/special/first-chinese/img_step1.png"></a></li>
+        <li><a href="#"><img src="../img/element/special/first-chinese/img_step1.png"></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("._stepScroll").mCustomScrollbar({theme:"dark"});
+    $("._categoryContent").mCustomScrollbar({theme:"dark"});
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home Learn Hybrid</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+	<div class="entireWrap lightBlueBg">
+		<header class="whiteHeader">
+			<div class="boxTitle boxtitle_middleEntry"></div>
+			<div class="closeBox"></div>
+		</header>
+
+		<div class="contentWrap">
+			<ul class="studyList entry korean">
+				<li class="title subjectTitle" data-text="HOM_001_020">
+					국어
+					<div class="subjectIcon"></div>
+				</li>
+				<li data-text="SUB_111_001"><i style="background-color: #fff0aa"><img src="../img/menu_btn/i_a11.png" alt=""></i>예비중 국어</li>
+				<li data-text="SUB_111_002"><i style="background-color: #fff0aa"><img src="../img/menu_btn/i_a12.png" alt=""></i>개념익히기 갈래</li>
+				<li data-text="SUB_111_003"><i style="background-color: #fff0aa"><img src="../img/menu_btn/i_a12.png" alt=""></i>개념익히기 문법</li>
+				<li class="noBorder" data-text="SUB_111_004"><i style="background-color: #fff0aa"><img src="../img/menu_btn/i_a12.png" alt=""></i>개념익히기 어휘</li>
+			</ul>
+
+			<ul class="studyList entry fixedRow english">
+				<li class="title subjectTitle" data-text="HOM_001_024">
+					영어
+					<div class="subjectIcon"></div>
+				</li>
+				<li data-text="SUB_111_008"><i style="background-color: #c6cdf4"><img src="../img/menu_btn/i_a11.png" alt=""></i>문법1 중학입문</li>
+				<li data-text="SUB_111_009"><i style="background-color: #c6cdf4"><img src="../img/menu_btn/i_a11.png" alt=""></i>문법2 예비중1</li>
+				<li data-text="SUB_111_010"><i style="background-color: #c6cdf4"><img src="../img/menu_btn/i_a11.png" alt=""></i>영작</li>
+				<li data-text="SUB_111_011"><i style="background-color: #c6cdf4"><img src="../img/menu_btn/i_a11.png" alt=""></i>회화</li>
+				<li data-text="SUB_111_012"><i style="background-color: #c6cdf4"><img src="../img/menu_btn/i_a11.png" alt=""></i>어휘</li>
+				<li data-text="SUB_111_013"><i style="background-color: #c6cdf4"><img src="../img/menu_btn/i_a11.png" alt=""></i>듣기</li>
+				<li class="noBorder" data-text="SUB_111_014"><i style="background-color: #c6cdf4"><img src="../img/menu_btn/i_a11.png" alt=""></i>쓰기</li>
+			</ul>
+
+			<div class="flex_column">
+				<ul class="studyList fixedRow entry math flex-basis_50">
+					<li class="title subjectTitle" data-text="HOM_001_021">
+						수학
+						<div class="subjectIcon"></div>
+					</li>
+					<li data-text="SUB_111_005"><i style="background-color: #fddbdb"><img src="../img/menu_btn/i_a11.png" alt=""></i>중학입문수학</li>
+					<li data-text="SUB_111_006"><i style="background-color: #fddbdb"><img src="../img/menu_btn/i_a11.png" alt=""></i>예비중1 과정</li>
+					<li class="noBorder" data-text="SUB_111_007"><i style="background-color: #fddbdb"><img src="../img/menu_btn/i_a11.png" alt=""></i>중1 수학특강</li>
+				</ul>
+
+				<ul class="studyList entry society flex-basis_40">
+					<li class="title subjectTitle" data-text="HOM_001_022">
+						사회
+						<div class="subjectIcon"></div>
+					</li>
+					<li data-text="SUB_111_015"><i style="background-color: #cdeeaa"><img src="../img/menu_btn/i_a11.png" alt=""></i>중학사회입문</li>
+					<li class="noBorder" data-text="SUB_111_016"><i style="background-color: #cdeeaa"><img src="../img/menu_btn/i_a11.png" alt=""></i>중1 사회</li>
+				</ul>
+			</div>
+
+			<div class="flex_column">
+				<ul class="studyList fixedRow entry science flex-basis_50">
+					<li class="title subjectTitle" data-text="HOM_001_023">
+						과학
+						<div class="subjectIcon"></div>
+					</li>
+					<li data-text="SUB_111_017"><i style="background-color: #a4dff1"><img src="../img/menu_btn/i_a11.png" alt=""></i>중학과학입문</li>
+					<li data-text="SUB_111_018"><i style="background-color: #a4dff1"><img src="../img/menu_btn/i_a11.png" alt=""></i>중1 과학</li>
+					<li data-text="SUB_111_019" class="noBorder"><i style="background-color: #a4dff1"><img src="../img/menu_btn/i_a11.png" alt=""></i>과학특강</li>
+				</ul>
+
+				<ul class="studyList entry fixedRow total flex-basis_40">
+					<li class="title subjectTitle" data-text="HOM_001_025">
+						역사
+						<div class="subjectIcon"></div>
+					</li>
+					<li data-text="SUB_111_020"><i style="background-color: #f7ccee"><img src="../img/menu_btn/i_a11.png" alt=""></i>중1 역사특강</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+
+</html>

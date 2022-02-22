@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home Learn Hybrid</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body class="my_app_drawer"><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+	<div class="entireWrap">
+		<header class="whiteHeader">
+			<div class="flex align-items_center">
+				<div class="boxTitle boxTitle_myapp_title"></div>
+				<div class="embossInfo" data-text="FOL_001_002">34개</div>
+			</div>
+			<div class="flex align-items_center">
+				<input class="roundInput" type="text" placeholder="검색어 입력" data-placeholder="SUB_104_021" />
+				<div class="closeBox"></div>
+			</div>
+		</header>
+		<section>
+<aside class="app_drawer_aside">
+	<div class="flex_column align-items_center">
+		<figure>
+			<img src="../img/samples/sampleProfileImage.png" />
+		</figure>
+		<ul class="draw_aside_user_info">
+			<li>김홈런</li>
+			<li><span data-text="HOM_002_010">4학년</span> &bull; <span data-text="HOM_002_011"> 박지수선생님</span></li>
+		</ul>
+
+		<div class="drawer_aside_banner" data-href="http://daum.net">
+			<img src="../img/samples/sampleBanner04.jpg" />
+		</div>
+
+		<div class="drawer_aside_banner" data-href="todayStudy.html">
+			<img src="../img/samples/sampleBanner05.jpg" />
+		</div>
+
+		<button type="button" class="drawer_aside_button" data-text="FOL_001_008">더 많은 학습 보러가기</button>
+	</div>
+</aside>
+
+			<main>
+				<nav class="button_tabs">
+					<div class="flex align-items_center">
+						<a href class="on">전체</a>
+						<a href data-text="HOM_001_020">국어</a>
+						<a href data-text="HOM_001_021">수학</a>
+						<a href data-text="HOM_001_024">영어</a>
+						<a href data-text="HOM_001_023">과학</a>
+						<a href data-text="HOM_001_022">사회</a>
+						<a href><span data-text="HOM_001_036">특별학습</span></a>
+					</div>
+					<div class="flex align-items_center">
+						<div class="customSelect">
+							<span data-text="FOL_001_003">최신순</span>
+							<ul>
+								<li data-value="0" data-text="FOL_001_003">최신순</li>
+								<li data-value="1">인기순</li>
+								<li data-value="2">이름순</li>
+							</ul>
+						</div>
+
+						<div class="view_type_select">
+							<div></div>
+							<div class="on"></div>
+						</div>
+					</div>
+				</nav>
+
+				<div class="app_list_wrap">
+					<div class="scrollWrap mCustomScroll">
+
+						<h4>추가 설치된 학습</h4>
+					<div class="app_list">
+
+						<div class="item del err">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon01.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>신비한 과학</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item del">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon02.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>키즈비디오와 함께하는 신나는 놀이 교실</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item err">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon03.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>PICPOP</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon04.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li data-text="SUB_029_005">영단어암기</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item error del">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon05.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>초연산</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon06.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li><span data-text="SUB_107_014">실험의달인</span></li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon07.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>역사이야기</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon08.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>ABC Kids</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon09.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li data-text="HOM_001_003">수학완성</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+
+
+					</div>
+
+					<h4>기본 설치된 학습</h4>
+					<div class="app_list">
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon10.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>초등논술</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon11.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>키즈수학</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon12.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li data-text="SUB_107_020">한자서당</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon10.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>초등논술</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon11.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>키즈수학</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon12.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>한자서당한자서당한자서당한자서당</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon10.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>초등논술</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon11.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li>키즈수학</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+						<div class="item">
+							<div class="iconMask">
+								<img src="../img/samples/app_icon12.png" />
+							</div>
+							<div class="app_icon_info">
+								<ul>
+									<li data-text="SUB_107_020">한자서당</li>
+									<li>850MB</li>
+								</ul>
+								<div class="date">2020.07.17</div>
+							</div>
+							<div class="del"></div>
+							<div class="err"></div>
+						</div>
+
+					</div>
+
+					</div>
+				</div>
+			</main>
+		</section>
+	</div>
+	<script type="text/javascript">
+	$(".view_type_select > div").click(function(e){
+		var $type = $(this);
+		if ($type.index() == 0) {
+			$(".app_list").addClass("iconType");
+		} else {
+			$(".app_list").removeClass("iconType");
+		}
+	});
+	</script>
+</body>
+</html>

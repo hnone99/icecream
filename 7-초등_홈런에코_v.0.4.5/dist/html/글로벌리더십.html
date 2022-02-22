@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home Learn Hybrid</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="entireWrap bg-grey">
+  <div class="header-element global_leadership bg-pink">
+    <div class="logo"><img src="../img/element/global_leadership/logo.png" data-src="SUB_104_001" alt=""></div>
+    <div class="input-group search">
+      <input class="form-control" type="search" placeholder="검색어 입력" data-placeholder="SUB_104_021" aria-label="Search">
+      <a class="btn-search" href="#"><img src="../img/element/global_leadership/search.png" alt=""></a>
+    </div>
+    <div class="closeBox"><a href="#"></a></div>
+  </div>
+  <div class="overflow_hidden pt-3">
+    <div class="tabs global_leadership">
+      <div class="tab">
+        <a class="active" href="#" data-target="panel1"><i class="i-img"><img src="../img/element/global_leadership/home_on.png" alt="" width="23"></i><span data-text="SUB_104_005">홈</span></a>
+        <a href="#" data-target="panel2"><i class="i-img"><img src="../img/element/global_leadership/popular_off.png" alt="" width="23"></i><span data-text="SUB_104_006">인기</span></a>
+      </div>
+      <div class="tab">
+        <div class="tab-header"><span data-text="SUB_104_018">주제별</span></div>
+        <a href="#" data-target="panel3"><i class="i-img"><img src="../img/element/global_leadership/book_off.png" alt="" width="23"></i><span data-text="SUB_104_012">인문</span></a>
+        <a href="#" data-target="panel4"><i class="i-img"><img src="../img/element/global_leadership/brain_off.png" alt="" width="22"></i><span data-text="HOM_001_022">사회</span></a>
+        <a href="#" data-target="panel5"><i class="i-img"><img src="../img/element/global_leadership/science_off.png" alt="" width="18"></i><span data-text="HOM_001_023">과학</span></a>
+        <a href="#" data-target="panel6"><i class="i-img"><img src="../img/element/global_leadership/smile_off.png" alt="" width="23"></i><span data-text="SUB_104_013">감성</span></a>
+        <a href="#" data-target="panel7"><i class="i-img"><img src="../img/element/global_leadership/graduate_off.png" alt="" width="27"></i><span data-text="SUB_104_014">진로</span></a>
+      </div>
+      <div class="tab">
+        <div class="tab-header">보관함</div>
+        <a href="#" data-target="panel8"><i class="i-img"><img src="../img/element/global_leadership/eye_off.png" alt="" width="25"></i><span data-text="SUB_104_009">내가 본 영상</span></a>
+        <a href="#" data-target="panel9"><i class="i-img"><img src="../img/element/global_leadership/like_off.png" alt="" width="23"></i><span data-text="SUB_104_010">좋아요 표시한 영상</span></a>
+        <a href="#" data-target="panel10"><i class="i-img"><img src="../img/element/global_leadership/recommend_off.png" alt="" width="20"></i><span data-text="SUB_104_004">나만을 위한 추천 영상</span></a>
+        <a href="#" data-target="panel11"><i class="i-img"><img src="../img/element/global_leadership/youtube_off.png" alt="" width="25"></i><span data-text="SUB_104_011">구독 영상</span></a>
+        <a href="#" data-target="panel12"><i class="i-img"><img src="../img/element/global_leadership/rocket_off.png" alt="" width="25"></i><span data-text="SUB_104_015">수행</span></a>
+        <a></a>
+        <a></a>
+      </div>
+    </div>
+    <div class="tabs-panel-box global_leadership">
+      <div class="tabs-panel" id="panel1">
+        <div class="gl-movie">
+          <div class="scroll scrollAtRight" style="height: 641px;">
+            <div class="gl-movie-item">
+              <div class="gl-top">
+                <div class="title"><span data-text="SUB_104_002">지금 뜨는 영상</span></div>
+                <a class="btn-all _fold" href="#"><span data-text="SUB_104_016">모두보기</span><i class="i-img"><img src="../img/element/global_leadership/arrow_right_all.png" alt="" width="8"></i></a>
+              </div>
+              <div class="gl-content fold">
+                <ul class="clearfix">
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_01.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_02.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_03.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button class="active"><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_01.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_02.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_03.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button class="active"><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="gl-movie-item">
+              <div class="gl-top">
+                <div class="title"><span data-text="SUB_104_002">지금 뜨는 영상</span></div>
+                <a class="btn-all _fold" href="#"><span data-text="SUB_104_016">모두보기</span><i class="i-img"><img src="../img/element/global_leadership/arrow_right_all.png" alt="" width="8"></i></a>
+              </div>
+              <div class="gl-content fold">
+                <ul class="clearfix">
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_01.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_02.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_03.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button class="active"><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_01.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_02.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_03.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button class="active"><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="gl-movie-item">
+              <div class="gl-top">
+                <div class="title"><span data-text="SUB_104_002">지금 뜨는 영상</span></div>
+                <a class="btn-all _fold" href="#"><span data-text="SUB_104_016">모두보기</span><i class="i-img"><img src="../img/element/global_leadership/arrow_right_all.png" alt="" width="8"></i></a>
+              </div>
+              <div class="gl-content fold">
+                <ul class="clearfix">
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_01.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_02.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_03.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button class="active"><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_01.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_02.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_03.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button class="active"><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="movie">
+                    <a href="#">
+                      <div class="img">
+                        <img src="../img/element/temp/movie_04.png" alt="">
+                        <span class="time">00:03:59</span>
+                      </div>
+                      <div class="title">[화랑도] 원조 BTS,꽃미남꽃미남꽃미남</div>
+                      <div class="category">사회 > 황제성의 초필史기</div>
+                      <div class="v-count">
+                        <span class="count"><span data-text="SUB_104_017">조회수</span>: 16,032</span>
+                        <span class="value">755<button><i class="i-heart"></i></button></span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-panel" id="panel2" style="display: none">2</div>
+      <div class="tabs-panel" id="panel3" style="display: none">3</div>
+      <div class="tabs-panel" id="panel4" style="display: none">4</div>
+      <div class="tabs-panel" id="panel5" style="display: none">5</div>
+      <div class="tabs-panel" id="panel6" style="display: none">6</div>
+      <div class="tabs-panel" id="panel7" style="display: none">7</div>
+      <div class="tabs-panel" id="panel8" style="display: none">8</div>
+      <div class="tabs-panel" id="panel9" style="display: none">9</div>
+      <div class="tabs-panel" id="panel10" style="display: none">10</div>
+      <div class="tabs-panel" id="panel11" style="display: none">11</div>
+    </div>
+  </div>
+</div>
+<script>
+  $('.tabs a').on('click', function () {
+
+    var img = $(this).children(".i-img").children("img");
+    var imgOther = $('body').find('.tabs a .i-img img')
+    var target = '#' + $(this).data('target');
+
+    $(this).parents().find('a').removeClass('active');
+    $(this).addClass('active');
+    $(target).show().siblings('.tabs-panel').hide();
+
+    imgOther.attr("src", function (index,attr) {
+      if(attr.match('_on')) {
+        return attr.replace("_on","_off");
+      }
+    });
+
+    img.attr("src", function (index,attr) {
+      if(attr.match('_off')) {
+        return attr.replace("_off","_on");
+      }
+    });
+
+  })
+
+  $('._fold').on('click',function (){
+    let $content = $(this).parent().siblings();
+
+    if($content.hasClass('fold')) {
+      $content.removeClass('fold');
+      $(this).html('<span>접기</span><i class="i-img"><img src="../img/element/global_leadership/arrow_right_all.png" alt="" width="8"></i>')
+    }
+    else {
+      $content.addClass('fold');
+      $(this).html('<span data-text="SUB_104_016">모두보기</span><i class="i-img"><img src="../img/element/global_leadership/arrow_right_all.png" alt="" width="8"></i>')
+    }
+  })
+</script>
+<script type="text/javascript">
+  $(".scrollAtRight").mCustomScrollbar({
+    theme: "dark"
+  });
+</script>
+</body>
+</html>

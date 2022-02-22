@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<div class="wrap_flex wrap_special">
+  <div class="semester_select spec-bg">
+    <div class="wrap_header">
+      <div class="area-left">
+        <div class="tit_logo"><span class="sr-only">홈런픽</span></div>
+      </div>
+      <div class="area-right">
+        <div class="study_guide spec-label-bg"><a href="#" class="d-block" data-text="SUB_218_005">학습안내</a></div>
+        <div class="btn-close"><span class="sr-only">X</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="homeLearnPick">
+    <div class="main-bg">
+      <img src="../img/element/special/temp/m_banner.png" alt="">
+      <span class="badge-pick"><img src="../img/element/special/homelearnpick/badge_pick.png" alt=""></span>
+      <div class="btn-area">
+        <a class="btn-view" href="#"><i class="ic-view"><img src="../img/element/special/temp/sam_ic_arrow_right.png" alt=""></i>보러가기</a>
+        <div class="badge-area"><i class="ic-corn"><img src="../img/element/special/temp/sam_ic_icecream.png" alt=""></i><span class="badge-corn">+10콘</span></div>
+      </div>
+    </div>
+    <div class="swiper-container _homeLearnPickSlider">
+      <p class="slider-title" data-text="SUB_201_006">지난 홈런픽</p>
+<!--      <p class="empty" >지난 홈런픽이 없습니다.</p>-->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""><span class="badge-completed"><img src="../img/element/special/homelearnpick/badge_completed.png" alt=""></span></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"><img src="../img/element/temp/movie_01.png" alt=""></div>
+          <div class="tit">[8월 vol.16] 독립</div>
+        </div>
+      </div>
+      <div class="pagination-container">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var swiper = new Swiper('._homeLearnPickSlider', {
+    slidesPerView: 4,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  })
+</script>
+</body>
+</html>

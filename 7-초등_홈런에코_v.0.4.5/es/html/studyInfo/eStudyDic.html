@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Referrer" content="origin" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=1280, user-scalable=no" />
+	<meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+	<meta name="robots" content="index,nofollow" />
+	<meta name="description" content="Home Learn Hybrid" />
+	<meta name="keywords" content="Home Learn Hybrid" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>교과서사전</title>
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../../js/init.js?v=3"></script>
+
+	<script type="text/javascript">
+
+
+
+		var REQ_GRADE = fnGetParam("grade");//현재 선택된 학년
+		var REQ_TERM = fnGetParam("term");//현재 선택된 학기
+    let PAGE_TITLE = $("title").text();
+		var SUBJ_NM = null;
+		var CLIST = null;
+
+		var subjList = null;
+
+
+    function backKeyEvent() {
+
+      fnCloseWebView();
+    }
+    //종료 팝업 메시지 출력
+    function fnCloseWebView() {
+
+      commonConfirm("홈런교과서사전을(를) 종료하시겠습니까?", '', closeWebView, '');
+    }
+
+    function fnOnLoaded(){
+      //닫기버튼 이벤트 설정
+      $('#closeBtnID').on("click", fnCloseWebView);
+
+			fnGetSubjList();
+			fnSetGradeTerm(REQ_GRADE, REQ_TERM);
+
+			// 20210621 ynjoung added.
+			// 전체메뉴 API를 호출해서, 선택 가능한 학년을 제한한다
+			var allMenuParams = {
+				user_id: EUSER_INFO.USER_ID,
+				isSchoolingUser: ((!$.isEmpty(EUSER_INFO.frontSa)) ? "Y":"N"),
+				grade: EUSER_INFO.GRADE_GBN
+			};
+			$.postJSON('eco', '/eco/api/menu/all', allMenuParams, function(resp) {
+				console.trace("menuAll API called");
+				if(!resp) {
+					console.warn("menuAll API resp: ", resp);
+					return;
+				}
+				if(resp.errorCode != "0000") {
+					console.warn("menuAll API resp: ", resp);
+					return;
+				}
+
+				var gradeList = resp.subjGrade.map(function(grade) { return grade.grade_cd; });
+				if(resp.subjGrade.length > 0) {
+					$("#topGradeID li").each(function(index, el) {
+						var jqEl = $(el);
+						var value = jqEl.data("value");
+						if(!isNaN(value)) {
+							var grade = parseInt(value);
+							grade = Math.round(grade / 2);
+							if(!gradeList.includes("" + grade)) {
+								jqEl.hide();
+							} else {
+								jqEl.show();
+							}
+						}
+					});
+				}
+			});
+
+		}
+
+
+		function fnGetSubjList() {
+
+			var param = {
+				term_cd: REQ_TERM,
+				grade_div: REQ_GRADE,
+				Version: "1"
+			};
+			$.postJSON('hapi', '/dictionary/SubjList', param, fnGetSubjListOk, false);
+		}
+
+		function getIcon(subj_id) {
+			if (subj_id == '국어' || subj_id == '국어활동') {
+				return "i_kor";
+			}
+			else if (subj_id == '수학' || subj_id == '수학익힘책') {
+				return "i_math";
+			}
+			else if (subj_id == '사회') {
+				return "i_society";
+			}
+			else if (subj_id == '과학') {
+				return "i_science";
+			}
+			else if (subj_id == '실험관찰') {
+				return "i_observe";
+			}
+			else if (subj_id == '도덕') {
+				return "ic_moral";
+			}
+			return "i_comb";
+		}
+
+		var prevSubj = null;
+		function fnGetSubjListOk(retData) {
+
+			if (retData.resultCode == "0") {
+				subjList = retData.subjList;
+				$('#subjContainer').empty();
+				var idx = 0;
+				for (var i = 0; i < subjList.length; i++) {
+					var li = '';
+					if (i == 0) {
+						li += '<li id="subj_' + i + '" class="active" style="width:100%">';
+					} else {
+						li += '<li id="subj_' + i + '" style="width:100%">';
+					}
+					li += '<a href="#" style="display:inline-block;line-height:70px;" onclick="fnGetSubjInfo(1,' + i + ')"><i class="i-img ' + getIcon(subjList[i].subj_viw_nm) + '"></i>' + subjList[i].subj_viw_nm + '</a></li>';
+					$('#subjContainer').append(li);
+
+					if (SUBJ_NM == subjList[i].subj_viw_nm)
+						idx = i;
+				}
+
+				fnGetSubjInfo(1, idx);
+			}
+			else {
+				//다시 시도해 주세요.
+				commonAlert("SUB_901_051");
+			}
+		}
+
+		function fnGetSubjInfo(Version, idx) {
+			if (prevSubj != null) {
+				$(prevSubj).removeClass('active');
+			}
+			if (idx != 0)
+				$('#subj_0').removeClass('active');
+
+			SUBJ_NM = subjList[idx].subj_viw_nm;
+			var param = {
+				grade_div: subjList[idx].grade_div,
+				Version: Version,
+				confirm_cd: subjList[idx].confirm_cd,
+				subj_id: subjList[idx].subj_id,
+				term_div: subjList[idx].term_cd,
+				local_cd: subjList[idx].local_cd
+			};
+			$.postJSON('hapi', '/dictionary/LessonList', param, fnGetSubjInfoOk, false);
+
+			prevSubj = '#subj_' + idx;
+			$(prevSubj).addClass('active');
+
+			var OD1 = null;
+			OD1 = `${REQ_GRADE}학년 ${REQ_TERM}학기`;
+
+			var OD2 = null;
+			if (PAGE_TITLE)
+				OD2 = PAGE_TITLE;
+
+			var OD3 = null;
+			if ($(prevSubj+" a").length > 0)
+				OD3 = $(prevSubj + " a").text();
+
+			//xcaliper 적용
+			xNaviEvent(OD3, "", `${OD2}>${OD3}`, "M", null, OD1, OD2, OD3);
+		}
+
+		var listLesson1 = null;
+		var listLesson2 = null;
+		var listLesson3 = null;
+		function fnGetSubjInfoOk(retData) {
+
+			listLesson1 = new Array();
+			listLesson2 = new Array();
+			listLesson3 = new Array();
+
+			if (retData.resultCode == "0") {
+				var list = retData.lessonList;
+
+				for (var i = 0; i < list.length; i++) {
+					if (list[i].lv == 1) {
+						listLesson1.push(list[i]);
+					} else if (list[i].lv == 2) {
+						listLesson2.push(list[i]);
+					} else if (list[i].lv == 3) {
+						listLesson3.push(list[i]);
+					}
+				}
+			}
+			//TODO 스크롤 임시
+			$("#divLesson2").attr("style", "width:calc(100% - 460px)");
+			if (listLesson3.length > 0) {
+				//type 3 의 UI 적용
+				$('#divLesson1').show();
+				$('#divLesson2').removeClass('large');
+
+				$('#lesson1').empty();
+				for (var i = 0; i < listLesson1.length; i++) {
+
+					$('#lesson1').append('<li class="category"><span>' + listLesson1[i].study_course_nm + '</span></li>');
+
+					for (var j = 0; j < listLesson2.length; j++) {
+
+						if (listLesson1[i].study_course_id == listLesson2[j].course_idup) {
+							var li = '';
+
+							if (j == 0) {
+								li += '<li id="lesson1_' + listLesson2[j].study_course_id + '" class="active">';
+							} else {
+								li += '<li id="lesson1_' + listLesson2[j].study_course_id + '" >';
+							}
+
+							li += '<a href="#" onclick="fnGetLesson3(' + listLesson2[j].study_course_id + ')" ><span class="step"><span data-text="SUB_017_026;' + listLesson2[j].order_no + '">' + listLesson2[j].order_nm + '</span></span><span class="tit">' + listLesson2[j].study_course_nm + '</span></a>';
+							li += '</li>';
+
+							$('#lesson1').append(li);
+						}
+					}
+
+				}
+
+				fnGetLesson3(listLesson2[0].study_course_id);
+
+			} else if (listLesson2.length == 0) {
+				//type 2 의 UI 적용
+				$('#divLesson1').hide();
+				$('#divLesson2').addClass('large');
+
+				//TODO 스크롤 임시
+				$("#divLesson2").attr("style", "width:calc(100% - 0px)");
+
+				$('#lesson2').empty();
+
+				CLIST = listLesson1;
+				for (var i = 0; i < listLesson1.length; i++) {
+					{
+						var li = '';
+						li += '<li>';
+						if(listLesson1[i].subj_viw_nm == '국어활동'){
+							li += '<a href="#" onclick="fnOpenStudy(' + listLesson1[i].dic_id + ', '+i+')">';
+						}else{
+
+							li += '<a href="#" onclick="fnOpenStudy(' + listLesson1[i].study_course_id + ', '+i+')">';
+						}
+						li += '<div class="num"><span data-text="HOM_001_032;' + listLesson1[i].order_no + '">' + listLesson1[i].order_nm + '</span></div>';
+						li += '<div class="con">';
+						var page = listLesson1[i].s_page;
+						if (listLesson1[i].e_page > 0)
+							page += '~' + listLesson1[i].e_page;
+
+						li += '<span class="page">' + page + '<span data-text="SUB_005_003">쪽</span></span>';
+						li += '<span class="tit">' + listLesson1[i].study_course_nm + '</span>';
+						li += '</div>';
+						li += '</a>';
+						li += '</li>';
+						$('#lesson2').append(li);
+					}
+				}
+
+			} else {
+				$('#divLesson1').show();
+				$('#divLesson2').removeClass('large');
+
+				$('#lesson1').empty();
+				for (var i = 0; i < listLesson1.length; i++) {
+
+					var li = '';
+					if (i == 0) {
+						li += '<li id="lesson1_' + listLesson1[i].study_course_id + '" class="active">';
+					} else {
+						li += '<li id="lesson1_' + listLesson1[i].study_course_id + '" >';
+					}
+
+					li += '<a href="#" onclick="fnGetLesson2(' + listLesson1[i].study_course_id + ')" ><span class="step"><span data-text="SUB_017_026;' + listLesson1[i].order_no + '">' + listLesson1[i].order_nm + '</span></span><span class="tit">' + listLesson1[i].study_course_nm + '</span></a>';
+					li += '</li>';
+
+					$('#lesson1').append(li);
+				}
+
+				fnGetLesson2(listLesson1[0].study_course_id);
+			}
+
+		}
+		var prevLesson1 = null;
+		function fnGetLesson2(course_idup) {
+			fnShowLesson(listLesson2, course_idup);
+		}
+		function fnGetLesson3(course_idup) {
+			fnShowLesson(listLesson3, course_idup);
+		}
+
+		function fnShowLesson(list, course_idup) {
+			if (prevLesson1 != null) {
+				$(prevLesson1).removeClass('active');
+			}
+
+			$('#lesson2').empty();
+			CLIST = list;
+			for (var i = 0; i < list.length; i++) {
+				if (list[i].course_idup == course_idup) {
+					// TODO: (list[i].svc_flag == "0") 일 경우, "업데이트 준비중"을 표시한다
+					var li = '';
+					li += '<li>';
+					li += '<a href="#" onclick="fnOpenStudy(' + list[i].dic_id + ', '+i+')">';
+					li += '<div class="num"><span data-text="HOM_001_032;' + list[i].order_no + '">' + list[i].order_nm + '</span></div>';
+					li += '<div class="flex-grow d-flex">';
+					li += '<div class="con w-100 flex-row justify-content-start align-items-center pr-4">';
+					li += '<div class="d-flex flex-column flex-grow">';
+					var page = list[i].s_page;
+					if (list[i].e_page > 0)
+						page += '~' + list[i].e_page;
+					li += '<span class="page">' + page + '<span data-text="SUB_005_003">쪽</span></span>';
+					li += '<span class="tit">' + list[i].study_course_nm + '</span>';
+					li += '</div>';
+					//업데이트 준비중 시작
+					li += '<div class="flex-shrink-0 pl-4"><span class="update text-dark">업데이트 준비중</span></div>';
+					//업데이트 준비중 끝
+					li += '</div>';
+					li += '</div>';
+					li += '</a>';
+					li += '</li>';
+
+					$('#lesson2').append(li);
+				}
+			}
+			prevLesson1 = '#lesson1_' + course_idup;
+			$(prevLesson1).addClass('active');
+
+			var OD1 = null;
+			OD1 = `${REQ_GRADE}학년 ${REQ_TERM}학기`;
+
+			var OD2 = null;
+			if (PAGE_TITLE)
+				OD2 = PAGE_TITLE;
+
+			var OD3 = null;
+			if ($("#subjContainer li.active").length > 0)
+				OD3 = $("#subjContainer li.active").text();
+
+			var OD4 = null;
+			if ($("#lesson1 li.active").length > 0)
+				OD4 = $("#lesson1 li.active").text();
+
+			//xcaliper 적용
+			xNaviEvent(OD4, "", `${OD2}>${OD3}>${OD4}`, "M", null, OD1, OD2, OD3, OD4);
+		}
+
+		function fnOpenStudy(dic_id, idx) {
+
+			var cinfo = CLIST[idx];
+
+			var OD1 = null;
+			OD1 = `${REQ_GRADE}학년 ${REQ_TERM}학기`;
+
+			var OD2 = null;
+			if (PAGE_TITLE)
+				OD2 = PAGE_TITLE;
+
+			var OD3 = null;
+			if ($("#subjContainer li.active").length > 0)
+				OD3 = $("#subjContainer li.active").text();
+
+			var OD4 = null;
+
+			if($("#divLesson1").css("display") == "none"){
+
+				OD4 = cinfo.order_nm + " " + cinfo.study_course_nm;
+
+				//xcaliper 적용
+				xNaviEvent(OD4, dic_id, `${OD2}>${OD3}>${OD4}`, "C", "text", OD1, OD2, OD3, OD4);
+			}
+			else{
+
+				if ($("#lesson1 li.active").length > 0)
+					OD4 = $("#lesson1 li.active").text();
+
+				var OD5 = cinfo.order_nm + " " + cinfo.study_course_nm;
+				//xcaliper 적용
+				xNaviEvent(OD5, dic_id, `${OD2}>${OD3}>${OD4}>${OD5}`, "C", "text", OD1, OD2, OD3, OD4, OD5);
+			}
+			var url = "/contents/Elementary/Book?student_no=" + EUSER_INFO.STUDENT_NO;
+			url += "&dictionary_no=" + dic_id;
+			url += "&request_gbn=init";
+			url += "&dictionary_type=1";
+			//url += "&subj_lesson_no=" + cinfo.subj_id;
+			url += "&subj_lesson_no=" + "";
+			url += "&user_id=" + EUSER_INFO.USER_ID;
+			//url += "&intgtTbkYn=" + cinfo.intgtTbkYn;
+			try {
+				if(cinfo.intgtTbkYn == true)
+					url += "&studyCourseId=" + cinfo.study_course_id;
+			} catch(e) {
+				console.error(e);
+			}
+			openWebView(url);
+		}
+		function fnGoGrade(grade, term) {
+
+			REQ_GRADE = grade;
+			REQ_TERM = term;
+			fnSetGradeTerm(REQ_GRADE, REQ_TERM);
+			fnGetSubjList();
+			// location.replace('eStudyDic.html?grade=' + grade + '&term=' + term);
+		}
+	</script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br />
+	<button id="enBtn" data-lang="en">영어</button><br />
+	<style>
+		#koBtn,
+		#enBtn {
+			position: relative;
+			z-index: 1111;
+			border: 1px solid #0a0a0a;
+			border-radius: 10px;
+			background-color: #f2f2f2;
+		}
+	</style>
+
+	<div class="entireWrap">
+		<div class="wrap_school_study text_book">
+			<div class="bg_top">
+				<div class="tit" data-text="SUB_001_024">교과서사전</div>
+				<div class="customSelect"><span id="topGradeViewID" data-text="SUB_101_001;1;1">1학년 2학기</span>
+					<ul id="topGradeID">
+						<li data-value="1" onclick="fnGoGrade(1,1)" data-text="SUB_101_001;1;1">1학년 1학기</li>
+
+						<li data-value="2" onclick="fnGoGrade(1,2)" data-text="SUB_101_001;1;2">1학년 2학기</li>
+						<li data-value="3" onclick="fnGoGrade(2,1)" data-text="SUB_101_001;2;1">2학년 1학기</li>
+						<li data-value="4" onclick="fnGoGrade(2,2)" data-text="SUB_101_001;2;2">2학년 2학기</li>
+						<li data-value="5" onclick="fnGoGrade(3,1)" data-text="SUB_101_001;3;1">3학년 1학기</li>
+						<li data-value="6" onclick="fnGoGrade(3,2)" data-text="SUB_101_001;3;2">3학년 2학기</li>
+						<li data-value="7" onclick="fnGoGrade(4,1)" data-text="SUB_101_001;4;1">4학년 1학기</li>
+						<li data-value="8" onclick="fnGoGrade(4,2)" data-text="SUB_101_001;4;2">4학년 2학기</li>
+						<li data-value="9" onclick="fnGoGrade(5,1)" data-text="SUB_101_001;5;1">5학년 1학기</li>
+						<li data-value="10" onclick="fnGoGrade(5,2)" data-text="SUB_101_001;5;2">5학년 2학기</li>
+						<li data-value="11" onclick="fnGoGrade(6,1)" data-text="SUB_101_001;6;1">6학년 1학기</li>
+						<li data-value="12" onclick="fnGoGrade(6,2)" data-text="SUB_101_001;6;2">6학년 1학기</li>
+					</ul>
+					<input type="hidden" id="customSelectID" name="customSelect" value="4"><!-- customSelectID ID 지정 필수 -->
+				</div>
+				<a href="#" class="btn-close" id="closeBtnID"><span class="sr-only">close</span></a>
+			</div>
+			<div class="category_menu _categoryMenu" style="width:220px;">
+				<ul id="subjContainer" style="width:100%">
+
+				</ul>
+			</div>
+			<div class="category_content _categoryContent active" data-id="categoryMenu1">
+				<div class="cStep active _cStep" id="divLesson1">
+					<div class="scroll transparent _stepScroll">
+						<ul id="lesson1">
+
+						</ul>
+					</div>
+				</div>
+				<div class="cContent _cContent active" id="divLesson2" style="width:calc(100% - 460px)">
+					<!-- //TODO 스크롤 임시 -->
+					<div class="scroll transparent _contentScroll">
+						<ul id="lesson2">
+
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			//   $('._stepScroll').mCustomScrollbar()
+			//   $('._contentScroll').mCustomScrollbar()
+		});
+
+		// 오늘의 학습 종료시 호출되는 callback을 override해서 refresh 방지
+		var callTodayReload = function() {}
+	</script>
+</body>
+
+</html>

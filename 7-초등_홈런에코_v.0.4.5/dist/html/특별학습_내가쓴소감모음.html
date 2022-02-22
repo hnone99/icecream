@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+
+<div class="entireWrap">
+  <div class="wrap_my_posting wrap_my_post">
+    <div class="title-area title-center">
+      <span class="title">내가 쓴 소감 모음</span>
+      <i class="i-char"></i>
+      <div class="calendar">
+        <a href="#" class="ic-cal"><img src="../img/element/special/reading/ic_cal.png" alt=""></a>
+      </div>
+      <div class="customSelect">
+        <span data-text="SUB_212_011">최신 날짜 순</span>
+        <ul>
+          <li class="" data-value="1" data-text="SUB_212_011">최신 날짜 순</li>
+          <li data-value="2">좋아요 높은 순</li>
+        </ul>
+        <input type="hidden" name="customSelect" value="1">
+      </div>
+      <a href="#" class="btn-close"><img src="../img/element/special/reading/btn_close.png" alt=""></a>
+    </div>
+    <div class="container_posting">
+      <div class="container_posting list_posting">
+        <div class="line-border"></div>
+        <ul class="_memoList">
+          <li class="big-yellow">
+            <div class="header-bg">
+              <p class="user-info"><em>2020.11.16</em></p>
+            </div>
+            <div class="content">
+              <a class="btn-go" href="#" data-text="SUB_212_009">학습 바로가기<i class="ic-refresh"></i></a>
+              <div class="tit-area my-area">
+                <span class="tit" style="color:#d86600"><p>지금은 공사중</p></span>
+              </div>
+              <p class="text">
+                재미난 동시에요^
+              </p>
+              <div class="btn-area d-flex">
+                <a class="btn-like" href="#"><i class="ic-heart"></i>좋아요 3</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+
+  $(".icon_dropdown").on("click", function () {
+    if ($(this).parent().siblings('.list_wrap').hasClass('close')) {
+      $(this).removeClass('close');
+      $(this).children('i').attr('class', 'fas fa-angle-up');
+      $(this).parent().siblings('.list_wrap').removeClass('close');
+    } else {
+      $(this).addClass('close');
+      $(this).children('i').attr('class', 'fas fa-angle-down');
+      $(this).parent().siblings('.list_wrap').addClass('close');
+    }
+  });
+
+</script>
+</body>
+</html>

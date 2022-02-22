@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>수학완성</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<header id="menubar">
+  <div class="left_side">
+    <i class="menubar_menu_btn"></i>
+    <div class="scrollWrap">
+      <a href="#" class="menu_item" >오늘의 학습</a>
+      <a href="#" class="menu_item" >학교공부</a>
+      <a href="#" class="menu_item active" ><span data-text="HOM_001_035">수학완성</span></a>
+      <a href="#" class="menu_item" ><span data-text="HOM_001_034">영어완성</span></a>
+      <a href="#" class="menu_item" ><span data-text="HOM_001_036">특별학습</span></a>
+    </div>
+    <a href="#"  class="roundButton"><span data-text="SUB_107_018">글로벌리더십</span></a>
+  </div>
+  <div class="right_side">
+    <i class="menubar_battery"></i>
+    <span class="time"><span data-text="COM_001_015">오후</span> 01:36</span>
+    <a href="#"><i class="menubar_bell"><label class="noti">7</label></i></a>
+    <a href="#"><i class="menubar_personal"></i></a>
+    <a href="#"><i class="menubar_wifi"></i></a>
+    <a href="#"><i class="menubar_config"></i></a>
+    <a href="#"><i class="menubar_quit"></i></a>
+  </div>
+</header>
+<div class="wrap_flex lightBlueBg">
+  <div class="semester_select math-bg">
+    <div class="wrap_header">
+      <div class="flex">
+        <div class="customSelect"><span><span data-text="HOM_002_010">1학년</span></span>
+          <ul>
+            <li data-value="1"><span data-text="SUB_101_002">리틀홈런</span></li>
+            <li data-value="2"><span data-text="HOM_002_010">1학년</span></li>
+            <li data-value="4"><span data-text="HOM_002_010">2학년</span></li>
+            <li data-value="4"><span data-text="HOM_002_010">3학년</span></li>
+            <li data-value="5"><span data-text="HOM_002_010">3학년</span></li>
+            <li data-value="6"><span data-text="HOM_002_010">5학년</span></li>
+            <li data-value="8"><span data-text="HOM_002_010">6학년</span></li>
+          </ul>
+          <input type="hidden" name="customSelect">
+        </div>
+        <i class="ic_sub_noti"></i>
+        <strong><span data-text="SUB_019_001">기초부터 최상위까지 수준별 학습으로 실력을 다지는 수학 완성학습</span></strong>
+        <!--        <i class="icon_new"></i>-->
+      </div>
+      <div class="study_guide math-label-bg"><a href="#" class="d-block"><span data-text="SUB_001_005">학습안내</span></a></div>
+    </div>
+  </div>
+  <div class="wrap_home">
+    <div class="subject_panel math-bg math-border-color">
+      <!-- s 수정 -- 2020.12.04 -->
+      <div class="boxTitle">
+        <div class="img">
+          <img src="../img/element/math/boxTitles/tit_01.png" alt="">
+        </div>
+      </div>
+      <!-- e 수정 -- 2020.12.04 -->
+      <p><span data-text="SUB_017_006">개념별 유형 학습으로<br/> 상시 평가에 대비하자!</span></p>
+      <div class="menu-list">
+        <ul>
+          <li class="lg">
+            <a href="#">
+              <div>
+                <i class="i-img lg"><img src="../img/element/math/icon/icon_01.png" alt=""></i>
+                <div class="t-area">
+                  <span class="desc" data-text="SUB_017_013" style="width: 130px">게임처럼 즐겁게 공부하는</span>
+                  <span class="tit"><span data-text="SUB_017_009">연산 빌리지</span></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="lg">
+            <a href="#">
+              <div>
+                <i class="i-img lg"><img src="../img/element/math/icon/icon_02.png" alt=""></i>
+                <div class="t-area">
+                  <span class="desc" data-text="SUB_017_014">상위 1%실력에<br/>도전하는</span>
+                  <span class="tit"><span data-text="SUB_017_010">연산 챌린지</span></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="lg">
+            <a href="#">
+              <div>
+                <i class="i-img lg"><img src="../img/element/math/icon/icon_02.png" alt=""></i>
+                <div class="t-area">
+                  <span class="desc" data-text="SUB_017_014">상위 1%실력에<br/>도전하는</span>
+                  <span class="tit"><span data-text="SUB_017_010">연산 챌린지</span></span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <ul class="studyList half mb-3">
+        <li class="title small">
+          <!--          <div class="boxTitle mathTitle02"></div>-->
+          <!-- s 수정 -- 2020.12.04 -->
+          <div class="boxTitle">
+            <div class="img">
+              <img src="../img/element/math/boxTitles/tit_02.png" alt="">
+            </div>
+          </div>
+          <!-- e 수정 -- 2020.12.04 -->
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size" style="background-color: #b0e1bc"><img src="../img/element/math/icon/icon_sm_01.png" alt=""></i>
+            <span data-text="SUB_017_015">교과 연계 연산력</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size" style="background-color: #b0e1bc"><img src="../img/element/math/icon/icon_sm_02.png" alt=""></i>
+            <span data-text="SUB_017_016">계산 속도 향상</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size" style="background-color: #b0e1bc"><img src="../img/element/math/icon/icon_sm_03.png" alt=""></i>
+            <span data-text="SUB_017_017">암산력 향상</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="studyList half">
+        <li class="title small">
+          <!-- s 수정 -- 2020.12.04 -->
+          <div class="boxTitle">
+            <div class="img">
+              <img src="../img/element/math/boxTitles/tit_03.png" alt="">
+            </div>
+          </div>
+          <!-- e 수정 -- 2020.12.04 -->
+        </li>
+        <li><a href="#"><i class="i-size" style="background-color: #f5d6c5"><img src="../img/element/math/icon/icon_sm_04.png" alt=""></i><span data-text="SUB_017_018">덧셈뺄셈랜드</span></a></li>
+        <li><a href="#"><i class="i-size" style="background-color: #f5d6c5"><img src="../img/element/math/icon/icon_sm_05.png" alt=""></i><span data-text="SUB_017_019">분수소수 스페이스</span></a></li>
+        <li><a href="#"><i class="i-size" style="background-color: #f5d6c5"><img src="../img/element/math/icon/icon_sm_06.png" alt=""></i><span data-text="SUB_017_020">곱셈나눗셈 어드벤처</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="studyList">
+        <li class="title">
+          <!-- s 수정 -- 2020.12.04 -->
+          <div class="boxTitle">
+            <div class="img">
+              <img src="../img/element/math/boxTitles/tit_04.png" alt="">
+            </div>
+          </div>
+          <!-- e 수정 -- 2020.12.04 -->
+          <span data-text="SUB_017_007">영역별 집중 학습 코스</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size"><img src="../img/element/math/icon/icon_sm_07.png" alt=""></i>
+            <span class="tit"><span data-text="SUB_017_021">수와 연산</span></span>
+            <span class="desc"><span data-text="SUB_017_027">필수 계산법 완성하기</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size"><img src="../img/element/math/icon/icon_sm_08.png" alt=""></i>
+            <span class="tit"><span data-text="SUB_017_022">도형</span></span>
+            <span class="desc"><span data-text="SUB_017_028">도형의 성질 집중분석하기</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size"><img src="../img/element/math/icon/icon_sm_09.png" alt=""></i>
+            <span class="tit"><span data-text="SUB_017_023">측정</span></span>
+            <span class="desc"><span data-text="SUB_017_029">다양한 속성 단위 수치화하기</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size"><img src="../img/element/math/icon/icon_sm_10.png" alt=""></i>
+            <span class="tit"><span data-text="SUB_017_024">확률과 통계</span></span>
+            <span class="desc"><span data-text="SUB_017_030">생활 속 문제 해결하기</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="i-size"><img src="../img/element/math/icon/icon_sm_11.png" alt=""></i>
+            <span class="tit"><span data-text="SUB_017_025">규칙성</span></span>
+            <span class="desc"><span data-text="SUB_017_031">생활 속 추론능력 기르기</span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul class="studyList centered" style="height: 350px">
+        <li class="title">
+          <!-- s 수정 -- 2020.12.04 -->
+          <div class="boxTitle">
+            <div class="img">
+              <img src="../img/element/math/boxTitles/tit_05.png" alt="">
+            </div>
+          </div>
+          <!-- e 수정 -- 2020.12.04 -->
+          <span data-text="SUB_017_008">최상위 수학으로 실력완성</span>
+        </li>
+        <li><a href="#"><i class="i-size"><img src="../img/element/math/icon/icon_sm_12.png" alt=""></i><span data-text="SUB_017_026">1단원</span></a></li>
+        <li><a href="#"><i class="i-size"><img src="../img/element/math/icon/icon_sm_12.png" alt=""></i><span data-text="SUB_017_026">2단원</span></a></li>
+        <li><a href="#"><i class="i-size"><img src="../img/element/math/icon/icon_sm_12.png" alt=""></i><span data-text="SUB_017_026">3단원</span></a></li>
+        <li><a href="#"><i class="i-size"><img src="../img/element/math/icon/icon_sm_12.png" alt=""></i><span data-text="SUB_017_026">4단원</span></a></li>
+        <li><a href="#"><i class="i-size"><img src="../img/element/math/icon/icon_sm_12.png" alt=""></i><span data-text="SUB_017_026">5단원</span></a></li>
+      </ul>
+      <ul class="studyList mt-3" style="height: 185px;">
+        <li class="title small">
+          <div class="boxTitle">
+            <div class="img">
+              <img src="../img/element/math/boxTitles/tit_05.png" alt="">
+            </div>
+          </div>
+        </li>
+        <li class="row p-0"><span class="col-4"><a href="#">1단원</a></span><span class="col-4"><a href="#">2단원</a></span><span class="col-4"><a href="#">3단원</a></span></li>
+        <li class="row"><span class="col-4"><a href="#">4단원</a></span><span class="col-4"><a href="#">5단원</a></span><span class="col-4"><a href="#">6단원</a></span></li>
+      </ul>
+      <!--      <div class="banner_event _bannerEvent ml-4">-->
+      <!--        <div>-->
+      <!--          <a href="#"><img src="../img/element/math/temp/banner_event.png"></a>-->
+      <!--          <a href="#"><img src="../img/element/math/temp/banner_event.png"></a>-->
+      <!--          <a href="#"><img src="../img/element/math/temp/banner_event.png"></a>-->
+      <!--        </div>-->
+      <!--        <ul class="bannerIndicator">-->
+      <!--          <li class=""></li>-->
+      <!--          <li class="on"></li>-->
+      <!--          <li></li>-->
+      <!--        </ul>-->
+      <!--      </div>-->
+    </div>
+  </div>
+</div>
+</body>
+</html>

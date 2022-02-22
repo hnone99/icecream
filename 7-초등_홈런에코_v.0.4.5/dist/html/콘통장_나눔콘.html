@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>코니월드</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="entireWrap">
+  <div class="corn-share-box">
+    <div class="header-area">
+      <div class="title" data-text="PRI_010_001">나눔콘</div>
+      <div class="text">
+        <span class="txt">2020년 홈런키즈의 마음을 담아 <em class="bold">135,110,004콘</em>을 기부했어요</span>
+        <a href="#" class="badge-info">
+          <img src="../img/element/coneyWorld/ic_heart.png" alt="">
+          <span data-text="PRI_011_001">지난 나눔현황</span>
+        </a>
+      </div>
+      <a href="#" class="btn-close"><img src="../img/element/coneyWorld/btn_close.png" alt=""></a>
+    </div>
+    <div class="content-area">
+      <div class="title">
+        <span class="txt-lg" data-text="PRI_010_004">나의 나눔 콘</span><span class="txt-sm">(<em data-text="PRI_010_005">콘통장에서 '나의 나눔 콘 활동'을 확인 할 수 있어요.</em>)</span>
+      </div>
+      <div class="info-box clearfix">
+        <div class="item">
+          <p class="tit" data-text="PRI_010_006">나의 콘</p>
+          <span class="val">637<em>콘</em></span>
+        </div>
+        <div class="item">
+          <p class="tit" data-text="PRI_010_007">나눔 랭킹</p>
+          <span class="val">52,868<em>위</em></span>
+        </div>
+        <div class="item">
+          <p class="tit" data-text="PRI_011_004">총 기부 횟수</p>
+          <span class="val">0<em>회</em></span>
+        </div>
+        <div class="item">
+          <p class="tit" data-text="PRI_010_009">총 기부콘</p>
+          <span class="val">0<em>콘</em></span>
+        </div>
+      </div>
+      <div class="input-box">
+        <span class="title" data-text="PRI_010_010">기부할 콘</span>
+        <div class="input-wrap">
+          <input type="text" title="" value="300">
+          <span>콘</span>
+          <p class="desc">큰 기부는 최소300콘부터<br/>100콘 단위로만 할 수 있어요.</p>
+        </div>
+        <div class="input-wrap large">
+          <input type="text" title="" placeholder="나눔의 한마디도 함께 입력해 주세요.">
+          <p class="desc"><em data-text="PRI_010_014">한글 100자 이내</em>(0/200Byte)</p>
+        </div>
+        <a href="#" class="btn">
+          <span data-text="PRI_010_011">기부하기</span>
+          <img src="../img/element/coneyWorld/arrow_next_lightgray.png" alt="">
+        </a>
+      </div>
+      <div class="tooltip-box">
+        <div class="left-side">
+          <div class="title">
+            <img src="../img/element/coneyWorld/ic_exclamation.png" alt="">
+            <span data-text="PRI_010_015">꼭 확인해 주세요!</span>
+          </div>
+          <ul>
+            <li data-action="PRI_010_016">콘 기부는 1일 1회만 가능하며, 기부 시 <나눔의 한마디>를 쓸 수 있어요</li>
+            <li data-action="PRI_010_017">한번 기부한 콘은 취소 할 수 없으니 신중하게 생각하고 기부해 주세요</li>
+            <li data-action="PRI_010_018">매년 모아진 나눔콘은 연말에 원으로 환산해서 불우이웃돕기 성금으로 기부하게 됩니다.</li>
+            <li data-action="PRI_010_019">바른 말, 고운 말로 나눔의 한마디를 남겨 주세요.(나눔의 한마디와 관련없는 글은 임의 삭제 될 수 있습니다.)</li>
+          </ul>
+        </div>
+        <div class="right-side">
+          <div class="title">
+            <span class="tit" data-text="PRI_010_020">나눔의 한마디</span>
+            <a href="#" class="text-link">더보기 +</a>
+          </div>
+          <ul class="scroll transparent _scroll" style="height: 230px">
+            <li>
+              <a href="#">
+                <div class="img"><img src="../img/element/coneyWorld/ic_list_sample1.png" alt=""></div>
+                <div class="user-info">
+                  <div class="name">김태안(taean77**)</div>
+                  <div class="desc">아주 적은 콘이지만 많은 사람들 그리고 좋은 일에 사용됐으면 좋겠습니다.</div>
+                  <div class="time">6시간전</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img"><img src="../img/element/coneyWorld/ic_list_sample2.png" alt=""></div>
+                <div class="user-info">
+                  <div class="name">김태안(taean77**)</div>
+                  <div class="desc">아주 적은 콘이지만 많은 사람들 그리고 좋은 일에 사용됐으면 좋겠습니다.</div>
+                  <div class="time">6시간전</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img"><img src="../img/element/coneyWorld/ic_list_sample1.png" alt=""></div>
+                <div class="user-info">
+                  <div class="name">김태안(taean77**)</div>
+                  <div class="desc">아주 적은 콘이지만 많은 사람들 그리고 좋은 일에 사용됐으면 좋겠습니다.</div>
+                  <div class="time">6시간전</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img"><img src="../img/element/coneyWorld/ic_list_sample2.png" alt=""></div>
+                <div class="user-info">
+                  <div class="name">김태안(taean77**)</div>
+                  <div class="desc">아주 적은 콘이지만 많은 사람들 그리고 좋은 일에 사용됐으면 좋겠습니다.</div>
+                  <div class="time">6시간전</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $("._scroll").mCustomScrollbar({});
+</script>
+</body>
+</html>

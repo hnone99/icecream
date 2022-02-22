@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>특별학습</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body><button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="entireWrap">
+  <div class="wrap_history">
+    <div class="top_area">
+      <div class="title"><img src="../img/element/special/history/tit.png" alt=""></div>
+      <a href="#" class="btn-close"><img src="../img/element/special/history/ic_close.png" alt=""></a>
+    </div>
+    <div class="content_history">
+      <div class="left-side _leftSide">
+        <div class="inner">
+          <ul>
+            <li class="active"><a href="#">선사~통일신라</a></li>
+            <li><a href="#" data-text="SUB_225_006">고려</a></li>
+            <li><a href="#" data-text="SUB_225_007">조선 전기</a></li>
+            <li><a href="#" data-text="SUB_225_008">조선 후기</a></li>
+            <li><a href="#">근대</a></li>
+            <li><a href="#">현대</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-side _rightSide">
+        <div class="inner">
+          <div class="scroll transparent _scrollRight">
+            <ul>
+              <li>
+                <a href="#">
+                  <div class="video">
+                    <img src="../img/element/special/temp/sam_video.png" alt="">
+                    <div class="time"><i class="ic-play"></i>
+                      <span data-text="SUB_015_003">06분 15초</span>
+                    </div>
+                    <i class="badge_new"></i>
+                  </div>
+                  <p class="title">구석기 시대 사람들의 생활 모습</p></a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="video">
+<!--                    <img src="../img/element/special/temp/sam_video.png" alt="">-->
+                        <img src="../img/modify/default_thumnail.png" alt="">
+                    <div class="time"><i class="ic-play"></i><span data-text="SUB_015_003">06분 15초</span></div>
+                  </div>
+                  <p class="title">구석기 시대 사람들의 생활 모습</p></a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="video">
+                    <img src="../img/element/special/temp/sam_video.png" alt="">
+                    <div class="time"><i class="ic-play"></i><span data-text="SUB_015_003">06분 15초</span></div>
+                  </div>
+                  <p class="title">구석기 시대 사람들의 생활 모습</p></a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="video">
+                    <img src="../img/element/special/temp/sam_video.png" alt="">
+                    <div class="time"><i class="ic-play"></i><span data-text="SUB_015_003">06분 15초</span></div>
+                  </div>
+                  <p class="title">구석기 시대 사람들의 생활 모습</p></a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="video">
+                    <img src="../img/element/special/temp/sam_video.png" alt="">
+                    <div class="time"><i class="ic-play"></i><span data-text="SUB_015_003">06분 15초</span></div>
+                  </div>
+                  <p class="title">구석기 시대 사람들의 생활 모습</p></a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="video">
+                    <img src="../img/element/special/temp/sam_video.png" alt="">
+                    <div class="time"><i class="ic-play"></i><span data-text="SUB_015_003">06분 15초</span></div>
+                  </div>
+                  <p class="title">구석기 시대 사람들의 생활 모습</p></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $("._scrollRight").mCustomScrollbar({
+    theme: "dark"
+  });
+  $('._leftSide li a').click(function(){
+    $("._rightSide").removeClass('active');
+    $("._rightSide[data-id='"+$(this).attr('data-id')+"']").addClass("active");
+    $("._leftSide li a").parent().removeClass('active');
+    $(this).parent().addClass('active');
+  });
+</script>
+</body>
+</html>

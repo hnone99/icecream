@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>코니월드</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../js/jquery.twbsPagination.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/modal.js"></script>
+  <script src="../js/lang/lang.js"></script>
+</head>
+
+<body>
+<button id="koBtn" data-lang="ko">한국</button><br/>
+<button id="enBtn" data-lang="en">영어</button><br/>
+<style>
+  #koBtn, #enBtn {
+    position: relative;
+    z-index: 1111;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+</style>
+
+<div class="entireWrap">
+  <div class="corn-account-box">
+    <div class="header-area">
+      <div class="title" data-text="PRI_007_002">콘통장</div>
+      <a href="#" class="badge-info"><img src="../img/element/coneyWorld/ic_question.png" alt=""><span data-text="PRI_008_001">콘 모으는 방법</span></a>
+      <a href="#" class="btn-close"><img src="../img/element/coneyWorld/btn_close.png" alt=""></a>
+    </div>
+    <div class="clearfix">
+      <div class="calendar-area">
+        <div class="calendar-header">
+          <a href="#" class="btn-prev"><img src="../img/element/coneyWorld/arrow_prev.png" alt=""></a>
+          <a href="#" class="badge-year" data-text="PRI_130_001">2020년 11월</a>
+          <a href="#" class="btn-next"><img src="../img/element/coneyWorld/arrow_next.png" alt=""></a>
+        </div>
+        <table class="calendar">
+          <colgroup>
+            <col style="width: 14.285%">
+            <col style="width: 14.285%">
+            <col style="width: 14.285%">
+            <col style="width: 14.285%">
+            <col style="width: 14.285%">
+            <col style="width: 14.285%">
+            <col style="width: 14.285%">
+          </colgroup>
+          <thead>
+          <tr>
+            <th data-text="HOM_001_013">일</th>
+            <th data-text="HOM_001_007">월</th>
+            <th data-text="HOM_001_008">화</th>
+            <th data-text="HOM_001_009">수</th>
+            <th data-text="HOM_001_010">목</th>
+            <th data-text="HOM_001_011">금</th>
+            <th data-text="HOM_001_012">토</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7<span class="badge blue" data-text="PRI_007_013">적립</span></td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11<span class="badge blue" data-text="PRI_007_013">적립</span></td>
+            <td class="today">12<span class="badge blue" data-text="PRI_007_013">적립</span></td>
+            <td>13</td>
+            <td>14<span class="badge blue" data-text="PRI_007_013">적립</span></td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20<span class="badge blue" data-text="PRI_007_013">적립</span></td>
+            <td>21<span class="badge blue" data-text="PRI_007_013">적립</span></td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+            <td class="disabled"></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="value-area">
+        <div class="top-area">
+          <img src="../img/element/coneyWorld/badge_corn.png" alt="">
+          <span class="text" data-text="PRI_007_011">보유 콘</span>
+          <span class="value" data-text="HOM_002_012">637콘</span>
+        </div>
+        <div class="content-area">
+          <div class="tab-menu _tabMenu">
+            <ul>
+              <li class="active"><a href="#" data-id="tab1">전체</a></li>
+              <li><a href="#" data-id="tab2">적립</a></li>
+              <li><a href="#" data-id="tab3">사용</a></li>
+              <li><a href="#" data-id="tab4">나눔</a></li>
+            </ul>
+          </div>
+          <div class="tab-content _tabContent" data-id="tab1">
+            <div class="scroll transparent _scrollRight" style="height: 499px">
+              <ul>
+                <li class="plus">
+                  <a href="#">
+                    <span class="date">07.13 15:00</span>
+                    <span class="tit">출석체크</span>
+                    <span class="value">+10 적립</span>
+                  </a>
+                </li>
+                <li class="minus">
+                  <a href="#">
+                    <span class="date">07.13 15:00</span>
+                    <span class="tit">출석체크</span>
+                    <span class="value">-10 사용</span>
+                  </a>
+                </li>
+                <li class="plus">
+                  <a href="#">
+                    <span class="date">07.13 15:00</span>
+                    <span class="tit">출석체크</span>
+                    <span class="value">+10 적립</span>
+                  </a>
+                </li>
+                <li class="minus">
+                  <a href="#">
+                    <span class="date">07.13 15:00</span>
+                    <span class="tit">출석체크</span>
+                    <span class="value">-10 사용</span>
+                  </a>
+                </li>
+                <li class="plus">
+                  <a href="#">
+                    <span class="date">07.13 15:00</span>
+                    <span class="tit">출석체크</span>
+                    <span class="value">+10 적립</span>
+                  </a>
+                </li>
+                <li class="minus">
+                  <a href="#">
+                    <span class="date">07.13 15:00</span>
+                    <span class="tit">출석체크</span>
+                    <span class="value">-10 사용</span>
+                  </a>
+                </li>
+                <li class="plus">
+                  <a href="#">
+                    <span class="date">07.13 15:00</span>
+                    <span class="tit">출석체크</span>
+                    <span class="value">+10 적립</span>
+                  </a>
+                </li>
+                <li class="minus">
+                  <a href="#">
+                    <span class="date">07.13 15:00</span>
+                    <span class="tit">출석체크</span>
+                    <span class="value">-10 사용</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $("._scrollRight").mCustomScrollbar({
+      theme: "dark"
+    });
+    // 상단 탭
+    $('._tabMenu li a').click(function(){
+      $("._tabContent").removeClass('active');
+      $("._tabContent[data-id='"+$(this).attr('data-id')+"']").addClass("active");
+      $("._tabMenu li a").parent().removeClass('active');
+      $(this).parent().addClass('active');
+    });
+  })
+</script>
+</body>
+</html>
