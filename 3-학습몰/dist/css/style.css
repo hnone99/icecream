@@ -1138,6 +1138,19 @@ footer .family .input-group select {
   background: #fff url(../img/new/btn-open-n@3x.png) no-repeat right 14px center/16px 16px;
 }
 
+/* 모달 닫기 버튼 추가 */
+.modal.modal-static .modal-dialog {
+  transform: scale(1);
+}
+
+.modal .modal-close {
+  color: #fff;
+  position: absolute;
+  right: -4px;
+  top: -45px;
+  font-size: 44px;
+}
+
 .ui-new .wrap {
   width: 100%;
   max-width: 100%;
@@ -2773,6 +2786,54 @@ footer .family .input-group select {
   right: -63px;
   margin-top: 0;
   transform: translateY(-50%);
+}
+
+.tooltip-popup {
+  width: 310px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2.5rem;
+  border-radius: 2rem;
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 28px);
+  z-index: 1;
+  transform: translate(-50%, 0);
+  margin-left: 6px;
+  text-align: center;
+}
+
+.tooltip-popup::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 18px 15px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.7) transparent;
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  margin-left: -15px;
+}
+
+.tooltip-popup p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.tooltip-popup .tooltip-btn {
+  font-size: 1.6rem;
+  background: #fff;
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 50rem;
+  width: 100%;
+  font-weight: 500;
+  color: #000;
 }
 
 .free-experience-box {
@@ -6926,6 +6987,18 @@ a.btnui1.btnui_1 {
     overflow: hidden;
     font-size: 26px;
   }
+  .tooltip-popup {
+    padding: 2rem 1.5rem;
+    width: 260px;
+    margin-left: 0;
+  }
+  .tooltip-popup p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  .tooltip-popup .tooltip-btn {
+    font-size: 13px;
+  }
 }
 
 @media all and (max-width: 960px) {
@@ -7233,17 +7306,6 @@ a.btnui1.btnui_1 {
     background-color: #fff;
     border-radius: 0;
     box-shadow: none;
-  }
-  .ui-new .search-box .input-group::before {
-    position: absolute;
-    top: 50%;
-    left: 56px;
-    display: block;
-    width: 2px;
-    height: 21px;
-    margin-top: -10px;
-    background-color: #ff7602;
-    content: '';
   }
   .ui-new .search-box .input-group .btn-search-back {
     display: block;
@@ -8093,11 +8155,6 @@ a.btnui1.btnui_1 {
   .ui-new .search-box .input-group {
     height: 39px;
     padding-left: 22px;
-  }
-  .ui-new .search-box .input-group::before {
-    left: 45px;
-    height: 15px;
-    margin-top: -7px;
   }
   .ui-new .search-box .input-group .btn-search-back {
     left: 8px;

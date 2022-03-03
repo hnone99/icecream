@@ -202,7 +202,26 @@
                   </div>
                   <!-- 상품 버튼 -->
                   <div class="card-btn">
-                    <a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-active" >공부하고 싶어요</a>
+                    <a href="#" class="btn btn-radius btn-primary btn-subscribe btn-new-active">공부하고 싶어요</a>
+                    <!-- 220303 말풍선 팝업 추가 -->
+                    <div class="tooltip-popup">
+                      <p>공부하고 싶은 학습이 있다면 <br>부모님께 알려주세요.</p>
+                      <div class="row row-10">
+                        <div class="col">
+                          <button type="button" class="tooltip-btn">다시 보지 않기</button>
+                        </div>
+                        <div class="col">
+                          <button type="button" class="tooltip-btn" data-tooltip-btn="close">닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <script>
+                      $('[data-tooltip-btn="close"]').on('click',function(e){
+                        e.preventDefault();
+                        $(this).closest('.tooltip-popup').fadeOut(150);
+                      })
+                    </script>
+                    <!-- //220303 말풍선 팝업 추가 -->
                   </div>
                 </div>
               </div>

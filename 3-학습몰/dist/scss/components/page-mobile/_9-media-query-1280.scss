@@ -48,15 +48,6 @@
         background-color: #fff;
         border-radius: 0;
         box-shadow: none;
-        &::before{
-          @include top-left(50%, 56px);
-          display: block;
-          width: 2px;
-          height: 21px;
-          margin-top: -10px;
-          background-color: #ff7602;
-          content: ''
-        }
         .btn-search-back{
           display: block;
           @include top-left(0, 0);

@@ -286,3 +286,18 @@ footer{
     }
   }
 }
+
+
+/* 모달 닫기 버튼 추가 */
+.modal{
+  &.modal-static{
+    .modal-dialog{transform: scale(1);}
+  }
+  .modal-close{
+    color: #fff;
+    position: absolute;
+    right: -4px;
+    top: -45px;
+    font-size: 44px;
+  }
+}
