@@ -320,7 +320,15 @@
 					// TODO: (list[i].svc_flag == "0") 일 경우, "업데이트 준비중"을 표시한다
 					var li = '';
 					li += '<li>';
-					li += '<a href="#" onclick="fnOpenStudy(' + list[i].dic_id + ', '+i+')">';
+					li += '<a href="#" ';
+					if(list[i].svc_flag != "0") {
+						// 업데이트 준비중
+						li += ' onclick="ifNativeRun(\'displayToastPopup\', \'본 컨텐츠는 업데이트 후에 이용하실 수 있습니다.\')"';
+					} else {
+						// 컨텐츠 실행
+						li += 'onclick="fnOpenStudy(' + list[i].dic_id + ', '+i+')"';
+					}
+					li += '>';
 					li += '<div class="num"><span data-text="HOM_001_032;' + list[i].order_no + '">' + list[i].order_nm + '</span></div>';
 					li += '<div class="flex-grow d-flex">';
 					li += '<div class="con w-100 flex-row justify-content-start align-items-center pr-4">';
@@ -329,11 +337,13 @@
 					if (list[i].e_page > 0)
 						page += '~' + list[i].e_page;
 					li += '<span class="page">' + page + '<span data-text="SUB_005_003">쪽</span></span>';
-					li += '<span class="tit">' + list[i].study_course_nm + '</span>';
+					li += '<span class="tit line-max-2">' + list[i].study_course_nm + '</span>';
 					li += '</div>';
-					//업데이트 준비중 시작
-					li += '<div class="flex-shrink-0 pl-4"><span class="update text-dark">업데이트 준비중</span></div>';
-					//업데이트 준비중 끝
+					if(list[i].svc_flag != "0") {
+						//업데이트 준비중 시작
+						li += '<div class="flex-shrink-0 pl-4"><span class="update text-dark">업데이트 준비중</span></div>';
+						//업데이트 준비중 끝
+					}
 					li += '</div>';
 					li += '</div>';
 					li += '</a>';

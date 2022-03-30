@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="Referrer" content="origin"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=1280, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-title" content="Home Learn Hybrid" />
+  <meta name="robots" content="index,nofollow"/>
+  <meta name="description" content="Home Learn Hybrid"/>
+  <meta name="keywords" content="Home Learn Hybrid"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>학교공부예복습</title>
+	<link rel="stylesheet" href="/es/css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	<script src="/es/js/init.js"></script>
+    <style>
+        .scroll { -ms-overflow-style: none; }
+        .scroll::-webkit-scrollbar{ display:none; }
+    </style>
+  <script type="text/javascript">
+
+    let SUBJ_TAB_LIST = [
+      {
+        subj_nm: "국어",
+        subj_tab: "tab_1",
+        subj_css: "korean",
+      },
+      {
+        subj_nm: "수학",
+        subj_tab: "tab_2",
+        subj_css: "math",
+      },
+      {
+        subj_nm: "사회",
+        subj_tab: "tab_3",
+        subj_css: "society",
+      },
+      {
+        subj_nm: "과학",
+        subj_tab: "tab_4",
+        subj_css: "combine",
+      },
+      {
+        subj_nm: "영어",
+        subj_tab: "tab_5",
+        subj_css: "english",
+      },
+      {
+        subj_nm: "방학수학",
+        subj_tab: "tab_6",
+        subj_css: "math",
+      },
+      {
+        subj_nm: "방학사회",
+        subj_tab: "tab_7",
+        subj_css: "society",
+      },
+      {
+        subj_nm: "방학과학",
+        subj_tab: "tab_8",
+        subj_css: "combine",
+      },
+      {
+        subj_nm: "통합",
+        subj_tab: "tab_9",
+        subj_css: "combine",
+      }
+    ];
+    let PAGE_TITLE = $("title").text();
+
+    let ENG_SUBJ = null; //영어 하위 교과서
+    let REQ_ENG_SUBJ = fnGetParam("eng"); //요청한 하위 영어 교과서
+    let REQ_SUBJ = fnGetParam("subj");//현재 선택된 과목
+    let REQ_TAB = fnGetParam("tab");//현재 선택된 tab
+    let PRE_REQ_SUBJ = null;//이전 선택된 과목
+    let REQ_GRADE = fnGetParam("grade");//현재 선택된 학년
+    let REQ_TERM = fnGetParam("term");//현재 선택된 학기
+    let REQ_SUBJ_VNM = null;//현재선택된 교과 노출명
+    let REQ_PRESUBJ_NM = null;//현재선택된 과목내용
+    if(REQ_ENG_SUBJ != null)
+      REQ_ENG_SUBJ = decodeURIComponent(REQ_ENG_SUBJ);
+
+    let IS_ENG_EVENT = false;//영어교과서를 선택했는지 여부
+
+    let C_DATA_LIST = null; //현재 조회된 목차 list;
+
+    let SUBJ_LIST = new Array();// 조회한 학년학기별 과목 목록 데이터
+
+    if((REQ_SUBJ == null || REQ_SUBJ == "") && REQ_TAB != null && REQ_TAB != "")
+      REQ_SUBJ = fnGetTabName(REQ_TAB);
+
+    if (ECO_MENUS && ECO_MENUS.length > 0){
+      var flag = false;
+      for (var s=SUBJ_TAB_LIST.length-1; s >= 0; s--) {
+        flag = false;
+        for (var n = 0; n < ECO_MENUS.length; n++) {
+
+          //console.log(`${SUBJ_TAB_LIST[s].subj_nm} ::: ${ECO_MENUS[n]} `);
+          if(SUBJ_TAB_LIST[s].subj_nm.indexOf(ECO_MENUS[n]) > -1){
+            flag = true;
+            break;
+          }
+        }
+        if(!flag)
+          SUBJ_TAB_LIST.splice(s, 1);
+
+        //console.log(`${SUBJ_TAB_LIST}`);
+      }
+    }
+    function backKeyEvent() {
+
+      fnCloseWebView();
+    }
+    //종료 팝업 메시지 출력
+    function fnCloseWebView() {
+
+      commonConfirm("홈런학교공부예복습을(를) 종료하시겠습니까?", '', closeWebView, '');
+    }
+
+    function fnOnLoaded(){
+      //닫기버튼 이벤트 설정
+      $('#closeBtnID').on("click", fnCloseWebView);
+
+      fnGetTop();
+      $('.menu_top > ul > li').each(function (index, item) {
+
+        $(item).on('click', function () {
+
+          var selGradValue = $('#topGradeViewID').attr("data-value");
+          var grade = Math.round(selGradValue / 2);
+          var term = (selGradValue % 2 == 0 ? 2 : 1);
+          PRE_REQ_SUBJ = REQ_SUBJ;
+          REQ_SUBJ = fnGetTabName(this.id);
+          //조회 성공 후 메뉴 변경
+          if(fnGetList(grade, term)){
+
+            IS_ENG_EVENT = false; //영어교과서 선택 이벤트여부 초기화
+            fnSetTabMenu(this.id, grade, term);
+          }
+          else
+            REQ_SUBJ = PRE_REQ_SUBJ;
+        });
+      });
+
+
+    //kt랜드 true시 삭제 처리
+      if(ECO_IS_KT == "Y"){
+        $("title").text('교과학습');
+        $("#topTitle").text('교과학습');
+        $("#introStudyCtntImg").attr("src", "../../img/element/schoolStudy/preStudy/bg_info_kt.png")
+      }
+
+        // 20210621 ynjoung added.
+        // 전체메뉴 API를 호출해서, 선택 가능한 학년을 제한한다
+        var allMenuParams = {
+            user_id: EUSER_INFO.USER_ID,
+            isSchoolingUser: ((!$.isEmpty(EUSER_INFO.frontSa)) ? "Y":"N"),
+            grade: EUSER_INFO.GRADE_GBN
+        };
+        $.postJSON('eco', '/eco/api/menu/all', allMenuParams, function(resp) {
+            console.trace("menuAll API called");
+            if(!resp) {
+                console.warn("menuAll API resp: ", resp);
+                return;
+            }
+            if(resp.errorCode != "0000") {
+                console.warn("menuAll API resp: ", resp);
+                return;
+            }
+
+            var gradeList = resp.subjGrade.map(function(grade) { return grade.grade_cd; });
+            $("#topGradeID li").each(function(index, el) {
+                var jqEl = $(el);
+                var value = jqEl.data("value");
+                if(!isNaN(value)) {
+                    var grade = parseInt(value);
+                    grade = Math.round(grade / 2);
+                    if(!gradeList.includes("" + grade)) {
+                        jqEl.hide();
+                    } else {
+                        jqEl.show();
+                    }
+                }
+            });
+
+        });
+    }
+
+    //과목,학년 목록 조회
+    function fnGetTop(){
+
+      var param = {
+        user_id: EUSER_INFO.USER_ID,
+        isHybrid: "Y"
+      };
+      $.postJSON('eco', '/schoolStudy/NewSchoolStudyRRList', param, fnGetTopOk , false);
+    }
+
+		//과목,학년 목록 Object 생성
+		function fnGetTopOk(retData){
+      if(retData.errorCode == "0000"){
+
+        var list = retData.List;
+        // console.log("================================= before sort ==================================== ");
+        // console.log(JSON.stringify(list));
+        // console.log("================================= before sort ==================================== ");
+
+        //과목, 학년, 학기로 정렬
+        list.sort(fnSchoolStudySort);
+        // console.log("================================= after sort ==================================== ");
+        // console.log(JSON.stringify(list));
+        // console.log("================================= after sort ==================================== ");
+
+
+        var topInfoIdx = 0;
+        var topInfoFlag = false;
+        var gvalue = 0;//학년학기선택 항목 설정 값
+
+        if(list != null && list.length > 0){
+
+          var subjList = null;
+          for(var l=0; l < list.length; l++){
+
+            /*
+            if ((ECO_MENUS && ECO_MENUS.length > 0 && !ECO_MENUS.includes(list[n].pre_subj_viw_nm))
+              continue; */
+
+            topInfoFlag = false;
+            for(var t=0; t < SUBJ_LIST.length; t++){
+
+              if(SUBJ_LIST[t].grade == list[l].grade_div && SUBJ_LIST[t].term == list[l].term_cd){
+                topInfoFlag = true;
+                break;
+              }
+            }
+
+            if(l == 0 || !topInfoFlag)
+              SUBJ_LIST[topInfoIdx++] = { grade: list[l].grade_div, term: list[l].term_cd, subjList: new Array()};
+
+            //console.log("grade: "+ list[l].grade_div+", term: "+list[l].term_cd+", list["+l+"].pre_subj_viw_nm :: " + list[l].pre_subj_viw_nm + ", list[" + l + "].subj_viw_nm :: " + list[l].subj_viw_nm);
+            SUBJ_LIST[topInfoIdx-1].subjList.push({
+              subj_nm: list[l].pre_subj_viw_nm,
+              subj_viw_nm: list[l].subj_viw_nm,
+              pre_subj_nm: list[l].pre_subj_nm,
+              subj_id: list[l].subj_id,
+              local_cd: list[l].local_cd,
+              confirm_cd: list[l].confirm_cd
+            });
+          }
+          //console.log(JSON.stringify(SUBJ_LIST));
+          //교과 목록 조회 후 컨텐츠 목록 조회
+          fnSetGradeTerm(REQ_GRADE, REQ_TERM);
+          if(fnGetList(REQ_GRADE, REQ_TERM))
+            fnSetTabMenu(REQ_SUBJ, REQ_GRADE, REQ_TERM);
+        }
+      }
+      else{
+
+        alert("error");
+      }
+    }
+
+    function fnGetSubjInfo (grade_div, term_cd){
+
+      var sslist = SUBJ_LIST;
+      //console.log("REQ_SUBJ : " + REQ_SUBJ);
+      var gtSubjList = null;
+      var param = null;
+      var engSel = null;//영어교과서 선택시 선택 교과서 정보
+      for(var n=0; sslist != null && n < sslist.length; n++){
+
+        if(sslist[n].grade == grade_div && sslist[n].term == term_cd){
+
+          //console.log("grade : " + grade_div);
+          //console.log("term_cd : " + term_cd);
+          gtSubjList = sslist[n].subjList;
+
+          for (var s = 0; gtSubjList != null && s < gtSubjList.length; s++) {
+
+            //console.log("gtSubjList[s].subj_nm : " + gtSubjList[s].subj_nm);
+            if (gtSubjList[s].subj_nm == REQ_SUBJ) {
+
+              param = {
+                user_id: EUSER_INFO.USER_ID,
+                isHybrid: "Y",
+                grade_div: grade_div,
+                term_cd: term_cd,
+                subj_viw_nm: gtSubjList[s].subj_viw_nm,
+                pre_subj_nm: gtSubjList[s].pre_subj_nm,
+                subj_id: gtSubjList[s].subj_id,
+                local_cd: gtSubjList[s].local_cd,
+                confirm_cd: gtSubjList[s].confirm_cd
+              };
+
+              if (REQ_SUBJ == "영어") {
+
+                ENG_SUBJ = null;
+
+                for (s; s < gtSubjList.length; s++) {
+
+                  if(gtSubjList[s].subj_nm != "영어")
+                    break;
+
+                  if (ENG_SUBJ == null) {
+
+                    ENG_SUBJ = { html: "", params: new Array() };
+                    ENG_SUBJ.html += '  <ul>';
+                    ENG_SUBJ.html += '    <li class="active">';
+                  }
+                  else {
+
+                    ENG_SUBJ.html += '    <li>';
+                  }
+                  //console.log("ENG_SUBJ.params.length ==== " + ENG_SUBJ.params.length);
+                  if(REQ_ENG_SUBJ != null && REQ_ENG_SUBJ == gtSubjList[s].subj_viw_nm){
+                    engSel = ENG_SUBJ.params.length;
+                  }
+                  ENG_SUBJ.html += '<a href="#" idx="' + ENG_SUBJ.params.length+'"';
+                  ENG_SUBJ.html += ' onClick="fnGetEngList(\''+ENG_SUBJ.params.length+'\');">';
+                  ENG_SUBJ.html += gtSubjList[s].subj_viw_nm + '</a></li>';
+
+                  ENG_SUBJ.params.push({
+                    user_id: EUSER_INFO.USER_ID,
+                    isHybrid: "Y",
+                    grade_div: grade_div,
+                    term_cd: term_cd,
+                    subj_viw_nm: gtSubjList[s].subj_viw_nm,
+                    pre_subj_nm: gtSubjList[s].pre_subj_nm,
+                    subj_id: gtSubjList[s].subj_id,
+                    local_cd: gtSubjList[s].local_cd,
+                    confirm_cd: gtSubjList[s].confirm_cd
+                  });
+                }
+                ENG_SUBJ.html += '  </ul>';
+                $('#leftGroupID').addClass("case3");
+                $('#engSubjLstID').html(ENG_SUBJ.html);
+              }
+              else{
+                $('#leftGroupID').removeClass("case3");
+                $('#engSubjLstID').html("");
+              }
+              break;
+            }
+          }
+        }
+      }
+
+      //영어교과서를 선택하여 이동한경우 선택 교과서 파라미터로 설정
+      if (engSel != null) {
+        IS_ENG_EVENT = true;
+        var obj = $('#engSubjLstID li a[idx=' + engSel + ']');
+        $('#engSubjLstID li a').each(function () {
+
+          $(this).parent().removeClass("active");
+        });
+        $(obj).parent().addClass("active");
+
+        //영어 교과서 선택 정보 저장
+        fnOnStemp(engSel, null);
+        REQ_ENG_SUBJ = null;
+        param = ENG_SUBJ.params[engSel];
+      }
+      //선택된 과목 학년 학기 목록이 없는 경우 선택된 학년학기의 첫번째 과목으로 이동
+      else if(param == null){
+
+        for (var s = 0; gtSubjList != null && s < gtSubjList.length; s++) {
+
+          //console.log("gtSubjList[s].subj_nm : " + gtSubjList[s].subj_nm);
+          if (gtSubjList[s].subj_nm == SUBJ_TAB_LIST[0].subj_nm) {
+
+            REQ_SUBJ = gtSubjList[0].subj_nm
+
+            if (REQ_SUBJ == "영어") {
+              $('#leftGroupID').addClass("case3");
+            }
+            else {
+              $('#leftGroupID').removeClass("case3");
+              $('#engSubjLstID').html("");
+            }
+            param = {
+              user_id: EUSER_INFO.USER_ID,
+              isHybrid: "Y",
+              grade_div: grade_div,
+              term_cd: term_cd,
+              subj_viw_nm: gtSubjList[s].subj_viw_nm,
+              pre_subj_nm: gtSubjList[s].pre_subj_nm,
+              subj_id: gtSubjList[s].subj_id,
+              local_cd: gtSubjList[s].local_cd,
+              confirm_cd: gtSubjList[s].confirm_cd
+            };
+            break;
+          }
+        }
+      }
+      return param;
+    }
+
+    //영어 교과 목록 조회 전용
+    function fnGetEngList(idx){
+
+      var obj = $('#engSubjLstID li a[idx=' + idx + ']');
+      IS_ENG_EVENT = true;
+      var param = ENG_SUBJ.params[idx];
+      $('#engSubjLstID li a').each(function (){
+
+        $(this).parent().removeClass("active");
+      });
+      $(obj).parent().addClass("active");
+
+      if (param != null) {
+
+        REQ_GRADE = param.grade_div;
+        REQ_TERM = param.term_cd;
+        REQ_SUBJ_VNM = param.subj_viw_nm;
+        REQ_PRESUBJ_NM = param.pre_subj_nm;
+
+        fnOnStemp(idx, null);
+
+        var OD1 = null;
+        OD1 = `${REQ_GRADE}학년 ${REQ_TERM}학기`;
+
+        var OD2 = null;
+        if (PAGE_TITLE)
+          OD2 = PAGE_TITLE;
+
+        var OD3 = null;
+        if (param.pre_subj_nm)
+          OD3 = param.pre_subj_nm;
+
+        var OD4 = null;
+        if (param.subj_viw_nm)
+          OD4 = param.subj_viw_nm;
+
+        //xcaliper 적용
+        xNaviEvent(OD4, "", `${PAGE_TITLE}>${REQ_SUBJ}>${REQ_SUBJ_VNM}`, "M", null, OD1, OD2, OD3, OD4);
+        $.postJSON('eco', '/schoolStudy/SchoolStudyLessonList', param, fnGetListOk, false);
+        return true;
+      }
+      else {
+        //백업된 값으로 rollback
+        $('#topGradeViewID').attr("data-value", $('#topGradeViewID').attr("old-value"));
+        commonAlert(REQ_SUBJ + " " + grade_div + "학년 " + term_cd + "학기 학습은 없습니다.");
+        return false;
+      }
+    }
+
+    function fnGetList(grade_div, term_cd){
+
+      //console.log("grade_div = " + grade_div);
+      //console.log("term_cd = " + term_cd);
+      var param = fnGetSubjInfo(grade_div, term_cd);
+
+      if(param != null){
+
+        REQ_GRADE = param.grade_div;
+        REQ_TERM = param.term_cd;
+        REQ_SUBJ_VNM = param.subj_viw_nm;
+        REQ_PRESUBJ_NM = param.pre_subj_nm;
+        $.postJSON('eco', '/schoolStudy/SchoolStudyLessonList', param, fnGetListOk , false);
+        return true;
+      }
+      else{
+        //백업된 값으로 rollback
+        $('#topGradeViewID').attr("data-value", $('#topGradeViewID').attr("old-value"));
+        commonAlert(REQ_SUBJ + " " + grade_div + "학년 " + term_cd + "학기 학습은 없습니다.");
+        return false;
+      }
+    }
+
+    //학교학습 목록 설정
+    function fnGetListOk(retData){
+
+      if(retData.errorCode == "0000"){
+
+        var xc_array = new Array();//xcaliper 앱설명
+        var xc_desc = "";
+        var list = retData.List;
+        var leftLst = "";
+        var rightLst = "";
+        var stepNo = 0;
+        var rightFlag = false;
+        var isMiddleStep = false;
+
+        var selStep = null;//이전선택 목록을 가기위한 key
+
+        if ("사회|통합".indexOf(REQ_SUBJ) > -1)
+          isMiddleStep = true;
+
+        if(list != null && list.length > 0){
+
+          C_DATA_LIST = list;
+          xc_array[0] = "학교공부예복습";
+          xc_array[1] = REQ_SUBJ;
+          for(var n=0; n < list.length; n++){
+
+            //이전선택 목록을 가기위한 key 생성
+            selStep = REQ_SUBJ+""+REQ_SUBJ_VNM+""+REQ_GRADE+""+REQ_TERM+""+list[n].study_course_id;
+            selStep = selStep.replace(/ +/, "");
+            if(isMiddleStep && list[n].lv == 1){//중단원이 있는 대단원 목록
+
+              xc_array[2] = list[n].order_nm + " " + list[n].study_course_nm;
+
+              leftLst += '<li class="category">';
+              leftLst += ' <em><span>' + list[n].order_nm + '</span></em>';
+              leftLst += ' <span>' + list[n].study_course_nm + '</span>';
+              leftLst += '</li>';
+
+            }//단원 및 중단원 목록 설정
+            else if (list[n].lv == 1 || (isMiddleStep && list[n].lv == 2)) {
+
+              xc_array[3] = list[n].order_nm + " " + list[n].study_course_nm;
+              ++stepNo;
+              rightFlag = true;
+              if (stepNo == 1)
+                leftLst += `<li class='active' onclick='fnOnStemp(this.id,"${stepNo}",${n});' id='${selStep}'>`;
+              else
+                leftLst += `<li onclick='fnOnStemp(this.id,"${stepNo}",${n});' id='${selStep}'>`;
+              leftLst += ' <a href="#" data-id="step' + stepNo + '">';
+              leftLst += '   <span class="step">' + list[n].order_nm + '</span>';
+
+              if ("영어".indexOf(REQ_SUBJ) > -1 && false){
+
+                var scm = list[n].study_course_nm;
+                if(scm.length > 32)
+                  scm = scm.substring(0, 32) + "...";
+                leftLst += '		<span class="tit" style="text-overflow: ellipsis;">' + scm + '</span>';
+
+                xc_array[4] = scm;
+               }
+               else
+                leftLst += '		<span class="tit" style="text-overflow: ellipsis;">' + list[n].study_course_nm + '</span>';
+              leftLst += '	</a>';
+              leftLst += '</li>';
+            }
+            else{//오른쪽 리스트
+
+              if(rightFlag){
+                if(stepNo == 1)
+                  rightLst += '<div class="cContent _cContent active" data-id="step'+stepNo+'">';
+                else
+                  rightLst += '<div class="cContent _cContent" data-id="step'+stepNo+'">';
+
+                rightLst += '	<div class="scroll transparent _contentScroll">';
+                rightLst += '	  <ul>';
+
+                rightFlag = false;
+              }
+
+              xc_desc = "";
+              for(var x=0; xc_array && x < xc_array.length; x++){
+
+                if(xc_array[x] && xc_array[x].replace(/ /, "").length > 0)
+                  xc_desc += ">"+xc_array[x];
+              }
+              list[n].xc_name = list[n].order_nm + list[n].study_course_nm;
+              xc_desc = xc_desc.substring(1) + ">" + list[n].xc_name;
+              list[n].xc_desc = xc_desc;
+
+
+              rightLst += '	      <li>';
+              rightLst += '	        <a href="javascript:;" onclick=\'fnOpenStudy('+n+');\'>';
+              rightLst += '	          <div class="num">'+list[n].order_nm+'</div>';
+              rightLst += '	          <div class="flex-grow d-flex">';
+              rightLst += '	            <div class="con w-100 flex-row justify-content-start align-items-center pr-4">';
+              rightLst += '	              <div class="d-flex flex-column flex-grow">';
+              rightLst += '	                <span class="page">'+list[n].s_page+'~'+list[n].e_page+'<span data-text="SUB_005_003">쪽</span></span>';
+              rightLst += '	                <span class="tit line-max-2">'+list[n].study_course_nm+'</span>';
+              rightLst += '	              </div>';
+              //업데이트 준비중 시작
+              rightLst += '	              <div class="flex-shrink-0 pl-4"><span class="update">업데이트 준비중</span></div>';
+              //업데이트 준비중 끝
+              rightLst += '	            </div>';
+              rightLst += '	          </div>';
+              rightLst += '	        </a>';
+              rightLst += '	      </li>';
+
+              if(list.length == (n+1) || list[n+1].lv == 1 || (isMiddleStep && list[n+1].lv == 2)){//다음이 끝이건, 단원이거나 중단원인경우 오른쪽 div 닫기
+
+                rightLst += '    </ul>';
+                rightLst += '  </div>';
+                rightLst += '</div>';
+              }
+            }
+          }
+
+          //리스트를 덮어 씌움
+          $('#leftLstID').html(leftLst);
+          //이전 리스트 삭제
+          $('div.cContent._cContent').remove();
+          //신규 리스트 추가
+          $('#leftGroupID').append(rightLst);
+
+          fnSetListEvent();
+          ifGetSelectedList(fnGetSelListKey(REQ_SUBJ == "영어" && !IS_ENG_EVENT));
+        }
+      }
+      else{
+
+        alert("error");
+      }
+    }
+
+    //초등 목차에서 마지막 선택한 목차를 저장하기 위한 key를 반환
+    function fnGetSelListKey(isSubj){
+
+      var sref = location.href;
+      sref = sref.substring(sref.lastIndexOf("/"), sref.lastIndexOf(".html"))
+      sref += ("|" + REQ_SUBJ);
+      if (typeof REQ_SUB_SUBJ != "undefined")
+        sref += ("|" + REQ_SUB_SUBJ);
+      if (!isSubj && typeof REQ_SUBJ_VNM != "undefined")
+        sref += ("|" + REQ_SUBJ_VNM);
+
+      return sref;//encodeURIComponent(sref);
+    }
+
+    //선택된 목록 조회 후 포커싱
+    function fnSetSelectInfo(selectedInfo){
+
+      var resStep = null;
+      if (selectedInfo) {
+
+        try {
+
+          if (selectedInfo.isSubj && !IS_ENG_EVENT){
+            //IS_ENG_EVENT = true;
+            if (typeof REQ_ENG_SUBJ == "undefined" || REQ_ENG_SUBJ == null || REQ_ENG_SUBJ == "") {
+
+              if($(`#engSubjLstID > ul > li > a[idx=${selectedInfo.step}]`).length > 0)
+                $(`#engSubjLstID > ul > li > a[idx=${selectedInfo.step}]`).trigger("click");
+            }
+            return;
+          }
+
+          resStep = selectedInfo.step;
+          var stepnum = parseInt(selectedInfo.stepnum,10);
+          $("#" + resStep + " a").trigger("click");
+
+          if ($("#" + resStep) && $("#" + resStep).parent && $("#" + resStep).parent().parent && $("#" + resStep).offset) {
+
+            if (stepnum > 1) {
+              /* if ($("#" + resStep).offset() && $("#" + resStep).offset().top) {
+
+                stepnum = $("#" + resStep).offset().top;
+                stepnum = parseInt(stepnum, 10) - 230;
+              }
+              else
+                stepnum = 7 * stepnum; */
+
+              stepnum = 100 * (stepnum-1);
+            }
+            else{
+              stepnum = 0;
+            }
+            $("#" + resStep).parent().parent().scrollTop(stepnum);
+            //console.log(`============= 자동 스크롤 실행 :[${stepnum}]`)
+          }
+        } catch (error) {}
+      }
+    }
+
+    //목록중 선택항목 저장
+    function fnOnStemp(step, stepnum, idx){
+
+      var isSubj = false;
+      if($.isEmpty(stepnum))
+        isSubj = true;
+      else{
+
+        var study = C_DATA_LIST[idx];
+        var xc_desc = study.order_nm + " " + study.study_course_nm;
+
+        var OD1 = null;
+        OD1 = `${REQ_GRADE}학년 ${REQ_TERM}학기`;
+
+        var OD2 = null;
+        if (PAGE_TITLE)
+          OD2 = PAGE_TITLE;
+
+        var OD3 = null;
+        var OD4 = null;
+        var OD5 = null;
+
+        if(REQ_SUBJ == "영어"){
+
+          OD3 = study.pre_subj_nm;
+          OD4 = study.subj_viw_nm;
+          OD5 = xc_desc;
+        }
+        else{
+
+          OD3 = study.subj_viw_nm;
+          OD4 = xc_desc;
+        }
+
+        //xcaliper 적용
+        xNaviEvent(xc_desc, "", `${PAGE_TITLE}>${REQ_SUBJ}>${REQ_SUBJ_VNM}>${decodeURIComponent(xc_desc)}`, "M", null, OD1, OD2, OD3, OD4 ,OD5);
+      }
+
+      var selectedInfo = {
+        req_subj: REQ_SUBJ,
+        grade_div: REQ_GRADE,
+        term_cd: REQ_TERM,
+        step: step,
+        stepnum: stepnum,
+        isSubj: isSubj
+      };
+      ifSetSelectedList(fnGetSelListKey(isSubj), selectedInfo);
+    }
+
+    function fnSetListEvent() {
+      // $('._stepScroll').mCustomScrollbar()
+      // $('._contentScroll').mCustomScrollbar()
+      // 메뉴 탭
+      $('._categoryMenu li a').click(function () {
+        $('._categoryContent').removeClass('active')
+        $('._categoryContent[data-id=\'' + $(this).attr('data-id') + '\']').addClass('active')
+        $('._categoryMenu li a').parent().removeClass('active')
+        $(this).parent().addClass('active')
+      });
+      // 단계 탭
+      $('._cStep li > a').click(function () {
+        $('._cContent').removeClass('active')
+        $('._cContent[data-id=\'' + $(this).attr('data-id') + '\']').addClass('active')
+        $('._cStep li > a').parent().removeClass('active')
+        $(this).parent().addClass('active')
+      });
+    }
+
+
+    //초등학교공부 예복습 컨텐츠 실행 명령
+    function fnOpenStudy(idx) {
+
+      var study = C_DATA_LIST[idx];
+      var svc_flag = study.svc_flag;
+      var studyCourceId = study.study_course_id;
+
+      var OD1 = null;
+      OD1 = `${REQ_GRADE}학년 ${REQ_TERM}학기`;
+
+      var OD2 = null;
+      if (PAGE_TITLE)
+        OD2 = PAGE_TITLE;
+
+      var OD3 = null;
+      if (REQ_SUBJ == "영어") {
+        OD3 = study.pre_subj_nm +" > "+ study.subj_viw_nm;
+      }
+      else {
+        OD3 = study.subj_viw_nm;
+      }
+
+      var OD4 = null;
+      if ($('#leftLstID li.active a span.step').length > 0)
+        OD4 = $('#leftLstID li.active a span.step').text() + " " + $('#leftLstID li.active a span.tit').text();
+
+      var OD5 = null;
+      if (study.xc_name)
+        OD5 = study.xc_name;
+
+      //xcaliper 적용
+      xNaviEvent(study.xc_name, studyCourceId, study.xc_desc, "C", "text", OD1, OD2, OD3, OD4, OD5);
+		  //xcaliper 적용
+
+      /* @param {*} svc_flag
+       * @param {*} studyCourceId
+       * @param {*} gradeDiv
+       * @param {*} termCd
+       * @param {*} subjViwNm
+       * @param {*} preSubjNm
+       */
+      //console.log("svc_flag:"+svc_flag + ",studyCourceId:" + studyCourceId + ",REQ_GRADE:" + REQ_GRADE + ",REQ_TERM:" + REQ_TERM + ",REQ_SUBJ_VNM:" + REQ_SUBJ_VNM + ",REQ_PRESUBJ_NM:" + REQ_PRESUBJ_NM )
+      ifNativeRun("openStudyContents", svc_flag, studyCourceId, REQ_GRADE, REQ_TERM, REQ_SUBJ_VNM, REQ_PRESUBJ_NM);
+    }
+  </script>
+</head>
+
+
+<body>
+<div class="entireWrap prepareReview">
+  <div id="tabMenuID" class="wrap_school_study combine"><!-- tabMenuID ID 지정 필수 --> <!-- combine -- 과학/통합 공통 색상 사용? -->
+    <div class="bg_top_large">
+      <div class="bg_top">
+        <div class="tit"><span data-text="HOM_001_028" id="topTitle">학교공부예복습</span><span class="badge-info" data-href="">
+          <a href="#" data-toggle="modal" data-target="#introStudy"><img src="../../img/element/schoolStudy/studyTest/btn_info.png" alt=""></a></span></div>
+        <div class="customSelect"><span id="topGradeViewID"></span><!-- topGradeViewID ID 지정 필수 -->
+          <ul id="topGradeID"><!-- topGradeID ID 지정 필수 -->
+            <li data-value="1">1학년 1학기</li>
+            <li data-value="2">1학년 2학기</li>
+            <li data-value="3">2학년 1학기</li>
+            <li data-value="4">2학년 2학기</li>
+            <li data-value="5">3학년 1학기</li>
+            <li data-value="6">3학년 2학기</li>
+            <li data-value="7">4학년 1학기</li>
+            <li data-value="8">4학년 2학기</li>
+            <li data-value="9">5학년 1학기</li>
+            <li data-value="10">5학년 2학기</li>
+            <li data-value="11">6학년 1학기</li>
+            <li data-value="12">6학년 2학기</li>
+          </ul>
+          <input type="hidden" id="customSelectID" name="customSelect" value="4"><!-- customSelectID ID 지정 필수 -->
+        </div>
+        <a href="#" class="btn-close" id="closeBtnID"><span class="sr-only">close</span></a>
+      </div>
+      <div class="menu_top">
+        <ul><!-- tab_# ID 지정 필수 -->
+          <li id="tab_1" style="display: none;" class="active"><a href="#"><i class="ic-img ic-kor"></i><span data-text="HOM_001_020">국어</span></a></li>
+          <li id="tab_2" style="display: none;"><a href="#"><i class="ic-img ic-math"></i><span data-text="HOM_001_021">수학</span></a></li>
+          <li id="tab_3" style="display: none;"><a href="#"><i class="ic-img ic-society"></i><span data-text="HOM_001_022">사회</span></a></li>
+          <li id="tab_4" style="display: none;"><a href="#"><i class="ic-img ic-science"></i><span data-text="HOM_001_023">과학</span></a></li>
+          <li id="tab_5" style="display: none;"><a href="#"><i class="ic-img ic-combine"></i><span data-text="HOM_001_024">영어</span></a></li>
+          <li id="tab_6" style="display: none;"><a href="#"><em class="sm">방학</em> 수학</a></li>
+          <li id="tab_7" style="display: none;"><a href="#"><em class="sm">방학</em> 사회</a></li>
+          <li id="tab_8" style="display: none;"><a href="#"><em class="sm">방학</em> 과학</a></li>
+          <li id="tab_9" style="display: none;"><a href="#"><i class="ic-img ic-combine"></i><span data-text="HOM_001_025">통합</span></a>
+        </ul>
+      </div>
+    </div>
+    <div class="category_content large _categoryContent active" data-id="categoryMenu1" id="leftGroupID"><!-- leftLstID ID 지정 필수 -->
+      <div id="engSubjLstID" class="cCategory">
+      </div>
+      <div class="cStep active _cStep">
+        <div class="scroll transparent _stepScroll">
+          <ul id="leftLstID"><!-- leftLstID ID 지정 필수 -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal-info etc_info fade" id="introStudy" data-backdrop="static" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <a href="#" class="btn-close" data-dismiss="modal" aria-label="Close">
+        <img src="../../img/element/special/koreanHistory/btn_X.png" alt=""></a>
+      <div class="content">
+        <img src="../../img/element/schoolStudy/preStudy/bg_info.png" alt="" id="introStudyCtntImg">
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('#introStudy').modal('hide')
+</script>
+</body>
+</html>

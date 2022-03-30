@@ -110,9 +110,16 @@
             <li>
               <a href="#">
                 <div class="num"><span data-text="HOM_001_032">1장</span></div>
-                <div class="con">
-                  <span class="page">8~15<span data-text="SUB_005_003">쪽</span></span>
-                  <span class="tit">1,2,3,4 알아보기</span>
+                <!-- 2022.02.21 부트스트랩 클래스를 활용하여 변경 -->
+                <div class="flex-grow d-flex">
+                  <div class="con w-100 flex-row justify-content-start align-items-center pr-4">
+                    <div class="d-flex flex-column flex-grow">
+                      <span class="page">8~15<span data-text="SUB_005_003">쪽</span></span>
+                      <span class="tit line-max-2">1,2,3,4 알아보기</span>
+                    </div>
+                    <!-- 업데이트 준비중 -->
+                    <div class="flex-shrink-0 pl-4"><span class="update">업데이트 준비중</span></div>
+                  </div>
                 </div>
               </a>
               <a href="#" class="btn-more"><img src="../img/element/schoolStudy/studyTest/btn_more.png" alt=""></a>

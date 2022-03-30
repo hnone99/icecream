@@ -1,6 +1,6 @@
 $(document).on('ready resize', function() {
   // 메인 슬라이드
-  $(".main-slider").slick({
+  /* $(".main-slider").slick({
     infinite: true,
     dots: true,
     arrows : true,
@@ -25,5 +25,16 @@ $(document).on('ready resize', function() {
         }
       }
     ]
+  }); */
+  /* 상품몰 메인과 동일하게 설정 */
+  $(".main-slider").slick({
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 1000
   });
 });
