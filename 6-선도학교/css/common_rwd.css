@@ -3650,6 +3650,19 @@ nav > a span {
   z-index: 4;
 }
 
+.contents .evaluation_wrap .evaluation_list > li.stateUpdate:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 3.85vw;
+  bottom: 8vw;
+  width: 6.4vw;
+  height: 2.1vw;
+  background: transparent url("./../imgs/common/ico/badge_today_update.png") center scroll no-repeat;
+  background-size: contain;
+  z-index: 4;
+}
+
 .contents .evaluation_wrap .evaluation_list > li:first-child {
   padding-top: 0;
 }
@@ -4016,6 +4029,25 @@ nav > a span {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   background: transparent url("./../imgs/common/ico/badge_today_complete.png") center scroll no-repeat;
+  background-size: contain;
+  z-index: 4;
+}
+
+.contents .specialStudy_wrap .specialStudy_list > li.stateUpdate .thumnailTxt_wrap {
+  position: relative;
+}
+
+.contents .specialStudy_wrap .specialStudy_list > li.stateUpdate .thumnailTxt_wrap:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -5.4vw;
+  top: -0.7vw;
+  width: 6.4vw;
+  height: 2.1vw;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  background: transparent url("./../imgs/common/ico/badge_today_update.png") center scroll no-repeat;
   background-size: contain;
   z-index: 4;
 }
