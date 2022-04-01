@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 > 마이페이지 정보 및 광고 개인정보 수집 이용 동의 팝업</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.min.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.fn.openPopup('popupSample');
+        });
+    </script>
+</head>
+<body>
+    <div class="container mypage bg_none">
+    <!-- S 콘텐츠 영역 -->
+        <section class="header">
+            <h1 class="headerTitle">알림 설정</h1>
+            <a href="#none" class="btn_close_w"><img src="./imgs/common/btn/btn_close_w.png" alt="닫기"></a>
+        </section>
+        <section class="contents">
+            <div class="my_notification_wrap">
+                <strong class="settingTitle1">마케팅 정보 수신 설정</strong>
+                <div class="my_setting">
+                    <strong class="settingTitle2">정보 및 광고 수신 (선택)</strong>
+                    <p class="settingInfo">새로운 서비스 및 이벤트 소식, 제휴 안내 등 각종 혜택을 받을 수 있습니다.</p>
+                    <label for="toggle_checkbox1" class="toggle_switch">
+                        <input type="checkbox" id="toggle_checkbox1">
+                        <span class="toggle">
+                            <span class="switch"></span>
+                        </span>
+                    </label>
+                </div>
+                <strong class="settingTitle1">나의 소식 수신 설정</strong>
+                <div class="my_setting">
+                    <strong class="settingTitle2">정보 및 광고 개인정보 수집 이용 동의 (선택)</strong>
+                    <p class="settingInfo">내 활동 기반 혜택 및 정보성 소식에 대한 안내를 받을 수 있습니다.</p>
+                    <label for="toggle_checkbox2" class="toggle_switch">
+                        <input type="checkbox" id="toggle_checkbox2">
+                        <span class="toggle">
+                            <span class="switch"></span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </section>
+    <!-- E 콘텐츠 영역 -->
+    <!-- S Popup 영역 -->
+        <section class="popup_wrap">
+            <div class="popup_common popup_agree type2" id="popupSample">
+                <div class="pop_header">
+                    <strong>정보 및 광고 개인정보 수집 이용 동의</strong>
+                    <a href="#none" class="btn_close_popup"><img src="./imgs/popup/btn_popup_close.png" alt="팝업 닫기"></a>
+                </div>
+                <div class="pop_container">
+                    <div class="my_notification_agree">
+                        <p class="agree_copy"><span class="color_point">내 활동 기반 혜택 및 정보성 소식</span>에 대한<br> 안내를 받을 수 있습니다.</p>
+                        <div class="agreeInfo_box">
+                           <ul class="agree_list">
+                              <li>
+                                 <strong>전송형태</strong>
+                                 앱 PUSH
+                              </li>
+                              <li>
+                                 <strong>수집목적</strong>
+                                 내 활동 기반(학습 구매) 정보성 소식 안내
+                              </li>
+                              <li>
+                                 <strong>수집항목</strong>
+                                 기기 식별자
+                              </li>
+                              <li>
+                                 <strong>보유기간</strong>
+                                 별도 동의 철회시 까지
+                              </li>
+                              <li>
+                                 <strong>철회방법</strong>
+                                 앱 내 알림 설정 > 서비스 소식 수신 동의 철회
+                              </li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop_btn_wrap">
+                    <a href="#none" class="btn_comfirm">확인</a>
+                </div>
+            </div>
+        </section>
+    <!-- E Popup 영역 -->
+    </div>
+</body>
+</html>

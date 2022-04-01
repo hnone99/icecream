@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 > 튜토리얼</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.min.css">
+    <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/lib/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            var tutorialsSwiper;
+            tutorialsSwiper = new Swiper('.tutorials_wrap', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="container tutorials">
+        <a href="#none" class="btn_close"><img src="./imgs/common/btn_end.png" alt="로그아웃, 앱종료"></a>
+    <!-- S 콘텐츠 영역 -->
+        <section class="contents">
+            <div class="swiper-container tutorials_wrap">
+                <div class="swiper-wrapper">
+                    <!-- S 마크업 수정 (08.17) -->
+                    <article class="swiper-slide page1">
+                        <h1><img src="./imgs/login/txt_login_title.png" alt="olleh tv 홈스쿨 x i-Scream AI홈런"></h1>
+                        <h2>누구나 프리미엄 교육을 받을 수 있도록 우리 아이의 하루, <strong>KT와 AI홈런이 함께합니다.</strong><br>집에서 쓰고 계신, 모든 안드로이드 태블릿 에서 이용 가능합니다.</h2>
+                        <img src="./imgs/tutorials/page1_img_tutorial_left.png" class="page1_img1" alt="캐릭터 이미지 1">
+                        <img src="./imgs/tutorials/page1_img_tutorial_main_01.png" class="page1_img2" alt="KT olleh tv 홈스쿨 x i-Scream AI홈런">
+                        <img src="./imgs/tutorials/page1_img_tutorial_right.png" class="page1_img3" alt="KT ID만 있으면 10일동안 누구나 무료로 이용 가능합니다.">
+                    </article>
+                    <!-- E 마크업 수정 (08.17) -->
+                    <article class="swiper-slide page2">
+                        <h1><strong>학교공부</strong> 예·복습</h1>
+                        <h2>
+                            학교수업대비 <strong>모든 과목 학교 교과를 완벽히 연계</strong>한 멀티미디어 학습 콘텐츠<br>
+                            학교공부 예복습에 최적화된 전학년/전과목 콘텐츠 무제한 학습
+                        </h2>
+                        <div class="page2_contents">
+                            <strong class="colorOrg">아이스크림(i-Scream)</strong>의 노하우 그대로, 전 학년, 모든 과목 학교 교과를 완벽히 연계한 학습 콘텐츠<br>
+                            <strong>코딩, 과학 실험 등</strong> 교과 학습 이외의 <strong>다양한 주제별 특별 학습 콘텐츠 제공</strong><br>
+                            <strong>AR, VR, 3D 등 방대한 미래형 콘텐츠</strong>를 구축하여 4차 산업혁명 시대 글로벌 인재를 위한 스마트 학습환경 제공
+                        </div>
+                    </article>
+                    <article class="swiper-slide page3">
+                        <h1><strong>학교공부평가 &</strong> 시험대비평가</h1>
+                        <h2>
+                            <strong>과학적 평가와 맞춤학습 관리</strong>를 통한 단계별 시험 대비<br>
+                            내 오답노트로 유사문제를 통한 <strong>반복 학습으로 완벽 이해</strong>
+                        </h2>
+                        <div class="page3_contents">
+                            <ul class="page3_list">
+                                <li>
+                                    <strong>학교공부평가</strong>
+                                    <span>학습 단위별 평가로 빈틈없이 대비</span>
+                                    <img src="./imgs/tutorials/page3_list_content1.png" alt="학교공부평가">
+                                </li>
+                                <li>
+                                    <strong>수행평가</strong>
+                                    <span>개념 확인부터 적용까지</span>
+                                    <img src="./imgs/tutorials/page3_list_content2.png" alt="수행평가">
+                                </li>
+                                <li>
+                                    <strong>스피드퀴즈</strong>
+                                    <span>게임형 퀴즈로  핵심 개념 빠르게 확인</span>
+                                    <img src="./imgs/tutorials/page3_list_content3.png" alt="스피드퀴즈">
+                                </li>
+                                <li>
+                                    <strong>AI홈런 모의고사</strong>
+                                    <span>우리 아이 수준 점검</span>
+                                    <img src="./imgs/tutorials/page3_list_content4.png" alt="AI홈런 모의고사">
+                                </li>
+                                <li>
+                                    <strong>시험대비평가</strong>
+                                    <span>시험대비특강, 족집게 문제 풀기</span>
+                                    <img src="./imgs/tutorials/page3_list_content5.png" alt="시험대비평가">
+                                </li>
+                                <li>
+                                    <strong>내 오답노트</strong>
+                                    <span>반복 학습으로 완벽 이해</span>
+                                    <img src="./imgs/tutorials/page3_list_content6.png" alt="내 오답노트">
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="./imgs/tutorials/page3_content.png" class="page3_img1" alt="캐릭터">
+                    </article>
+                    <article class="swiper-slide page4">
+                        <h1><strong>두 배의</strong> 행복</h1>
+                        <h2>
+                            홈스쿨링 업계 최초 <strong>추가비용 없이 2자녀까지 등록 가능</strong><br>
+                            아이 별 별도 프로필 등록, 오답노트/생활기록부 관리 등 <strong>개별 학습 커리큘럼</strong> 제공
+                        </h2>
+                        <img src="./imgs/tutorials/page4_content.png" class="page4_img1" alt="두 배의 행복 설명">
+                    </article>
+                    <!-- S 마크업 수정 (07.23) -->
+                    <article class="swiper-slide page5">
+                        <h1><strong>홈스쿨학부모</strong>(학부모APP)</h1>
+                        <h2>언제 어디서든 편리하게 <strong>스마트폰을 통해 자녀의 맞춤 서비스를 이용</strong>할 수 있는 학부모 APP제공</h2>
+                        <div class="page5_contents">
+                            <img src="./imgs/tutorials/page5_content.png" class="page5_img1" alt="홈스쿨학부모(학부모APP)">
+                            <ul class="page5_list">
+                                <li>
+                                    <img src="./imgs/tutorials/page5_list_content1.png" alt="스마트하게 관리하는 AI생활기록부">
+                                    <strong>스마트하게 관리하는 <span>AI생활기록부</span></strong>
+                                    <span>빅데이터 분석을 통한 학습 성향, 패턴, 성취도,<br>취약도 파악 및 개인 맞춤 학습 처방 제시</span>
+                                </li>
+                                <li>
+                                    <img src="./imgs/tutorials/page5_list_content2.png" alt="AI홈런만의 학부모 전용 콘텐츠 가치같이">
+                                    <strong>AI홈런만의 학부모 전용 콘텐츠 <span>가치같이</span></strong>
+                                    <span>교육뉴스, 지혜.지식.통찰, 홈런소식 등<br>자녀 교육을 위한 정보 제공  </span>
+                                </li>
+                                <li>
+                                    <img src="./imgs/tutorials/page5_list_content3.png" alt="자녀 학습 습관을 알아보는 학습심리검사">  
+                                    <strong>자녀 학습 습관을 알아보는 <span>학습심리검사</span></strong>
+                                    <span>부모와 자녀의 관계를 점검하고 자녀의 평소 행동에 대해<br>보다 깊이 이해할 수 있는 통찰력 제공</span>
+                                </li>
+                                <li>
+                                    <img src="./imgs/tutorials/page5_list_content4.png" alt="원활하게 소통하는 메신저 홈런톡">  
+                                    <strong>원활하게 소통하는 메신저 <span>홈런톡</span></strong>
+                                    <span>학부모・선생님・자녀간 실시간 상담 및<br>소통을 위한 공간 제공</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- E 마크업 수정 (07.23) -->
+                    <!-- S 마크업 추가 (07.23) -->
+                    <article class="swiper-slide page6">
+                        <h1><strong>AI튜터 기가지니</strong> ”아이뚜루”</h1>
+                        <h2>인공지능 기가지니 <strong>AI튜터와 대화하며 자기주도 학습을 완성</strong>합니다.</h2>
+                        <div class="page6_contents">
+                            <img src="./imgs/tutorials/page6_content.png" class="page6_img1" alt="AI튜터 기가지니 ”아이뚜루”">
+                            <ul class="page6_list">
+                                <li>
+                                    <img src="./imgs/tutorials/page6_list_content1.png" alt="선생님처럼 코칭">
+                                    <strong><span>선생님처럼</span> 코칭</strong>
+                                    <span>학습 시작 전 목표를 함께 다져보고,<br>잘못된 학습 습관과 학습 현황을 분석해줘요.</span>
+                                </li>
+                                <li>
+                                    <img src="./imgs/tutorials/page6_list_content2.png" alt="엄마 아빠 대신 위트 있는 잔소리">
+                                    <strong><span>엄마 아빠 대신</span> 위트 있는 잔소리</strong>
+                                    <span>재밌는 퀴즈, 스트레칭 등을 통해 집중을 도와주고,<br>칭찬과 격려를 통해 힘이 되어줘요.</span>
+                                </li>
+                                <li>
+                                    <img src="./imgs/tutorials/page6_list_content3.png" alt="포털 대신 궁금증 해결">  
+                                    <strong><span>포털 대신</span> 궁금증 해결</strong>
+                                    <span>백과사전에서부터 영어사전까지<br>똑똑하게 친절하게 제가 알려 줄게요.</span>
+                                </li>
+                                <li>
+                                    <img src="./imgs/tutorials/page6_list_content4.png" alt="친구처럼 공감">  
+                                    <strong><span>친구처럼</span> 공감</strong>
+                                    <span>지치고 힘들 때, 신나게 수다 떨고 싶을 때<br>내가 말동무가 되어 드릴게요.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- E 마크업 추가 (07.23) -->
+                </div>
+                <p class="com_checkbox_wrap"><input type="checkbox" id="lookAgain"><label for="lookAgain">다시 보지 않기</label></p>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            
+        </section>
+    <!-- E 콘텐츠 영역 -->
+    </div>
+</body>
+</html>

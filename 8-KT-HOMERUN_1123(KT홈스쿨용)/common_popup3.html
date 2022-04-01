@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 > 공통 팝업</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.min.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.fn.openPopup('popupSample');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+    <!-- S 콘텐츠 영역 -->
+        
+    <!-- E 콘텐츠 영역 -->
+    <!-- S Popup 영역 -->
+        <section class="popup_wrap opacity7">
+            <div class="popup_common end" id="popupSample">
+                <a href="#none" class="btn_close_popup"><img src="./imgs/popup/btn_popup_close.png" alt="팝업 닫기"></a>
+                <div class="pop_btn_wrap">
+                    <a href="#none" class="btn_child"><img src="./imgs/popup/ico_child.png" alt="자녀 선택"><span>자녀 선택</span></a>
+                    <a href="#none" class="btn_logOut"><img src="./imgs/popup/ico_logout.png" alt="로그아웃"><span>로그아웃</span></a>
+                    <a href="#none" class="btn_close_app"><img src="./imgs/popup/ico_end.png" alt="앱 종료"><span>앱 종료</span></a>
+                </div>
+            </div>
+        </section>
+    <!-- E Popup 영역 -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 > 회원가입 가입 상품 별 안내 팝업</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.min.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.fn.openPopup('popupSample');
+        });
+    </script>
+</head>
+<body>
+    <div class="container mypage">
+    <!-- S 콘텐츠 영역 -->
+        <section class="header">
+            <h1 class="headerTitle">마이페이지</h1>
+            <a href="#none" class="btn_setting"><img src="./imgs/common/btn/btn_setting.png" alt="설정"></a>
+            <!-- S 마크업 수정 (06.29) -->
+            <ul class="setting_menu">
+                <li><a href="#none">알림 설정</a></li>
+                <li><a href="#none">페어링하기</a></li>
+                <li><a href="#none">AI튜터 설정</a></li>
+            </ul>
+            <!-- E 마크업 수정 (06.29) -->
+            <a href="#none" class="btn_close_w"><img src="./imgs/common/btn/btn_close_w.png" alt="닫기"></a>
+        </section>
+        <section class="contents">
+            <div class="my_service_wrap">
+                <strong class="mypageTitle">이용 중인 서비스</strong>
+                <div class="box type3_1">
+                    <p class="remainingPeriod">
+                        <strong>03일</strong>
+                        <span>남은 기간</span>
+                    </p>
+                    <strong class="serviceTitle">
+                        <a href="#none" class="btn_detailView"><img src="./imgs/common/btn/btn_info_02.png" alt="자세히보기"></a>
+                        무료체험 진행 중입니다.
+                    </strong>
+                    <span class="comment">올레 tv 홈스쿨 x AI홈런 상품에 가입하시면<br> 무제한으로 KT콘텐츠를 이용하실 수 있습니다.</span>
+                    <a href="#none" class="btn_joinPaidment">서비스 가입하기</a>
+                </div>
+            </div>
+            <div class="contentsL">
+                <strong class="mypageTitle">학습자 정보</strong>
+                <div class="box type1">
+                    <ul class="my_profile">
+                        <li>
+                            <div class="userProfile_wrap">
+                                <div class="userImg_wrap"><img src="./imgs/login/img_login_profile_sel_02.png" alt=""></div>
+                                <a href="#none" class="btn_editProfile">
+                                    <img src="./imgs/common/btn/btn_edit.png" alt="프로필 수정">
+                                </a>
+                            </div>
+                            <strong><span>4학년</span>홍길동</strong>
+                        </li>
+                        <li>
+                            <a href="#none" class="btn_addProfile">
+                                <div class="img_wrap"><img src="./imgs/login/btn_addProfile_02.png" alt=""></div>
+                                자녀 추가
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contentsR">
+                <strong class="mypageTitle">학부모 정보</strong>
+                <div class="box type2">
+                    <strong class="parentName">김홈런</strong>
+                    <a href="#none" class="btn_editInfo">정보 수정</a>
+                </div>
+                <strong class="mypageTitle">약관 및 정책</strong>
+                <div class="box type4">
+                    <ul class="type4_contents">
+                        <li>이용약관 정보<a href="#none" class="btn_totalView">보기</a></li>
+                        <li>오픈소스 라이선스<a href="#none" class="btn_totalView">보기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    <!-- E 콘텐츠 영역 -->
+    <!-- S Popup 영역 -->
+        <section class="popup_wrap">
+            <div class="popup_common popup_productInfo" id="popupSample">
+                <div class="popup_content">
+                    <!-- S 서비스 가입자_ 결합 상품 -->
+                    <p>
+                        QPCL (결합상품 : tv프라임홈스쿨) tv 프라임홈스쿨은 올레 tv 탭 이용<br> 시에만 가입/이용 가능합니다. (일반 셋톱박스에서 가입 및 전환 불가)<br><br>
+                        tv 프라임홈스쿨은 1개월 내 타 요금제로 변경이 불가하며,<br>
+                        타 요금제로 변경 시 90일 이내 동 요금제로의 재가입이 <strong>불가합니다.</strong><br><br>
+                        약정기간내 내 해지한 경우, 사용 기간에 따라 할인반환금이 부과됩니다.<br>
+                        ( kt.com 내 할인반환금 안내 참조 )
+                    </p>
+                    <!-- E 서비스 가입자_ 결합 상품 -->
+                    <!-- S 서비스 가입자_ 부가 단품 -->
+                    <!--
+                    <p>
+                        2A71 (부가단품 : olleh tv 홈스쿨) tv 요금제와 별도로 요금이 부과됩니다.<br><br>
+                        가입 첫달 1개월 이내 해지하는 경우, 1개월 미만 위약금이 부과됩니다.<br><br>
+                        kt 고객센터 (유선전화 100번)으로 연락주시면, olleh tv 요금제와 결합하여 결합할인 혜택을 받으실 수 있습니다. 
+                    </p>
+                    -->
+                    <!-- E 서비스 가입자_ 부가 단품 -->
+                    <!-- S 무료체험 신청자 -->
+                    <!--
+                    <p>
+                        무료체험 14일 동안 olleh tv 홈스쿨 X AI 홈런을 체험하실 수 있습니다.<br><br>
+                        무료체험은 사은품(액세서리 3종 세트) 및 지류학습지가 제공되지 않습니다.<br><br>
+                        무료체험 후 부가서비스 가입하시거나,<br>
+                        KT 대리점 방문 혹은 고객센터(유선전화 100번)를 통해<br>
+                        올레 tv 탭 결합 요금제에 가입하여 계속 사용하실 수 있습니다.
+                    </p>
+                    -->
+                    <!-- E 무료체험 신청자 -->
+                </div>
+                <div class="pop_btn_wrap">
+                    <a href="#none" class="btn_comfirm">확인</a>
+                </div>
+            </div>
+        </section>
+    <!-- E Popup 영역 -->
+    </div>
+</body>
+</html>

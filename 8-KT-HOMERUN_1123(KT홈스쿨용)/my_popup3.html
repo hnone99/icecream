@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 > 회원가입 가입하기 서비스가입 정보수정</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.min.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.fn.openPopup('popupSample');
+        });
+    </script>
+</head>
+<body>
+    <div class="container member">
+    <!-- S 콘텐츠 영역 -->
+        <section class="header">
+            <h1 class="headerTitle">정보 수정</h1>
+            <a href="#none" class="btn_close_w"><img src="./imgs/common/btn/btn_close_w.png" alt="닫기"></a>
+        </section>
+        <section class="contents typeInput">
+            <table class="join_step_table">
+                <colgroup>
+                    <col style="width:50%">
+                    <col style="width:50%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="2"><strong>회원정보</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2" class="lineF">
+                            <strong>학부모 이름</strong>
+                            <div class="join_step_table_contents">
+                                <div class="join_step_line"><input type="text" class="disabled" placeholder="이름 입력" value="김홈런" disabled></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="type1">
+                        <td class="lineL">
+                            <strong>휴대폰 번호</strong>
+                            <div class="join_step_table_contents">
+                                <div class="join_step_line stepPhoneType">
+                                    <!-- <div class="com_dropDown_box">
+                                        <div class="com_dropDown_wrap" data-type="dropDown">
+                                            <a href="#none">통신사</a>
+                                            <a href="#none" class="active">KT</a>
+                                            <a href="#none">SKT</a>
+                                            <a href="#none">LG U+</a>
+                                            <a href="#none">알뜰폰</a>
+                                        </div>
+                                    </div> -->
+                                    <div class="com_dropDown_box">
+                                        <div class="com_dropDown_wrap" data-type="dropDown">
+                                            <a href="#none" class="select">010</a>
+                                            <a href="#none" class="active">010</a>
+                                            <a href="#none">011</a>
+                                            <a href="#none">016</a>
+                                            <a href="#none">017</a>
+                                            <a href="#none">018</a>
+                                            <a href="#none">019</a>
+                                        </div>
+                                    </div>
+                                    <input type="text" value="1234">
+                                    <input type="text" value="1234">
+                                    <a href="#none" class="btn_stepType dimmed">인증요청</a>
+                                </div>
+                                <div class="join_step_line stepType">
+                                    <input type="text" disabled="">
+                                    <a href="#none" class="btn_stepType dimmed">인증</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="lineR">
+                            <strong>결제수단
+                                <a href="#none" class="btn_methodPayment"><img src="./imgs/common/btn/btn_info.png" alt="결제수단 보기"></a>
+                            </strong>
+                            <div class="join_step_table_contents">
+                                <div class="join_step_line" data-card-num="010-12**-*234"><input type="text" value="KT 모바일" placeholder="" disabled></div>
+                                <span class="join_step_comment">선택하신 회선의 요금명세서에 함께 청구됩니다.</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="type2">
+                        <td colspan="2" class="lineF">
+                            <strong>배송지 주소</strong>
+                            <div class="join_step_table_contents">
+                                <div class="join_step_line stepPostType"><input type="text" value="06180"><a href="#none" class="btn_stepType">우편번호 검색</a></div>
+                                <div class="join_step_line"><input type="text" value="서울특별시 강남구 테헤란로 88길 15"></div>
+                                <div class="join_step_line"><input type="text" value="123동 2301호"></div>
+                                <span class="join_step_comment">서비스 가입 시 학기 당 9권(연 2회/총 18권)의 지류 학습지와 함께 무선 키보드, 거치대 케이스, 스타일러스 펜을 무료로 보내드립니다.(1~2학년은 학기 당 8권)</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="footer">
+            <div class="footer_btn_wrap">
+                <div class="footer_btnR_wrap">
+                    <a href="#none" class="btn_typeB">수정완료</a>
+                </div>
+            </div>
+        </section>
+    <!-- E 콘텐츠 영역 -->
+        <!-- S Popup 영역 -->
+        <section class="popup_wrap">
+            <div class="popup_common editPw" id="popupSample">
+                <div class="pop_header">
+                    <strong>비밀번호 변경</strong>
+                </div>
+                <div class="pop_container">
+                    <strong class="editPwTitle">신규 비밀번호를 입력해주세요</strong>
+                    <p class="input_wrap"><input type="password" placeholder="현재 비밀번호"></p>
+                    <p class="input_wrap"><input type="password" placeholder="신규 비밀번호"></p>
+                    <p class="input_wrap"><input type="password" placeholder="신규 비밀번호 확인"></p>
+                    <strong class="comment_pw">비밀번호는 영문, 숫자, 특수문자 포함 8~15자 이상의 조합으로 등록해주세요</strong>
+                    <ul class="com_popup_dot_list">
+                        <li>영문/숫자/특수문자 포함 8~15자까지 등록가능합니다.</li>
+                        <li>비밀번호는 ‘KT좋은부모’ 앱에서 사용됩니다</li>
+                    </ul>
+                    <p class="btn_wrap">비밀번호를 잊으셨나요?<a href="#none" class="btn_pwReset">비밀번호 초기화하기</a></p>
+                </div>
+                <div class="pop_btn_wrap">
+                    <a href="#none" class="btn_confirm dimmed">확인</a>
+                </div>
+            </div>
+        </section>
+    <!-- E Popup 영역 -->
+    </div>
+</body>
+</html>
