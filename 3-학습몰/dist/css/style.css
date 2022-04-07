@@ -2594,6 +2594,7 @@ footer .family .input-group select {
 
 .detail-tab ul {
   display: flex;
+  align-items: center;
 }
 
 .detail-tab li {
@@ -6930,6 +6931,21 @@ a.btnui1.btnui_1 {
     background-position: 0 0;
     background-size: 14px 8px;
     background-repeat: no-repeat;
+  }
+  .detail-tab {
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  .detail-tab ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .detail-tab li {
+    flex: 0 0 auto;
+  }
+  .detail-tab a {
+    font-size: 14px;
+    padding: 10px 0;
   }
   .detail-swiper {
     padding-left: 0 !important;

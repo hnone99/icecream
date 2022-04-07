@@ -224,6 +224,13 @@
     }
   }
 
+  .detail-tab{
+    margin-bottom: 0;margin-top: 30px;
+    ul{display: flex;justify-content: space-evenly;}
+    li{flex: 0 0 auto;}
+    a{font-size: 14px;padding: 10px 0;}
+  }
+
   .detail-swiper{
     padding-left: 0 !important;padding-right: 0 !important;
     .item:focus{outline: 0;}
