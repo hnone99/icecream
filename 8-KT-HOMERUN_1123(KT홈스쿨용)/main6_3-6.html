@@ -26,7 +26,7 @@
                     click:function(e){
                         var idx = $(e.target).index() + 1;
                         var listIdx = $(e.target).parent('li').index();
-                        
+
                         $(e.target).parent().siblings().removeClass('active').closest('.studySpecial_list').removeClass('scroll');
                         $(e.target).parents('.studySpecial_list').find('.studySpecialDetailList_wrap').attr('data-active-index', 0);
                         $(e.target).parents('li').addClass('active').closest('.studySpecial_list').addClass('scroll');
@@ -87,7 +87,7 @@
             Description:
             - 상세 목록이 있는 학습은 선택시 상세 목록 그룹 노출
             - 선택한 class 'studySpecialDetailList_wrap'에 class 'active' 추가하고 data-active-index 속성에 index 값으로 포커스되는 아이템 표시( 1 ~ 5 )
-            - class 'studySpecialDetail_list'의 li가 8개가 넘을경우 class 'scroll' 추가  
+            - class 'studySpecialDetail_list'의 li가 8개가 넘을경우 class 'scroll' 추가
             - 1~2학년:  안녕학교 | 동화누리 | 음악누리 | 미술누리 | 인물 한국사 | 홈런공부송 | 코딩송 | 한자서당 | 홈런타자연습 | 취미생활
             - 3~6학년:  한국사 | 한국문화100 | 한자서당 | 3D 체험관 | 미래직업 탐색 | 홈런 AI교과서 | 열려라 코딩 | 홈런공부송 | 홈런 타자연습 | 취미생활
          -->
@@ -96,8 +96,15 @@
                     <li>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_17.png" alt="한국사"></a>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_11.png" alt="한국문화100"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_19.png" alt="유네스코 세계유산"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_20.png" alt="생각 나누기"></a>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_08.png" alt="한자서당"></a>
+                    </li>
+                    <li>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_18.png" alt="3D 체험관"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_14.png" alt="홈런 AI교과서"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_12.png" alt="열려라 코딩"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_21.png" alt="읭? 나도 궁금해!"></a>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_13.png" alt="미래직업 탐색"></a>
                         <div class="studySpecialDetailList_wrap" data-active-index="0">
                             <ul class="studySpecialDetail_list">
@@ -105,12 +112,10 @@
                                 <li><a href="#none"><img src="./imgs/img_study_specialSub_06.png" alt="일상의 소리"><span>일상의 소리</span></a></li>
                                 <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
                                 <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
-                            </ul>    
+                            </ul>
                         </div>
                     </li>
                     <li>
-                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_14.png" alt="홈런 AI교과서"></a>
-                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_12.png" alt="열려라 코딩"></a>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_06.png" alt="홈런공부송"></a>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_09.png" alt="홈런타자연습"></a>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_16.png" alt="취미생활"></a>
@@ -118,14 +123,12 @@
                         <!-- <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_15.png" alt="일상의 소리"></a> -->
                         <div class="studySpecialDetailList_wrap" data-active-index="0">
                             <ul class="studySpecialDetail_list">
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_01.png" alt="한자서당"><span>한자서당</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_02.png" alt="마법천자문"><span>마법천자문</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_01.png" alt="한자서당"><span>한자서당</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_02.png" alt="마법천자문"><span>마법천자문</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_05.png" alt="홈트레이닝 생활체조"><span>홈트레이닝 생활체조</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_06.png" alt="일상의 소리"><span>일상의 소리</span></a></li>
+                                <!-- 220413 컨텐츠 추가 -->
+                                <li><a href="#none"><img src="https://xcdn.home-learn.com/data/origin_img/2022/04/13/220413103249998.png" alt="퍼니 드로잉"><span>퍼니 드로잉</span></a></li>
+                                <li><a href="#none" style="padding-right: 10px"><img src="https://xcdn.home-learn.com/data/origin_img/2022/04/13/220413103250257.png" alt="프렌즈 스토리"><span>프렌즈 스토리</span></a></li>
+                                <!-- //220413 컨텐츠 추가 -->
                             </ul>
                         </div>
                     </li>

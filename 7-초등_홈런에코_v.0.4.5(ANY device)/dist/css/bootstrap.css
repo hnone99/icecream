@@ -15252,10 +15252,11 @@ nav.button_tabs {
   height: 52px;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
 nav.button_tabs .align-items_center:first-child{
   overflow-x:auto;
-  width:600px;
+  width:560px;
 }
 nav.button_tabs a {
   height: 42px;
@@ -15279,7 +15280,7 @@ nav.button_tabs a.on {
   padding: 12px 18px; }
 
 .my_app_drawer .button_tabs {
-  padding: 0 20px 0 47px;
+  padding: 0 20px 0 0;
   margin-bottom: 15px; }
 
 /* 수정 -- 21.01.28 */
@@ -39680,4 +39681,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .modal.topSecret .top_secret .input-group .btn-confirm img {
   width: 100%;
   height: 100%;
+}
+
+.btn-app-edit{
+    height: 42px;line-height: 40px;border: 2px solid #ccc;color: #999;font-size: 20px;border-radius: 22.5px;padding: 0 20px 1px;background: #fff;margin-right: 10px;white-space: nowrap;font-weight: 700;
+}
+.btn-app-edit.active{
+    background: #5f5f5f;color: #fff;border-color: #5f5f5f;
 }

@@ -86,6 +86,12 @@
 						<a href><span data-text="HOM_001_036">특별학습</span></a>
 					</div>
 					<div class="flex align-items_center">
+                        <button class="btn-app-edit">앱 편집</button>
+                        <script>
+                            $('.btn-app-edit').on('click',function(){
+                                $(this).toggleClass('active');
+                            })
+                        </script>
 						<div class="customSelect">
 							<span data-text="FOL_001_003">최신순</span>
 							<ul>
