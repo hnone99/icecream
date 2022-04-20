@@ -7393,3 +7393,46 @@ aside .personalMenu a.new span:after {
         background-size: contain
     }
 }
+
+.ico-textbook-select{background: url('../../imgs/common/ico/ico_textbook_select.svg') no-repeat 0 0;display: inline-block;vertical-align: middle;width: 31px;height: 30px;}
+.textbook-select{text-align: right;padding-right: 50px;margin-top: -40px;margin-bottom: -20px;}
+.textbook-select button{border: 4px solid #badad9;border-radius: 50rem;font-size: 30px;font-weight: 800;color: #000;padding: 10px 22px;background: #fff;position: relative;z-index: 3;}
+
+.selected-textbook { display: flex; align-items: center;justify-content: flex-end;padding-right: 50px;margin-top: -30px;margin-bottom: -16px;position: relative;z-index: 3; }
+.selected-textbook .my{display: inline-block;background: #13bad5;color: #fff;font-weight: 800;border-radius: 10px;line-height: 1;padding: 10px 12px;font-size: 28px;margin-right: 18px;}
+.selected-textbook dl{display: flex;font-size: 28px;}
+.selected-textbook dl dt{color: #0dafbd;}
+.selected-textbook dl dd{color: #666;}
+.selected-textbook dl dd + dt:before{content: '';display: inline-block;vertical-align: middle; background: #b4cfcf;width: 2px;height: 26px;margin: 0 24px;}
+.selected-textbook .btn-info{margin-left: 24px;}
+.ico-info{display: inline-block;vertical-align: middle;width: 50px;height: 50px;background: url('./../imgs/common/ico/ico_info.png') no-repeat 0 0;background-size: contain;}
+
+.popupTextbookSelect .popup_common{width: 830px;height: 800px;}
+.pop-textbook-select{padding: 55px 0 0;}
+.pop-textbook-select > p{font-size: 30px;color: #333;text-align: center;line-height: 1.5;margin-bottom: 50px;}
+.pop-textbook-select .list{padding: 0 107px;}
+.pop-textbook-select .list label{font-size: 32px;font-weight: 700;width: 170px;display: block;}
+.pop-textbook-select .list label::before{content: '';display: inline-block;vertical-align: middle;width: 8px;height: 8px;background: #000;border-radius: 50%;margin-right: 18px;}
+.pop-textbook-select .list .row + .row{margin-top: 20px;}
+.popupTextbookSelect .selected-list{padding: 5px 48px;border: 2px solid #dcdcdc;border-radius: 15px;margin-left: 107px;margin-right: 107px;background: #f2f2f2;transform: translateY(15px);}
+.popupTextbookSelect .selected-list li{font-size: 32px;padding: 30px 0;}
+.popupTextbookSelect .selected-list li + li{border-top: 2px solid #ddd;}
+.popupTextbookSelect .selected-list span{font-weight: 700;color: #000;}
+.popupTextbookSelect .selected-list span::before{content: '';content: '';display: inline-block;vertical-align: middle;width: 8px;height: 8px;background: #000;border-radius: 50%;margin-right: 18px;}
+.popupTextbookSelect .selected-list span::after{content: ' : ';}
+.popupTextbookSelect .selected-list strong{font-weight: 800;color: #03aeca;}
+.popupTextbookSelect .popup_common .pop_btn_wrap{padding-left: 107px;padding-right: 107px;}
+.popupTextbookSelect .popup_common .pop_btn_wrap a{font-size: 32px;flex: 1;}
+
+.com_loginDropDown_wrap.style-default{position: relative;}
+.com_loginDropDown_wrap.style-default .value{display: block;overflow: hidden;width: 100%;padding: 22px 36px;font-weight: 700;font-size: 32px;color: #a6a6a6;line-height: 1.15em;border: 2px solid #ccc;border-radius: 16px;position: relative;}
+.com_loginDropDown_wrap.style-default .value::before{content: '';display: block;width: 23px;height:23px;position: absolute;right: 20px;top: 50%;margin-top: -11.5px;background: #fff url('./../imgs/common/btn/bg_login_drop_down.png') no-repeat 0 0;background-size: contain;}
+.com_loginDropDown_wrap.style-default .value.active{color: #000;}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_inner_wrap{display: none;position: absolute;left: 0;bottom: 0;width: 100%;padding-right: 26px;background-color: #fff;border: 2px solid #ccc;border-radius: 16px}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents {overflow-x: hidden;overflow-y: auto;max-height: 353px;padding: 26px 0}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents::-webkit-scrollbar-track {margin: 20px 0}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents li:first-child a {padding-top: 0}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents li:last-child a {padding-bottom: 0}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents li a {display: block;overflow: hidden;padding: 26px 36px;font-weight: 700;font-size: 32px;color: #000;line-height: 1.15em}
+
+
