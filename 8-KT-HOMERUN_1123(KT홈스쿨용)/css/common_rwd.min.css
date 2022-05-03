@@ -7408,6 +7408,7 @@ aside .personalMenu a.new span:after {
 .ico-info{display: inline-block;vertical-align: middle;width: 50px;height: 50px;background: url('./../imgs/common/ico/ico_info.png') no-repeat 0 0;background-size: contain;}
 
 .popupTextbookSelect .popup_common{width: 830px;height: 800px;}
+.popupTextbookSelect.ver2 .popup_common{height: 885px;}
 .pop-textbook-select{padding: 55px 0 0;}
 .pop-textbook-select > p{font-size: 30px;color: #333;text-align: center;line-height: 1.5;margin-bottom: 50px;}
 .pop-textbook-select .list{padding: 0 107px;}
