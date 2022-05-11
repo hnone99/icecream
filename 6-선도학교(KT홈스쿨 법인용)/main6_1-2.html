@@ -26,9 +26,9 @@
                         var idx = $(e.target).index() + 1;
                         var listIdx = $(e.target).parent('li').index();
 
-                        $(e.target).parent().siblings().removeClass('active');
+                        $(e.target).parent().siblings().removeClass('active').closest('.studySpecial_list').removeClass('scroll');
                         $(e.target).parents('.studySpecial_list').find('.studySpecialDetailList_wrap').attr('data-active-index', 0);
-                        $(e.target).parents('li').addClass('active');
+                        $(e.target).parents('li').addClass('active').closest('.studySpecial_list').addClass('scroll');
                         $(e.target).parent().children('.studySpecialDetailList_wrap').attr('data-active-index', idx);
 
                     }
@@ -99,8 +99,8 @@
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_05.png" alt="인물 한국사"></a>
                         <div class="studySpecialDetailList_wrap" data-active-index="0">
                             <ul class="studySpecialDetail_list">
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_01.png" alt="한자서당"><span>한자서당</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_02.png" alt="마법천자문"><span>마법천자문</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_05.png" alt="홈트레이닝 생활체조"><span>홈트레이닝 생활체조</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_06.png" alt="일상의 소리"><span>일상의 소리</span></a></li>
                                 <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
                                 <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
                             </ul>
@@ -111,17 +111,15 @@
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_07.png" alt="코딩송"></a>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_08.png" alt="한자서당"></a>
                         <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_09.png" alt="홈런타자연습"></a>
-                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_10.png" alt="홈트레이닝 생활체조"></a>
+                        <a href="#none" class="studyListItem"><img src="./imgs/img_study_speical_16.png" alt="취미생활"></a>
                         <div class="studySpecialDetailList_wrap" data-active-index="0">
                             <ul class="studySpecialDetail_list">
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_01.png" alt="한자서당"><span>한자서당</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_02.png" alt="마법천자문"><span>마법천자문</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_01.png" alt="한자서당"><span>한자서당</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_02.png" alt="마법천자문"><span>마법천자문</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_03.png" alt="태극천자문"><span>태극천자문</span></a></li>
-                                <li><a href="#none"><img src="./imgs/img_study_specialSub_04.png" alt="한자 도로롱"><span>한자 도로롱</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_05.png" alt="홈트레이닝 생활체조"><span>홈트레이닝 생활체조</span></a></li>
+                                <li><a href="#none"><img src="./imgs/img_study_specialSub_06.png" alt="일상의 소리"><span>일상의 소리</span></a></li>
+                                <!-- 220413 컨텐츠 추가 -->
+                                <li><a href="#none"><img src="https://xcdn.home-learn.com/data/origin_img/2022/04/13/220413103249998.png" alt="퍼니 드로잉"><span>퍼니 드로잉</span></a></li>
+                                <li><a href="#none" style="padding-right: 10px"><img src="https://xcdn.home-learn.com/data/origin_img/2022/04/13/220413103250257.png" alt="프렌즈 스토리"><span>프렌즈 스토리</span></a></li>
+                                <!-- //220413 컨텐츠 추가 -->
                             </ul>
                         </div>
                     </li>
@@ -133,14 +131,17 @@
     <!-- S 개인화 영역 -->
         <aside>
             <div class="personalMenu">
-                <a href="#none" class="ico_note"><span>오답노트</span></a>
-                <a href="#none" class="ico_box"><span>내공상자</span></a>
-                <a href="#none" class="ico_ai"><span>AI생기부</span></a>
-                <a href="#none" class="ico_check"><span>출석체크</span></a>
-                <!-- <a href="#none" class="ico_event"><span>이벤트</span></a> -->
-                <!-- <a href="#none" class="ico_shop"><span>코니월드</span></a> -->
-                <a href="#none" class="ico_talk"><span>홈런톡</span></a>
-                <a href="#none" class="ico_test"><span>심리검사</span></a>
+                <div class="personalMenu_inner">
+                    <a href="#none" class="ico_tutor"><span>AI튜터</span></a>
+                    <a href="#none" class="ico_note"><span>오답노트</span></a>
+                    <a href="#none" class="ico_box"><span>내공상자</span></a>
+                    <a href="#none" class="ico_ai"><span>AI생기부</span></a>
+                    <a href="#none" class="ico_check"><span>출석체크</span></a>
+                    <a href="#none" class="ico_event"><span>이벤트</span></a>
+                    <a href="#none" class="ico_talk new"><span>홈런톡</span></a>
+                    <a href="#none" class="ico_test"><span>심리검사</span></a>
+                    <a href="#none" class="ico_shop"><span>코니월드</span></a>
+                </div>
             </div>
         </aside>
     <!-- E 개인화 영역 -->
