@@ -1,13 +1,17 @@
-(function($) {
+var initecoHost = (location.host.indexOf("dev") > -1)? "dev-stu.home-learn.com" : "www.home-learn.com" ;
+document.write('<scri' + 'pt src="https://' + initecoHost + '/apps/ecoinit/fullscreen_enc.js"></scr' + 'ipt>');
+window.addEventListener("DOMContentLoaded",function(e){try{initFullScreen({w:2000,h:1200,mode:0})}catch(e){console.log(e)}});
+
+(function ($) {
     $(document).ready(function(){
-        
+
         $("[data-type='dropDown'] a").on({
             click:function(e){
                 var currentTarget = e.currentTarget || null;;
                 var $parent;
                 var isOpen;
                 var isSelect
-                
+
                 if( currentTarget != null){
 
                     if(!$(currentTarget).hasClass('select')){
@@ -17,7 +21,7 @@
                         if(isOpen){
                             $(currentTarget).siblings('.select').text($(currentTarget).text())
                             $(currentTarget).addClass('active').siblings().removeClass('active');
-                            
+
                             $parent.removeClass('open');
                         }else{
                             $("[data-type='dropDown']").removeClass('open');
@@ -57,7 +61,7 @@
                 $("[data-type='termsCheck']").find("input[type='checkbox']").prop('checked', isChecked);
             }
         });
-        
+
         $("[data-type='termsCheck'] input[type='checkbox']").on({
             change:function(e){
                 var $target = $(e.target);
@@ -85,7 +89,7 @@
             var isBgEvent = (_isBgEvent == false)?false:true;
 
             $('.popup_wrap').css({'display':'flex'});
-            
+
             target.fadeIn(function(){
                 if(isBgEvent){
                     $('.popup_wrap').off('click').on({
@@ -145,7 +149,7 @@ $(function(){
 			var grade = null;
 			var term = null;
 			if (fnGetList) {
-	
+
 				//현재 데이터 백업
 				$('#topGradeViewID').attr("old-value", $('#topGradeViewID').attr("data-value"));
 				$('#topGradeViewID').attr("data-value", value);
@@ -154,14 +158,14 @@ $(function(){
 				isSuc = fnGetList(grade, term);
 			}
 			if (isSuc) {
-	
+
 				if (fnSetTabMenu)
 					fnSetTabMenu(REQ_SUBJ, grade, term);
 			}
 			else
 				return;
 		}
-		
+
 		$input.val(value);
 		$(this).parent("ul").removeClass("down");
 		var text = $(this).text();

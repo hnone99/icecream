@@ -6,8 +6,8 @@
 *{margin:0; padding:0; letter-spacing:-0.05em;-webkit-text-size-adjust:none; outline:none; box-sizing:border-box; -webkit-touch-callout:none}
 *:focus {outline:none}
 a, button {-webkit-tap-highlight-color:transparent}
-html    {height:100%}
-body    {height:100%; font-weight:700; font-family:'NanumSquare', 'NanumSquareRound', 'Dotum', 'DroidSansFallback', 'AppleGothicNeoSD', 'sans-serif';-webkit-font-smoothing: antialiased;}
+html    {width:100% !important; height:100% !important; overflow:hidden !important; background-color:#000000 !important;}
+body    {position:relative !important; width:2000px !important; height:1200px !important;overflow:hidden !important; background-color:#fff !important; font-weight:700; font-family:'NanumSquare', 'NanumSquareRound', 'Dotum', 'DroidSansFallback', 'AppleGothicNeoSD', 'sans-serif';-webkit-font-smoothing: antialiased;}
 img     {border:0 none; vertical-align:top}
 
 a:link      {text-decoration:none}
