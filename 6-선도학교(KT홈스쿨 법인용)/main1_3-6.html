@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=2000, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>초등랜드 &gt; 교과학습 3-6학년</title>
     <link rel="stylesheet" href="./css/webfont.css">
     <link rel="stylesheet" href="./css/base.css">
@@ -57,11 +57,16 @@
                 </div>
             <!-- E > 학기선택 -->
             </h1>
-        <!-- S > 과목 별 교과 학습
-            Description:
-            - 1~2학년:  국어 | 수학 | 통합
-            - 3~6학년:  국어 | 수학 | 사회 | 과학 | 영어
-         -->
+            <!-- S 교과서 선택하기 -->
+            <div class="textbook-select">
+                <button type="button"><i class="ico-textbook-select"></i> 교과서 선택하기</button>
+            </div>
+            <!-- E 교과서 선택하기 -->
+            <!-- S > 과목 별 교과 학습
+                Description:
+                - 1~2학년:  국어 | 수학 | 통합
+                - 3~6학년:  국어 | 수학 | 사회 | 과학 | 영어
+            -->
             <article class="subjectLearning_wrap">
                 <a href="#none" class="subjectLearningItem kor">
                     <strong>국어</strong>
@@ -111,14 +116,19 @@
     <!-- S 개인화 영역 -->
         <aside>
             <div class="personalMenu">
-                <a href="#none" class="ico_note"><span>오답노트</span></a>
-                <a href="#none" class="ico_box"><span>내공상자</span></a>
-                <a href="#none" class="ico_ai"><span>AI생기부</span></a>
-                <a href="#none" class="ico_check"><span>출석체크</span></a>
-                <!-- <a href="#none" class="ico_event"><span>이벤트</span></a> -->
-                <!-- <a href="#none" class="ico_shop"><span>코니월드</span></a> -->
-                <a href="#none" class="ico_talk"><span>홈런톡</span></a>
-                <a href="#none" class="ico_test"><span>심리검사</span></a>
+                <!-- S 마크업 수정 (07.05) -->
+                <div class="personalMenu_inner">
+                    <a href="#none" class="ico_tutor"><span>AI튜터</span></a>
+                    <a href="#none" class="ico_note"><span>오답노트</span></a>
+                    <a href="#none" class="ico_box"><span>내공상자</span></a>
+                    <a href="#none" class="ico_ai"><span>AI생기부</span></a>
+                    <a href="#none" class="ico_check"><span>출석체크</span></a>
+                    <a href="#none" class="ico_event"><span>이벤트</span></a>
+                    <a href="#none" class="ico_talk new"><span>홈런톡</span></a>
+                    <a href="#none" class="ico_test"><span>심리검사</span></a>
+                    <a href="#none" class="ico_shop"><span>코니월드</span></a>
+                </div>
+                <!-- E 마크업 수정 (07.05) -->
             </div>
         </aside>
     <!-- E 개인화 영역 -->

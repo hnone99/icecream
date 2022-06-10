@@ -1,6 +1,6 @@
-var initecoHost = (location.host.indexOf("dev") > -1)? "dev-stu.home-learn.com" : "www.home-learn.com" ;
+/* var initecoHost = (location.host.indexOf("dev") > -1)? "dev-stu.home-learn.com" : "www.home-learn.com" ;
 document.write('<scri' + 'pt src="https://' + initecoHost + '/apps/ecoinit/fullscreen_enc.js"></scr' + 'ipt>');
-window.addEventListener("DOMContentLoaded",function(e){try{initFullScreen({w:2000,h:1200,mode:0})}catch(e){console.log(e)}});
+window.addEventListener("DOMContentLoaded",function(e){try{initFullScreen({w:2000,h:1200,mode:0})}catch(e){console.log(e)}}); */
 
 (function ($) {
     $(document).ready(function(){

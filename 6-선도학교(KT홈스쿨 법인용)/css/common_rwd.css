@@ -6785,3 +6785,45 @@ aside .personalMenu a.new span::after {
         background-size: contain;
     }
 }
+
+.ico-textbook-select{background: url('../../imgs/common/ico/ico_textbook_select.svg') no-repeat 0 0;display: inline-block;vertical-align: middle;width: 1.55vw;height: 1.5vw;}
+.textbook-select{text-align: right;padding-right: 2.5vw;margin-top: -2vw;margin-bottom: -1vw;}
+.textbook-select button{border: .2vw solid #badad9;border-radius: 50rem;font-size: 1.5vw;font-weight: 800;color: #000;padding: .5vw 1.1vw;background: #fff;position: relative;z-index: 3;}
+
+.selected-textbook { display: flex; align-items: center;justify-content: flex-end;padding-right: 2.5vw;margin-top: -1.5vw;margin-bottom: -.8vw;position: relative;z-index: 3; }
+.selected-textbook .my{display: inline-block;background: #13bad5;color: #fff;font-weight: 800;border-radius: .5vw;line-height: 1;padding: .5vw .6vw;font-size: 1.4vw;margin-right: .9vw;}
+.selected-textbook dl{display: flex;font-size: 1.4vw;}
+.selected-textbook dl dt{color: #0dafbd;}
+.selected-textbook dl dd{color: #666;}
+.selected-textbook dl dd + dt:before{content: '';display: inline-block;vertical-align: middle; background: #b4cfcf;width: .1vw;height: 1.3vw;margin: 0 1.2vw;}
+.selected-textbook .btn-info{margin-left: 1.2vw;}
+.ico-info{display: inline-block;vertical-align: middle;width: 2.5vw;height: 2.5vw;background: url('./../imgs/common/ico/ico_info.png') no-repeat 0 0;background-size: contain;}
+
+.popupTextbookSelect .popup_common{width: 41.5vw;height: 40vw;}
+.popupTextbookSelect.ver2 .popup_common{height: 44.25vw;}
+.pop-textbook-select{padding: 2.75vw 0 0;}
+.pop-textbook-select > p{font-size: 1.5vw;color: #333;text-align: center;line-height: 1.5;margin-bottom: 2.5vw;}
+.pop-textbook-select .list{padding: 0 5.35vw;}
+.pop-textbook-select .list label{font-size: 1.6vw;font-weight: 700;width: 8.5vw;display: block;}
+.pop-textbook-select .list label::before{content: '';display: inline-block;vertical-align: middle;width: .4vw;height: .4vw;background: #000;border-radius: 50%;margin-right: .9vw;}
+.pop-textbook-select .list .row + .row{margin-top: 1vw;}
+.popupTextbookSelect .selected-list{padding: .25vw 2.4vw;border: .1vw solid #dcdcdc;border-radius: .75vw;margin-left: 5.35vw;margin-right: 5.35vw;background: #f2f2f2;transform: translateY(.75vw);}
+.popupTextbookSelect .selected-list li{font-size: 1.6vw;padding: 1.5vw 0;}
+.popupTextbookSelect .selected-list li + li{border-top: .1vw solid #ddd;}
+.popupTextbookSelect .selected-list span{font-weight: 700;color: #000;}
+.popupTextbookSelect .selected-list span::before{content: '';content: '';display: inline-block;vertical-align: middle;width: .4vw;height: .4vw;background: #000;border-radius: 50%;margin-right: .9vw;}
+.popupTextbookSelect .selected-list span::after{content: ' : ';}
+.popupTextbookSelect .selected-list strong{font-weight: 800;color: #03aeca;}
+.popupTextbookSelect .popup_common .pop_btn_wrap{padding-left: 5.35vw;padding-right: 5.35vw;}
+.popupTextbookSelect .popup_common .pop_btn_wrap a{font-size: 1.6vw;flex: 1;}
+
+.com_loginDropDown_wrap.style-default{position: relative;}
+.com_loginDropDown_wrap.style-default .value{display: block;overflow: hidden;width: 100%;padding: 1.1vw 1.8vw;font-weight: 700;font-size: 1.6vw;color: #a6a6a6;line-height: 1.15em;border: .1vw solid #ccc;border-radius: .8vw;position: relative;}
+.com_loginDropDown_wrap.style-default .value::before{content: '';display: block;width: 1.15vw;height:1.15vw;position: absolute;right: 1vw;top: 50%;margin-top: -.575vw;background: #fff url('./../imgs/common/btn/bg_login_drop_down.png') no-repeat 0 0;background-size: contain;}
+.com_loginDropDown_wrap.style-default .value.active{color: #000;}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_inner_wrap{display: none;position: absolute;left: 0;bottom: 0;width: 100%;padding-right: 1.3vw;background-color: #fff;border: .1vw solid #ccc;border-radius: .8vw}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents {overflow-x: hidden;overflow-y: auto;max-height: 17.65vw;padding: 1.3vw 0}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents::-webkit-scrollbar-track {margin: 1vw 0}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents li:first-child a {padding-top: 0}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents li:last-child a {padding-bottom: 0}
+.com_loginDropDown_wrap.style-default .com_loginDropDown_contents li a {display: block;overflow: hidden;padding: 1.3vw 1.8vw;font-weight: 700;font-size: 1.6vw;color: #000;line-height: 1.15em}

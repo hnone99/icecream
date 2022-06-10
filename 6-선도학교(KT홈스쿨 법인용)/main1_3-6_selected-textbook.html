@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>초등랜드 &gt; 교과학습 1-2학년</title>
+    <title>초등랜드 &gt; 교과학습 3-6학년</title>
     <link rel="stylesheet" href="./css/webfont.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/common_rwd.css">
@@ -11,7 +12,6 @@
     <script src="./js/lib/jquery.min.js"></script>
     <script src="./js/lib/swiper-bundle.min.js"></script>
     <script src="./js/common.js"></script>
-
 </head>
 <body>
     <div class="container">
@@ -19,7 +19,7 @@
     <!-- S 사용자 정보 & GNB 영역 -->
         <nav>
         <!-- S > 사용자 정보 -->
-            <h1><img src="./imgs/common/bg_ci.svg" alt="olleh tv 홈스쿨 x i-Scream AI 홈런"></h1>
+            <h1><img src="./imgs/common/bg_ci.png" alt="olleh tv 홈스쿨 x i-Scream AI 홈런"></h1>
             <div class="userInfo">
                 <div class="userImg_wrap"><img src="./imgs/dummy/dummy_userImg.png" alt="dummy Image"></div>
                 <strong class="userName">홍길동<span class="userGrade">(4학년)</span></strong>
@@ -57,11 +57,25 @@
                 </div>
             <!-- E > 학기선택 -->
             </h1>
-        <!-- S > 과목 별 교과 학습
-            Description:
-            - 1~2학년:  국어 | 수학 | 통합
-            - 3~6학년:  국어 | 수학 | 사회 | 과학 | 영어
-        -->
+            <!-- S 선택된 교과서 -->
+            <div class="selected-textbook">
+                <span class="my">내 교과서</span>
+                <dl>
+                    <dt>수학</dt>
+                    <dd>아이스크림미디어</dd>
+                    <dt>사회</dt>
+                    <dd>아이스크림미디어</dd>
+                    <dt>과학</dt>
+                    <dd>아이스크림미디어</dd>
+                </dl>
+                <button type="button" class="btn-info" aria-label="선택교과서 정보"><i class="ico-info"></i></button>
+            </div>
+            <!-- E 선택된 교과서 -->
+            <!-- S > 과목 별 교과 학습
+                Description:
+                - 1~2학년:  국어 | 수학 | 통합
+                - 3~6학년:  국어 | 수학 | 사회 | 과학 | 영어
+            -->
             <article class="subjectLearning_wrap">
                 <a href="#none" class="subjectLearningItem kor">
                     <strong>국어</strong>
@@ -71,7 +85,7 @@
                     <strong>수학</strong>
                     <span>연산을 재미있게<br> 수학을 튼튼하게<br> 기초부터 하나씩</span>
                 </a>
-                <!-- <a href="#none" class="subjectLearningItem society">
+                <a href="#none" class="subjectLearningItem society">
                     <strong>사회</strong>
                     <span>생생하고 풍부한<br> 시각자료로<br> 단계별학습</span>
                 </a>
@@ -82,11 +96,11 @@
                 <a href="#none" class="subjectLearningItem eng">
                     <strong>영어</strong>
                     <span>파닉스부터<br> 리딩까지 단계별<br> 학습</span>
-                </a> -->
-                <a href="#none" class="subjectLearningItem all">
+                </a>
+                <!-- <a href="#none" class="subjectLearningItem all">
                     <strong>통합</strong>
                     <span>생생하고 풍부한<br> 시간자료로<br> 단계별학습</span>
-                </a>
+                </a> -->
             </article>
         <!-- E > 과목 별 교과 학습 -->
         <!-- S > 교과학습 도우미 -->
@@ -111,14 +125,19 @@
     <!-- S 개인화 영역 -->
         <aside>
             <div class="personalMenu">
-                <a href="#none" class="ico_note"><span>오답노트</span></a>
-                <a href="#none" class="ico_box"><span>내공상자</span></a>
-                <a href="#none" class="ico_ai"><span>AI생기부</span></a>
-                <a href="#none" class="ico_check"><span>출석체크</span></a>
-                <!-- <a href="#none" class="ico_event"><span>이벤트</span></a> -->
-                <!-- <a href="#none" class="ico_shop"><span>코니월드</span></a> -->
-                <a href="#none" class="ico_talk"><span>홈런톡</span></a>
-                <a href="#none" class="ico_test"><span>심리검사</span></a>
+                <!-- S 마크업 수정 (07.05) -->
+                <div class="personalMenu_inner">
+                    <a href="#none" class="ico_tutor"><span>AI튜터</span></a>
+                    <a href="#none" class="ico_note"><span>오답노트</span></a>
+                    <a href="#none" class="ico_box"><span>내공상자</span></a>
+                    <a href="#none" class="ico_ai"><span>AI생기부</span></a>
+                    <a href="#none" class="ico_check"><span>출석체크</span></a>
+                    <a href="#none" class="ico_event"><span>이벤트</span></a>
+                    <a href="#none" class="ico_talk new"><span>홈런톡</span></a>
+                    <a href="#none" class="ico_test"><span>심리검사</span></a>
+                    <a href="#none" class="ico_shop"><span>코니월드</span></a>
+                </div>
+                <!-- E 마크업 수정 (07.05) -->
             </div>
         </aside>
     <!-- E 개인화 영역 -->

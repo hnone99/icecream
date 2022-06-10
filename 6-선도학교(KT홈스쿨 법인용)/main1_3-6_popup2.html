@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>초등랜드 &gt; 교과학습 3-6학년</title>
+    <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common_rwd.css">
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/lib/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.fn.openPopup('popupTextbookSelectConfirm');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+    <!-- S 콘텐츠 영역 -->
+
+    <!-- E 콘텐츠 영역 -->
+    <!-- S Popup 영역 -->
+        <section class="popup_wrap popupTextbookSelect">
+            <div class="popup_common" id="popupTextbookSelectConfirm">
+                <div class="pop_header">
+                    <strong>교과서 선택이 완료되었어요.</strong>
+                </div>
+                <div class="pop_container">
+                    <div class="pop-textbook-select">
+                        <p>선택한 교과서를 확인해 주세요.</p>
+                        <div class="selected-list">
+                            <ul>
+                                <li>
+                                    <span>4학년 수학</span>
+                                    <strong>아이스크림미디어</strong>
+                                </li>
+                                <li>
+                                    <span>4학년 사회</span>
+                                    <strong>동아출판(안)</strong>
+                                </li>
+                                <li>
+                                    <span>4학년 과학</span>
+                                    <strong>미래엔</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop_btn_wrap">
+                    <a href="#none" class="btn_comfirm flex-grow-0">확인</a>
+                </div>
+            </div>
+        </section>
+    <!-- E Popup 영역 -->
+    </div>
+</body>
+</html>
