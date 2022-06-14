@@ -2987,6 +2987,7 @@ input[type="text"].disabled:disabled {
 
 .container.specialStudy_detail .header.specialStudyBg7 .headerTitle img {
     height: auto;
+    max-height: 3vw;
 }
 
 .container.specialStudy_detail .header.specialStudyBg7+.contents .specialStudy_detail_inner_sort {
@@ -3040,6 +3041,7 @@ input[type="text"].disabled:disabled {
 
 .container.specialStudy_detail .header.specialStudyBg8 .headerTitle img {
     height: auto;
+    max-height: 3.5vw;
 }
 
 .container.specialStudy_detail .header.specialStudyBg8+.contents .specialStudy_detail_inner_sort {
@@ -3094,6 +3096,7 @@ input[type="text"].disabled:disabled {
 
 .container.specialStudy_detail .header.specialStudyBg9 .headerTitle img {
     height: auto;
+    max-height: 3vw;
 }
 
 .container.specialStudy_detail .header.specialStudyBg9+.contents .specialStudy_detail_inner_sort {
@@ -3148,6 +3151,7 @@ input[type="text"].disabled:disabled {
 
 .container.specialStudy_detail .header.specialStudyBg10 .headerTitle img {
     height: auto;
+    max-height: 3vw;
 }
 
 .container.specialStudy_detail .header.specialStudyBg11 {
@@ -3170,6 +3174,7 @@ input[type="text"].disabled:disabled {
 
 .container.specialStudy_detail .header.specialStudyBg11 .headerTitle img {
     height: auto;
+    max-height: 3vw;
 }
 
 .container.specialStudy_detail .header h1 {
@@ -3315,7 +3320,7 @@ input[type="text"].disabled:disabled {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 2em 2em 0 2em;
+    border-radius: 1.6vw 1.6vw 0 1.6vw;
 }
 
 .container.specialStudy_detail .contents .specialStudy_detail_list_wrap .specialStudy_detail_inner_list_wrap .specialStudy_detail_list li a .img_wrap:before {
@@ -3327,7 +3332,7 @@ input[type="text"].disabled:disabled {
     left: 0;
     top: 0;
     border: 0.1vw solid #ccc;
-    border-radius: 2em 2em 0 2em;
+    border-radius:1.6vw 1.6vw 0 1.6vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
